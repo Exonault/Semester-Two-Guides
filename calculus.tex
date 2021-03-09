@@ -4,13 +4,13 @@
 \usepackage[bulgarian]{babel}
 \usepackage{amsmath}
 
-\newtheorem{theorem}{Tеорема}[section]
+\newtheorem{theorem}{Tеорема}[subsection]
 \newtheorem{corollary}{Следствие}[theorem]
 \newtheorem{lemma}[theorem]{Лема}
 
+\newtheorem{definition}{Дефиниция}[subsection]
 
 \title{Математически анализ 2}
-\date{2021-01-23}
 \author{Exonaut}
 
 
@@ -50,22 +50,27 @@ $$ |a_k + b_k|  \leq \sqrt{ \sum_{k=1}^{m} (a_k + b_k)^2} \leq   \sum_{k=1}^{m}|
 
 \subsection{Видове крайно мерни пространства}
 
-\begin{enumerate}
-	\item Линейно(Векторно) пространство \\
-	Нека L е линейно(векторно) пространство над полето $R$. В него има въведени две операции: събиране и умножение на вектор с число.
-	\begin{enumerate}
- 		\item $x,y \in L \implies z = x+ y \in L $
-		\item $x \in L, \lambda \in R \implies z = \lambda x \in L$
-	\end{enumerate}
-	\item  Евклидово пространство\\
-Крайномерното пространство L се нарича евклидово, ако в него е въведено скаларно произведение, т.е за всеки два елемента $x,y \in L$ може да се съпостави реално число $(x,y)$, удовлетворяващо свойствата за линейност, симетричност и положителна определеност.
+\subsubsection{Линейно(Векторно) пространство}
+	\begin{definition}
+Нека L е линейно(векторно) пространство над полето $R$. В него има въведени две операции: събиране и умножение на вектор с число.
+		\begin{enumerate}
+ 			\item $x,y \in L \implies z = x+ y \in L $
+			\item $x \in L, \lambda \in R \implies z = \lambda x \in L$
+		\end{enumerate}
+\end{definition}
 
+\subsubsection{Евклидово пространство}
+\begin{definition}
+Крайномерното пространство L се нарича евклидово, ако в него е въведено скаларно произведение, т.е за всеки два елемента $x,y \in L$ може да се съпостави реално число $(x,y)$, удовлетворяващо свойствата за линейност, симетричност и положителна определеност.
 	\begin{enumerate}
  		\item $x,y,z \in L ,\lambda \in R \implies (x+y,z) = (x,z) + (y,z); (\lambda x,y) = \lambda(x,y)$
 		\item $x,y \in L \implies (x,y) = (y,x)$
 		\item $x \in L, x\neq 0 \implies (x,x) > 0 $
 	\end{enumerate}
-	\item Метрично пространство\\
+\end{definition}
+
+\subsubsection{Метрично пространство}
+\begin{definition}
 Крайномерното пространство L се нарича метрично, ако в него е въведено разстояние (метрика) $\rho$, т.е за два елемента $x,y \in L$ може да се съпостави неотрицателно число  $\rho \geq 0 $  със следните свойства
 	\begin{enumerate}
  		\item $\rho(x,x) = 0 ; \rho(x,y) > 0 , x\neq y $
@@ -73,38 +78,140 @@ $$ |a_k + b_k|  \leq \sqrt{ \sum_{k=1}^{m} (a_k + b_k)^2} \leq   \sum_{k=1}^{m}|
 		\item $\rho(x,z) \leq \rho(x,y) + \rho(y,z). \forall x,y,z \in L$
 	\end{enumerate}
 Метрично пространство L с метрика $\rho$ се означава $(L,\rho)$
-	\item Нормирано пространство
-Пространството се нарича нормирано, ако в него е въведена норма ||.||, т.е $||.||: L \rightarrow R_0^+$ със свойства 
-\begin{enumerate}
+\end{definition}
+
+\subsubsection{Нормирано пространство}
+\begin{definition}
+Пространството се нарича нормирано, ако в него е въведена норма $||.||$, т.е $||.||: L \rightarrow R_0^+$ със свойства 
+	\begin{enumerate}
  		\item $x = 0  \implies ||x|| = 0, x \neq 0  \implies ||x|| > 0$
 		\item $x \in L, \lambda \in R \implies ||\lambda x|| = |\lambda|  ||x||$
 		\item $x,y \in L \implies ||x+y|| \leq |x| + |y|$
 	\end{enumerate}
-\end{enumerate}
-
+\end{definition}
 \begin{theorem}
 Ако L е нормирано пространство с дадена норма $|| . ||$, то L е метрично пространство, т.е равенството $\rho(x,y) = ||x - y||$ дефинира  разстоянието в L
 \end{theorem}
 
 \subsection{Пространството $R^m$ - дефиниция и основни свойства}
 
-Дефиниция: Множеството от наредени m-торки $a = (a_1, a_2, ... , a_m)$ от реални числа. Числата $a_1, a_2, ... , a_m$ се наричат съответно първа, втора, ..., m-та кордината на а.\\
+\begin{definition}
+Множеството от наредени m-торки $a = (a_1, a_2, ... , a_m)$ от реални числа. Числата $a_1, a_2, ... , a_m$ се наричат съответно първа, втора, ..., m-та кордината на а.\\
 \\
- Ако имаме $a = (a_1, a_2, ... , a_m), b = (b_1, b_2, ... , b_m), ; \lambda \in R $ то\\
-	1) $a+b =(a_1, a_2, ... , a_m) +  (b_1, b_2, ... , b_m) = (a_1 + b_1, a_2+b_2, ... , a_m + b_m) \in R^m$
-	2) $ \lambda a =(\lambda a_1,\lambda a_2, ... , \lambda a_m) \in R^m $\\
+ Ако имаме $a = (a_1, a_2, ... , a_m), b = (b_1, b_2, ... , b_m), ; \lambda \in R $ то
+	\begin{enumerate}
+		\item $a+b =(a_1, a_2, ... , a_m) +  (b_1, b_2, ... , b_m) = (a_1 + b_1, a_2+b_2, ... , a_m + b_m) \in R^m$
+		\item $ \lambda a =(\lambda a_1,\lambda a_2, ... , \lambda a_m) \in R^m $\\
+	\end{enumerate}
+\end{definition}
+\subsubsection{Скаларно произведение}
 Скаларно произведение се дефинира : $$ (a,b) = \left( \sum_{k=1}^{m}a_kb_k \right )$$\\
-С така въведено скаларно произведение пространството $R^m$ се превръща в евклидово.\\
+С така въведено скаларно произведение пространството $R^m$ се превръща в евклидово.
+\subsubsection{Норма и метрика}
 С равенството:
 $$||a|| := \sqrt{ \sum_{k=1}^{m}(a_k)^2  }$$ \\
 се въвежда норма в $R^m$.
 \\
  Нормата генерира метрика в $R^m$ с формула: 
-$$\rho(a,b) := ||a-b|| = \sqrt{ \sum_{k=1}^{m} (a_k - b_k)^2} $$\\
-Скаларен квадрат: $a^2 = (a,a) = \sum _{k=1}^{m}a_k^2$\\
-Коши-Шварц чрез скаларен квадрат: $(a,b)^2 \leq a^2b^2$ и $|(a,b)|\leq ||a|| ||b||$\\ 
+$$\rho(a,b) := ||a-b|| = \sqrt{ \sum_{k=1}^{m} (a_k - b_k)^2} $$
+\subsubsection{Скаларен квадрат}
+Скаларен квадрат: $a^2 = (a,a) = \sum _{k=1}^{m}a_k^2$
+\subsubsection{Неравенство на Коши-Шварц, чрез скаларен квадрат}
+Коши-Шварц чрез скаларен квадрат: $(a,b)^2 \leq a^2b^2$ и $|(a,b)|\leq ||a|| ||b||$
+\subsubsection{Неравенство на Минковски, чрез скаларен квадрат}
 Неравенство на Минковски чрез скаларен квадрат: $||a+b||\leq ||a|| + ||b||$
 \subsection{Точки и множества в $R^m$}
+
+\subsubsection{Паралелепипед}
+	\begin{definition}
+Множеството\\
+$$\Pi (a; \delta_1, \delta_2, ... ,\delta_m) = \{ x \in R^m: -\delta_k < x_k -a_k < \delta_k   \}$$
+се нарича отворен паралелепипед в $R^m$ с център точката а.\\
+\\
+Множеството\\
+$$\widetilde\Pi (a; \delta_1, \delta_2, ... ,\delta_m) = \{ x \in R^m: -\delta_k \leq x_k -a_k \leq \delta_k   \}$$
+се нарича затворен паралелепипед в $R^m$ с център точката а.\\
+\\
+Ако $\delta_1 = \delta_2 = ... = \delta_m = \delta$, получените множества $\Pi (a; \delta)$ и $\widetilde\Pi (a; \delta)$ се  наричат съответно отворен и затворен куб в $R^m$ с център а.
+ 	\end{definition}
+\subsubsection{Сфера и кълбо}
+	\begin{definition}
+Нека числото r > 0. Множеството \\
+$$B(a;r) = \{ x | x \in R^m, \rho(x,a) <r \} = \{ x| x \in R^m, || x-a || < r \}$$\\
+се нарича отворено кълбо в $R^m$ с център a и радиус r, множеството \\
+$$\widetilde B(a;r) = \{ x | x \in R^m, \rho(x,a) \leq r \} = \{ x| x \in R^m, || x-a || \leq r \}$$\\
+се нарича затворено кълбо в $R^m$ с център a и радиус r, а множеството \\
+$$S(a;r) = \{ x | x \in R^m, \rho(x,a) = r \} = \{ x| x \in R^m, || x-a || = r \}$$\\
+се нарича сфера в $R^m$ с център a и радиус r, а множеството \\
+	\end{definition}
+
+	\begin{definition}
+Точката а се нарича
+\begin{itemize}
+	\item вътрешна за множеството А, ако съществува отворено кълбо $B(a,\varepsilon): B(a,\varepsilon) \subset A$
+	\item външна за А, ако съществува $B(a,\varepsilon): B(a,\varepsilon) \subset R^m \backslash  A$
+	\item контурна за А, ако за всяко $\varepsilon > 0: B(a,\varepsilon) \cap A \neq \O $ и \\ $ B(a,\varepsilon) \cap (R^m \backslash  A) \neq \O$
+	\item изолирана ако съществува $\varepsilon > 0: B(a,\varepsilon) \cap A = \{ a \}$
+\end{itemize}
+	\end{definition}
+
+\begin{definition}
+Множеството $A \subset R^m $ се нарича 
+\begin{itemize}
+	\item отворено, ако всяка негова точка е вътрешна 
+	\item затворено, ако неговото допълнение  $R^m \backslash A$ е отворено
+\end{itemize}
+	\end{definition}
+
+\begin{definition}
+Околност на дадена точка $a \in R^m $ се нарича всяко отворено множество, което я съдържа. Означава се с $U_a$.
+\end{definition}
+
+\begin{definition}
+Точка а се нарича точка на сгъстяване на множеството $A \subset R^m $, ако всяка нейна околност $U_a$ съдържа поне една точка на А, различна от а, т.е $U_a \cap (A\backslash \{ a \} \neq \O $
+\end{definition}
+
+\begin{definition}
+Величината \\
+$$d = d(A) = \sup_{a',a'' \in A} \rho(a';a'')$$\\
+се нарича диаметър на множеството  $A \subset R^m $.
+\end{definition}
+
+\begin{definition}
+Множеството  $A \subset R^m $ се нарича ограничено, ако съшествува кълбо(с краен радиус), което го съдържа.
+\end{definition}
+
+\begin{definition}
+Множеството  $A \subset R^m $ се нарича компактно, ако А е затворено и ограничено.
+\end{definition}
+
+\begin{definition}
+Множеството   $x = (x_1, x_2, ... , x_m) \in R^m$, чийто кординати са непрекъснати функции $x_k = x_k(t) (k = 1, 2, ..., m)$, дефинирани върху даден интервал [a,b] се нарича непрекъсната крива в $R^m$. t се нарича параметър на кривата.\\
+Точките $x(a) = (x_1(a), x_2(a), ... , x_m(a))$ и $x(b) = (x_1(b), x_2(b), ... , x_m(b))$ се наричат начало и край на дадената крива. Ако $x(a) = x(b)$ кривата е затворена
+\end{definition}
+
+\begin{definition}
+Нека $x^0 = (x_1^0, x_2^0, ... , x_m^0) \in R^m$ и $\alpha_1, \alpha_2, ... , \alpha_m$ са фиксирани числа за които $\sum_{k=1}^{m}\alpha_k > 0$. Множеството от точки $x = (x_1, x_2, ... , x_m)$ чиито кординати се представят във вида \\
+$$x_k = x_k^0 + \alpha_kt, k = 1, 2, ..., m , -\infty < t <\infty $$\\
+се нарича права линия в пространството $R^m$, минаваща през точка $x^0$ по направление $(\alpha_1, \alpha_2, ... , \alpha_m).$
+\end{definition}
+
+\begin{definition}
+Множеството  $A \subset R^m $ се нарича свързано,  ако за всеки две негови точки съществува непрекъсната крива $\gamma$, която ги свързва и $\gamma \subset A$.
+\end{definition}
+
+\begin{definition}
+Множеството  $A \subset R^m $ се нарича област, ако е отворено и свързано. Ако е и затворено, то се нарича затворена област. 
+\end{definition}
+
+\begin{definition}
+Област, всеки две точки на която могат да се съединят с отсечка, изцяло лежаща в нея, се нарича изпъкнала област. 
+\end{definition}
+
+\begin{definition}
+Областа $A \subset R^m $ се нарича звездообразна област, отностно точката $x^0 \in A$, ако за вскяка точка $x \in A$ отсечката $[x^0,x]$ лежи изцяло в А. 
+\end{definition}
+
 
 \subsection{Редици от точки в $R^m$}
 
