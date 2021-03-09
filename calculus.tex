@@ -1,0 +1,162 @@
+\documentclass[fleqn]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[bulgarian]{babel}
+\usepackage{amsmath}
+
+\newtheorem{theorem}{Tеорема}[section]
+\newtheorem{corollary}{Следствие}[theorem]
+\newtheorem{lemma}[theorem]{Лема}
+
+
+\title{Математически анализ 2}
+\date{2021-01-23}
+\author{Exonaut}
+
+
+\begin{document}
+\maketitle
+\pagenumbering{gobble}
+\newpage
+\pagenumbering{arabic}
+
+\tableofcontents
+\newpage
+
+\section{Лекция 1: Пространството $R^m$}
+\subsection{Няколко важни неравенства}
+Нека $a_k $ и $b_k (k = 1, 2, ..., m) $ са реални числа и $m \in N$
+\begin{theorem}[Неравенство на Коши-Шварц]
+В сила е следното неравенство: \\
+$$\left( \sum_{k=1}^{m}a_kb_k \right ) ^ 2   \leq  \left( \sum_{k=1}^{m}a_k \right)  \left( \sum_{k=1}^{m}b_k  \right) $$
+\end{theorem}
+Равенство се достига само когато $a_k$ и $b_k$ са пропорционални:\\
+ ($\exists \lambda_0: b_k =\lambda_0 a_k  $)\\
+Равенството може да се запише: 
+$$\displaystyle\left\lvert \sum_{k=1}^{m}a_kb_k \right \rvert \leq \sqrt{\left( \sum_{k=1}^{m}a_k \right)}  \sqrt{ \left( \sum_{k=1}^{m}b_k  \right)} $$
+
+\begin{theorem}[Неравенство на Минковски]
+В сила е следното неравенство: \\
+$$\sqrt{ \sum_{k=1}^{m} (a_k + b_k)^2}   \leq \sqrt{ \sum_{k=1}^{m}a_k^2 } + \sqrt{ \sum_{k=1}^{m}b_k^2 }$$
+\end{theorem}
+Равенство се достига само когато $a_k$ и $b_k$ са пропорционални.
+Общ случай на неравенството на Минковски:
+$$\left ( \sum_{k=1}^{m} |a_k + b_k|^p \right)^\frac{1}{p}   \leq\left ( \sum_{k=1}^{m}|a_k|^p\right)^\frac{1}{p} + \left ( \sum_{k=1}^{m} |b_k|^p \right)^\frac{1}{p}   ( p\geq 1)$$
+
+\begin{theorem}
+В сила е следното неравенство: \\
+$$ |a_k + b_k|  \leq \sqrt{ \sum_{k=1}^{m} (a_k + b_k)^2} \leq   \sum_{k=1}^{m}|a_k - b_k| $$
+\end{theorem}
+
+\subsection{Видове крайно мерни пространства}
+
+\begin{enumerate}
+	\item Линейно(Векторно) пространство \\
+	Нека L е линейно(векторно) пространство над полето $R$. В него има въведени две операции: събиране и умножение на вектор с число.
+	\begin{enumerate}
+ 		\item $x,y \in L \implies z = x+ y \in L $
+		\item $x \in L, \lambda \in R \implies z = \lambda x \in L$
+	\end{enumerate}
+	\item  Евклидово пространство\\
+Крайномерното пространство L се нарича евклидово, ако в него е въведено скаларно произведение, т.е за всеки два елемента $x,y \in L$ може да се съпостави реално число $(x,y)$, удовлетворяващо свойствата за линейност, симетричност и положителна определеност.
+
+	\begin{enumerate}
+ 		\item $x,y,z \in L ,\lambda \in R \implies (x+y,z) = (x,z) + (y,z); (\lambda x,y) = \lambda(x,y)$
+		\item $x,y \in L \implies (x,y) = (y,x)$
+		\item $x \in L, x\neq 0 \implies (x,x) > 0 $
+	\end{enumerate}
+	\item Метрично пространство\\
+Крайномерното пространство L се нарича метрично, ако в него е въведено разстояние (метрика) $\rho$, т.е за два елемента $x,y \in L$ може да се съпостави неотрицателно число  $\rho \geq 0 $  със следните свойства
+	\begin{enumerate}
+ 		\item $\rho(x,x) = 0 ; \rho(x,y) > 0 , x\neq y $
+		\item $\rho(x,y) = \rho(y,x)$
+		\item $\rho(x,z) \leq \rho(x,y) + \rho(y,z). \forall x,y,z \in L$
+	\end{enumerate}
+Метрично пространство L с метрика $\rho$ се означава $(L,\rho)$
+	\item Нормирано пространство
+Пространството се нарича нормирано, ако в него е въведена норма ||.||, т.е $||.||: L \rightarrow R_0^+$ със свойства 
+\begin{enumerate}
+ 		\item $x = 0  \implies ||x|| = 0, x \neq 0  \implies ||x|| > 0$
+		\item $x \in L, \lambda \in R \implies ||\lambda x|| = |\lambda|  ||x||$
+		\item $x,y \in L \implies ||x+y|| \leq |x| + |y|$
+	\end{enumerate}
+\end{enumerate}
+
+\begin{theorem}
+Ако L е нормирано пространство с дадена норма $|| . ||$, то L е метрично пространство, т.е равенството $\rho(x,y) = ||x - y||$ дефинира  разстоянието в L
+\end{theorem}
+
+\subsection{Пространството $R^m$ - дефиниция и основни свойства}
+
+Дефиниция: Множеството от наредени m-торки $a = (a_1, a_2, ... , a_m)$ от реални числа. Числата $a_1, a_2, ... , a_m$ се наричат съответно първа, втора, ..., m-та кордината на а.\\
+\\
+ Ако имаме $a = (a_1, a_2, ... , a_m), b = (b_1, b_2, ... , b_m), ; \lambda \in R $ то\\
+	1) $a+b =(a_1, a_2, ... , a_m) +  (b_1, b_2, ... , b_m) = (a_1 + b_1, a_2+b_2, ... , a_m + b_m) \in R^m$
+	2) $ \lambda a =(\lambda a_1,\lambda a_2, ... , \lambda a_m) \in R^m $\\
+Скаларно произведение се дефинира : $$ (a,b) = \left( \sum_{k=1}^{m}a_kb_k \right )$$\\
+С така въведено скаларно произведение пространството $R^m$ се превръща в евклидово.\\
+С равенството:
+$$||a|| := \sqrt{ \sum_{k=1}^{m}(a_k)^2  }$$ \\
+се въвежда норма в $R^m$.
+\\
+ Нормата генерира метрика в $R^m$ с формула: 
+$$\rho(a,b) := ||a-b|| = \sqrt{ \sum_{k=1}^{m} (a_k - b_k)^2} $$\\
+Скаларен квадрат: $a^2 = (a,a) = \sum _{k=1}^{m}a_k^2$\\
+Коши-Шварц чрез скаларен квадрат: $(a,b)^2 \leq a^2b^2$ и $|(a,b)|\leq ||a|| ||b||$\\ 
+Неравенство на Минковски чрез скаларен квадрат: $||a+b||\leq ||a|| + ||b||$
+\subsection{Точки и множества в $R^m$}
+
+\subsection{Редици от точки в $R^m$}
+
+\section{Лекция 2: Функция на няколко променливи. Граница и непрекъснатост}
+
+\section{Лекция 3: Частни производни. Диференцируемост на функция на две и повече променливи }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
