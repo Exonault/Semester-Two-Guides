@@ -3,10 +3,13 @@
 \usepackage[utf8]{inputenc}
 \usepackage[bulgarian]{babel}
 \usepackage{amsmath}
+\usepackage{booktabs}
 
-\newtheorem{theorem}{Tеорема}[section]
-\newtheorem{corollary}{Следствие}[theorem]
-\newtheorem{lemma}[theorem]{Лема}
+
+\newtheorem{example}{Пример}[subsection]
+
+\newtheorem{definition}{Дефиниция}[subsection]
+
 
 
 \title{Дискретна математика}
@@ -21,6 +24,155 @@
 
 \tableofcontents
 \newpage
+
+\section{Лекция 1: Логика и логически оператори}
+
+\subsection{Дефиниции}
+
+\begin{definition}
+\textbf{Логиката} е система, базирана на съждения
+\end{definition}
+
+\begin{definition}
+\textbf{Съждението} е твърдение което може да бъде истина или лъжа (но не и двете едновеременно).\\
+Следователно резултатът от едно съждение може да бъде истина(И) или ако то е вярно или лъжа (Л), ако е грешно.
+\end{definition}
+
+\begin{definition}
+Съжденията, които не съдържат в себе си други съждения, се наричат \textbf{прости}.
+\end{definition}
+
+\begin{definition}
+Едно и няколко съждения могат да бъдат обединени в едно единствено \textbf{комбинирано съждение}, посредством логически оператори. 
+\end{definition}
+
+\begin{definition}
+\textbf{Таблица на истинност} се нарича таблица, в която се изброяват всички възможни комбинации от стойности  на отделните променливи в съждението, както и съответните стойности на функцията. 
+\end{definition}
+
+\begin{definition}
+Две \textbf{съждения са еквиваленти}, ако имат една и съща таблица на истинност или следват едно от друго вследствие прилагани основни закони за преобразуване. 
+\end{definition}
+\newpage
+\subsection{Логически оператори}
+
+\subsubsection{Отрицание(NOT)}
+Означава се със знака $\neg$\\
+Функция на една променлива с таблица на истинност: 
+\begin{table}[htp]
+  \begin{center}
+    \begin{tabular}{c|c} 
+      \textbf{p} & \textbf{$\neg$p} \\
+      \hline
+      T & F \\
+      F & T \\
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\subsubsection{И, Конюнкция (AND)}
+Означава се със знака $\land$\\
+Функция на две променливи с таблица на истинност: 
+\begin{table}[htp]
+  \begin{center}
+    \begin{tabular}{c|c|c} 
+      \textbf{p} & \textbf{q}  & \textbf{p $\land$ q} \\
+      \hline
+	F & F & F \\
+	F & T & F \\
+	T & F & F \\
+ 	T & T & T \\
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\subsubsection{ИЛИ, Дизюнкция (OR)}
+Означава се със знака $\lor$\\
+Функция на две променливи с таблица на истинност: 
+\begin{table}[htp]
+  \begin{center}
+    \begin{tabular}{c|c|c} 
+      \textbf{p} & \textbf{q}  & \textbf{p $\lor$ q} \\
+      \hline
+	F & F & F \\
+	F & T & T \\
+	T & F & T \\
+ 	T & T & T \\
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\newpage
+
+\subsubsection{Сума по модул 2, изключващо или (XOR)}
+Означава се със знака $\otimes$\\
+Функция на две променливи с таблица на истинност: 
+\begin{table}[htp]
+  \begin{center}
+    \begin{tabular}{c|c|c} 
+      \textbf{p} & \textbf{q}  & \textbf{p $\otimes$ q} \\
+      \hline
+	F & F & F \\
+	F & T & T \\
+	T & F & T \\
+ 	T & T & F \\
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\subsubsection{Импликация, следствие }
+Означава се със знака $\rightarrow$\\
+Функция на две променливи с таблица на истинност: 
+\begin{table}[htp]
+  \begin{center}
+    \begin{tabular}{c|c|c} 
+      \textbf{p} & \textbf{q}  & \textbf{p $\rightarrow$ q} \\
+      \hline
+	F & F & T \\
+	F & T & T \\
+	T & F & F \\
+ 	T & T & T \\
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\subsubsection{Двупосочно следствие}
+Означава се със знака $\Leftrightarrow$\\
+Функция на две променливи с таблица на истинност: 
+\begin{table}[htp]
+  \begin{center}
+    \begin{tabular}{c|c|c} 
+      \textbf{p} & \textbf{q}  & \textbf{p $\Leftrightarrow$ q} \\
+      \hline
+	F & F & T \\
+	F & T & F \\
+	T & F & F \\
+ 	T & T & T \\
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\newpage
+
+\subsection{Закони за еквивалентни преобразувания}
+
+\begin{itemize}
+	\item Закон за идентичност : $p \land T \equiv p , p \lor F \equiv p$
+	\item Закон за доминиране : $p \lor T \equiv T , p \land F \equiv F$
+	\item Закон за пълна идентичност : $p \land p \equiv p , p \lor p \equiv p$
+	\item Закон за двойно отрицание : $\neg(\neg p) \equiv p $
+	\item Комутативен закон : $p \land q \equiv q \land p | p \lor q \equiv q \lor p$
+	\item Асоциативен закон : $p \land (q \land r) \equiv (p \land q ) \land r | p \lor (q \lor r) \equiv (p \lor q ) \lor r$
+	\item Дистрибутивен закон : $p \land (q \lor r) \equiv (p \land q ) \lor (p \land r ) | p \lor (q \land r) \equiv (p \lor q ) \land (p \lor r )  $
+	\item Закони на де Морган : $\neg (p \land q) \equiv (\neg p) \lor (\neg q) | \neg (p \lor q) \equiv (\neg p) \land (\neg q) $
+	\item Закон за импликацията : $p \rightarrow q \equiv \neg p \lor q$
+	\item Закон за тривиалната тавтология:  $p \lor \neq p \equiv T | p \land \neq p \equiv F$
+	\item Закон за тривиалното опровержение : $(p \Leftrightarrow q) \equiv \neg (p \otimes q), \neg (p \Leftrightarrow q) \equiv (p \otimes q) $
+
+\end{itemize}
+
+\section{Лекция 2:}
+
 
 
 
