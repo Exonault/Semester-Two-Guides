@@ -259,6 +259,88 @@ T.e редицата има граница точката а, тогава и с
 
 \section{Лекция 2: Функция на няколко променливи. Граница и непрекъснатост}
 
+\subsection{Дефниция на функция на няколко променливи}
+	\begin{definition}
+Казва се че дадена функция с дефиниционна област(дефиниционно множество) D, ако на всяка точка $x = (x_1, x_2, ... , x_m)$ от множеството D е съпоставено реално число $f(x) = f(x_1, x_2, ... , x_m)$, т.е на всяко $x \in D$ съществува единствено число $y = f(x) \in R$. Понякога за кратко се записва. 
+$$f: D \rightarrow R$$\\
+В $R^2$ се използва $(x,y)$ за означение, а в $R^3$ - $(x,y,z)$.
+	\end{definition}
+\subsection{Граница на функция на няколко променливи}
+	\begin{definition}[Коши]
+Нека $f: D \rightarrow R, a \in R^m$, а е точка на сгъстяване за D. Казва се че $f(x)$ има граница L при $x \rightarrow a$ със стойностти $x \neq a$ ако за всяко $\varepsilon > 0$ съществува $\delta > 0$, че за всяко x от множеството $D \backslash \{a\}$, за което $\rho(x;a) = || x - a || < \delta $ е изпълнено $|f(x) - L | < \varepsilon$. Записва се $$\lim_{x \rightarrow a} f(x) = L$$
+	\end{definition}
+
+	\begin{definition}[Хайне]
+Нека $f: D \rightarrow R, a \in R^m$, а е точка на сгъстяване за D. Казва се че $f(x)$ има граница L при $x \rightarrow a$ със стойностти $x \neq a$ ако за всяка редица  $\{x^{(n)}\} ,x^{(n)} \in D, x^{(n)} \neq a$ сходяща към а, числовата редица $\{f(x^{(n)})\}$ има граница L. 
+	\end{definition}
+
+	\begin{theorem}
+Дефинициите 2.2.1 и 2.2.2 на Коши и Хайне за граница на функция са еквивалентни.
+	\end{theorem}
+
+	\begin{definition}
+Нека $f: D \rightarrow R, a \in R^m$, а е точка на сгъстяване за D. Казва се че $f(x)$ дивергира към $\infty$ (съответно към $-\infty$) при $x \rightarrow a$ със стойностти $x \neq a$, ако за всяко $A \in R$ съществува такова $\delta > 0$, че за всяко x от множеството $D \backslash \{a\}$, за което $\rho(x;a) = || x - a || < \delta $ е изпълнено $f(x) > A $( съответно $f(x) < A)$. Записва се
+ $$\lim_{x \rightarrow a} f(x) = \infty (-\infty) $$ 
+	\end{definition}
+
+	\begin{definition}[Повторна граница]
+Нека $D \subset R^2, a = (a_1, a_2) \in R^2$ e точка на сгъстяване за D и функция $f: D \rightarrow R$. Нека съществува такава околност $U_{a_2} \subset R$ на точката $а_2$, че за всички стойностти $y \in U_{a_2} $ да съществува  $\lim_{x \rightarrow a_1} f(x,y) = \varphi (y)$. Ако освен това съществува $\lim_{y \rightarrow a_2} \varphi (y) = A$, А се нарича повторна граница и се означава както следва 
+$$A = A_{1,2} = \lim_{y \rightarrow a_2} (\lim_{x \rightarrow a_1} f(x,y) ) $$.\\
+Аналогично се съвежда и другата повторна граница 
+$$ A_{2,1} = \lim_{x \rightarrow a_1} (\lim_{y \rightarrow a_2} f(x,y) ) $$
+	\end{definition}
+
+	\begin{theorem}
+Нека $D \subset R^2, a = (a_1, a_2) \in R^2$ e точка на сгъстяване за D и функция $f: D \rightarrow R$.  Нека
+	\begin{enumerate}
+		\item  Нека съществува такава околност $U_{a_2} \subset R$ на точката $а_2$, че за всички стойностти $y \in U_{a_2} $ да съществува  $\lim_{x \rightarrow a_1} f(x,y) = \varphi (y)$.
+
+		\item Съществува границата $\lim_{(x, y) \rightarrow (a_1,a_2) } f(x,y) = L$.
+	\end{enumerate}
+Тогава съществува граница  $\lim_{y \rightarrow a_2} \varphi (y)$ и освен това е в сила равенствотот  $\lim_{y \rightarrow a_2} \varphi (y) = L$
+	\end{theorem}
+
+\subsection{Непрекъснатост на функция на няколко променливи}
+	\begin{definition}
+Казва се че функцията $f: D \rightarrow R$ е непрекъсната в точка $a \in D$ ако $\lim_{x \rightarrow a} f(x) = f(a)$.
+	\end{definition}
+
+	\begin{definition}[непрекъснатост по Коши]
+Казва се, че функцията $f: D \rightarrow R$ е непрекъсната в точка $a \in D$, ако за всяко $\varepsilon > 0$ съществува $\delta > 0$, че за всяко x от множеството $D $, за което $\rho(x;a) = || x - a || < \delta $ е изпълнено $|f(x) - f(a) | < \varepsilon$.
+	\end{definition}
+
+	\begin{definition}[непрекъснатост по Хайне]
+Казва се, че функцията $f: D \rightarrow R$ е непрекъсната в точка $a \in D$ ако за всяка редица  $\{x^{(n)}\}$ (с $x^{(n)} \in D$ за $n \in N$) сходяща към а, числовата редица $\{f(x^{(n)})\}$ има граница $f(a)$. 
+	\end{definition}
+
+	\begin{definition}[за съставна функция]
+Нека $A \subset R^m$ е отворено множество, $f: А \rightarrow R$ и $x_k: (\alpha, \beta) \rightarrow R, k = 1 \div m$. Полагайки  $x(t) = (x_1(t), x_2(t), ... , x_m(t)) \in A$ за всяко $t \in (\alpha, \beta)$ съставната функция $F(t) = f \circ x(t) = f(x(t))$ се дефинира по формулата 
+$$F(t) = f \circ x(t) = f(x(t)) = f(x_1(t), x_2(t), ... , x_m(t))$$
+	\end{definition}
+
+	\begin{theorem}
+Нека $A \subset R^m$ е отворено множество и $f: А \rightarrow R$ интервалът $(\alpha, \beta) \subset R$ , $x_k: (\alpha, \beta) \rightarrow R$ за $k = 1 \div m$. Нека освен това $x(t) = (x_1(t), x_2(t), ... , x_m(t)) \in A$ за $\forall t \in (\alpha, \beta)$ и $x_k$ са непрекъснати в точката $t_0 \in (\alpha, \beta) $  за $k = 1 \div m$, а $f$ e непрекъсната в $x^0 = x(t_0)$. Toгава функцията $F(t) = f \circ x(t) = f(x(t)) = f(x_1(t), x_2(t), ... , x_m(t))$ е непрекъсната в точката $t_0$
+	\end{theorem}
+
+\subsection{Равномерна непрекъснатост на функция на няколко променливи}
+	\begin{definition}
+Нека $A \subset R^m$ е отворено множество и $f: А \rightarrow R$. Функцията се нарича равномерно непрекъсната в A, ако за  всяко $\varepsilon > 0$ съществува $\delta = \delta(\epsilon)$, че за всеки две точки $x', x'' \in A$ за които разстоянието $\rho(x';x'') =|| x' - x'' || < \delta $, да следва, че $|f(x') - f(x'') | < \varepsilon$.
+	\end{definition}
+
+	\begin{theorem}[на Вайерщрас]
+Нека множеството $K \subset R^m$ е компактно и функцията $f: K \rightarrow R$ е непрекъсната върху K. Tогава 
+	\begin{enumerate}
+		\item f е ограничена в К, т.е същестуват $m, M \in R$ такива че за всички $x \in K$ е изпълнено неравенството
+$m \leq f(x) \leq M$
+		\item f достифа най- малката и най- голямата си стойност в К, т.е съществуват точки $x^0, y^0 \in K$ , такива че
+$$f(x^0) = \inf _{x \in K}f(x) ; f(y^0) = \sup_{y \in K} f(x)$$
+	\end{enumerate}
+	\end{theorem}
+
+	\begin{theorem}[на Kантор]
+Нека множеството $K \subset R^m$ е компактно и функцията $f: K \rightarrow R$ е непрекъсната върху K. Тогава $f$ е равномерно непрекъсната върху K.
+	\end{theorem}
+
 \section{Лекция 3: Частни производни. Диференцируемост на функция на две и повече променливи }
 
 
