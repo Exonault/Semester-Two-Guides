@@ -414,31 +414,41 @@ $$f(x) - f(x^0) = \sum_{k=1}^{m} A_k(x_k + x_k ^ 0) + \varepsilon (x^0, x - x^0)
 \end{definition}
 
 \begin{theorem}
-
+Ако функцията $f: U \rightarrow R$ е диференцируема в точката $x^0 \in U$, то тя е непрекъсната. 
 \end{theorem}
 
 \begin{definition}
-
+В случай на диференцируемост в точката $x^0$ на функцията $f: U \rightarrow R$, изразът 
+$$df(x^0) \circ (h) = A_1 h_1 + A_2 h_2 + ... + A_m h_m$$
+(или $df, df(x^0)$) се нарича пълен диференциал на $f(x)$ в точката $x^0$
 \end{definition}
 
+\begin{theorem}
+Ако функцията $f: U \rightarrow R$ е диференцируема в точката $x^0 \in U$, то съществуват частните производни $\dfrac{\partial f(x^0)}{\partial x_k}$ в точката $x^0$ и освен това $A_k(x^0) = \dfrac{\partial f(x^0)}{\partial x_k}, k = 1 \div m$.
+\end{theorem}
+
 \begin{definition}
+Ако функцията $f: U \rightarrow R$ е диференцируема в точката $x^0 \in U$, то със следната формула се изразява нейната производна в точката $x^0$
+$$f'(x^0) = (f'_{x_1}(x^0), f'_{x_2}(x^0), ..., f'_{x_m}(x^0))$$.
 
 \end{definition}
 
 \begin{theorem}
-
-\end{theorem}
-
-\begin{theorem}
-
+Ако функцията $f: U \rightarrow R$ притежава частни производни $\dfrac{\partial f(x^0)}{\partial x_k}, k = 1 \div m$ в отвореното множество U и освен това са непрекъснати в точката $x^0 \in U$, то $f$ е диференцируема в точката $x^0$.
 \end{theorem}
 
 \begin{definition}
-
+Ако функцията $f: U \rightarrow R$ притежава частни производни в U и тези частични производни са непрекъснати в точката $x^0 \in U$, то функцията се нарича непрекъснато диференцируема в точката $x^0$. Ако тези производни са непрекъснати в U, то функцията се нарича непрекъсанот диференцируема в това множество. 
 \end{definition}
 
 \begin{definition}
+Диференциалът на диференциала от $n-1$ ред (n = 2, 3, ...) от функцията f(ако съществува) се нарича диференциал от n-ти ред(n-ти диференциал) на тази функция и се бележи $d^n f$\\
+\\
+Ако f е два пъти непрекъсната и диференцируема в $x^0 \in U$ тогава втория диференциал получава по следния резултат
+$$d^2 f(x^0) = \sum_{i=1}^ m \sum_{j=1}^m f''_{x_i x_j}(x^0) dx_i dx_j = \left( \dfrac{\partial}{\partial x_1}dx_1 + ... + \dfrac{\partial}{\partial x_m}dx_m\right )^2 f(x^0)$$
 
+Aналогично ако f е n пъти непрекъсната и диференцируема в $x^0 \in U$, то $d^n f(x^0)$ съществува и се дава със следната формула 
+$$d^n f(x^0) = \left( \dfrac{\partial}{\partial x_1}dx_1 + ... + \dfrac{\partial}{\partial x_m}dx_m\right )^n f(x^0)$$
 \end{definition}
 
 
