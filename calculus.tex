@@ -8,6 +8,8 @@
 \newtheorem{corollary}{Следствие}[theorem]
 \newtheorem{lemma}[theorem]{Лема}
 
+\newtheorem{example}{Пример}[subsection]
+
 \newtheorem{definition}{Дефиниция}[subsection]
 
 \title{Математически анализ 2}
@@ -149,8 +151,8 @@ $$S(a;r) = \{ x | x \in R^m, \rho(x,a) = r \} = \{ x| x \in R^m, || x-a || = r \
 Точката а се нарича
 \begin{itemize}
 	\item вътрешна за множеството А, ако съществува отворено кълбо $B(a,\varepsilon): B(a,\varepsilon) \subset A$
-	\item външна за А, ако съществува $B(a,\varepsilon): B(a,\varepsilon) \subset R^m \backslash  A$
-	\item контурна за А, ако за всяко $\varepsilon > 0: B(a,\varepsilon) \cap A \neq \O $ и \\ $ B(a,\varepsilon) \cap (R^m \backslash  A) \neq \O$
+	\item външна за А, ако съществува $B(a,\varepsilon): B(a,\varepsilon) \subset R^m \setminus  A$
+	\item контурна за А, ако за всяко $\varepsilon > 0: B(a,\varepsilon) \cap A \neq \O $ и \\ $ B(a,\varepsilon) \cap (R^m \setminus  A) \neq \O$
 	\item изолирана ако съществува $\varepsilon > 0: B(a,\varepsilon) \cap A = \{ a \}$
 \end{itemize}
 	\end{definition}
@@ -159,7 +161,7 @@ $$S(a;r) = \{ x | x \in R^m, \rho(x,a) = r \} = \{ x| x \in R^m, || x-a || = r \
 Множеството $A \subset R^m $ се нарича 
 \begin{itemize}
 	\item отворено, ако всяка негова точка е вътрешна 
-	\item затворено, ако неговото допълнение  $R^m \backslash A$ е отворено
+	\item затворено, ако неговото допълнение  $R^m \setminus A$ е отворено
 \end{itemize}
 	\end{definition}
 
@@ -168,7 +170,7 @@ $$S(a;r) = \{ x | x \in R^m, \rho(x,a) = r \} = \{ x| x \in R^m, || x-a || = r \
 \end{definition}
 
 \begin{definition}
-Точка а се нарича точка на сгъстяване на множеството $A \subset R^m $, ако всяка нейна околност $U_a$ съдържа поне една точка на А, различна от а, т.е $U_a \cap (A\backslash \{ a \} \neq \O $
+Точка а се нарича точка на сгъстяване на множеството $A \subset R^m $, ако всяка нейна околност $U_a$ съдържа поне една точка на А, различна от а, т.е $U_a \cap (A\setminus \{ a \} \neq \O $
 \end{definition}
 
 \begin{definition}
@@ -267,7 +269,7 @@ $$f: D \rightarrow R$$\\
 	\end{definition}
 \subsection{Граница на функция на няколко променливи}
 	\begin{definition}[Коши]
-Нека $f: D \rightarrow R, a \in R^m$, а е точка на сгъстяване за D. Казва се че $f(x)$ има граница L при $x \rightarrow a$ със стойностти $x \neq a$ ако за всяко $\varepsilon > 0$ съществува $\delta > 0$, че за всяко x от множеството $D \backslash \{a\}$, за което $\rho(x;a) = || x - a || < \delta $ е изпълнено $|f(x) - L | < \varepsilon$. Записва се $$\lim_{x \rightarrow a} f(x) = L$$
+Нека $f: D \rightarrow R, a \in R^m$, а е точка на сгъстяване за D. Казва се че $f(x)$ има граница L при $x \rightarrow a$ със стойностти $x \neq a$ ако за всяко $\varepsilon > 0$ съществува $\delta > 0$, че за всяко x от множеството $D \setminus \{a\}$, за което $\rho(x;a) = || x - a || < \delta $ е изпълнено $|f(x) - L | < \varepsilon$. Записва се $$\lim\limits_{x \rightarrow a} f(x) = L$$
 	\end{definition}
 
 	\begin{definition}[Хайне]
@@ -279,30 +281,30 @@ $$f: D \rightarrow R$$\\
 	\end{theorem}
 
 	\begin{definition}
-Нека $f: D \rightarrow R, a \in R^m$, а е точка на сгъстяване за D. Казва се че $f(x)$ дивергира към $\infty$ (съответно към $-\infty$) при $x \rightarrow a$ със стойностти $x \neq a$, ако за всяко $A \in R$ съществува такова $\delta > 0$, че за всяко x от множеството $D \backslash \{a\}$, за което $\rho(x;a) = || x - a || < \delta $ е изпълнено $f(x) > A $( съответно $f(x) < A)$. Записва се
- $$\lim_{x \rightarrow a} f(x) = \infty (-\infty) $$ 
+Нека $f: D \rightarrow R, a \in R^m$, а е точка на сгъстяване за D. Казва се че $f(x)$ дивергира към $\infty$ (съответно към $-\infty$) при $x \rightarrow a$ със стойностти $x \neq a$, ако за всяко $A \in R$ съществува такова $\delta > 0$, че за всяко x от множеството $D \setminus \{a\}$, за което $\rho(x;a) = || x - a || < \delta $ е изпълнено $f(x) > A $( съответно $f(x) < A)$. Записва се
+ $$\lim\limits_{x \rightarrow a} f(x) = \infty (-\infty) $$ 
 	\end{definition}
 
 	\begin{definition}[Повторна граница]
-Нека $D \subset R^2, a = (a_1, a_2) \in R^2$ e точка на сгъстяване за D и функция $f: D \rightarrow R$. Нека съществува такава околност $U_{a_2} \subset R$ на точката $а_2$, че за всички стойностти $y \in U_{a_2} $ да съществува  $\lim_{x \rightarrow a_1} f(x,y) = \varphi (y)$. Ако освен това съществува $\lim_{y \rightarrow a_2} \varphi (y) = A$, А се нарича повторна граница и се означава както следва 
-$$A = A_{1,2} = \lim_{y \rightarrow a_2} (\lim_{x \rightarrow a_1} f(x,y) ) $$.\\
+Нека $D \subset R^2, a = (a_1, a_2) \in R^2$ e точка на сгъстяване за D и функция $f: D \rightarrow R$. Нека съществува такава околност $U_{a_2} \subset R$ на точката $а_2$, че за всички стойностти $y \in U_{a_2} $ да съществува  $\lim\limits_{x \rightarrow a_1} f(x,y) = \varphi (y)$. Ако освен това съществува $\lim\limits_{y \rightarrow a_2} \varphi (y) = A$, А се нарича повторна граница и се означава както следва 
+$$A = A_{1,2} =\lim\limits_{y \rightarrow a_2} (\lim\limits_{x \rightarrow a_1} f(x,y) ) $$.\\
 Аналогично се съвежда и другата повторна граница 
-$$ A_{2,1} = \lim_{x \rightarrow a_1} (\lim_{y \rightarrow a_2} f(x,y) ) $$
+$$ A_{2,1} = \lim\limits_{x \rightarrow a_1} (\lim\limits_{y \rightarrow a_2} f(x,y) ) $$
 	\end{definition}
 
 	\begin{theorem}
 Нека $D \subset R^2, a = (a_1, a_2) \in R^2$ e точка на сгъстяване за D и функция $f: D \rightarrow R$.  Нека
 	\begin{enumerate}
-		\item  Нека съществува такава околност $U_{a_2} \subset R$ на точката $а_2$, че за всички стойностти $y \in U_{a_2} $ да съществува  $\lim_{x \rightarrow a_1} f(x,y) = \varphi (y)$.
+		\item  Нека съществува такава околност $U_{a_2} \subset R$ на точката $а_2$, че за всички стойностти $y \in U_{a_2} $ да съществува  $\lim\limits_{x \rightarrow a_1} f(x,y) = \varphi (y)$.
 
-		\item Съществува границата $\lim_{(x, y) \rightarrow (a_1,a_2) } f(x,y) = L$.
+		\item Съществува границата $\lim\limits_{(x, y) \rightarrow (a_1,a_2) } f(x,y) = L$.
 	\end{enumerate}
-Тогава съществува граница  $\lim_{y \rightarrow a_2} \varphi (y)$ и освен това е в сила равенствотот  $\lim_{y \rightarrow a_2} \varphi (y) = L$
+Тогава съществува граница  $\lim\limits_{y \rightarrow a_2} \varphi (y)$ и освен това е в сила равенствотот  $\lim\limits_{y \rightarrow a_2} \varphi (y) = L$
 	\end{theorem}
 
 \subsection{Непрекъснатост на функция на няколко променливи}
 	\begin{definition}
-Казва се че функцията $f: D \rightarrow R$ е непрекъсната в точка $a \in D$ ако $\lim_{x \rightarrow a} f(x) = f(a)$.
+Казва се че функцията $f: D \rightarrow R$ е непрекъсната в точка $a \in D$ ако $\lim\limits_{x \rightarrow a} f(x) = f(a)$.
 	\end{definition}
 
 	\begin{definition}[непрекъснатост по Коши]
@@ -324,7 +326,7 @@ $$F(t) = f \circ x(t) = f(x(t)) = f(x_1(t), x_2(t), ... , x_m(t))$$
 
 \subsection{Равномерна непрекъснатост на функция на няколко променливи}
 	\begin{definition}
-Нека $A \subset R^m$ е отворено множество и $f: А \rightarrow R$. Функцията се нарича равномерно непрекъсната в A, ако за  всяко $\varepsilon > 0$ съществува $\delta = \delta(\epsilon)$, че за всеки две точки $x', x'' \in A$ за които разстоянието $\rho(x';x'') =|| x' - x'' || < \delta $, да следва, че $|f(x') - f(x'') | < \varepsilon$.
+Нека $A \subset R^m$ е отворено множество и $f: A \rightarrow R$. Функцията се нарича равномерно непрекъсната в A, ако за  всяко $\varepsilon > 0$ съществува $\delta = \delta(\epsilon)$, че за всеки две точки $x', x'' \in A$ за които разстоянието $\rho(x';x'') =|| x' - x'' || < \delta $, да следва, че $|f(x') - f(x'') | < \varepsilon$.
 	\end{definition}
 
 	\begin{theorem}[на Вайерщрас]
@@ -332,7 +334,7 @@ $$F(t) = f \circ x(t) = f(x(t)) = f(x_1(t), x_2(t), ... , x_m(t))$$
 	\begin{enumerate}
 		\item f е ограничена в К, т.е същестуват $m, M \in R$ такива че за всички $x \in K$ е изпълнено неравенството
 $m \leq f(x) \leq M$
-		\item f достифа най- малката и най- голямата си стойност в К, т.е съществуват точки $x^0, y^0 \in K$ , такива че
+		\item f достифа най малката и най-голямата си стойност в К, т.е съществуват точки $x^0, y^0 \in K$ , такива че
 $$f(x^0) = \inf _{x \in K}f(x) ; f(y^0) = \sup_{y \in K} f(x)$$
 	\end{enumerate}
 	\end{theorem}
@@ -342,8 +344,102 @@ $$f(x^0) = \inf _{x \in K}f(x) ; f(y^0) = \sup_{y \in K} f(x)$$
 	\end{theorem}
 
 \section{Лекция 3: Частни производни. Диференцируемост на функция на две и повече променливи }
+ 
+\subsection{Дефиниция на частна производна}
+Ще дефинираме елементи които ще се използват. 
+\begin{itemize}
+	\item $D \subset R^m$ -  отворено множество
+	\item $x^0 = (x_1 ^ 0, x_2 ^ 0, ... , x_m ^ 0)$ - точка, принадлежаща на D
+	\item $U_{x^0} \subset D$ - околност на $x^0$
+	\item $U_{x_i ^ 0} \subset D$ - oколност на $x_i ^ 0$ (i  = 1, 2, ..., m)
+	\item точката $(x_1 ^ 0, x_2 ^ 0, ..., x_{i-1}^0, x_i ^ 0, x_{i+1} ^i, ..., x_m ^ 0) \in U_{x^0}$, за всички стойности на $x_i \in U_{x_i ^ 0}$
+	\item $f$ и $g$ - функции, дефинирани съответно в $D$ и $U_{x_i ^ 0}$. т.е \\
+$f: D \rightarrow R , g: U_{x_i ^ 0} \rightarrow R$ и $g(x_i) = f(x_1 ^ 0, x_2 ^ 0, ..., x_{i-1}^0, x_i ^ 0, x_{i+1} ^i, ..., x_m ^ 0)$
+\end{itemize}
+ 
+\begin{definition}
+Производната, ако съществува на функцията $g$ в точката $x_i ^ 0$ се нарича частна производна на функцията f( по променлива  $x_i ^ 0$) в точката $x^0$. Използва се означението $\dfrac {\partial f(x^0)}{\partial x_i}$ или $f'_{x_i} (x^0)$. \\
+Частната производна на функцията $f$ отностно променливата $x_i$ е равна на границата на функцията $\varphi (h_i)  = \dfrac{g(x_i ^0 + h_i) - g(x_i ^ 0)}{h_i}$ при $h_i \rightarrow 0$ (ако съществува) т.е
+$$\lim_{h_i \rightarrow 0} \varphi (h_i) = \lim_{h_i \rightarrow 0} \dfrac{g(x_i ^0 + h_i) - g(x_i ^ 0)}{h_i} = \dfrac {\partial f(x^0)}{\partial x_i}$$
+\end{definition}
 
+\begin{example}
+$$f(x,y) = x^2 + 9xy^2$$
+$$f'_x (x,y) = (x^2)'_x+(9xy^2)'_x = 2x + 9y^2$$
+$$f'_y (x,y) = (x^2)'_y+(9xy^2)'_y = 0 + 9x.2.y = 18xy $$
+\end{example}
 
+\subsection{Частни производни от по-висок ред}
+
+\begin{definition}
+Частната производна на частната производна от $n-1$ ред, $n = 1, 2, ...$(aко съществува), се нарича частична производна от $n$-ти ред. Частните производни, получени при диференциране по различни променливи се наричат смесени производни, а получените при диференциране само по една и съща променлива се наричат чисти производни. 
+\end{definition}
+
+\begin{example}
+$f(x,y) = x^3\sin(6y) + x^2y^3 + 2222, f''_{x,y} = ?, f''_{y,x} = ?$
+	\begin{enumerate}
+	\item $f''_{x,y} = (f'_x(x,y))'_y$\\
+		\begin{enumerate}
+			\item$f'_x(x,y) =(x^3\sin(6y))'_x + (x^2y^3)'_x + (2222)'_x = 3x^2 \sin(6y) + 2xy^3 + 0 $
+			\item$f''_{x,y} = (3x^2 \sin(6y) + 2xy^3)'_y = (3x^2 \sin(6y))'_y + (2xy^3)'_y  =3x^2 \cos(6y).6 + 2.3xy^2 = 18x^2\cos(6y) + 6xy^2$
+		\end{enumerate}
+	\item $f''_{y,x} = (f'_y(x,y))'_x$
+		\begin{enumerate}
+			\item $f'_y (x,y) =(x^3\sin(6y))'_y + (x^2y^3)'_y + (2222)'_y = x^3 \cos(6y).6 + x^2.3y^2 + 0 = 6x^3 \cos(6y) + 3x^2y^2 $ 
+			\item $f''_{y,x} = (6x^3 \cos(6y) + 3x^2y^2)'_y = (6x^3 \cos(6y))_y + (3x^2y^2)'_y = 6.3.x^2 \cos(6y) + 3.2.xy^2 = 18x^2\cos(6y) + 6xy^2 $
+		\end{enumerate}
+	\end{enumerate}
+\end{example}
+
+\begin{theorem}[за равенство на смесени производни]
+Нека точката $(x_0, y_0) \in R^2$ и нека функцията $f$ е дефинирана в отвореното множество $U=U_{(x_0, y_0)} \subset R^2$, което е нейната област т.е $f: U \rightarrow R$. Нека освен това съществуват частните производни $f'_x, f'_y,f''_{x,y},f''_{y,x}$ за всички $(x, y)\in U$ и $f''_{x,y},f''_{y,x}$ са непрекъснати в точката $(x_0, y_0)$. Тогава е изпълнено равенството 
+$$f''_{x,y}(x_0, y_0) = f''_{y,x}(x_0, y_0)$$
+\end{theorem}
+\subsection{Диференцируемост на функция}
+Ще дефинираме елементи които ще се използват. 
+\begin{itemize}
+	\item $x^0 \in R^m$
+	\item $U \subset R^m$ - отворено множество, което е околност на $x^0$.Без ограничение на общността може да се счита че U e $\delta$-околност на $x^0$ т.е U е отворено кълбо $B(x^0;\delta)$ с център $x^0$ и радиус $\delta$
+	\item $f: U \rightarrow R$ - функция дефинирана в $U = B(x^0;\delta) $
+\end{itemize}
+
+\begin{definition}
+Функцията $f$ се нарича диференцируема в точка $x^0$ ако съществуват числа $A_1, A_2, ..., A_m$ и функция $\varepsilon (x^0, x - x^0)$, дефинирана за всички допустими стойности на $x \in U$ и $x - x^0 = (x_1 - x_1 ^0, x_2 - x_2 ^0,... x_m - x_m ^0)$, като при това 
+$$f(x) - f(x^0) = \sum_{k=1}^{m} A_k(x_k + x_k ^ 0) + \varepsilon (x^0, x - x^0) ||x - x^0||$$ 
+и $\lim\limits_{|| x - x^0|| \rightarrow 0}\varepsilon (x^0, x - x^0) = 0$
+\end{definition}
+
+\begin{definition}
+Функцията $f$ се нарича диференцируема в отвореното множество $U$, ако тя е диференцируема във всяка негова точка. 
+\end{definition}
+
+\begin{theorem}
+
+\end{theorem}
+
+\begin{definition}
+
+\end{definition}
+
+\begin{definition}
+
+\end{definition}
+
+\begin{theorem}
+
+\end{theorem}
+
+\begin{theorem}
+
+\end{theorem}
+
+\begin{definition}
+
+\end{definition}
+
+\begin{definition}
+
+\end{definition}
 
 
 
