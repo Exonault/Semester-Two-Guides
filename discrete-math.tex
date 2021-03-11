@@ -3,13 +3,11 @@
 \usepackage[utf8]{inputenc}
 \usepackage[bulgarian]{babel}
 \usepackage{amsmath}
+\usepackage{amssymb}
 \usepackage{booktabs}
 
-
 \newtheorem{example}{Пример}[subsection]
-
 \newtheorem{definition}{Дефиниция}[subsection]
-
 
 
 \title{Дискретна математика}
@@ -164,14 +162,171 @@
 	\item Комутативен закон : $p \land q \equiv q \land p | p \lor q \equiv q \lor p$
 	\item Асоциативен закон : $p \land (q \land r) \equiv (p \land q ) \land r | p \lor (q \lor r) \equiv (p \lor q ) \lor r$
 	\item Дистрибутивен закон : $p \land (q \lor r) \equiv (p \land q ) \lor (p \land r ) | p \lor (q \land r) \equiv (p \lor q ) \land (p \lor r )  $
-	\item Закони на де Морган : $\neg (p \land q) \equiv (\neg p) \lor (\neg q) | \neg (p \lor q) \equiv (\neg p) \land (\neg q) $
+	\item Закони на Де Морган : $\neg (p \land q) \equiv (\neg p) \lor (\neg q) | \neg (p \lor q) \equiv (\neg p) \land (\neg q) $
 	\item Закон за импликацията : $p \rightarrow q \equiv \neg p \lor q$
-	\item Закон за тривиалната тавтология:  $p \lor \neq p \equiv T | p \land \neq p \equiv F$
+	\item Закон за тривиалната тавтология:  $p \lor \neg p \equiv T | p \land \neg p \equiv F$
 	\item Закон за тривиалното опровержение : $(p \Leftrightarrow q) \equiv \neg (p \otimes q), \neg (p \Leftrightarrow q) \equiv (p \otimes q) $
-
 \end{itemize}
 
-\section{Лекция 2:}
+\subsection{Предикатни функции и предикати}
+
+\begin{definition}[Предикатна функция]
+Предикатна функция е твърдение, което съдържа една или повече променливи. \\
+Ако на дадена променлива е присвоена стойност, се казва, че е известна.\\
+Предикатна функция става съждение, ако всички нейни аргументи са известни. \\
+\end{definition}
+
+\begin{definition}[Предикат]
+Нека е дадена предикатна функция $Q(x,y,z)$.\\
+Свойството Q, с което се задава връзката между променливите x, y, z се нарича предикат.
+\end{definition}
+
+\subsection{Квантор}
+Нека P(x) е предикатна функция.
+
+\begin{definition}[Квантор за общност]
+За твърдения от вида: \\
+За \textbf{всяко} x, P(x) e истина/лъжа.\\
+се записва : \\
+$\forall x P(x)$ "за всяко х P(x)"\\
+Знака за общност е $\forall$.
+\end{definition}
+
+\begin{definition}[Квантор за съществуване]
+За твърдения от вида: \\
+Съществува \textbf{такова} x, \textbf{за което} P(x) e \textbf{истина/лъжа}.\\
+се записва : \\
+$\exists x P(x)$ "съществува х, такова че P(x) е истина/лъжа" или "Съществува поне едно x, за което P(x) е истина/лъжа"\\
+Знака за общност е $\exists$.
+\end{definition}
+
+\subsection{Закони на Де Морган за квантори}
+
+\begin{itemize}
+	\item $\neg (\forall P(x)) \equiv \exists x(\neg P(x))$
+	\item $\neg (\exists P(x)) \equiv \forall x(\neg P(x))$
+\end{itemize}
+
+\section{Лекция 2: Математически доказателства}
+
+\subsection{Теория на доказателствата}
+Теорията на доказателствата се използва за определяне на верността на дадени математически аргументи и за конструирането им. 
+
+\begin{definition}[Дедукция]
+Дедукция във философията означава извеждане на особеното и единичното от общото, както и схващане на единичния случай на базата на всеобщ закон. \\
+В кибернетиката означава извеждане на твърдения от други твърдения с помощта на логически заключения.
+\end{definition}
+
+\subsection{Терминология}
+
+\begin{definition}[Аксиома]
+Аксиомата е базово допускане, което не е необходимо да се доказва. 
+Аксиомите са твърдения, които са истина, или твърдения които се приемат за истинам но не могат да бъдат доказани. 
+\end{definition}
+
+\begin{definition}[Доказателство]
+Доказателството се използва, за да се докаже, че дадено твърдение е истина. То се състои от последователност от твърдения, които формират \textbf{аргумент}.
+\end{definition}
+
+\begin{definition}[Теорема]
+Теорема е твърдение, чиято истинност се доказва. \\
+Теоремата се състои от две части: условия(хипотези) и  извод(заключения). \\
+Коректното доказателство (по дедукция) се състои в това да се установи: 
+\begin{itemize}
+	\item Ако условията са изпълнени, то извода е истина.
+	\item Ако съждението "условия $\rightarrow$ извод" е тавология.
+\end{itemize}
+Често липват елементи на логическа връзка, която може да бъде запълнена с допълнителни условия и аксиоми и съждения, свързани помежду си посредством подходящи правила за изводи. 
+\end{definition}
+
+\begin{definition}[Лема]
+Лемата е проста теорема, което се използва като междинен резултат за доказване на друга теорема. 
+\end{definition}
+
+\begin{definition}[Слествие]
+Следствието е резултат, който директно следва от съответната теорема
+\end{definition}
+
+\begin{definition}[Допускане]
+Допускането е твърдение, чийто резултат е неизвестен. Веднъж доказано, то се превръща в теорема. 
+\end{definition}
+
+\subsection{Правила за извод}
+$\therefore$ - знак за следователно\\
+Всичко преди знака са хипотези. 
+\begin{itemize}
+	\item Събиране(Addition) \\ $p (q) \\ \therefore p\lor q$
+	\item Опростяване (Simplification) \\$p\land q \\ \therefore p(q)$
+	\item Конюнкция (Conjunction) \\$p \\ q\\ \therefore p\land q$
+	\item Закон за безразличие(Modus ponens) \\ $p \\ p \rightarrow q \\ \therefore q$
+	\item Моdus tollens \\$\neg q \\ p \rightarrow q \\ \therefore \neg p$
+	\item Хипотетичен силогизъм (Hypothetical syllogism) \\$ p \rightarrow q \\ q \rightarrow r \\ \therefore p \rightarrow r $
+	\item Дизюнктивен силогизъм \\ $p\lor q \\ \neg p \\ \therefore q$
+\end{itemize}
+
+\subsection{Аргументи}
+
+\begin{definition}[Аргумент]
+Аргументът се състои от една или няколко хипотези и заключение. \\
+Аргумент е валиден, ако всичките му хипотези са истина и заключението също е истина. \\
+Ако някоя от хипотезите е лъжа, дори валиден аргумент може да води до некоректно заключение. \\
+\\
+Доказателство: трябва да се докаже че твърдението "хипотези $\rightarrow$ заключение" е истина, като се използват правила за извод. 
+\end{definition}
+
+\begin{example}
+"Ако $101$ е кратно на $3$ , то $101^2$ се дели на $9$." \\
+Въпреки че аргументът е валиден, заключението е некоректно (невярно), защото едната от хипотезите(“$101$ е кратно на $3$”)е лъжа. \\
+Ако в аргумента $101$ се замести с $102$, ще се получи коректно заключение “$102^2$ е кратно на $9$”.
+\\ 
+Нека p: "101 e кратно на 3" и q: "$101^2$ е кратно на $9$". Toгава имаме следния случай
+\\
+$p
+\\ p \rightarrow q 
+\\ \therefore q$
+\\Обаче p е лъжа, следователно q е некоректно заключение. 
+\end{example}
+
+\subsection{Правила за извод при използване на квантори и предикати}
+
+\begin{itemize}
+	\item Универсалноследствие(Universal instantiation)
+\\
+$\forall x P(x) 
+\\
+\therefore P(c)$ ако $c \in U$
+	\item Универсално обобщение(Universal generalization)
+\\
+$ P(c)$ за някое $c \in U$ 
+\\
+$\therefore\forall x P(x)$
+
+	\item Частичноследствие(Existential instantiation)
+\\
+$\exists x P(x) 
+\\
+\therefore P(c)$ за някой елемент $c \in U$
+
+	\item Частично обобщение(Existential generalization)
+\\
+$P(c)$ за някой елемент $c \in U$
+\\
+$\therefore \exists x P(x)  $
+\end{itemize}
+
+\subsection{Доказателство на теореми}
+\begin{itemize}
+	\item Директно доказателство \\
+Импликацията "$p \rightarrow q$" може да бъде доказана чрез доказване на твърдението:\\
+ “Ако p е истина , то q също е истина.”
+	\item Индиректно доказателство \\
+Импликацията "$p \rightarrow q$" е еквивалентна на следния контра-пример "$\neg q \rightarrow \neg p$". Следователно, доказателството на изходната импликация "$p \rightarrow q$" се свежда до доказване на твърдението: “Ако q е лъжа, то и p също е лъжа.
+\end{itemize}
+
+\section{Лекция 3: Множества}
+
+
+
 
 
 
