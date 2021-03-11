@@ -8,7 +8,7 @@
 
 \newtheorem{example}{Пример}[subsection]
 \newtheorem{definition}{Дефиниция}[subsection]
-
+\newtheorem{axiom}{Аксиома}[subsection]
 
 \title{Дискретна математика}
 \author{Exonaut}
@@ -17,6 +17,7 @@
 \begin{document}
 \maketitle
 \pagenumbering{gobble}
+
 \newpage
 \pagenumbering{arabic}
 
@@ -323,34 +324,203 @@ $\therefore \exists x P(x)  $
 Импликацията "$p \rightarrow q$" е еквивалентна на следния контра-пример "$\neg q \rightarrow \neg p$". Следователно, доказателството на изходната импликация "$p \rightarrow q$" се свежда до доказване на твърдението: “Ако q е лъжа, то и p също е лъжа.
 \end{itemize}
 
-\section{Лекция 3: Множества}
+\section{Лекция 3: Теория на множества}
 
+\subsection{Парадокс на Ръсел}
+Някои множества (класове) съдържат себе си а други не.\\
+Ръсел нарича множествата класове.\\
+Класът от всички класове е клас, който се съдържа (принадлежи)на себе си. Празният клас не принадлежи на себе си. Да допуснем, че може да създадем клас от всички класове, като празния например, които не съдържат себе си.\\
+Парадоксът възниква при въпроса, дали този клас принадлежи на себе си. \\
+Множеството от всички множества, които не съдържат себе си !? \\
+$M = \{ A | A \notin A \}$\\
+\begin{itemize}
+	\item Множество – първично понятие
+	\item Принадлежност на елемент към множеството – първично понятие \\
+$x\in A \rightarrow$ Елементът x принадлежи на A.
+	\item Свойство – понятие от логиката и се приема за първично. \\
+P – свойство. Ако даден предмет x го притежава се записва P(x)
+\end{itemize}
 
+\begin{definition}[Множества]
+Множества се дефинират като се изброяват елементите му 
+$$A = \{ a_1, a_2, ..., a_n\}$$
+за безкрайни множества е по - удобно като се използва свойство за принадлежност 
+$$R = \{x | P(x) \} $$
+\end{definition}
 
+\begin{axiom}
+Ако го има свойството P, то съществува множеството на всички обекти, които имат това свойство P.
+\end{axiom}
 
+\begin{axiom}
+Две множества са равни, ако съдържат еднакви елементи.
+\end{axiom}
 
+\begin{definition}[Нормално множество]
+Нормално множество е множество, което не принадлежи на себе си $A \notin A$
+\end{definition}
 
+\subsection{Множества}
+\begin{itemize}
+	\item Множество е неподредена съвокупност от нула или повече различни обекти (наречени елементи). 
+ 	\item $a \in A$ - "а е елемент на множеството А" 
+	\item $a \notin A$ - "а не е елемент на А"
+	\item $A = \{ a_1, a_2, ..., a_n\}$ - "A се състои от $a_1, a_2, ..., a_n$"
+	\item Подреждането на елементите не е от значение.
+	\item Няма значение ако някой елемент се повтаря. 
+\end{itemize}
 
+\begin{example}
 
+\begin{itemize}
+	\item $A = \varnothing$ - празно множество 
+	\item $A = \{z\}, z \in A, z \neq \{z\}$
+	\item $A =\{ \{b,c \}, \{c, x, d \} \}$ - множество от множества 
+	\item $A = \{\{ x, y \}\}, \{x,y\} \in A, \{x,y\} \neq \{\{x,y\}\}$
+	\item $A = \{x | P(x) \}$
+\end{itemize}
 
+\end{example}
 
+\subsubsection{Равенство на множества}
 
+\begin{definition}
+Множествата A и B са равни тогава и само тогава, когато съдържат едни и същи елементи.
+\end{definition}
 
+\begin{example}
+$A = \{9, 2, 7, 3\}, B = {7, 9, -3, 2} : A = B$\\
+$A$= $\{$куче, котка, кон$\}$, $B$ =$\{$котка, кон, катерица, куче$\}$ : $A\neq B$ \\
+$A$ = $\{$куче, котка, кон$\}$, $B$ = $\{$котка, кон, куче, куче$\}$  : $A = B$
+\end{example}
 
+\subsubsection{Подмножества}
+$A \subseteq B$ - "A e подмножество на B"\\
+$A \subseteq B$ тогава и само тогава, когато всеки елемент на А е и елемент на В\\
+Формален запис:
+$$A \subseteq B \Leftrightarrow \forall x (x \in A \rightarrow x \in B )$$
+\\
+Правила
+\begin{itemize}
+	\item $A = B \Leftrightarrow (A \subseteq B) \land (B \subseteq A)$
+	\item $((A \subseteq B)) \land (B \subseteq C)) \Rightarrow (A \subseteq C) $
+	\item $\varnothing \subseteq A$ за всяко множество А (но $\varnothing \in A$ не е вярно за всяко множество А)
+	\item $А \subseteq A$ за всяко множество А
+\end{itemize}
 
+\subsubsection{Собствени подмножества}
+$A \subset B$ - "A е собствено подмножество на B"\\
+$A \subseteq B$ и $A \neq B$\\
+Формален запис:
+$$A \subset B \Leftrightarrow \forall x (x \in A \rightarrow x \in B ) \land \exists x (x \in B \land x \notin A)$$
+или
+$$A \subset B \Leftrightarrow \forall x (x \in A \rightarrow x \in B ) \land \neg \forall x (x \in B \rightarrow x \in A)$$
 
+\subsubsection{Число на кардиналност, мощност(брой елементи)  на множество}
+Ако множеството S съдържа n различни елемента, $n \in N$, Множеството S е крайно множество с кардиналност (мощност) n.\\
+Мощност: $|P(A)| = 2^{|A|}$ 
+\begin{example}
+$A = \{Mercedes, BMW, Porsche\}, |A| = 3 $\\
+$B = \{1, \{2, 3\}, \{4, 5\}, 6\}, |B| = 4 $\\
+$C = \varnothing, |C| = 0 $ \\
+$D = \{x \in N | x \leq 7000\}, |D| = 7001$\\
+$E = \{x \in N | x \geq 7000\}, |E| = \infty$\\
+\end{example}
 
+\subsubsection{Множество от всички подмножества на дадено множество}
+$P(A)$ "множеството от всички подмножества на A" (записва се като $2^A$)\\
+$P(A) = \{B | B\subseteq A \}$
 
+\subsubsection{Декартово произведение}
+\begin{definition}[Декартово произведение ]
+Декартово произведение на две множества А и В е ново множество $A \times B$, което се дефинира като
+$$A \times B = \{(a,b) | a\in A \land b \in B \}$$
+т.е декартовото произведение е множество от наредени двойки. 
+\end{definition}
 
+\begin{example}
+$A = \{x, y\}, B = \{a, b, c\}$\\
+$A \times B = \{(x, a), (x, b), (x, c), (y, a), (y, b), (y, c)\}$
+\end{example}
+ 
+\begin{itemize}
+	\item $A \times \varnothing = \varnothing$
+	\item $\varnothing \times A = \varnothing$
+	\item За непразни множества A иB : $A\neq B \Leftrightarrow A \times B \neq B \times A$
+	\item $|A \times B| = |A|\cdot |B|$
+\end{itemize}
 
+\subsection {Oперации на множества} 
+ 
+\subsubsection{Обединение}
+$A \cup B = \{x | x\in A \land x \in B\}$
+\begin{example}
+$A = \{a, b\}, B = \{b, c, d\}$\\
+$A \cup B = \{a, b, c, d\}$
+\end{example}
 
+\subsubsection{Сечение}
+$A \cap B = \{x | x\in A \lor x \in B\}$\\
+Несвързани множества: Нямат общи елементи , $A \cap B = \varnothing$
 
+\begin{example}
+$A = \{a, b\}, B = \{b, c, d\}$\\
+$A \cap B = \{b\}$
+\end{example}
 
+\subsubsection{Разлика}
 
+$A \setminus B = \{x | x \in A \land x \notin B \}$
+\begin{example}
+$A = \{a, b\}, B = \{b, c, d\}$\\
+$A \setminus B = \{a\}$
+\end{example}
 
+\subsubsection{Допълнение}
+$A^c \equiv  \overline{A} = U - A$\\ 
+U - универсално множество. 
 
+\begin{example}
+$U = N$\\
+$B = \{250, 251, 252, ...\}$\\
+$\overline{B} = \{0, 1, 2, ..., 248, 249\}$
+\end{example}
 
+\subsection{Идентичност на законите за логическо преобразуване и законите за операции с множества}
 
+\begin{itemize}
+	\item Закон за идентичност : \\
+$A \cup \varnothing = A \\
+ A \cap U = A$
+	\item Закон за доминиране :  \\
+$A \cup U = A \\
+ A \cap \varnothing = A$
+	\item Закон за пълна идентичност : \\
+$A \cup A = A \\
+ A \cap A = A$
+	\item Закон за двойно отрицание : \\
+$\overline{\overline{A}} \equiv (A^c)^c  = A$
+	\item Комутативен закон :\\ 
+$A \cup B = B \cup A \\ 
+A \cap B = B \cap A $
+	\item Асоциативен закон :\\ 
+$A \cup (B \cup C) = (A \cup B) \cup C \\ 
+A \cap (B \cap C) = (A \cap B) \cap C $
+	\item Дистрибутивен закон : \\
+$A \cup (B \cap C) = (A \cup B) \cap (A \cup C) \\
+ A \cap (B \cup C) = (A \cap B) \cup (A \cap C) $
+	\item Закони на Де Морган : \\
+$\overline{A \cup B} = \overline{A} \cap \overline{B} \\
+\overline{A \cap B} = \overline{A} \cup \overline{B}$
+	\item Закон за поглъщането : \\
+$A \cup (A \cap B) = A \\
+ A \cap (A \cup B) = A $
+	\item Закон за допълнението: \\
+$A \cup \overline{A} = U \\
+ A \cap \overline{A} = \varnothing $  
+\end{itemize}
+ 
+\section{Лекция 4: Релации}
 
 
 
