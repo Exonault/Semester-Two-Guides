@@ -3,6 +3,9 @@
 \usepackage[utf8]{inputenc}
 \usepackage[bulgarian]{babel}
 \usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{booktabs}
+
 
 \newtheorem{theorem}{Tеорема}[subsection]
 \newtheorem{corollary}{Следствие}[theorem]
@@ -25,9 +28,9 @@
 \tableofcontents
 \newpage
 
-\section{Лекция 1: Пространството $R^m$}
+\section{Лекция 1: Пространството $\mathbb{R}^m$}
 \subsection{Няколко важни неравенства}
-Нека $a_k $ и $b_k (k = 1, 2, ..., m) $ са реални числа и $m \in N$
+Нека $a_k $ и $b_k (k = 1, 2, ..., m) $ са реални числа и $m \in \mathbb{N}$
 \begin{theorem}[Неравенство на Коши-Шварц]
 В сила е следното неравенство: \\
 $$\left( \sum_{k=1}^{m}a_kb_k \right ) ^ 2   \leq  \left( \sum_{k=1}^{m}a_k \right)  \left( \sum_{k=1}^{m}b_k  \right) $$
@@ -57,7 +60,7 @@ $$ |a_k + b_k|  \leq \sqrt{ \sum_{k=1}^{m} (a_k + b_k)^2} \leq   \sum_{k=1}^{m}|
 Нека L е линейно(векторно) пространство над полето $R$. В него има въведени две операции: събиране и умножение на вектор с число.
 		\begin{enumerate}
  			\item $x,y \in L \implies z = x+ y \in L $
-			\item $x \in L, \lambda \in R \implies z = \lambda x \in L$
+			\item $x \in L, \lambda \in \mathbb{R} \implies z = \lambda x \in L$
 		\end{enumerate}
 \end{definition}
 
@@ -65,7 +68,7 @@ $$ |a_k + b_k|  \leq \sqrt{ \sum_{k=1}^{m} (a_k + b_k)^2} \leq   \sum_{k=1}^{m}|
 \begin{definition}
 Крайномерното пространство L се нарича евклидово, ако в него е въведено скаларно произведение, т.е за всеки два елемента $x,y \in L$ може да се съпостави реално число $(x,y)$, удовлетворяващо свойствата за линейност, симетричност и положителна определеност.
 	\begin{enumerate}
- 		\item $x,y,z \in L ,\lambda \in R \implies (x+y,z) = (x,z) + (y,z); (\lambda x,y) = \lambda(x,y)$
+ 		\item $x,y,z \in L ,\lambda \in \mathbb{R} \implies (x+y,z) = (x,z) + (y,z); (\lambda x,y) = \lambda(x,y)$
 		\item $x,y \in L \implies (x,y) = (y,x)$
 		\item $x \in L, x\neq 0 \implies (x,x) > 0 $
 	\end{enumerate}
@@ -84,26 +87,26 @@ $$ |a_k + b_k|  \leq \sqrt{ \sum_{k=1}^{m} (a_k + b_k)^2} \leq   \sum_{k=1}^{m}|
 
 \subsubsection{Нормирано пространство}
 \begin{definition}
-Пространството се нарича нормирано, ако в него е въведена норма $||.||$, т.е $||.||: L \rightarrow R_0^+$ със свойства 
+Пространството се нарича нормирано, ако в него е въведена норма $\Vert. \Vert$, т.е $\Vert.\Vert: L \rightarrow \mathbb{R}_0^+$ със свойства 
 	\begin{enumerate}
- 		\item $x = 0  \implies ||x|| = 0, x \neq 0  \implies ||x|| > 0$
-		\item $x \in L, \lambda \in R \implies ||\lambda x|| = |\lambda|  ||x||$
-		\item $x,y \in L \implies ||x+y|| \leq |x| + |y|$
+ 		\item $x = 0  \implies \Vert x \Vert = 0, x \neq 0  \implies \Vert x\Vert > 0$
+		\item $x \in L, \lambda \in \mathbb{R} \implies \Vert \lambda x \Vert = |\lambda|  \Vert x \Vert$
+		\item $x,y \in L \implies \Vert x+y\Vert \leq |x| + |y|$
 	\end{enumerate}
 \end{definition}
 \begin{theorem}
-Ако L е нормирано пространство с дадена норма $|| . ||$, то L е метрично пространство, т.е равенството $\rho(x,y) = ||x - y||$ дефинира  разстоянието в L
+Ако L е нормирано пространство с дадена норма $\Vert . \Vert$, то L е метрично пространство, т.е равенството $\rho(x,y) = \Vert x - y \Vert$ дефинира  разстоянието в L
 \end{theorem}
 
-\subsection{Пространството $R^m$ - дефиниция и основни свойства}
+\subsection{Пространството $\mathbb{R}^m$ - дефиниция и основни свойства}
 
 \begin{definition}
 Множеството от наредени m-торки $a = (a_1, a_2, ... , a_m)$ от реални числа. Числата $a_1, a_2, ... , a_m$ се наричат съответно първа, втора, ..., m-та кордината на а.\\
 \\
- Ако имаме $a = (a_1, a_2, ... , a_m), b = (b_1, b_2, ... , b_m), ; \lambda \in R $ то
+ Ако имаме $a = (a_1, a_2, ... , a_m), b = (b_1, b_2, ... , b_m), ; \lambda \in \mathbb{R} $ то
 	\begin{enumerate}
-		\item $a+b =(a_1, a_2, ... , a_m) +  (b_1, b_2, ... , b_m) = (a_1 + b_1, a_2+b_2, ... , a_m + b_m) \in R^m$
-		\item $ \lambda a =(\lambda a_1,\lambda a_2, ... , \lambda a_m) \in R^m $\\
+		\item $a+b =(a_1, a_2, ... , a_m) +  (b_1, b_2, ... , b_m) = (a_1 + b_1, a_2+b_2, ... , a_m + b_m) \in \mathbb{R}^m$
+		\item $ \lambda a =(\lambda a_1,\lambda a_2, ... , \lambda a_m) \in \mathbb{R}^m $\\
 	\end{enumerate}
 \end{definition}
 \subsubsection{Скаларно произведение}
@@ -111,99 +114,103 @@ $$ |a_k + b_k|  \leq \sqrt{ \sum_{k=1}^{m} (a_k + b_k)^2} \leq   \sum_{k=1}^{m}|
 С така въведено скаларно произведение пространството $R^m$ се превръща в евклидово.
 \subsubsection{Норма и метрика}
 С равенството:
-$$||a|| := \sqrt{ \sum_{k=1}^{m}(a_k)^2  }$$ \\
-се въвежда норма в $R^m$.
+$$\Vert a\Vert := \sqrt{ \sum_{k=1}^{m}(a_k)^2  }$$ \\
+се въвежда норма в $\mathbb{R}^m$.
 \\
- Нормата генерира метрика в $R^m$ с формула: 
-$$\rho(a,b) := ||a-b|| = \sqrt{ \sum_{k=1}^{m} (a_k - b_k)^2} $$
+ Нормата генерира метрика в $\mathbb{R}^m$ с формула: 
+$$\rho(a,b) := \Vert a-b\Vert = \sqrt{ \sum_{k=1}^{m} (a_k - b_k)^2} $$
+
 \subsubsection{Скаларен квадрат}
 Скаларен квадрат: $a^2 = (a,a) = \sum _{k=1}^{m}a_k^2$
+
 \subsubsection{Неравенство на Коши-Шварц, чрез скаларен квадрат}
-Коши-Шварц чрез скаларен квадрат: $(a,b)^2 \leq a^2b^2$ и $|(a,b)|\leq ||a|| ||b||$
+Коши-Шварц чрез скаларен квадрат: $(a,b)^2 \leq a^2b^2$ и $|(a,b)|\leq \Vert a \Vert \Vert b \Vert$
+
 \subsubsection{Неравенство на Минковски, чрез скаларен квадрат}
-Неравенство на Минковски чрез скаларен квадрат: $||a+b||\leq ||a|| + ||b||$
-\subsection{Точки и множества в $R^m$}
+Неравенство на Минковски чрез скаларен квадрат: $\Vert a+b \Vert\leq \Vert a \Vert + \Vert b \Vert$
+
+\subsection{Точки и множества в $\mathbb{R}^m$}
 
 \subsubsection{Паралелепипед}
 	\begin{definition}
 Множеството\\
-$$\Pi (a; \delta_1, \delta_2, ... ,\delta_m) = \{ x \in R^m: -\delta_k < x_k -a_k < \delta_k   \}$$
-се нарича отворен паралелепипед в $R^m$ с център точката а.\\
+$$\Pi (a; \delta_1, \delta_2, ... ,\delta_m) = \{ x \in \mathbb{R}^m: -\delta_k < x_k -a_k < \delta_k   \}$$
+се нарича отворен паралелепипед в $\mathbb{R}^m$ с център точката а.\\
 \\
 Множеството\\
-$$\widetilde\Pi (a; \delta_1, \delta_2, ... ,\delta_m) = \{ x \in R^m: -\delta_k \leq x_k -a_k \leq \delta_k   \}$$
+$$\widetilde\Pi (a; \delta_1, \delta_2, ... ,\delta_m) = \{ x \in\mathbb{R}^m: -\delta_k \leq x_k -a_k \leq \delta_k   \}$$
 се нарича затворен паралелепипед в $R^m$ с център точката а.\\
 \\
-Ако $\delta_1 = \delta_2 = ... = \delta_m = \delta$, получените множества $\Pi (a; \delta)$ и $\widetilde\Pi (a; \delta)$ се  наричат съответно отворен и затворен куб в $R^m$ с център а.
+Ако $\delta_1 = \delta_2 = ... = \delta_m = \delta$, получените множества $\Pi (a; \delta)$ и $\widetilde\Pi (a; \delta)$ се  наричат съответно отворен и затворен куб в $\mathbb{R}^m$ с център а.
  	\end{definition}
 \subsubsection{Сфера и кълбо}
 	\begin{definition}
 Нека числото r > 0. Множеството \\
-$$B(a;r) = \{ x | x \in R^m, \rho(x,a) <r \} = \{ x| x \in R^m, || x-a || < r \}$$\\
-се нарича отворено кълбо в $R^m$ с център a и радиус r, множеството \\
-$$\widetilde B(a;r) = \{ x | x \in R^m, \rho(x,a) \leq r \} = \{ x| x \in R^m, || x-a || \leq r \}$$\\
-се нарича затворено кълбо в $R^m$ с център a и радиус r, а множеството \\
-$$S(a;r) = \{ x | x \in R^m, \rho(x,a) = r \} = \{ x| x \in R^m, || x-a || = r \}$$\\
-се нарича сфера в $R^m$ с център a и радиус r, а множеството \\
+$$B(a;r) = \{ x | x \in \mathbb{R}^m, \rho(x,a) <r \} = \{ x| x \in \mathbb{R}^m, \Vert x-a \Vert < r \}$$\\
+се нарича отворено кълбо в $\mathbb{R}^m$ с център a и радиус r, множеството \\
+$$\widetilde B(a;r) = \{ x | x \in \mathbb{R}^m, \rho(x,a) \leq r \} = \{ x| x \in \mathbb{R}^m, \Vert x-a \Vert \leq r \}$$\\
+се нарича затворено кълбо в $\mathbb{R}^m$ с център a и радиус r, а множеството \\
+$$S(a;r) = \{ x | x \in \mathbb{R}^m, \rho(x,a) = r \} = \{ x| x \in \mathbb{R}^m, \Vert x-a \Vert = r \}$$\\
+се нарича сфера в $\mathbb{R}^m$ с център a и радиус r, а множеството \\
 	\end{definition}
 
 	\begin{definition}
 Точката а се нарича
 \begin{itemize}
 	\item вътрешна за множеството А, ако съществува отворено кълбо $B(a,\varepsilon): B(a,\varepsilon) \subset A$
-	\item външна за А, ако съществува $B(a,\varepsilon): B(a,\varepsilon) \subset R^m \setminus  A$
-	\item контурна за А, ако за всяко $\varepsilon > 0: B(a,\varepsilon) \cap A \neq \O $ и \\ $ B(a,\varepsilon) \cap (R^m \setminus  A) \neq \O$
+	\item външна за А, ако съществува $B(a,\varepsilon): B(a,\varepsilon) \subset \mathbb{R}^m \setminus  A$
+	\item контурна за А, ако за всяко $\varepsilon > 0: B(a,\varepsilon) \cap A \neq \O $ и \\ $ B(a,\varepsilon) \cap (\mathbb{R}^m \setminus  A) \neq \O$
 	\item изолирана ако съществува $\varepsilon > 0: B(a,\varepsilon) \cap A = \{ a \}$
 \end{itemize}
 	\end{definition}
 
 \begin{definition}
-Множеството $A \subset R^m $ се нарича 
+Множеството $A \subset \mathbb{R}^m $ се нарича 
 \begin{itemize}
 	\item отворено, ако всяка негова точка е вътрешна 
-	\item затворено, ако неговото допълнение  $R^m \setminus A$ е отворено
+	\item затворено, ако неговото допълнение  $\mathbb{R}^m \setminus A$ е отворено
 \end{itemize}
 	\end{definition}
 
 \begin{definition}
-Околност на дадена точка $a \in R^m $ се нарича всяко отворено множество, което я съдържа. Означава се с $U_a$.
+Околност на дадена точка $a \in \mathbb{R}^m $ се нарича всяко отворено множество, което я съдържа. Означава се с $U_a$.
 \end{definition}
 
 \begin{definition}
-Точка а се нарича точка на сгъстяване на множеството $A \subset R^m $, ако всяка нейна околност $U_a$ съдържа поне една точка на А, различна от а, т.е $U_a \cap (A\setminus \{ a \} \neq \O $
+Точка а се нарича точка на сгъстяване на множеството $A \subset \mathbb{R}^m $, ако всяка нейна околност $U_a$ съдържа поне една точка на А, различна от а, т.е $U_a \cap (A\setminus \{ a \} \neq \O $
 \end{definition}
 
 \begin{definition}
 Величината \\
 $$d = d(A) = \sup_{a',a'' \in A} \rho(a';a'')$$\\
-се нарича диаметър на множеството  $A \subset R^m $.
+се нарича диаметър на множеството  $A \subset \mathbb{R}^m $.
 \end{definition}
 
 \begin{definition}
-Множеството  $A \subset R^m $ се нарича ограничено, ако съшествува кълбо(с краен радиус), което го съдържа.
+Множеството  $A \subset \mathbb{R}^m $ се нарича ограничено, ако съшествува кълбо(с краен радиус), което го съдържа.
 \end{definition}
 
 \begin{definition}
-Множеството  $A \subset R^m $ се нарича компактно, ако А е затворено и ограничено.
+Множеството  $A \subset \mathbb{R}^m $ се нарича компактно, ако А е затворено и ограничено.
 \end{definition}
 
 \begin{definition}
-Множеството   $x = (x_1, x_2, ... , x_m) \in R^m$, чийто кординати са непрекъснати функции $x_k = x_k(t) (k = 1, 2, ..., m)$, дефинирани върху даден интервал [a,b] се нарича непрекъсната крива в $R^m$. t се нарича параметър на кривата.\\
+Множеството   $x = (x_1, x_2, ... , x_m) \in \mathbb{R}^m $, чийто кординати са непрекъснати функции $x_k = x_k(t) (k = 1, 2, ..., m)$, дефинирани върху даден интервал [a,b] се нарича непрекъсната крива в $R^m$. t се нарича параметър на кривата.\\
 Точките $x(a) = (x_1(a), x_2(a), ... , x_m(a))$ и $x(b) = (x_1(b), x_2(b), ... , x_m(b))$ се наричат начало и край на дадената крива. Ако $x(a) = x(b)$ кривата е затворена
 \end{definition}
 
 \begin{definition}
-Нека $x^0 = (x_1^0, x_2^0, ... , x_m^0) \in R^m$ и $\alpha_1, \alpha_2, ... , \alpha_m$ са фиксирани числа за които $\sum_{k=1}^{m}\alpha_k > 0$. Множеството от точки $x = (x_1, x_2, ... , x_m)$ чиито кординати се представят във вида \\
+Нека $x^0 = (x_1^0, x_2^0, ... , x_m^0) \in \mathbb{R}^m$ и $\alpha_1, \alpha_2, ... , \alpha_m$ са фиксирани числа за които $\sum_{k=1}^{m}\alpha_k > 0$. Множеството от точки $x = (x_1, x_2, ... , x_m)$ чиито кординати се представят във вида \\
 $$x_k = x_k^0 + \alpha_kt, k = 1, 2, ..., m , -\infty < t <\infty $$\\
 се нарича права линия в пространството $R^m$, минаваща през точка $x^0$ по направление $(\alpha_1, \alpha_2, ... , \alpha_m).$
 \end{definition}
 
 \begin{definition}
-Множеството  $A \subset R^m $ се нарича свързано,  ако за всеки две негови точки съществува непрекъсната крива $\gamma$, която ги свързва и $\gamma \subset A$.
+Множеството  $A \subset \mathbb{R}^m $ се нарича свързано,  ако за всеки две негови точки съществува непрекъсната крива $\gamma$, която ги свързва и $\gamma \subset A$.
 \end{definition}
 
 \begin{definition}
-Множеството  $A \subset R^m $ се нарича област, ако е отворено и свързано. Ако е и затворено, то се нарича затворена област. 
+Множеството  $A \subset \mathbb{R}^m $ се нарича област, ако е отворено и свързано. Ако е и затворено, то се нарича затворена област. 
 \end{definition}
 
 \begin{definition}
@@ -211,13 +218,13 @@ $$x_k = x_k^0 + \alpha_kt, k = 1, 2, ..., m , -\infty < t <\infty $$\\
 \end{definition}
 
 \begin{definition}
-Областа $A \subset R^m $ се нарича звездообразна област, отностно точката $x^0 \in A$, ако за вскяка точка $x \in A$ отсечката $[x^0,x]$ лежи изцяло в А. 
+Областа $A \subset \mathbb{R}^m $ се нарича звездообразна област, отностно точката $x^0 \in A$, ако за вскяка точка $x \in A$ отсечката $[x^0,x]$ лежи изцяло в А. 
 \end{definition}
 
-\subsection{Редици от точки в $R^m$}
+\subsection{Редици от точки в $\mathbb{R}^m$}
 
 \begin{definition}
-Редицата $\{ x^{(n)} \}_{n = 1} ^ \infty = \{x_1 ^{(n)}, x_2 ^{(n)}, ... , x_m^{(n)}\} $ се нарича редица от точки в $R^m$, а редицата $\{ x_k ^{(n)}\}_{n=1} ^ \infty ( k = 1 \div m) $ - к-та кординатна редица. За по кратко редицата $\{ x^{(n)} \}_{n = 1} ^ \infty$ се означава $\{ x^{(n)} \}$
+Редицата $\{ x^{(n)} \}_{n = 1} ^ \infty = \{x_1 ^{(n)}, x_2 ^{(n)}, ... , x_m^{(n)}\} $ се нарича редица от точки в $\mathbb{R}^m$, а редицата $\{ x_k ^{(n)}\}_{n=1} ^ \infty ( k = 1 \div m) $ - к-та кординатна редица. За по кратко редицата $\{ x^{(n)} \}_{n = 1} ^ \infty$ се означава $\{ x^{(n)} \}$
 \end{definition}
 
 \begin{definition}
@@ -227,7 +234,7 @@ $\{ x^{(n_l)} \}, l = 1, 2, ..., $ или $\{ x^{(n_l)} \}_{l = 1} ^ \infty$\\
 \end{definition}
 
 \begin{definition}
-Редицата $\{ x^{(n)} \}$ се нарича сходяща към точка $a \in R^m$ (граница на редицата), ако за всяко $\varepsilon > 0$ съществува такова $N_0 > 0$, че за всяко $n > N_0$ е изпълено неравенството $\rho(x^{(n)};a) = ||x^{(n)} - a|| < \varepsilon$. Ако редицата няма граница, се нарича разходяща. 
+Редицата $\{ x^{(n)} \}$ се нарича сходяща към точка $a \in \mathbb{R}^m$ (граница на редицата), ако за всяко $\varepsilon > 0$ съществува такова $N_0 > 0$, че за всяко $n > N_0$ е изпълено неравенството $\rho(x^{(n)};a) = \Vert x^{(n)} - a \Vert < \varepsilon$. Ако редицата няма граница, се нарича разходяща. 
 \end{definition}
 
 
@@ -236,13 +243,13 @@ $\{ x^{(n_l)} \}, l = 1, 2, ..., $ или $\{ x^{(n_l)} \}_{l = 1} ^ \infty$\\
 \end{definition}
 
 \begin{theorem}
-Нека $x^{(n)} \in R^m$ за $n \in N$ и точката $a \in R^m$. Тогава 
+Нека $x^{(n)} \in \mathbb{R}^m$ за $n \in \mathbb{N} $ и точката $a \in \mathbb{R}^m$. Тогава 
 $$(\{x^{(n)}\} \to a )\iff (x_k ^{(n)} \to a_k, k = 1 \div m)$$\\
 T.e редицата има граница точката а, тогава и само тогава когато всяка от кординатите на редици $\{x_k^{(n)}\}$ има граница съответната кордината $a_k$ на точката а
 \end{theorem}
 
 \begin{theorem}[Критерий на Коши]
-Нека $x^{(n)} \in R^m$ за $n \in N$. Редицата $x^{(n)}$ е сходяща тогава и само тогава когато за всяко $\varepsilon > 0$ съществува такова число $N_0 > 0$, че при всяко $n \in N, n > N_0$ и всяко $p \in N$ е изпълено $\rho(x^{(n+p)}, x^{(n)}) = ||x^{(n+p)} - x^{(n)} || < \varepsilon$
+Нека $x^{(n)} \in \mathbb{R}^m$ за $n \in \mathbb{N} $. Редицата $x^{(n)}$ е сходяща тогава и само тогава когато за всяко $\varepsilon > 0$ съществува такова число $N_0 > 0$, че при всяко $n \in N, n > N_0$ и всяко $p \in \mathbb{N}$ е изпълено $\rho(x^{(n+p)}, x^{(n)}) = \Vert x^{(n+p)} - x^{(n)} \Vert < \varepsilon$
 \end{theorem}
 
 \begin{definition}
@@ -256,24 +263,24 @@ T.e редицата има граница точката а, тогава и с
 
 
 \begin{definition}
-Всяко множество $A \subset R^m $ се нарича компактно, ако от всяка редица $\{x^{(n)}\}, x^{(n)} \in A$, може да се избере сходяща подредица $\{x_k ^{(n)}\}$ с граница принадлежаща на А
+Всяко множество $A \subset \mathbb{R}^m $ се нарича компактно, ако от всяка редица $\{x^{(n)}\}, x^{(n)} \in A$, може да се избере сходяща подредица $\{x_k ^{(n)}\}$ с граница принадлежаща на А
 \end{definition}
 
 \section{Лекция 2: Функция на няколко променливи. Граница и непрекъснатост}
 
 \subsection{Дефниция на функция на няколко променливи}
 	\begin{definition}
-Казва се че дадена функция с дефиниционна област(дефиниционно множество) D, ако на всяка точка $x = (x_1, x_2, ... , x_m)$ от множеството D е съпоставено реално число $f(x) = f(x_1, x_2, ... , x_m)$, т.е на всяко $x \in D$ съществува единствено число $y = f(x) \in R$. Понякога за кратко се записва. 
-$$f: D \rightarrow R$$\\
-В $R^2$ се използва $(x,y)$ за означение, а в $R^3$ - $(x,y,z)$.
+Казва се че дадена функция с дефиниционна област(дефиниционно множество) D, ако на всяка точка $x = (x_1, x_2, ... , x_m)$ от множеството D е съпоставено реално число $f(x) = f(x_1, x_2, ... , x_m)$, т.е на всяко $x \in D$ съществува единствено число $y = f(x) \in \mathbb{R}$. Понякога за кратко се записва. 
+$$f: D \rightarrow \mathbb{R} $$\\
+В $\mathbb{R}^2$ се използва $(x,y)$ за означение, а в $\mathbb{R}^3$ - $(x,y,z)$.
 	\end{definition}
 \subsection{Граница на функция на няколко променливи}
 	\begin{definition}[Коши]
-Нека $f: D \rightarrow R, a \in R^m$, а е точка на сгъстяване за D. Казва се че $f(x)$ има граница L при $x \rightarrow a$ със стойностти $x \neq a$ ако за всяко $\varepsilon > 0$ съществува $\delta > 0$, че за всяко x от множеството $D \setminus \{a\}$, за което $\rho(x;a) = || x - a || < \delta $ е изпълнено $|f(x) - L | < \varepsilon$. Записва се $$\lim\limits_{x \rightarrow a} f(x) = L$$
+Нека $f: D \rightarrow \mathbb{R}, a \in \mathbb{R}^m$, а е точка на сгъстяване за D. Казва се че $f(x)$ има граница L при $x \rightarrow a$ със стойностти $x \neq a$ ако за всяко $\varepsilon > 0$ съществува $\delta > 0$, че за всяко x от множеството $D \setminus \{a\}$, за което $\rho(x;a) = \Vert x - a \Vert < \delta $ е изпълнено $|f(x) - L | < \varepsilon$. Записва се $$\lim\limits_{x \rightarrow a} f(x) = L$$
 	\end{definition}
 
 	\begin{definition}[Хайне]
-Нека $f: D \rightarrow R, a \in R^m$, а е точка на сгъстяване за D. Казва се че $f(x)$ има граница L при $x \rightarrow a$ със стойностти $x \neq a$ ако за всяка редица  $\{x^{(n)}\} ,x^{(n)} \in D, x^{(n)} \neq a$ сходяща към а, числовата редица $\{f(x^{(n)})\}$ има граница L. 
+Нека $f: D \rightarrow \mathbb{R}, a \in \mathbb{R}^m$, а е точка на сгъстяване за D. Казва се че $f(x)$ има граница L при $x \rightarrow a$ със стойностти $x \neq a$ ако за всяка редица  $\{x^{(n)}\} ,x^{(n)} \in D, x^{(n)} \neq a$ сходяща към а, числовата редица $\{f(x^{(n)})\}$ има граница L. 
 	\end{definition}
 
 	\begin{theorem}
@@ -281,21 +288,21 @@ $$f: D \rightarrow R$$\\
 	\end{theorem}
 
 	\begin{definition}
-Нека $f: D \rightarrow R, a \in R^m$, а е точка на сгъстяване за D. Казва се че $f(x)$ дивергира към $\infty$ (съответно към $-\infty$) при $x \rightarrow a$ със стойностти $x \neq a$, ако за всяко $A \in R$ съществува такова $\delta > 0$, че за всяко x от множеството $D \setminus \{a\}$, за което $\rho(x;a) = || x - a || < \delta $ е изпълнено $f(x) > A $( съответно $f(x) < A)$. Записва се
+Нека $f: D \rightarrow \mathbb{R}, a \in \mathbb{R}^m$, а е точка на сгъстяване за D. Казва се че $f(x)$ дивергира към $\infty$ (съответно към $-\infty$) при $x \rightarrow a$ със стойностти $x \neq a$, ако за всяко $A \in \mathbb{R}$ съществува такова $\delta > 0$, че за всяко x от множеството $D \setminus \{a\}$, за което $\rho(x;a) = \Vert x - a \Vert < \delta $ е изпълнено $f(x) > A $( съответно $f(x) < A)$. Записва се
  $$\lim\limits_{x \rightarrow a} f(x) = \infty (-\infty) $$ 
 	\end{definition}
 
 	\begin{definition}[Повторна граница]
-Нека $D \subset R^2, a = (a_1, a_2) \in R^2$ e точка на сгъстяване за D и функция $f: D \rightarrow R$. Нека съществува такава околност $U_{a_2} \subset R$ на точката $а_2$, че за всички стойностти $y \in U_{a_2} $ да съществува  $\lim\limits_{x \rightarrow a_1} f(x,y) = \varphi (y)$. Ако освен това съществува $\lim\limits_{y \rightarrow a_2} \varphi (y) = A$, А се нарича повторна граница и се означава както следва 
+Нека $D \subset \mathbb{R}^2, a = (a_1, a_2) \in \mathbb{R}^2$ e точка на сгъстяване за D и функция $f: D \rightarrow \mathbb{R}$. Нека съществува такава околност $U_{a_2} \subset \mathbb{R}$ на точката $а_2$, че за всички стойностти $y \in U_{a_2} $ да съществува  $\lim\limits_{x \rightarrow a_1} f(x,y) = \varphi (y)$. Ако освен това съществува $\lim\limits_{y \rightarrow a_2} \varphi (y) = A$, А се нарича повторна граница и се означава както следва 
 $$A = A_{1,2} =\lim\limits_{y \rightarrow a_2} (\lim\limits_{x \rightarrow a_1} f(x,y) ) $$.\\
 Аналогично се съвежда и другата повторна граница 
 $$ A_{2,1} = \lim\limits_{x \rightarrow a_1} (\lim\limits_{y \rightarrow a_2} f(x,y) ) $$
 	\end{definition}
 
 	\begin{theorem}
-Нека $D \subset R^2, a = (a_1, a_2) \in R^2$ e точка на сгъстяване за D и функция $f: D \rightarrow R$.  Нека
+Нека $D \subset \mathbb{R}^2, a = (a_1, a_2) \in \mathbb{R}^2$ e точка на сгъстяване за D и функция $f: D \rightarrow \mathbb{R}$.  Нека
 	\begin{enumerate}
-		\item  Нека съществува такава околност $U_{a_2} \subset R$ на точката $а_2$, че за всички стойностти $y \in U_{a_2} $ да съществува  $\lim\limits_{x \rightarrow a_1} f(x,y) = \varphi (y)$.
+		\item  Нека съществува такава околност $U_{a_2} \subset \mathbb{R}$ на точката $а_2$, че за всички стойностти $y \in U_{a_2} $ да съществува  $\lim\limits_{x \rightarrow a_1} f(x,y) = \varphi (y)$.
 
 		\item Съществува границата $\lim\limits_{(x, y) \rightarrow (a_1,a_2) } f(x,y) = L$.
 	\end{enumerate}
@@ -304,35 +311,35 @@ $$ A_{2,1} = \lim\limits_{x \rightarrow a_1} (\lim\limits_{y \rightarrow a_2} f(
 
 \subsection{Непрекъснатост на функция на няколко променливи}
 	\begin{definition}
-Казва се че функцията $f: D \rightarrow R$ е непрекъсната в точка $a \in D$ ако $\lim\limits_{x \rightarrow a} f(x) = f(a)$.
+Казва се че функцията $f: D \rightarrow \mathbb{R}$ е непрекъсната в точка $a \in D$ ако $\lim\limits_{x \rightarrow a} f(x) = f(a)$.
 	\end{definition}
 
 	\begin{definition}[непрекъснатост по Коши]
-Казва се, че функцията $f: D \rightarrow R$ е непрекъсната в точка $a \in D$, ако за всяко $\varepsilon > 0$ съществува $\delta > 0$, че за всяко x от множеството $D $, за което $\rho(x;a) = || x - a || < \delta $ е изпълнено $|f(x) - f(a) | < \varepsilon$.
+Казва се, че функцията $f: D \rightarrow \mathbb{R}$ е непрекъсната в точка $a \in D$, ако за всяко $\varepsilon > 0$ съществува $\delta > 0$, че за всяко x от множеството $D $, за което $\rho(x;a) = \Vert x - a \Vert < \delta $ е изпълнено $|f(x) - f(a) | < \varepsilon$.
 	\end{definition}
 
 	\begin{definition}[непрекъснатост по Хайне]
-Казва се, че функцията $f: D \rightarrow R$ е непрекъсната в точка $a \in D$ ако за всяка редица  $\{x^{(n)}\}$ (с $x^{(n)} \in D$ за $n \in N$) сходяща към а, числовата редица $\{f(x^{(n)})\}$ има граница $f(a)$. 
+Казва се, че функцията $f: D \rightarrow \mathbb{R}$ е непрекъсната в точка $a \in D$ ако за всяка редица  $\{x^{(n)}\}$ (с $x^{(n)} \in D$ за $n \in \mathbb{N}$) сходяща към а, числовата редица $\{f(x^{(n)})\}$ има граница $f(a)$. 
 	\end{definition}
 
 	\begin{definition}[за съставна функция]
-Нека $A \subset R^m$ е отворено множество, $f: А \rightarrow R$ и $x_k: (\alpha, \beta) \rightarrow R, k = 1 \div m$. Полагайки  $x(t) = (x_1(t), x_2(t), ... , x_m(t)) \in A$ за всяко $t \in (\alpha, \beta)$ съставната функция $F(t) = f \circ x(t) = f(x(t))$ се дефинира по формулата 
+Нека $A \subset \mathbb{R}^m$ е отворено множество, $f: А \rightarrow \mathbb{R}$ и $x_k: (\alpha, \beta) \rightarrow \mathbb{R}, k = 1 \div m$. Полагайки  $x(t) = (x_1(t), x_2(t), ... , x_m(t)) \in A$ за всяко $t \in (\alpha, \beta)$ съставната функция $F(t) = f \circ x(t) = f(x(t))$ се дефинира по формулата 
 $$F(t) = f \circ x(t) = f(x(t)) = f(x_1(t), x_2(t), ... , x_m(t))$$
 	\end{definition}
 
 	\begin{theorem}
-Нека $A \subset R^m$ е отворено множество и $f: А \rightarrow R$ интервалът $(\alpha, \beta) \subset R$ , $x_k: (\alpha, \beta) \rightarrow R$ за $k = 1 \div m$. Нека освен това $x(t) = (x_1(t), x_2(t), ... , x_m(t)) \in A$ за $\forall t \in (\alpha, \beta)$ и $x_k$ са непрекъснати в точката $t_0 \in (\alpha, \beta) $  за $k = 1 \div m$, а $f$ e непрекъсната в $x^0 = x(t_0)$. Toгава функцията $F(t) = f \circ x(t) = f(x(t)) = f(x_1(t), x_2(t), ... , x_m(t))$ е непрекъсната в точката $t_0$
+Нека $A \subset \mathbb{R}^m$ е отворено множество и $f: А \rightarrow \mathbb{R}$ интервалът $(\alpha, \beta) \subset \mathbb{R}$ , $x_k: (\alpha, \beta) \rightarrow \mathbb{R} $ за $k = 1 \div m$. Нека освен това $x(t) = (x_1(t), x_2(t), ... , x_m(t)) \in A$ за $\forall t \in (\alpha, \beta)$ и $x_k$ са непрекъснати в точката $t_0 \in (\alpha, \beta) $  за $k = 1 \div m$, а $f$ e непрекъсната в $x^0 = x(t_0)$. Toгава функцията $F(t) = f \circ x(t) = f(x(t)) = f(x_1(t), x_2(t), ... , x_m(t))$ е непрекъсната в точката $t_0$
 	\end{theorem}
 
 \subsection{Равномерна непрекъснатост на функция на няколко променливи}
 	\begin{definition}
-Нека $A \subset R^m$ е отворено множество и $f: A \rightarrow R$. Функцията се нарича равномерно непрекъсната в A, ако за  всяко $\varepsilon > 0$ съществува $\delta = \delta(\epsilon)$, че за всеки две точки $x', x'' \in A$ за които разстоянието $\rho(x';x'') =|| x' - x'' || < \delta $, да следва, че $|f(x') - f(x'') | < \varepsilon$.
+Нека $A \subset \mathbb{R}^m$ е отворено множество и $f: A \rightarrow \mathbb{R}$. Функцията се нарича равномерно непрекъсната в A, ако за  всяко $\varepsilon > 0$ съществува $\delta = \delta(\epsilon)$, че за всеки две точки $x', x'' \in A$ за които разстоянието $\rho(x';x'') =\Vert x' - x'' \Vert < \delta $, да следва, че $|f(x') - f(x'') | < \varepsilon$.
 	\end{definition}
 
 	\begin{theorem}[на Вайерщрас]
-Нека множеството $K \subset R^m$ е компактно и функцията $f: K \rightarrow R$ е непрекъсната върху K. Tогава 
+Нека множеството $K \subset \mathbb{R}^m$ е компактно и функцията $f: K \rightarrow \mathbb{R}$ е непрекъсната върху K. Tогава 
 	\begin{enumerate}
-		\item f е ограничена в К, т.е същестуват $m, M \in R$ такива че за всички $x \in K$ е изпълнено неравенството
+		\item f е ограничена в К, т.е същестуват $m, M \in \mathbb{R}$ такива че за всички $x \in K$ е изпълнено неравенството
 $m \leq f(x) \leq M$
 		\item f достифа най малката и най-голямата си стойност в К, т.е съществуват точки $x^0, y^0 \in K$ , такива че
 $$f(x^0) = \inf _{x \in K}f(x) ; f(y^0) = \sup_{y \in K} f(x)$$
@@ -340,7 +347,7 @@ $$f(x^0) = \inf _{x \in K}f(x) ; f(y^0) = \sup_{y \in K} f(x)$$
 	\end{theorem}
 
 	\begin{theorem}[на Kантор]
-Нека множеството $K \subset R^m$ е компактно и функцията $f: K \rightarrow R$ е непрекъсната върху K. Тогава $f$ е равномерно непрекъсната върху K.
+Нека множеството $K \subset \mathbb{R}^m$ е компактно и функцията $f: K \rightarrow \mathbb{R}$ е непрекъсната върху K. Тогава $f$ е равномерно непрекъсната върху K.
 	\end{theorem}
 
 \section{Лекция 3: Частни производни. Диференцируемост на функция на две и повече променливи }
@@ -348,13 +355,13 @@ $$f(x^0) = \inf _{x \in K}f(x) ; f(y^0) = \sup_{y \in K} f(x)$$
 \subsection{Дефиниция на частна производна}
 Ще дефинираме елементи които ще се използват. 
 \begin{itemize}
-	\item $D \subset R^m$ -  отворено множество
+	\item $D \subset \mathbb{R}^m$ -  отворено множество
 	\item $x^0 = (x_1 ^ 0, x_2 ^ 0, ... , x_m ^ 0)$ - точка, принадлежаща на D
 	\item $U_{x^0} \subset D$ - околност на $x^0$
 	\item $U_{x_i ^ 0} \subset D$ - oколност на $x_i ^ 0$ (i  = 1, 2, ..., m)
 	\item точката $(x_1 ^ 0, x_2 ^ 0, ..., x_{i-1}^0, x_i ^ 0, x_{i+1} ^i, ..., x_m ^ 0) \in U_{x^0}$, за всички стойности на $x_i \in U_{x_i ^ 0}$
 	\item $f$ и $g$ - функции, дефинирани съответно в $D$ и $U_{x_i ^ 0}$. т.е \\
-$f: D \rightarrow R , g: U_{x_i ^ 0} \rightarrow R$ и $g(x_i) = f(x_1 ^ 0, x_2 ^ 0, ..., x_{i-1}^0, x_i ^ 0, x_{i+1} ^i, ..., x_m ^ 0)$
+$f: D \rightarrow \mathbb{R} , g: U_{x_i ^ 0} \rightarrow \mathbb{R}$ и $g(x_i) = f(x_1 ^ 0, x_2 ^ 0, ..., x_{i-1}^0, x_i ^ 0, x_{i+1} ^i, ..., x_m ^ 0)$
 \end{itemize}
  
 \begin{definition}
@@ -392,21 +399,22 @@ $f(x,y) = x^3\sin(6y) + x^2y^3 + 2222, f''_{x,y} = ?, f''_{y,x} = ?$
 \end{example}
 
 \begin{theorem}[за равенство на смесени производни]
-Нека точката $(x_0, y_0) \in R^2$ и нека функцията $f$ е дефинирана в отвореното множество $U=U_{(x_0, y_0)} \subset R^2$, което е нейната област т.е $f: U \rightarrow R$. Нека освен това съществуват частните производни $f'_x, f'_y,f''_{x,y},f''_{y,x}$ за всички $(x, y)\in U$ и $f''_{x,y},f''_{y,x}$ са непрекъснати в точката $(x_0, y_0)$. Тогава е изпълнено равенството 
+Нека точката $(x_0, y_0) \in \mathbb{R}^2$ и нека функцията $f$ е дефинирана в отвореното множество $U=U_{(x_0, y_0)} \subset \mathbb{R}^2$, което е нейната област т.е $f: U \rightarrow \mathbb{R}$. Нека освен това съществуват частните производни $f'_x, f'_y,f''_{x,y},f''_{y,x}$ за всички $(x, y)\in U$ и $f''_{x,y},f''_{y,x}$ са непрекъснати в точката $(x_0, y_0)$. Тогава е изпълнено равенството 
 $$f''_{x,y}(x_0, y_0) = f''_{y,x}(x_0, y_0)$$
 \end{theorem}
+
 \subsection{Диференцируемост на функция}
 Ще дефинираме елементи които ще се използват. 
 \begin{itemize}
-	\item $x^0 \in R^m$
-	\item $U \subset R^m$ - отворено множество, което е околност на $x^0$.Без ограничение на общността може да се счита че U e $\delta$-околност на $x^0$ т.е U е отворено кълбо $B(x^0;\delta)$ с център $x^0$ и радиус $\delta$
-	\item $f: U \rightarrow R$ - функция дефинирана в $U = B(x^0;\delta) $
+	\item $x^0 \in \mathbb{R}^m$
+	\item $U \subset \mathbb{R}^m$ - отворено множество, което е околност на $x^0$.Без ограничение на общността може да се счита че U e $\delta$-околност на $x^0$ т.е U е отворено кълбо $B(x^0;\delta)$ с център $x^0$ и радиус $\delta$
+	\item $f: U \rightarrow \mathbb{R}$ - функция дефинирана в $U = B(x^0;\delta) $
 \end{itemize}
 
 \begin{definition}
 Функцията $f$ се нарича диференцируема в точка $x^0$ ако съществуват числа $A_1, A_2, ..., A_m$ и функция $\varepsilon (x^0, x - x^0)$, дефинирана за всички допустими стойности на $x \in U$ и $x - x^0 = (x_1 - x_1 ^0, x_2 - x_2 ^0,... x_m - x_m ^0)$, като при това 
-$$f(x) - f(x^0) = \sum_{k=1}^{m} A_k(x_k + x_k ^ 0) + \varepsilon (x^0, x - x^0) ||x - x^0||$$ 
-и $\lim\limits_{|| x - x^0|| \rightarrow 0}\varepsilon (x^0, x - x^0) = 0$
+$$f(x) - f(x^0) = \sum_{k=1}^{m} A_k(x_k + x_k ^ 0) + \varepsilon (x^0, x - x^0) \Vert x - x^0 \Vert$$ 
+и $\lim\limits_{\Vert x - x^0 \Vert \rightarrow 0}\varepsilon (x^0, x - x^0) = 0$
 \end{definition}
 
 \begin{definition}
@@ -414,31 +422,31 @@ $$f(x) - f(x^0) = \sum_{k=1}^{m} A_k(x_k + x_k ^ 0) + \varepsilon (x^0, x - x^0)
 \end{definition}
 
 \begin{theorem}
-Ако функцията $f: U \rightarrow R$ е диференцируема в точката $x^0 \in U$, то тя е непрекъсната. 
+Ако функцията $f: U \rightarrow \mathbb{R}$ е диференцируема в точката $x^0 \in U$, то тя е непрекъсната. 
 \end{theorem}
 
 \begin{definition}
-В случай на диференцируемост в точката $x^0$ на функцията $f: U \rightarrow R$, изразът 
+В случай на диференцируемост в точката $x^0$ на функцията $f: U \rightarrow \mathbb{R}$, изразът 
 $$df(x^0) \circ (h) = A_1 h_1 + A_2 h_2 + ... + A_m h_m$$
 (или $df, df(x^0)$) се нарича пълен диференциал на $f(x)$ в точката $x^0$
 \end{definition}
 
 \begin{theorem}
-Ако функцията $f: U \rightarrow R$ е диференцируема в точката $x^0 \in U$, то съществуват частните производни $\dfrac{\partial f(x^0)}{\partial x_k}$ в точката $x^0$ и освен това $A_k(x^0) = \dfrac{\partial f(x^0)}{\partial x_k}, k = 1 \div m$.
+Ако функцията $f: U \rightarrow \mathbb{R}$ е диференцируема в точката $x^0 \in U$, то съществуват частните производни $\dfrac{\partial f(x^0)}{\partial x_k}$ в точката $x^0$ и освен това $A_k(x^0) = \dfrac{\partial f(x^0)}{\partial x_k}, k = 1 \div m$.
 \end{theorem}
 
 \begin{definition}
-Ако функцията $f: U \rightarrow R$ е диференцируема в точката $x^0 \in U$, то със следната формула се изразява нейната производна в точката $x^0$
+Ако функцията $f: U \rightarrow \mathbb{R}$ е диференцируема в точката $x^0 \in U$, то със следната формула се изразява нейната производна в точката $x^0$
 $$f'(x^0) = (f'_{x_1}(x^0), f'_{x_2}(x^0), ..., f'_{x_m}(x^0))$$.
 
 \end{definition}
 
 \begin{theorem}
-Ако функцията $f: U \rightarrow R$ притежава частни производни $\dfrac{\partial f(x^0)}{\partial x_k}, k = 1 \div m$ в отвореното множество U и освен това са непрекъснати в точката $x^0 \in U$, то $f$ е диференцируема в точката $x^0$.
+Ако функцията $f: U \rightarrow \mathbb{R}$ притежава частни производни $\dfrac{\partial f(x^0)}{\partial x_k}, k = 1 \div m$ в отвореното множество U и освен това са непрекъснати в точката $x^0 \in U$, то $f$ е диференцируема в точката $x^0$.
 \end{theorem}
 
 \begin{definition}
-Ако функцията $f: U \rightarrow R$ притежава частни производни в U и тези частични производни са непрекъснати в точката $x^0 \in U$, то функцията се нарича непрекъснато диференцируема в точката $x^0$. Ако тези производни са непрекъснати в U, то функцията се нарича непрекъсанот диференцируема в това множество. 
+Ако функцията $f: U \rightarrow \mathbb{R}$ притежава частни производни в U и тези частични производни са непрекъснати в точката $x^0 \in U$, то функцията се нарича непрекъснато диференцируема в точката $x^0$. Ако тези производни са непрекъснати в U, то функцията се нарича непрекъсанот диференцируема в това множество. 
 \end{definition}
 
 \begin{definition}
@@ -446,31 +454,152 @@ $$f'(x^0) = (f'_{x_1}(x^0), f'_{x_2}(x^0), ..., f'_{x_m}(x^0))$$.
 \\
 Ако f е два пъти непрекъсната и диференцируема в $x^0 \in U$ тогава втория диференциал получава по следния резултат
 $$d^2 f(x^0) = \sum_{i=1}^ m \sum_{j=1}^m f''_{x_i x_j}(x^0) dx_i dx_j = \left( \dfrac{\partial}{\partial x_1}dx_1 + ... + \dfrac{\partial}{\partial x_m}dx_m\right )^2 f(x^0)$$
-
+което е симетрична квадратична форма на $dx_i (i = 1 \div m)$. \\
+\\
 Aналогично ако f е n пъти непрекъсната и диференцируема в $x^0 \in U$, то $d^n f(x^0)$ съществува и се дава със следната формула 
 $$d^n f(x^0) = \left( \dfrac{\partial}{\partial x_1}dx_1 + ... + \dfrac{\partial}{\partial x_m}dx_m\right )^n f(x^0)$$
 \end{definition}
 
+\section{Лекция 4: Диференциране на съставна функция. Производна по посока. Градиент. Допирателна. Нормална права }
 
+\subsection{Диференциране на съставна функция}
+$x^0 \in \mathbb{R}^m$ и отворено множество $U \subset \mathbb{R}^m$ е околност на точката $x^0$ (Без ограничение на общността може да се счита че U e $\delta$-околност на $x^0$ т.е U е отворено кълбо $B(x^0;\delta)$ с център $x^0$ и радиус $\delta$). \\
+$t_0 \in (\alpha, \beta) \subset R$
 
+\begin{theorem}
+Нека функцията $f$ e дефинирана в U, а $\varphi_k$ - в интервала $(\alpha, \beta)$, т.е \\
+$f: U \rightarrow \mathbb{R}$ и $\varphi_k: (\alpha, \beta)  \rightarrow \mathbb{R} $ $ (k = 1 \div m)$\\
+като при това $x_k = \varphi_k(t)$ за $ k = 1 \div m $, $ \varphi_1(t),  \varphi_2(t), ...,  \varphi_m(t) \in U$ за всички стойности на $t \in (\alpha, \beta)$. Нека $f$ е диференцируема в U, $f'_k$ са непрекъснати в $x^0$ за $ k = 1 \div m$, $\varphi_k$ са диференцируеми в $t_0$ и $F: (\alpha, \beta)  \rightarrow \mathbb{R}$ е дефинирана с равенствово. \\
+$$F(t) = f(\varphi_1(t),  \varphi_2(t), ...,  \varphi_m(t)), t \in (\alpha, \beta)$$
+Тогава функцията F е диференцируема в $t_0$ и в сила е следното равенство
+$$F'(t_0) = \sum_{k =1}^m f'_{x_k}(x^0)\varphi '_k (t_0)$$ \\
+За m = 2: \\
+$\varphi_1(t) = \varphi(t) , \varphi_2(t) =\psi(t) $
+$$F'(t_0) = f'_x(x_0, y_0)\varphi'(t_0) + f'_y(x_0, y_0)\psi'(t_0)$$
+\end{theorem}
 
+\begin{example}
+$f(x,y)$ - дефинирана и диференцируема в $U_{(1,2)} \subset \mathbb{R}^2$.\\
+Непрекъснати частни производни $f'_x, f'_y$ в точката (1,2). \\
+Намерете производната $F'(0)$ на съставната фунция F, зададена с равенството $F(t) = f(1+3t, 2+4t)$. \\
+\\
+$
+t_0 = 0 \\
+x = \varphi(t) = 1+3t \\
+y = \psi(t) = 2 + 4t \\
+x_0 = \varphi(0) = 1 \\
+y_0 = \psi(0) = 2 \\
+\varphi'(t) = 3 \\
+\psi'(t) = 4 \\
+F'(t_0) = f'_x(x_0, y_0)\varphi'(t_0) + f'_y(x_0, y_0)\psi'(t_0) \implies  F'(0) = 3f'_x(1,2) + 4f'_y(1,2)
+$
+\end{example}
 
+\subsection{Производна по посока. Градиент}
+Нека $x^0 \in \mathbb{R}^m$ и лъчът $l$ е дефиниран, както следва: $$l:x = x^0 + t\nu, t > 0$$
+Функцията f е дефинирана върху този лъч, а $$\varphi(t) := f(x(t)) = f(x^0 + t\nu), t > 0$$
 
+\begin{definition}
+Границата(ако съществува) 
+$$\lim\limits_{t \rightarrow 0, t > 0} \dfrac{\varphi(t) - \varphi(0)}{t} = \lim\limits_{t \rightarrow 0, t > 0} \dfrac{\varphi(x^0 + t\nu) - \varphi(x^0)}{t} $$
+се нарича производна на $f$ в точката $x^0$ по посока на вектора $\nu$ и се означава $\dfrac{\partial f(x^0)}{\partial \nu}$, т.е
+$$\dfrac{\partial f(x^0)}{\partial \nu} = \lim\limits_{t \rightarrow 0, t > 0} \dfrac{\varphi(t) - \varphi(0)}{t} = \lim\limits_{t \rightarrow 0, t > 0} \dfrac{\varphi(x^0 + t\nu) - \varphi(x^0)}{t}$$ ако същестува границата.\\
+\\
+Ако частните производни съществуват, са производни "по посока на кординатните оси". \\
+\\
+Ако $f$ е дефинирана и диференцируема в околността $U_{x^0}$ на точката в $x^0$ и $f'_{x_k}$ са непрекъснати в $x_0$, то съществува производната ѝ по посока на вектора $\nu = (\nu_1, \nu_2, ..., \nu_m)$ и 
+$$\dfrac{\partial f(x^0)}{\partial \nu} = \sum_{k = 1} ^m \nu_k \dfrac{\partial f(x^0)}{\partial x_k}$$
+\end{definition}
 
+\begin{definition}
+Векторът с кординати $f'_{x_1}(x^0), f'_{x_2}(x^0), ..., f'_{x_m}(x^0)$ се нарича градиент на $f$ в точката $x^0$ и се означава 
+$$grad \, f(x^0) = (f'_{x_1}(x^0), f'_{x_2}(x^0), ..., f'_{x_m}(x^0))$$
+Предвид тази дефиниция, формулата за производна по посока на вектор $\nu$ се записва по кратко във вида
+$$\dfrac{\partial f(x^0)}{\partial \nu} = grad \, (f(x^0), \nu)$$
+\end{definition}
 
+\begin {theorem}
+Ако функцията $f$ е дефинирана и диференцируема в околността $U_{x^0}$ на точката в $x^0$ и $f'_{x_k}$ са непрекъснати в $x_0$, то съществува производната на $f$ по посока на  произволен вектора $\nu = (\nu_1, \nu_2, ..., \nu_m)$ и тя се дава с формула: $\dfrac{\partial f(x^0)}{\partial \nu} = grad \, f(x^0)$
+\end {theorem}
+Ако, $\nu$ е единичен вектор, т.е $\Vert \nu \Vert = 1$. \\
+Тогава е в сила неравнестово $\left | \dfrac{\partial f(x^0)}{\partial \nu}\right| \leq \Vert grad \, f(x^0)  \Vert$, което следва от неравенство на Коши. 
+$$\left | \dfrac{\partial f(x^0)}{\partial \nu}\right| = \left| grad \, (f(x^0), \nu) \right| \leq \Vert grad \, f(x^0) \Vert \Vert \nu \Vert = \Vert grad \, f(x^0)  \Vert$$
+Равенство се достига само когато $\nu$ и $f(x^0)$ са колинеарни (еднопосочни или успоредни). тогава
+$$\left | \dfrac{\partial f(x^0)}{\partial \nu}\right| = \Vert grad \, f(x^0)  \Vert$$
+\\
+Ако вектора $\nu$ е колинеарен с градиента, тогава векторът $\nu =  \dfrac{grad \, f(x^0)}{\Vert grad \, f(x^0) \Vert}$ и тогава 
+$$
+\dfrac{\partial f(x^0)}{\partial \nu} = \left( grad \, f(x^0),  \dfrac{grad \, f(x^0)}{\Vert grad \, f(x^0) \Vert} \right) = \Vert grad \, f(x^0) \Vert
+$$
+Ако $grad \, f(x^0) \neq 0$ то производната достига най голяма стойност единствено, ако диференцирането се извършва по посока на градиента. С други думи, посоката на градиента е посоката на най бързо нарастване на функцията, а големината му е равна на производната по тази посока. \\
+\\
+Ако $\nu = (\cos \alpha_1, \cos \alpha_2, ..., \cos \alpha_m)$, то производната по посока $\nu$ става 
+$$\dfrac{\partial f(x^0)}{\partial \nu} = f'_{x_1}(x^0)\cos{\alpha_1} + f'_{x_2}(x^0)\cos{\alpha_2} + ... + f'_{x_m}(x^0)\cos{\alpha_m}.$$
 
+\subsection{Допирателна равнина. Нормална права}
 
+\begin{itemize}
+\item $(x_0, y_0) \in \mathbb{R}^2$ - точка в $\mathbb{R}^2$
+\item $M_0 (x_0, y_0, z_0) \in \mathbb{R}^3$  точка в $\mathbb{R}^3$
+\item $U = U_{(x_0,y_0)} \subset \mathbb{R}^2 =$ - околност на $(x_0,y_0)$ 
+\item $f: U \rightarrow \mathbb{R}$ - функция 
+\item $z_0 = f(x,y)$ 
+\item $S: z = f(x,y) \Leftrightarrow S: f(x,y) - z = 0$ - уравнение на равнина 
+\item $f'_x, f'_y$ - първи частни производни за всички $(x, y) \in U$,$ f'_x, f'_y$ са непрекъснати в точката $(x_0, y_0)$
+\end{itemize}
 
+\begin{definition}
+Равнината $\tau (\tau \nparallel Oz)$, зададена с уравнение 
+$$\tau : z - z_0 = f'_x (x_0, y_0)(x - x_0) + f'_y (x_0, y_0)(y - y_0) $$
+се нарича допирателна (тангенциална) равнина в точкат $M_0$ към повърхнината S и представлява графиката на $f(x,y)$. 
+\end{definition}
 
+\begin{definition}
+Векторите $n_1, n_2$
+$$n_1 (-f'_x (x_0, y_0), -f'_y (x_0, y_0), 1) \qquad n_2 (f'_x (x_0, y_0), f'_y (x_0, y_0), -1) ,$$ 
+които са нормални вектори на тангенциалната равнина, се наричат нормални вектори и за повърхнината S. \\
+$n_1 = -n_2$ Това позволява да се използват за ориентация на повърхината S. \\
+Горната страна се дефинира с вектора $n_1$ за който ъгъл $\measuredangle (n_1,k)$ е остър. 
+\end{definition}
 
+\begin{definition}
+Правата n, зададена с уравнение 
+$$n: \dfrac{x - x_0}{-f'_x (x_0, y_0)} = \dfrac{y-y_0}{-f'_y (x_0, y_0)} = \dfrac{z - z_0}{1} $$ 
+се нарича нормала към повърхнината S към точка $M_0$
+\end{definition}
 
+Ако прекараме две равнини през $М_0$ съответно $\alpha: x = x_0$ и $\beta: y = y_0$ всяка от тях пресича повърхнината в крива линия съответно
+$$C_1: x = x_0, y = y, z = f(x_0, y) \qquad C_2: x = x, y = y_0, z = f(x, y_0)$$
+$t_1$ е  направляващ вектор на допирателната права на кривата $C_1$ в точката $М_0$, а с $t_2$ - направляващ вектор на допирателната права на кривата $C_1$ в същата точката, то
+$$t_1 (0, 1, f'_y(x_0,y_0), \qquad t_2 (1, 0, f'_x (x_0,y_0))$$
+Равнината $\tau$ е компланарна с векторите $t_1, t_2$ то нейния нормален вектор може да се получи от векторното им произведение
+$$n_1 = t_2 \times t_1 \qquad n_2 = t_1 \times t_2$$
 
-
-
-
-
-
-
+\begin{example}
+За повърхнина S, зададена с уранение $S: z= x^2 + y^2 + 3$, да се напишат: \\
+а) допирателната равнина $\tau z  M_0 (0, 0, 3)$ \\
+б) нормалните вектори на $\tau$ в т. $М_0$.\\
+в) нормалата на повърхнината S в т. $М_0$. \\
+\\
+Решение: \\
+$z'_x = 2x\; ; z'_y = 2y\; ; M_0(0,0,3) = M_0(x_0, y_0, z_0) $\\
+$z'_x(x_0, y_0) = z'_x(0,0) = 0\; ; z'_y(x_0, y_0) = z'_y(0,0) = 0$\\
+а) $\tau : z - z_0 = z'_x (x_0, y_0)(x - x_0) + z'_y (x_0, y_0)(y - y_0) $\\
+$\tau : z - 3 = 0x + 0y \Leftrightarrow \tau: z = 3$\\
+\\
+б) \\
+$
+\vec {n_1} = (-f'_x (x_0, y_0), -f'_y (x_0, y_0), 1) = (0, 0, 1) \\
+\vec {n_2} = (f'_x (x_0, y_0), f'_y (x_0, y_0), -1) = (0, 0, -1) \\
+$
+\\
+в) \\
+$
+n: \dfrac{x - x_0}{-f'_x (x_0, y_0)} = \dfrac{y-y_0}{-f'_y (x_0, y_0)} = \dfrac{z - z_0}{1} \\
+n: \dfrac{x - 0}{0} = \dfrac{y-0}{0} = \dfrac{z - 3}{1} = \lambda \\
+n (0, 0, \lambda + 3), \lambda \in \mathbb{R}
+$
+\end{example}
 
 
 
