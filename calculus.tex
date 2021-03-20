@@ -13,6 +13,8 @@
 
 \newtheorem{example}{Пример}[subsection]
 
+\newtheorem{task}{Задача}[subsection]
+
 \newtheorem{definition}{Дефиниция}[subsection]
 
 \title{Математически анализ 2}
@@ -20,6 +22,7 @@
 
 
 \begin{document}
+
 \maketitle
 \pagenumbering{gobble}
 \newpage
@@ -29,6 +32,7 @@
 \newpage
 
 \section{Лекция 1: Пространството $\mathbb{R}^m$}
+
 \subsection{Няколко важни неравенства}
 Нека $a_k $ и $b_k (k = 1, 2, ..., m) $ са реални числа и $m \in \mathbb{N}$
 \begin{theorem}[Неравенство на Коши-Шварц]
@@ -46,11 +50,11 @@ $$\sqrt{ \sum_{k=1}^{m} (a_k + b_k)^2}   \leq \sqrt{ \sum_{k=1}^{m}a_k^2 } + \sq
 \end{theorem}
 Равенство се достига само когато $a_k$ и $b_k$ са пропорционални.
 Общ случай на неравенството на Минковски:
-$$\left ( \sum_{k=1}^{m} |a_k + b_k|^p \right)^\frac{1}{p}   \leq\left ( \sum_{k=1}^{m}|a_k|^p\right)^\frac{1}{p} + \left ( \sum_{k=1}^{m} |b_k|^p \right)^\frac{1}{p}   ( p\geq 1)$$
+$$\left ( \sum_{k=1}^{m} \vert a_k + b_k\vert ^p \right)^\frac{1}{p}   \leq\left ( \sum_{k=1}^{m}\vert a_k\vert ^p\right)^\frac{1}{p} + \left ( \sum_{k=1}^{m} \vert b_k\vert ^p \right)^\frac{1}{p}   ( p\geq 1)$$
 
 \begin{theorem}
 В сила е следното неравенство: \\
-$$ |a_k + b_k|  \leq \sqrt{ \sum_{k=1}^{m} (a_k + b_k)^2} \leq   \sum_{k=1}^{m}|a_k - b_k| $$
+$$ \vert a_k + b_k\vert   \leq \sqrt{ \sum_{k=1}^{m} (a_k + b_k)^2} \leq   \sum_{k=1}^{m}\vert a_k - b_k\vert  $$
 \end{theorem}
 
 \subsection{Видове крайно мерни пространства}
@@ -90,8 +94,8 @@ $$ |a_k + b_k|  \leq \sqrt{ \sum_{k=1}^{m} (a_k + b_k)^2} \leq   \sum_{k=1}^{m}|
 Пространството се нарича нормирано, ако в него е въведена норма $\Vert. \Vert$, т.е $\Vert.\Vert: L \rightarrow \mathbb{R}_0^+$ със свойства 
 	\begin{enumerate}
  		\item $x = 0  \implies \Vert x \Vert = 0, x \neq 0  \implies \Vert x\Vert > 0$
-		\item $x \in L, \lambda \in \mathbb{R} \implies \Vert \lambda x \Vert = |\lambda|  \Vert x \Vert$
-		\item $x,y \in L \implies \Vert x+y\Vert \leq |x| + |y|$
+		\item $x \in L, \lambda \in \mathbb{R} \implies \Vert \lambda x \Vert = \vert \lambda\vert   \Vert x \Vert$
+		\item $x,y \in L \implies \Vert x+y\Vert \leq \vert x\vert  + \vert y\vert $
 	\end{enumerate}
 \end{definition}
 \begin{theorem}
@@ -109,9 +113,11 @@ $$ |a_k + b_k|  \leq \sqrt{ \sum_{k=1}^{m} (a_k + b_k)^2} \leq   \sum_{k=1}^{m}|
 		\item $ \lambda a =(\lambda a_1,\lambda a_2, ... , \lambda a_m) \in \mathbb{R}^m $\\
 	\end{enumerate}
 \end{definition}
+
 \subsubsection{Скаларно произведение}
 Скаларно произведение се дефинира : $$ (a,b) = \left( \sum_{k=1}^{m}a_kb_k \right )$$\\
 С така въведено скаларно произведение пространството $R^m$ се превръща в евклидово.
+
 \subsubsection{Норма и метрика}
 С равенството:
 $$\Vert a\Vert := \sqrt{ \sum_{k=1}^{m}(a_k)^2  }$$ \\
@@ -124,7 +130,7 @@ $$\rho(a,b) := \Vert a-b\Vert = \sqrt{ \sum_{k=1}^{m} (a_k - b_k)^2} $$
 Скаларен квадрат: $a^2 = (a,a) = \sum _{k=1}^{m}a_k^2$
 
 \subsubsection{Неравенство на Коши-Шварц, чрез скаларен квадрат}
-Коши-Шварц чрез скаларен квадрат: $(a,b)^2 \leq a^2b^2$ и $|(a,b)|\leq \Vert a \Vert \Vert b \Vert$
+Коши-Шварц чрез скаларен квадрат: $(a,b)^2 \leq a^2b^2$ и $\vert (a,b)\vert \leq \Vert a \Vert \Vert b \Vert$
 
 \subsubsection{Неравенство на Минковски, чрез скаларен квадрат}
 Неравенство на Минковски чрез скаларен квадрат: $\Vert a+b \Vert\leq \Vert a \Vert + \Vert b \Vert$
@@ -132,7 +138,8 @@ $$\rho(a,b) := \Vert a-b\Vert = \sqrt{ \sum_{k=1}^{m} (a_k - b_k)^2} $$
 \subsection{Точки и множества в $\mathbb{R}^m$}
 
 \subsubsection{Паралелепипед}
-	\begin{definition}
+
+\begin{definition}
 Множеството\\
 $$\Pi (a; \delta_1, \delta_2, ... ,\delta_m) = \{ x \in \mathbb{R}^m: -\delta_k < x_k -a_k < \delta_k   \}$$
 се нарича отворен паралелепипед в $\mathbb{R}^m$ с център точката а.\\
@@ -142,19 +149,21 @@ $$\widetilde\Pi (a; \delta_1, \delta_2, ... ,\delta_m) = \{ x \in\mathbb{R}^m: -
 се нарича затворен паралелепипед в $R^m$ с център точката а.\\
 \\
 Ако $\delta_1 = \delta_2 = ... = \delta_m = \delta$, получените множества $\Pi (a; \delta)$ и $\widetilde\Pi (a; \delta)$ се  наричат съответно отворен и затворен куб в $\mathbb{R}^m$ с център а.
- 	\end{definition}
-\subsubsection{Сфера и кълбо}
-	\begin{definition}
-Нека числото r > 0. Множеството \\
-$$B(a;r) = \{ x | x \in \mathbb{R}^m, \rho(x,a) <r \} = \{ x| x \in \mathbb{R}^m, \Vert x-a \Vert < r \}$$\\
-се нарича отворено кълбо в $\mathbb{R}^m$ с център a и радиус r, множеството \\
-$$\widetilde B(a;r) = \{ x | x \in \mathbb{R}^m, \rho(x,a) \leq r \} = \{ x| x \in \mathbb{R}^m, \Vert x-a \Vert \leq r \}$$\\
-се нарича затворено кълбо в $\mathbb{R}^m$ с център a и радиус r, а множеството \\
-$$S(a;r) = \{ x | x \in \mathbb{R}^m, \rho(x,a) = r \} = \{ x| x \in \mathbb{R}^m, \Vert x-a \Vert = r \}$$\\
-се нарича сфера в $\mathbb{R}^m$ с център a и радиус r, а множеството \\
-	\end{definition}
+ \end{definition}
 
-	\begin{definition}
+\subsubsection{Сфера и кълбо}
+
+\begin{definition}
+Нека числото r > 0. Множеството \\
+$$B(a;r) = \{ x \vert  x \in \mathbb{R}^m, \rho(x,a) <r \} = \{ x\vert  x \in \mathbb{R}^m, \Vert x-a \Vert < r \}$$\\
+се нарича отворено кълбо в $\mathbb{R}^m$ с център a и радиус r, множеството \\
+$$\widetilde B(a;r) = \{ x \vert  x \in \mathbb{R}^m, \rho(x,a) \leq r \} = \{ x\vert  x \in \mathbb{R}^m, \Vert x-a \Vert \leq r \}$$\\
+се нарича затворено кълбо в $\mathbb{R}^m$ с център a и радиус r, а множеството \\
+$$S(a;r) = \{ x \vert  x \in \mathbb{R}^m, \rho(x,a) = r \} = \{ x\vert  x \in \mathbb{R}^m, \Vert x-a \Vert = r \}$$\\
+се нарича сфера в $\mathbb{R}^m$ с център a и радиус r, а множеството \\
+\end{definition}
+
+\begin{definition}
 Точката а се нарича
 \begin{itemize}
 	\item вътрешна за множеството А, ако съществува отворено кълбо $B(a,\varepsilon): B(a,\varepsilon) \subset A$
@@ -162,15 +171,18 @@ $$S(a;r) = \{ x | x \in \mathbb{R}^m, \rho(x,a) = r \} = \{ x| x \in \mathbb{R}^
 	\item контурна за А, ако за всяко $\varepsilon > 0: B(a,\varepsilon) \cap A \neq \O $ и \\ $ B(a,\varepsilon) \cap (\mathbb{R}^m \setminus  A) \neq \O$
 	\item изолирана ако съществува $\varepsilon > 0: B(a,\varepsilon) \cap A = \{ a \}$
 \end{itemize}
-	\end{definition}
+	
+\end{definition}
 
 \begin{definition}
 Множеството $A \subset \mathbb{R}^m $ се нарича 
+
 \begin{itemize}
 	\item отворено, ако всяка негова точка е вътрешна 
 	\item затворено, ако неговото допълнение  $\mathbb{R}^m \setminus A$ е отворено
 \end{itemize}
-	\end{definition}
+
+\end{definition}
 
 \begin{definition}
 Околност на дадена точка $a \in \mathbb{R}^m $ се нарича всяко отворено множество, което я съдържа. Означава се с $U_a$.
@@ -271,86 +283,93 @@ T.e редицата има граница точката а, тогава и с
 \section{Лекция 2: Функция на няколко променливи. Граница и непрекъснатост}
 
 \subsection{Дефниция на функция на няколко променливи}
-	\begin{definition}
+
+\begin{definition}
 Казва се че дадена функция с дефиниционна област(дефиниционно множество) D, ако на всяка точка $x = (x_1, x_2, ... , x_m)$ от множеството D е съпоставено реално число $f(x) = f(x_1, x_2, ... , x_m)$, т.е на всяко $x \in D$ съществува единствено число $y = f(x) \in \mathbb{R}$. Понякога за кратко се записва. 
 $$f: D \rightarrow \mathbb{R} $$\\
 В $\mathbb{R}^2$ се използва $(x,y)$ за означение, а в $\mathbb{R}^3$ - $(x,y,z)$.
-	\end{definition}
+\end{definition}
+
 \subsection{Граница на функция на няколко променливи}
-	\begin{definition}[Коши]
-Нека $f: D \rightarrow \mathbb{R}, a \in \mathbb{R}^m$, а е точка на сгъстяване за D. Казва се че $f(x)$ има граница L при $x \rightarrow a$ със стойностти $x \neq a$ ако за всяко $\varepsilon > 0$ съществува $\delta > 0$, че за всяко x от множеството $D \setminus \{a\}$, за което $\rho(x;a) = \Vert x - a \Vert < \delta $ е изпълнено $|f(x) - L | < \varepsilon$. Записва се $$\lim\limits_{x \rightarrow a} f(x) = L$$
-	\end{definition}
 
-	\begin{definition}[Хайне]
+\begin{definition}[Коши]
+Нека $f: D \rightarrow \mathbb{R}, a \in \mathbb{R}^m$, а е точка на сгъстяване за D. Казва се че $f(x)$ има граница L при $x \rightarrow a$ със стойностти $x \neq a$ ако за всяко $\varepsilon > 0$ съществува $\delta > 0$, че за всяко x от множеството $D \setminus \{a\}$, за което $\rho(x;a) = \Vert x - a \Vert < \delta $ е изпълнено $\vert f(x) - L \vert  < \varepsilon$. Записва се $$\lim\limits_{x \rightarrow a} f(x) = L$$
+\end{definition}
+
+\begin{definition}[Хайне]
 Нека $f: D \rightarrow \mathbb{R}, a \in \mathbb{R}^m$, а е точка на сгъстяване за D. Казва се че $f(x)$ има граница L при $x \rightarrow a$ със стойностти $x \neq a$ ако за всяка редица  $\{x^{(n)}\} ,x^{(n)} \in D, x^{(n)} \neq a$ сходяща към а, числовата редица $\{f(x^{(n)})\}$ има граница L. 
-	\end{definition}
+\end{definition}
 
-	\begin{theorem}
+\begin{theorem}
 Дефинициите 2.2.1 и 2.2.2 на Коши и Хайне за граница на функция са еквивалентни.
-	\end{theorem}
+\end{theorem}
 
-	\begin{definition}
+\begin{definition}
 Нека $f: D \rightarrow \mathbb{R}, a \in \mathbb{R}^m$, а е точка на сгъстяване за D. Казва се че $f(x)$ дивергира към $\infty$ (съответно към $-\infty$) при $x \rightarrow a$ със стойностти $x \neq a$, ако за всяко $A \in \mathbb{R}$ съществува такова $\delta > 0$, че за всяко x от множеството $D \setminus \{a\}$, за което $\rho(x;a) = \Vert x - a \Vert < \delta $ е изпълнено $f(x) > A $( съответно $f(x) < A)$. Записва се
  $$\lim\limits_{x \rightarrow a} f(x) = \infty (-\infty) $$ 
-	\end{definition}
+\end{definition}
 
-	\begin{definition}[Повторна граница]
+\begin{definition}[Повторна граница]
 Нека $D \subset \mathbb{R}^2, a = (a_1, a_2) \in \mathbb{R}^2$ e точка на сгъстяване за D и функция $f: D \rightarrow \mathbb{R}$. Нека съществува такава околност $U_{a_2} \subset \mathbb{R}$ на точката $а_2$, че за всички стойностти $y \in U_{a_2} $ да съществува  $\lim\limits_{x \rightarrow a_1} f(x,y) = \varphi (y)$. Ако освен това съществува $\lim\limits_{y \rightarrow a_2} \varphi (y) = A$, А се нарича повторна граница и се означава както следва 
 $$A = A_{1,2} =\lim\limits_{y \rightarrow a_2} (\lim\limits_{x \rightarrow a_1} f(x,y) ) $$.\\
 Аналогично се съвежда и другата повторна граница 
 $$ A_{2,1} = \lim\limits_{x \rightarrow a_1} (\lim\limits_{y \rightarrow a_2} f(x,y) ) $$
-	\end{definition}
+\end{definition}
 
-	\begin{theorem}
+\begin{theorem}
 Нека $D \subset \mathbb{R}^2, a = (a_1, a_2) \in \mathbb{R}^2$ e точка на сгъстяване за D и функция $f: D \rightarrow \mathbb{R}$.  Нека
-	\begin{enumerate}
-		\item  Нека съществува такава околност $U_{a_2} \subset \mathbb{R}$ на точката $а_2$, че за всички стойностти $y \in U_{a_2} $ да съществува  $\lim\limits_{x \rightarrow a_1} f(x,y) = \varphi (y)$.
+\begin{enumerate}
+		\item  Съществува такава околност $U_{a_2} \subset \mathbb{R}$ на точката $a_2$, че за всички стойностти $y \in U_{a_2} $ да съществува  $\lim\limits_{x \rightarrow a_1} f(x,y) = \varphi (y)$.
 
 		\item Съществува границата $\lim\limits_{(x, y) \rightarrow (a_1,a_2) } f(x,y) = L$.
-	\end{enumerate}
+\end{enumerate}
 Тогава съществува граница  $\lim\limits_{y \rightarrow a_2} \varphi (y)$ и освен това е в сила равенствотот  $\lim\limits_{y \rightarrow a_2} \varphi (y) = L$
-	\end{theorem}
+\end{theorem}
 
 \subsection{Непрекъснатост на функция на няколко променливи}
-	\begin{definition}
+
+\begin{definition}
 Казва се че функцията $f: D \rightarrow \mathbb{R}$ е непрекъсната в точка $a \in D$ ако $\lim\limits_{x \rightarrow a} f(x) = f(a)$.
-	\end{definition}
+\end{definition}
 
-	\begin{definition}[непрекъснатост по Коши]
-Казва се, че функцията $f: D \rightarrow \mathbb{R}$ е непрекъсната в точка $a \in D$, ако за всяко $\varepsilon > 0$ съществува $\delta > 0$, че за всяко x от множеството $D $, за което $\rho(x;a) = \Vert x - a \Vert < \delta $ е изпълнено $|f(x) - f(a) | < \varepsilon$.
-	\end{definition}
+\begin{definition}[непрекъснатост по Коши]
+Казва се, че функцията $f: D \rightarrow \mathbb{R}$ е непрекъсната в точка $a \in D$, ако за всяко $\varepsilon > 0$ съществува $\delta > 0$, че за всяко x от множеството $D $, за което $\rho(x;a) = \Vert x - a \Vert < \delta $ е изпълнено $\vert f(x) - f(a) \vert  < \varepsilon$.
+\end{definition}
 
-	\begin{definition}[непрекъснатост по Хайне]
+\begin{definition}[непрекъснатост по Хайне]
 Казва се, че функцията $f: D \rightarrow \mathbb{R}$ е непрекъсната в точка $a \in D$ ако за всяка редица  $\{x^{(n)}\}$ (с $x^{(n)} \in D$ за $n \in \mathbb{N}$) сходяща към а, числовата редица $\{f(x^{(n)})\}$ има граница $f(a)$. 
-	\end{definition}
+\end{definition}
 
-	\begin{definition}[за съставна функция]
+\begin{definition}[за съставна функция]
 Нека $A \subset \mathbb{R}^m$ е отворено множество, $f: А \rightarrow \mathbb{R}$ и $x_k: (\alpha, \beta) \rightarrow \mathbb{R}, k = 1 \div m$. Полагайки  $x(t) = (x_1(t), x_2(t), ... , x_m(t)) \in A$ за всяко $t \in (\alpha, \beta)$ съставната функция $F(t) = f \circ x(t) = f(x(t))$ се дефинира по формулата 
 $$F(t) = f \circ x(t) = f(x(t)) = f(x_1(t), x_2(t), ... , x_m(t))$$
-	\end{definition}
+\end{definition}
 
-	\begin{theorem}
+\begin{theorem}
 Нека $A \subset \mathbb{R}^m$ е отворено множество и $f: А \rightarrow \mathbb{R}$ интервалът $(\alpha, \beta) \subset \mathbb{R}$ , $x_k: (\alpha, \beta) \rightarrow \mathbb{R} $ за $k = 1 \div m$. Нека освен това $x(t) = (x_1(t), x_2(t), ... , x_m(t)) \in A$ за $\forall t \in (\alpha, \beta)$ и $x_k$ са непрекъснати в точката $t_0 \in (\alpha, \beta) $  за $k = 1 \div m$, а $f$ e непрекъсната в $x^0 = x(t_0)$. Toгава функцията $F(t) = f \circ x(t) = f(x(t)) = f(x_1(t), x_2(t), ... , x_m(t))$ е непрекъсната в точката $t_0$
-	\end{theorem}
+\end{theorem}
 
 \subsection{Равномерна непрекъснатост на функция на няколко променливи}
-	\begin{definition}
-Нека $A \subset \mathbb{R}^m$ е отворено множество и $f: A \rightarrow \mathbb{R}$. Функцията се нарича равномерно непрекъсната в A, ако за  всяко $\varepsilon > 0$ съществува $\delta = \delta(\epsilon)$, че за всеки две точки $x', x'' \in A$ за които разстоянието $\rho(x';x'') =\Vert x' - x'' \Vert < \delta $, да следва, че $|f(x') - f(x'') | < \varepsilon$.
-	\end{definition}
+\begin{definition}
+Нека $A \subset \mathbb{R}^m$ е отворено множество и $f: A \rightarrow \mathbb{R}$. Функцията се нарича равномерно непрекъсната в A, ако за  всяко $\varepsilon > 0$ съществува $\delta = \delta(\epsilon)$, че за всеки две точки $x', x'' \in A$ за които разстоянието $\rho(x';x'') =\Vert x' - x'' \Vert < \delta $, да следва, че $\vert f(x') - f(x'') \vert  < \varepsilon$.
+\end{definition}
 
-	\begin{theorem}[на Вайерщрас]
+\begin{theorem}[на Вайерщрас]
 Нека множеството $K \subset \mathbb{R}^m$ е компактно и функцията $f: K \rightarrow \mathbb{R}$ е непрекъсната върху K. Tогава 
-	\begin{enumerate}
+
+\begin{enumerate}
 		\item f е ограничена в К, т.е същестуват $m, M \in \mathbb{R}$ такива че за всички $x \in K$ е изпълнено неравенството
 $m \leq f(x) \leq M$
 		\item f достифа най малката и най-голямата си стойност в К, т.е съществуват точки $x^0, y^0 \in K$ , такива че
 $$f(x^0) = \inf _{x \in K}f(x) ; f(y^0) = \sup_{y \in K} f(x)$$
-	\end{enumerate}
-	\end{theorem}
+\end{enumerate}
 
-	\begin{theorem}[на Kантор]
+\end{theorem}
+
+\begin{theorem}[на Kантор]
 Нека множеството $K \subset \mathbb{R}^m$ е компактно и функцията $f: K \rightarrow \mathbb{R}$ е непрекъсната върху K. Тогава $f$ е равномерно непрекъсната върху K.
-	\end{theorem}
+\end{theorem}
+
 
 \newpage
 
@@ -538,10 +557,10 @@ $$\dfrac{\partial f(x^0)}{\partial \nu} = grad \, (f(x^0), \nu)$$
 Ако функцията $f$ е дефинирана и диференцируема в околността $U_{x^0}$ на точката в $x^0$ и $f'_{x_k}$ са непрекъснати в $x_0$, то съществува производната на $f$ по посока на  произволен вектора $\nu = (\nu_1, \nu_2, ..., \nu_m)$ и тя се дава с формула: $\dfrac{\partial f(x^0)}{\partial \nu} = grad \, f(x^0)$
 \end {theorem}
 Ако, $\nu$ е единичен вектор, т.е $\Vert \nu \Vert = 1$. \\
-Тогава е в сила неравнестово $\left | \dfrac{\partial f(x^0)}{\partial \nu}\right| \leq \Vert grad \, f(x^0)  \Vert$, което следва от неравенство на Коши. 
-$$\left | \dfrac{\partial f(x^0)}{\partial \nu}\right| = \left| grad \, (f(x^0), \nu) \right| \leq \Vert grad \, f(x^0) \Vert \Vert \nu \Vert = \Vert grad \, f(x^0)  \Vert$$
+Тогава е в сила неравнестово $\left \vert  \dfrac{\partial f(x^0)}{\partial \nu}\right\vert  \leq \Vert grad \, f(x^0)  \Vert$, което следва от неравенство на Коши. 
+$$\left \vert  \dfrac{\partial f(x^0)}{\partial \nu}\right\vert  = \left\vert  grad \, (f(x^0), \nu) \right\vert  \leq \Vert grad \, f(x^0) \Vert \Vert \nu \Vert = \Vert grad \, f(x^0)  \Vert$$
 Равенство се достига само когато $\nu$ и $f(x^0)$ са колинеарни (еднопосочни или успоредни). тогава
-$$\left | \dfrac{\partial f(x^0)}{\partial \nu}\right| = \Vert grad \, f(x^0)  \Vert$$
+$$\left \vert  \dfrac{\partial f(x^0)}{\partial \nu}\right\vert  = \Vert grad \, f(x^0)  \Vert$$
 \\
 Ако вектора $\nu$ е колинеарен с градиента, тогава векторът $\nu =  \dfrac{grad \, f(x^0)}{\Vert grad \, f(x^0) \Vert}$ и тогава 
 $$
@@ -596,37 +615,343 @@ $$n_1 = t_2 \times t_1 \qquad n_2 = t_1 \times t_2$$
 а) допирателната равнина $\tau z  M_0 (0, 0, 3)$ \\
 б) нормалните вектори на $\tau$ в т. $М_0$.\\
 в) нормалата на повърхнината S в т. $М_0$. \\
-\\
 Решение: \\
 $z'_x = 2x\; ; z'_y = 2y\; ; M_0(0,0,3) = M_0(x_0, y_0, z_0) $\\
 $z'_x(x_0, y_0) = z'_x(0,0) = 0\; ; z'_y(x_0, y_0) = z'_y(0,0) = 0$\\
 а) $\tau : z - z_0 = z'_x (x_0, y_0)(x - x_0) + z'_y (x_0, y_0)(y - y_0) $\\
 $\tau : z - 3 = 0x + 0y \Leftrightarrow \tau: z = 3$\\
-\\
 б)$
 \vec {n_1} = (-f'_x (x_0, y_0), -f'_y (x_0, y_0), 1) = (0, 0, 1) \\
 \vec {n_2} = (f'_x (x_0, y_0), f'_y (x_0, y_0), -1) = (0, 0, -1) \\
 $
-\\
 в) $
 n: \dfrac{x - x_0}{-f'_x (x_0, y_0)} = \dfrac{y-y_0}{-f'_y (x_0, y_0)} = \dfrac{z - z_0}{1} \\
 n: \dfrac{x - 0}{0} = \dfrac{y-0}{0} = \dfrac{z - 3}{1} = \lambda \\
 n (0, 0, \lambda + 3), \lambda \in \mathbb{R}
 $
+\\
 \end{example}
 
 \newpage
 
 \section{Лекция 5: }
 
+\newpage
 
+\section{Упражения}
 
+\subsection{Лекция 1}
 
+\begin{task}
+Да се покаже дали посочените редици $\{ X_n \} = \{ x_n, y_n \}$ са сходящи или разходящи. За сходящите да се намери границите им.\\
+\begin{enumerate}
 
+\item $x_n = 1 + \dfrac{1}{n}, \, y_n = 2 + \dfrac{\sin{n}}{n}$
+\item $x_n = \left( 1 + \dfrac{1}{n} \right) ^n, \, y_n = 2 + n $
+\item $x_n = (-1)^n, \, y_n = n$
+\item $x_n = (-1)^n, \, y_n = \dfrac{1}{n}$
+\item $x_n =\sin{\dfrac{n \pi }{2}}, \, y_n = (-1)^n$
+\item $x_n = \sin{n}, \, y_n = \dfrac{(-1)^n}{n}$
 
+\end{enumerate}
+Решение: \\
+\begin{enumerate}
 
+\item $\lim\limits_{n \rightarrow \infty} \dfrac{1}{n} = 0, \, \dfrac{\vert \sin{n} \vert}{n} \in \left[0, \dfrac{1}{n} \right] \implies 
+\lim\limits_{n \rightarrow \infty} x_n = 1, \, \lim\limits_{n \rightarrow \infty} y_n = 2 \implies 
+\text{редицата е сходяща; точката (1,2) е нейна граница}$
 
+\item $ \lim\limits_{n \rightarrow \infty} x_n = e , \lim\limits_{n \rightarrow \infty} y_n = \infty \implies 
+\text{разходяща редица} $
 
+\item $ \lim\limits_{n \rightarrow \infty} x_n \text{не съществува, защото има две точки на сгъстяване.}, \,  
+\lim\limits_{n \rightarrow \infty} y_n = \infty \implies \text{разходяща редица}$
+
+\item $\lim\limits_{n \rightarrow \infty} x_n \text{не съществува, защото има две точки на сгъстяване.}, \,  
+\lim\limits_{n \rightarrow \infty} y_n = 0 \implies \text{разходяща редица}$
+
+\item $\lim\limits_{n \rightarrow \infty} x_n \text{не съществува}, \,  
+\lim\limits_{n \rightarrow \infty} y_n = \infty \implies \text{разходяща редица}$
+
+\item $\lim\limits_{n \rightarrow \infty} x_n \text{не съществува}, \,  
+\lim\limits_{n \rightarrow \infty} y_n = 0 \implies \text{разходяща редица}$
+
+\end{enumerate}
+
+\end{task}
+
+\subsection{Лекция 2}
+
+\begin{task}
+Нека $D \subset \mathbb{R}^m$ и са разгледани няколко функции. Да се напишат дефиниционните им множества и да се даде пояснение.  
+
+\begin{enumerate}
+
+\item $z(x, y) = x^2 + y^2 $
+\item $z(x, y) = \sqrt{ y^2 - 2x }$
+\item $z(x, y) = \ln \sqrt{ y^2 - 2x } $
+\item $z(x, y) = \dfrac{1}{\sqrt{ -y^2 + 2x + 1}}$
+\item $w(x, y, z) = \arccos(x^2 + y^2 + z^2)$
+\item $f(n) = 
+\begin{cases}
+1, & x\in \mathbb{Q}^m \\
+0, & x \in \dfrac{\mathbb{R}^m}{\mathbb{Q}^m}
+\end{cases}
+$
+\end{enumerate}
+
+Решение: 
+\begin{enumerate}
+\item $z(x, y) = x^2 + y^2 \\ D= \mathbb{R}^2$
+
+\item $z(x, y) = \sqrt{ y^2 - 2x } \\ D= \{ (x,y): y^2 - 2x \geq 0\} \subset \mathbb{R}^2, x \leq \dfrac{y^2}{2}$
+
+\item $z(x, y) = \ln \sqrt{ y^2 - 2x } \\ D= \{ (x,y): y^2 - 2x > 0\} \subset \mathbb{R}^2, x < \dfrac{y^2}{2}$
+
+\item $z(x, y) = \dfrac{1}{\sqrt{ -y^2 + 2x + 1}}\\ D= \{ (x,y):  -y^2 + 2x + 1 > 0\} \subset \mathbb{R}^2, x > \dfrac{y^2 - 1 }{2}$
+
+\item $w(x, y, z) = \arccos(x^2 + y^2 + z^2) \\ D= \{ (x,y,z):  x^2 + y^2 + z^2 \leq \pi \} \subset \mathbb{R}^3, \\ 
+\text{Графиката е кълбо с център (0,0,0) и радиус} \sqrt{\pi}$
+
+\item $D \subset \mathbb{R}^m $
+\end{enumerate}
+
+\end{task}
+
+\begin{task}
+Разгледаните по - долу функциите са дефинирани в $D = \mathbb{R}^2 \setminus \{ (0,0) \}$. Кои от границите същестуват и колко са
+$$
+A = \lim\limits_{(x,y) \rightarrow (0,0)} f(x,y) \quad
+A_{1,2} = \lim\limits_{y \rightarrow 0} \left( \lim\limits_{x \rightarrow 0} f(x,y) \right) \quad
+A_{2,1} = \lim\limits_{x \rightarrow 0} \left( \lim\limits_{y \rightarrow 0} f(x,y) \right) \quad
+$$
+
+\begin{enumerate}
+
+\item $f(x,y) = \dfrac{x-y}{x+y}$
+\item $f(x,y) = \dfrac{x^2 + y^2}{x^2y^2 + (x - y)^2}$
+\item $f(x,y) = \dfrac{xy^2}{x^2+y^4}$
+\item $f(x,y) = (x+y) \sin{\dfrac{1}{x}} \cos{\dfrac{1}{y}}$
+\item $f(x,y) = \dfrac{x^4 + y^4}{x^2 + y^2}$
+
+\end{enumerate}
+Решение: 
+
+\begin{enumerate}
+
+\item $
+f(x,y) = \dfrac{x-y}{x+y} \\
+\lim\limits_{x \rightarrow 0} f(x,y) = \dfrac{-y}{y} = -1 \qquad 
+\lim\limits_{y \rightarrow 0} f(x,y) = \dfrac{x}{x} = 1 \\
+A_{1,2} = \lim\limits_{y \rightarrow 0} \left( \lim\limits_{x \rightarrow 0} f(x,y) \right) = \lim\limits_{y \rightarrow 0} \left( -1 \right) = -1\\
+A_{2,1} = \lim\limits_{x \rightarrow 0} \left( \lim\limits_{y \rightarrow 0} f(x,y) \right) = \lim\limits_{x \rightarrow 0} \left( 1 \right) = 1 \\
+A = \lim\limits_{(x,y) \rightarrow (0,0)} f(x,y) \text{ Не съществува, защото трябва }A_{1,2} = A_{2,1}
+$
+
+\item $
+f(x,y) = \dfrac{x^2 + y^2}{x^2y^2 + (x - y)^2}\\
+\lim\limits_{x \rightarrow 0} f(x,y) = \dfrac{y^2}{(-y)^2} = 1 \qquad 
+\lim\limits_{y \rightarrow 0} f(x,y) = \dfrac{x^2}{x^2} = 1 \\
+\implies A_{1,2} = A_{2,1} = 1 \implies \exists A = \lim\limits_{(x,y) \rightarrow (0,0)} f(x,y)\\
+\text{Редица: }(x_n, y_n) = (\dfrac{1}{n},\dfrac{1}{n}) \rightarrow (0,0), f(x_n, y_n) = 1 \rightarrow 1\\
+\text{Редица: }(x'_n, y'_n) = (\dfrac{1}{n},\dfrac{-1}{n})  \rightarrow (0,0), f(x'_n, y'_n) = \dfrac{2n^2}{1 + 4n^2} \rightarrow \dfrac{1}{2} \neq 1 \\
+\implies f(x,y) \text{ няма граница при } (x,y) \rightarrow (0,0)
+$
+
+\item $
+f(x,y) = \dfrac{xy^2}{x^2+y^4}\\
+\lim\limits_{x \rightarrow 0} f(x,y) = \dfrac{0}{y^4} = 0 \qquad 
+\lim\limits_{y \rightarrow 0} f(x,y) = \dfrac{0}{x^2} = 0 \\
+A_{1,2} = A_{2,1} = 0 \implies \exists A = \lim\limits_{(x,y) \rightarrow (0,0)} f(x,y) \\
+\text{Редица: }(x_n, y_n) = (\dfrac{1}{n^2},\dfrac{1}{n}) \rightarrow (0,0), f(x_n, y_n) = \dfrac{1}{2} \rightarrow \dfrac{1}{2} \neq 0\\
+\implies f(x,y) \text{ няма граница при } (x,y) \rightarrow (0,0)
+$
+
+\item $
+f(x,y) = (x+y) \sin{\dfrac{1}{x}} \cos{\dfrac{1}{y}}\\
+0 \leq \vert f(x,y) \vert \leq \vert x + y \vert \leq  \vert x \vert + \vert y \vert \text{ и } \vert x \vert + \vert y \vert \rightarrow 0 \\
+A = 0 \\
+\lim\limits_{x \rightarrow 0} \sin{\dfrac{1}{x}} \text{ - не съществува} \\
+\lim\limits_{x \rightarrow 0} f(x,y) = y\cos{\dfrac{1}{y}} \lim\limits_{x \rightarrow 0} \sin{\dfrac{1}{x}}\\$
+Аналогично и другата вътрешна граница не съществува. Но тогава и повторните граници $A_{1,2},\, A_{2,1}$ не съществуват. 
+
+\item $f(x,y) = \dfrac{x^4 + y^4}{x^2 + y^2}\\
+\lim\limits_{x \rightarrow 0} f(x,y) = y^2 \qquad 
+\lim\limits_{y \rightarrow 0} f(x,y) = x^2 \\
+A_{1,2} = \lim\limits_{y \rightarrow 0} \left( \lim\limits_{x \rightarrow 0} f(x,y) \right) = \lim\limits_{y \rightarrow 0} \left( y^2 \right) = 0\\
+A_{2,1} = \lim\limits_{x \rightarrow 0} \left( \lim\limits_{y \rightarrow 0} f(x,y) \right) = \lim\limits_{x \rightarrow 0} \left( x^2 \right) = 0 \\
+\implies A = A_{1,2} = A_{2,1} = 0
+$
+
+\end{enumerate}
+
+\end{task}
+
+\begin{task}
+Нека $A,B,C,D$ са подмножества на $\mathbb{R}^2$ дефинирани както следва \\
+$
+A = \{ (x,y): x \geq 0, y \leq 1, y>x \} \\
+B = \{ (x,y): x \leq 1, y \geq 0, y<x \} \\
+C = \{ (x,y): x = y , 0 \leq x \leq 1 \} \\
+D = A \cup B \cup C
+$ \\
+и функцията $f: D \rightarrow \mathbb{R} $ зададена по следния начин \\
+$f(x,y) = 
+\begin{cases}
+\dfrac{1}{y^2}, & (x,y)\in A \\
+0, & x = y \\
+-\dfrac{1}{x^2}, & (x,y)\in B
+\end{cases}$\\ 
+Да се изследва непрекъснатостта на тази функция. \\
+Решение: \\
+Функцията f е непрекъсната в А, защото е частно на две функции със знаменател $y^2 \neq 0$, в А. Аналогично е непрекъсната в B защото знаменателя е $x^2 \neq 0$. Остана да се изследва поведението върху C.\\
+$
+(x_0,y_0) = (x_0, x_0) \in C \\
+R = \{ (x_n , y_n) \},\ (x_n , y_n) \in A \\
+\lim\limits_{n \rightarrow \infty} R = (x_0, y_0)\\
+\lim\limits_{n \rightarrow \infty} f(x_n,y_n) = \dfrac{1}{y_0 ^2} = \dfrac{1}{x_0 ^2} \neq 0\\
+\text{Ако } x_0 \neq 0, \ f(x_0,y_0) = 0 \\
+\implies \text{ функцията е прекъсната в точката } (x_0, x_0) \neq (0,0) \\
+\text{Ако } (x_n , y_n) \in B,\ \lim\limits_{n \rightarrow \infty} f(x_n,y_n) = - \dfrac{1}{x_0 ^2} \neq f(x_0, x_0) \neq 0. \\
+\text{Ако } x_0 = 0,\ \lim\limits_{n \rightarrow \infty} f(x_n,y_n) = \infty(-\infty),\ f(0,0) = 0,\\
+\implies \text{f е прекъсната в точката (0,0).} 
+$\\
+Функцията е непрексъната в D, с изключение на точките от C, където е прекъсната. 
+\end{task}
+
+\subsection{Лекция 3}
+
+\begin{task}
+Да се намерят първите частни производни на следните функции
+\begin{enumerate}
+
+\item $f(x,y,z) = e^{4x+3y} + xy^2z^3 + 1111e^\pi$ за произволна точка $(x_0, y_0, z_0) \in \mathbb{R}^3$
+\item $f(x,y) = \vert x + y \vert$ в точката (0,0)
+\item $
+f(x,y) = 
+\begin{cases}
+\dfrac{xy}{x^2 + y^2}, & (x,y) \neq (0,0)  \\
+0, & (x,y) = (0,0) 
+\end{cases}$ в равнината $\mathbb{R}^2$ 
+\end{enumerate}
+Решение: \\
+
+\begin{enumerate}
+\item $
+f(x,y,z) = e^{4x+3y} + xy^2z^3 + 1111e^\pi \\
+f(x,y_0,z_0) \implies f'_x (x_0,y_0,z_0) = 4e^{4x_0+3y_0} + y_0 ^2 z_0 ^3 \\
+f(x_0,y,z_0) \implies f'_y (x_0,y_0,z_0) = 3e^{4x_0+3y_0} + 2x_0 y_0 z_0 ^3 \\
+f(x_0,y_0,z) \implies f'_z (x_0,y_0,z_0) = 3x_0 y_0 ^2 z_0 ^2
+$ 
+\item $
+f(x,y) = \vert x + y \vert \\
+\dfrac{g(h) - g(0)}{h} = \dfrac{f(0+h,0) - f(0,0)}{h} \\
+\lim\limits_{h \rightarrow 0} \dfrac{f(0+h,0) - f(0,0)}{h} = \lim\limits_{h \rightarrow 0} \dfrac{\vert h \vert}{h} \text{ не съществува} \\
+\implies \nexists f'_x (0,0) \text{(Аналогично се получава за $f'_y(0,0)$)} 
+$ 
+\item $
+f(x,y) = 
+\begin{cases}
+\dfrac{xy}{x^2 + y^2}, & (x,y) \neq (0,0)  \\
+0, & (x,y) = (0,0) 
+\end{cases}\\
+(x,y) \neq (0,0)\\
+f'_x (x,y) = \dfrac{y(y^2 - x^2)}{(x^2 + y^2)^2}\\
+f'_y (x,y) = \dfrac{x(x^2 - y^2)}{(x^2 + y^2)^2}\\
+\lim\limits_{h \rightarrow 0} \dfrac{f(0+h,0) - f(0,0)}{h} = \lim\limits_{h \rightarrow 0} \dfrac{0-0}{h} = \lim\limits_{h \rightarrow 0} = 0 \\
+\lim\limits_{k \rightarrow 0} \dfrac{f(0,0+k) - f(0,0)}{k} =  \lim\limits_{k \rightarrow 0} \dfrac{0-0}{k} = \lim\limits_{k \rightarrow 0} = 0 \\
+\implies $ Функцията има частни производни във всичко точки на равнината $\mathbb{R}^2$
+\end{enumerate}
+
+\end{task}
+
+\begin{task}
+$f(x,y) = x + (y-1)\arcsin{\sqrt{\dfrac{x}{y}}}\qquad f'_x(x,1) = ?$\\ 
+Решение: \\
+$
+f'_x (a,b) = \lim\limits_{h \rightarrow 0} \dfrac{f(a +h,b) - f(a,b)}{h} \text{(Ако съществува)} \implies \\
+f'_x(x,1) =  \lim\limits_{h \rightarrow 0} \dfrac{f(x +h,1) - f(x,1)}{h} \text{(Ако съществува)}\\
+f(x +h,1) = x + h + (1-1)\arcsin{\sqrt{\dfrac{x}{1}}} = x + h + 0 \arcsin{\sqrt{\dfrac{x}{1}}} =  x + h \\
+f(x,1) = x + (1-1)\arcsin{\sqrt{\dfrac{x}{1}}} = x + 0 \arcsin{\sqrt{\dfrac{x}{1}}} =  x \implies \\
+\lim\limits_{h \rightarrow 0} \dfrac{f(x +h,1) - f(x,1)}{h} =  \lim\limits_{h \rightarrow 0} \dfrac{x + h - x}{h} = \lim\limits_{h \rightarrow 0} \dfrac{h}{h} =  \lim\limits_{h \rightarrow 0} 1 \implies f'_x(x,1) = 1
+$
+\end{task}
+
+\begin{task}
+Да се докаже че функцията $f(x,y) = 
+\begin{cases}
+\dfrac{x^3y}{x^6 + y^2}, & (x,y) \neq (0,0)  \\
+0, & x^2 + y^2 = (0,0) 
+\end{cases}
+$ е прекъсната в точката (0,0) но има частни производни в тази точка. \\
+Решение: \\
+$
+\text{Редица } (x_n, y_n) = \left(\dfrac{1}{n}, \dfrac{1}{n^3} \right) \\
+f(x_n, y_n) = \dfrac{ \left( \dfrac{1}{n} \right)^3 \cdot \dfrac{1}{n^3}}{\left( \dfrac{1}{n}\right)^6 + \left( \dfrac{1}{n^3} \right)^3 } = \dfrac{\dfrac{1}{n^6}}{\dfrac{2}{n^6}} = \dfrac{1}{2} \qquad \lim\limits_{n \rightarrow \infty} f(x_n, y_n) = \dfrac{1}{2}  \implies \\
+\lim\limits_{x \rightarrow 0, y \rightarrow 0 } f(x, y) \neq f(0,0) = 0 \implies f(x, y) \text{ е прекъсната в т. }(0,0).\\
+\\
+f'_x (0,0) = \lim\limits_{x \rightarrow 0} \dfrac{f(x,0) - f(0,0)}{x - 0} = \dfrac{ \dfrac{x^3 \cdot 0}{x^6 + 0} - 0}{x - 0} = 0 \\
+f'_y (0,0) = \lim\limits_{y \rightarrow 0} \dfrac{f(0,y) - f(0,0)}{y - 0} = \dfrac{\dfrac{0^3 \cdot y}{0^6 + y^2} - 0}{y - 0} = 0
+$
+\end{task}
+
+\begin{task}
+Да се намерят първите частни производни на следните функции:
+\begin{enumerate}
+
+\item $f(x,y) = \sin{(2x+3)} + 3e^{-x}e^{4y} - 11x^3 + 19e^\pi$
+\item $f(x,y) = \sqrt{x^2 + y^2} + \arctan {\frac{y}{x}}$
+\item $f(x,y,z) = (xy)^z$
+\item $\sqrt[3]{x^2+3y^2} e^{x^2 - 5y}$
+
+\end{enumerate}
+Решение: \\
+
+\begin{enumerate}
+
+\item $
+f(x,y) = \sin{(2x+3)} + 3e^{-x}e^{4y} - 11x^3 + 19e^\pi \\
+f'_x(x,y) = (\sin{(2x+3)})'_x + (3e^{-x}e^{4y})'_x - (11x^3)'_x + (19e^\pi )'_x \\
+f'_x(x,y) = \cos{(2x+3)}\cdot 2 + (-3e^{-x}e^{4y}) - (3 \cdot 11x^2) + 0 \\
+f'_x(x,y) = 2\cos{(2x+3)} -3e^{-x}e^{4y} - 33x^2 \\
+f'_y(x,y) = (\sin{(2x+3)})'_y + (3e^{-x}e^{4y})'_y - (11x^3)'_y + (19e^\pi )'_y \\
+f'_y(x,y) = 0 + (3 \cdot 4 e^{-x}e^{4y}) - 0 + 0 = 12e^{-x}e^{4y}
+$
+\item $f(x,y) = \sqrt{x^2 + y^2} + \arctan {\frac{y}{x}}\\
+f'_x(x,y) = \dfrac{1}{2} (x^2)^{- \dfrac{1}{2}} \cdot 2x + \dfrac{1}{1 + \dfrac{y^2}{x^2}} \cdot y \cdot ( - \dfrac{1}{x^2}) \\
+f'_x(x,y) = \dfrac{x}{\sqrt{x^2 + y^2}} - \dfrac{x^2y}{x^2 + y^2} \cdot \dfrac{1}{x^2} \\
+f'_x(x,y) = \dfrac{x}{\sqrt{x^2 + y^2}} - \dfrac{xy}{x^2 + y^2} \\
+f'_y(x,y) = \dfrac{1}{2} (x^2)^{- \dfrac{1}{2}} \cdot 2y + \dfrac{1}{1 + \dfrac{y^2}{x^2}} \cdot  \dfrac{1}{x} \\
+f'_y(x,y) = \dfrac{y}{\sqrt{x^2 + y^2}} + \dfrac{x^2}{x^2 + y^2} \cdot \dfrac{1}{x}\\
+f'_y(x,y) = \dfrac{y}{\sqrt{x^2 + y^2}} + \dfrac{x}{x^2 + y^2}
+$
+
+\item $f(x,y,z) = (xy)^z\\
+f'_x(x,y,z) = z(xy)^{z-1} \cdot (xy)'x = yz(xy)^{z-1}\\
+f'_y(x,y,z) = z(xy)^{z-1} \cdot (xy)'y = xz(xy)^{z-1}\\
+f'_z(x,y,z) = (xy)^z \ln{(xy)}
+$
+
+\item $\sqrt[3]{x^2+3y^2} e^{x^2 - 5y}\\
+f'_x(x,y) = \left[ \sqrt[3]{x^2+3y^2} \right]'_x \cdot e^{x^2 - 5y} + \sqrt[3]{x^2+3y^2} \cdot (e^{x^2 - 5y})'_x\\
+f'_x(x,y) = \dfrac{1}{3} (x^2 + 3y^2)^{- \frac{2}{3}} \cdot 2x  \cdot e^{x^2 - 5y} +  \sqrt[3]{x^2+3y^2}\cdot 2x e^{x^2 - 5y} \\
+f'_x(x,y) = \dfrac{2x}{3} \cdot \dfrac{e^{x^2 - 5y}}{\sqrt[3]{(x^2+3y^2)^2}} + 2x \sqrt[3]{x^2+3y^2} \cdot e^{x^2 - 5y} \\
+f'_x(x,y) = \dfrac{2x}{3} \cdot \dfrac{e^{x^2 - 5y}}{\sqrt[3]{(x^2+3y^2)^2}} \left[ 1 + 3(x^2 + 3y^2) \right] \\
+f'_x(x,y) = \dfrac{2x}{3} (1 + 3x^2 + 9y^2) \dfrac {e^{x^2 - 5y}}{\sqrt[3]{(x^2+3y^2)^2}}\\
+\\
+f'_y(x,y) =  \left[ \sqrt[3]{x^2+3y^2} \right]'_y \cdot e^{x^2 - 5y} + \sqrt[3]{x^2+3y^2} \cdot (e^{x^2 - 5y})'_y\\
+f'_y(x,y) = \dfrac{1}{3} (x^2 + 3y^2)^{- \frac{2}{3}} \cdot 6y  \cdot e^{x^2 - 5y} +  \sqrt[3]{x^2+3y^2}\cdot (-5e^{x^2 - 5y}) \\
+f'_y(x,y) = 2y \cdot \dfrac{1}{\sqrt[3]{(x^2+3y^2)^2}} \cdot e^{x^2 - 5y} - 5  \sqrt[3]{x^2+3y^2}\cdot e^{x^2 - 5y} \\
+f'_y(x,y) = e^{x^2 - 5y} \cdot \sqrt[3]{(x^2+3y^2)^2} (2y - 5(x^2 + 3y^2)) \\
+f'_y(x,y) = (2y - 5x^2 - 15y^2) \dfrac{e^{x^2 - 5y}}{\sqrt[3]{(x^2+3y^2)^2}}
+$
+
+\end{enumerate}
+
+\end{task}
+\subsection{Лекция 4}
+
+\subsection{Лекция 5}
 
 
 
