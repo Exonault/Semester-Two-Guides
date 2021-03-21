@@ -61,11 +61,14 @@
 Функция на една променлива с таблица на истинност: 
 \begin{table}[htp]
   \begin{center}
-    \begin{tabular}{c|c} 
+    \begin{tabular}{|c|c|} 
+\hline
       \textbf{p} & \textbf{$\neg$p} \\
       \hline
       T & F \\
+\hline
       F & T \\
+\hline
     \end{tabular}
   \end{center}
 \end{table}
@@ -75,13 +78,18 @@
 Функция на две променливи с таблица на истинност: 
 \begin{table}[htp]
   \begin{center}
-    \begin{tabular}{c|c|c} 
+    \begin{tabular}{|c|c|c|} 
+\hline
       \textbf{p} & \textbf{q}  & \textbf{p $\land$ q} \\
       \hline
 	F & F & F \\
+\hline
 	F & T & F \\
+\hline
 	T & F & F \\
+\hline
  	T & T & T \\
+\hline
     \end{tabular}
   \end{center}
 \end{table}
@@ -91,13 +99,18 @@
 Функция на две променливи с таблица на истинност: 
 \begin{table}[htp]
   \begin{center}
-    \begin{tabular}{c|c|c} 
+    \begin{tabular}{|c|c|c|} 
+\hline
       \textbf{p} & \textbf{q}  & \textbf{p $\lor$ q} \\
       \hline
 	F & F & F \\
+\hline
 	F & T & T \\
+\hline
 	T & F & T \\
+\hline
  	T & T & T \\
+\hline
     \end{tabular}
   \end{center}
 \end{table}
@@ -109,13 +122,18 @@
 Функция на две променливи с таблица на истинност: 
 \begin{table}[htp]
   \begin{center}
-    \begin{tabular}{c|c|c} 
+    \begin{tabular}{|c|c|c|} 
+\hline
       \textbf{p} & \textbf{q}  & \textbf{p $\otimes$ q} \\
       \hline
 	F & F & F \\
+\hline
 	F & T & T \\
+\hline
 	T & F & T \\
+\hline
  	T & T & F \\
+\hline
     \end{tabular}
   \end{center}
 \end{table}
@@ -125,13 +143,18 @@
 Функция на две променливи с таблица на истинност: 
 \begin{table}[htp]
   \begin{center}
-    \begin{tabular}{c|c|c} 
+    \begin{tabular}{|c|c|c|} 
+\hline
       \textbf{p} & \textbf{q}  & \textbf{p $\rightarrow$ q} \\
-      \hline
+\hline
 	F & F & T \\
-	F & T & T \\
-	T & F & F \\
- 	T & T & T \\
+ \hline
+	F & T & T \\ 
+\hline
+	T & F & F \\ 
+\hline
+ 	T & T & T \\ 
+\hline
     \end{tabular}
   \end{center}
 \end{table}
@@ -141,13 +164,18 @@
 Функция на две променливи с таблица на истинност: 
 \begin{table}[htp]
   \begin{center}
-    \begin{tabular}{c|c|c} 
+    \begin{tabular}{|c|c|c|} 
+\hline
       \textbf{p} & \textbf{q}  & \textbf{p $\Leftrightarrow$ q} \\
-      \hline
+\hline
 	F & F & T \\
+\hline
 	F & T & F \\
+\hline
 	T & F & F \\
+\hline
  	T & T & T \\
+\hline
     \end{tabular}
   \end{center}
 \end{table}
@@ -903,6 +931,182 @@ R = \{(Иван, Иван),\;
 \end{example}
 
 \section{Лекция 5: Функции}
+Функция f от множеството A в множеството B е такова съответствие, че на всеки  елемент от множеството A е съпоставен (присвоен) един (единствен) елемент от множеството B.\\
+Присвояването се записва като 
+$$f(a) = b$$ 
+където b е едиствения елемент от B присвоен посредством f на елемента a от A. Ако f е функция отмножество A в множество B, то това се означава по следния начин 
+$$f: A \rightarrow B$$
+Mножеството A  e дефиниционна област на f, а множеството B е област на стойностите на f. \\
+b е образ на a, а a е първообраз на b. \\
+Диапазон на f е множеството от всички образи на всички  елементи на A.\\
+\begin{example}
+Да разгледаме функцията $f: P \rightarrow C$ където \\
+P = \{Лили, Митко, Катя, Петър\} \\
+C = \{Бургас, София, Пловдив, Варна\}\\
+f(Лили) = Пловдив \\
+f(Митко) = София \\
+f(Катя) = Бургас \\
+f(Петър) = Варна \\
+За случая, диапазонът на f е C. 
+\end{example}
+Начини за представяне на функциите :
+
+\begin{itemize}
+\item таблици \\
+\begin{table}[htp]
+  \begin{center}
+    \begin{tabular}{|c|c|} 
+\hline
+      \textbf{x} & \textbf{f(x)}\\
+\hline
+	Лили & Пловдив  \\ 
+\hline
+	Митко & София  \\
+\hline
+	Катя & Бургас \\
+\hline
+ 	Петър & Варна  \\
+\hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\item означаване на съответствията със стрелки 
+\item формули $f:\mathbb{R} \rightarrow \mathbb{R}, \quad f(x) = 2x$
+\item графики: множеството от наредени двойки $ \{(a, b) | a \in A, \, f(a) = b\}$.
+\end{itemize}
+Нека $f_1$ и $f_2$ са функции от A в R.Сумата и произведението на $f_1$ и $f_2$ също са функции от A в R дефинирани като:
+$$(f_1+ f_2)(x) =  f_1(x) + f_2(x)$$
+$$(f_1f_2)(x) =  f_1(x) f_2(x)$$
+
+\begin{example}
+$$f_1(x) = 3x \qquad f_2(x) = x+5 $$
+$$(f_1+ f_2)(x) =  f_1(x) + f_2(x) = 3x + x + 5 = 4x + 5$$
+$$(f_1f_2)(x) =  f_1(x) f_2(x) = 3x(x + 5) = 3x^2 + 15x$$
+\end{example}
+Ако разгледаме подмножеството $S \subseteq A$, то множеството от всички образи на елементите $s \in S$ се нарича образ на S.\\  
+Образът на S се означава с f(S): $f(S) = \{f(s) | s \in S\}$
+
+\subsection{Функциите като релации}
+Тъй като графиката на f е подмножество на $A \times B$, то тя е релация от A в B.\\
+Още повече, за всеки елементa на A, съществува точно една наредена двойка в графиката на функцията, чийто първи елемент е a.\\
+Обратно, ако R е релация от A в B, такава че всеки елемент от A е първи елемент на само една наредена двойка от R, тогава функцията може да бъде дефинирана посредством R като нейна графика.\\
+Tова се прави като на всеки елемент $a \in A$ се присвоява само един елемент $b \in B$, така че $(a, b) \in R$
+
+\subsection{Свойства на функции}
+
+\subsubsection{Инекция}
+Функцията $f: A \rightarrow B$ е "изображение в" или инекция (влагане), тогава и само тогава, когато
+$$\forall x, y \in A (f(x) = f(y) \rightarrow x = y)$$
+
+\subsubsection{Строго нарастваща/намаляваща}
+Функцията $f: A \rightarrow B$, където $A,B \subseteq R$ се наричастрого нарастваща, ако
+$$\forall x,y\in A (x < y \rightarrow f(x) < f(y))$$ 
+и строго намаляваща, ако
+$$\forall x,y\in A (x < y \rightarrow f(x) > f(y))$$ 
+
+\subsubsection{Сюрекция}
+Функцията $f: A \rightarrow B$ е " изображение върху" или сюрекция (налагане), тогава и само тогава, когато за всеки елемент $b \in B$ съществува елемент $a \in A$ ,така че $f(a) = b$.
+
+\subsubsection{Биекция}
+Функцията $f: A \rightarrow B$ е взаимно еднозначно съответствие, или биекция, тогава и само тогава, когато е едновременно инекция и сюрекция.
+
+\subsection{Обратна функция}
+Обратна функция на биекцията $f: A \rightarrow B$ е функцията 
+$$f^{-1}:B \rightarrow A, \, f^{-1}(b) = a \Leftrightarrow f(a) = b.$$
+
+\subsection{Крайни и безкрайни множества}
+
+\begin{definition}
+Множеството A е крайно, ако $ A \neq \varnothing $ или $\exists n \in \mathbb{N} $ и биекция $f: A \rightarrow I_n$. Мощността $\vert A \vert $=0, ако $ A = \varnothing $.
+\end{definition}
+
+\begin{definition}
+Множеството A е изброимо безкрайно, ако съществува биекция $f: A \rightarrow N$. Множеството A е изброимо, ако е крайно или изброимо безкрайно. \\
+Индексацията на елементите на едно множество А с елементите на друго множество е знак за съществуване на биекция между тях. 
+\end{definition}
+
+\begin{definition}
+Едно множество е безкрайно ако е равномощно на свое собствено подмножество.
+\end{definition}
+
+\begin{example}
+Фунцкията $f: N \rightarrow N_2, f(n) = 2n$ изобразява множеството на естествените числа N в собственото му подмножество на четните естествени числа $N_2$. Следователно 
+N е безкрайно множество. \\
+Множеството A= \{1,2,3\} е крайно, тъй като не съществува биекция между него и негово собствено подмножество.
+\end{example}
+
+\subsection{Принцип на Дирихле}
+Ако X и Y са крайни множества, чиито мощности са в отношение $ \vert X \vert > \vert Y \vert $, то за всяка функция $f: X \rightarrow Y$, съществуват $a_1 \neq a_2 \in X$, за които е в сила $f(a_1)=f(a_2)$.\\
+Принципът на Дерихле неформално се нарича принципа на чекмеджетата. Ако множеството X е множество от предмети а Y е множество от чекмеджета, така че предметите са повече от чекмеджетата и всички предмети от X се поставят в чекмеджетата от Y, то поне в едно чекмедже ще има поне два предмета.
+
+\subsection{Композиция}
+Композицията на две фyнкции $g: A \rightarrow B, \quad f: B \rightarrow C$ , се означава с $f ^\circ g$, и се дефинира като: 
+$$(f ^\circ g)(a) = f(g(a))$$
+Това означава : 
+\begin{itemize}
+\item първо, функцията g се прилага на елемента $a \in A$, като го изобразява в елемент от B 
+\item второ, функцията f се прилага на този елемент от B, изобразявайки го в елемент отC.
+\item Следователно,  съставната функция $(f ^\circ g)$ е изображение от A в C.
+\end{itemize}
+
+Композиция на функция с обратната и функция:
+$$(f^{-1\circ} f)(x) = f^{-1}(f(x)) = x$$
+
+\begin{example}
+$$f: \mathbb{R} \rightarrow \mathbb{R}, \qquad g: \mathbb{R} \rightarrow \mathbb{R} $$
+$$f(x) = 7x - 4, \qquad g(x) = 3x$$
+$$(f ^\circ g)(5) = f(g(5)) = f(15) = 105 - 4 = 101$$
+$$(f ^\circ g)(x) = f(g(x)) = f(3x) = 21x - 4$$
+\end{example}
+
+\subsection{Функции най-голямо цяло (Floor) и най-малко цяло(Ceiling)}
+Функциите floor и ceiling изобразяват реалните числа в целите числа $\mathbb{R} \rightarrow \mathbb{Z}$.\\
+Функцията най-голямо цяло (floor) присвоява на дадено $r \in R$ най-голямото цяло число $z \in Z$,такова че $z \leq r$.\\
+Означава се с $\lfloor r \rfloor$.\\
+По същество това е закръгляване надолу.
+\begin{example}
+$$\lfloor 2.3 \rfloor = 2,\qquad \lfloor 2 \rfloor = 2,\qquad \lfloor 0.5 \rfloor = 0,\qquad \lfloor -3.5 \rfloor = -4$$
+\end{example}
+Функцията най-малко цяло (ceiling) присвоява на дадено $r \in R$ най-малкото цяло число $z \in Z$ ,такова че $z \geq r$. \\
+Означава се с $\lceil r \rceil $.\\
+По същество това е закръгляване нагоре.
+\begin{example}
+$$\lceil 2.3 \rceil = 3,\qquad  \lceil 2 \rceil = 2, \qquad \lceil 0.5 \rceil = 1,\qquad \lceil -3.5 \rceil = -3$$
+\end{example}
+
+\newpage
+
+\section{Лекция 6: }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
