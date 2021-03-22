@@ -1,4 +1,4 @@
-\documentclass[fleqn]{article}
+\documentclass[fleqn,12pt]{article}
 
 \usepackage[utf8]{inputenc}
 \usepackage[bulgarian]{babel}
@@ -8,7 +8,6 @@
 
 
 \newtheorem{theorem}{Tеорема}[subsection]
-\newtheorem{corollary}{Следствие}[theorem]
 \newtheorem{lemma}[theorem]{Лема}
 
 \newtheorem{example}{Пример}[subsection]
@@ -91,7 +90,7 @@ $$ \vert a_k + b_k\vert   \leq \sqrt{ \sum_{k=1}^{m} (a_k + b_k)^2} \leq   \sum_
 
 \subsubsection{Нормирано пространство}
 \begin{definition}
-Пространството се нарича нормирано, ако в него е въведена норма $\Vert. \Vert$, т.е $\Vert.\Vert: L \rightarrow \mathbb{R}_0^+$ със свойства 
+Пространството се нарича нормирано, ако в него е въведена норма $\Vert. \Vert$, т.е $\Vert.\Vert: L \to \mathbb{R}_0^+$ със свойства 
 	\begin{enumerate}
  		\item $x = 0  \implies \Vert x \Vert = 0, x \neq 0  \implies \Vert x\Vert > 0$
 		\item $x \in L, \lambda \in \mathbb{R} \implies \Vert \lambda x \Vert = \vert \lambda\vert   \Vert x \Vert$
@@ -168,7 +167,7 @@ $$S(a;r) = \{ x \vert  x \in \mathbb{R}^m, \rho(x,a) = r \} = \{ x\vert  x \in \
 \begin{itemize}
 	\item вътрешна за множеството А, ако съществува отворено кълбо $B(a,\varepsilon): B(a,\varepsilon) \subset A$
 	\item външна за А, ако съществува $B(a,\varepsilon): B(a,\varepsilon) \subset \mathbb{R}^m \setminus  A$
-	\item контурна за А, ако за всяко $\varepsilon > 0: B(a,\varepsilon) \cap A \neq \O $ и \\ $ B(a,\varepsilon) \cap (\mathbb{R}^m \setminus  A) \neq \O$
+	\item контурна за А, ако за всяко $\varepsilon > 0: B(a,\varepsilon) \cap A \neq \varnothing $ и \\ $ B(a,\varepsilon) \cap (\mathbb{R}^m \setminus  A) \neq \varnothing$
 	\item изолирана ако съществува $\varepsilon > 0: B(a,\varepsilon) \cap A = \{ a \}$
 \end{itemize}
 	
@@ -189,7 +188,7 @@ $$S(a;r) = \{ x \vert  x \in \mathbb{R}^m, \rho(x,a) = r \} = \{ x\vert  x \in \
 \end{definition}
 
 \begin{definition}
-Точка а се нарича точка на сгъстяване на множеството $A \subset \mathbb{R}^m $, ако всяка нейна околност $U_a$ съдържа поне една точка на А, различна от а, т.е $U_a \cap (A\setminus \{ a \} \neq \O $
+Точка а се нарича точка на сгъстяване на множеството $A \subset \mathbb{R}^m $, ако всяка нейна околност $U_a$ съдържа поне една точка на А, различна от а, т.е $U_a \cap (A\setminus \{ a \} \neq \varnothing $
 \end{definition}
 
 \begin{definition}
@@ -286,18 +285,18 @@ T.e редицата има граница точката а, тогава и с
 
 \begin{definition}
 Казва се че дадена функция с дефиниционна област(дефиниционно множество) D, ако на всяка точка $x = (x_1, x_2, ... , x_m)$ от множеството D е съпоставено реално число $f(x) = f(x_1, x_2, ... , x_m)$, т.е на всяко $x \in D$ съществува единствено число $y = f(x) \in \mathbb{R}$. Понякога за кратко се записва. 
-$$f: D \rightarrow \mathbb{R} $$\\
+$$f: D \to \mathbb{R} $$\\
 В $\mathbb{R}^2$ се използва $(x,y)$ за означение, а в $\mathbb{R}^3$ - $(x,y,z)$.
 \end{definition}
 
 \subsection{Граница на функция на няколко променливи}
 
 \begin{definition}[Коши]
-Нека $f: D \rightarrow \mathbb{R}, a \in \mathbb{R}^m$, а е точка на сгъстяване за D. Казва се че $f(x)$ има граница L при $x \rightarrow a$ със стойностти $x \neq a$ ако за всяко $\varepsilon > 0$ съществува $\delta > 0$, че за всяко x от множеството $D \setminus \{a\}$, за което $\rho(x;a) = \Vert x - a \Vert < \delta $ е изпълнено $\vert f(x) - L \vert  < \varepsilon$. Записва се $$\lim\limits_{x \rightarrow a} f(x) = L$$
+Нека $f: D \to \mathbb{R}, a \in \mathbb{R}^m$, а е точка на сгъстяване за D. Казва се че $f(x)$ има граница L при $x \to a$ със стойностти $x \neq a$ ако за всяко $\varepsilon > 0$ съществува $\delta > 0$, че за всяко x от множеството $D \setminus \{a\}$, за което $\rho(x;a) = \Vert x - a \Vert < \delta $ е изпълнено $\vert f(x) - L \vert  < \varepsilon$. Записва се $$\lim\limits_{x \to a} f(x) = L$$
 \end{definition}
 
 \begin{definition}[Хайне]
-Нека $f: D \rightarrow \mathbb{R}, a \in \mathbb{R}^m$, а е точка на сгъстяване за D. Казва се че $f(x)$ има граница L при $x \rightarrow a$ със стойностти $x \neq a$ ако за всяка редица  $\{x^{(n)}\} ,x^{(n)} \in D, x^{(n)} \neq a$ сходяща към а, числовата редица $\{f(x^{(n)})\}$ има граница L. 
+Нека $f: D \to \mathbb{R}, a \in \mathbb{R}^m$, а е точка на сгъстяване за D. Казва се че $f(x)$ има граница L при $x \to a$ със стойностти $x \neq a$ ако за всяка редица  $\{x^{(n)}\} ,x^{(n)} \in D, x^{(n)} \neq a$ сходяща към а, числовата редица $\{f(x^{(n)})\}$ има граница L. 
 \end{definition}
 
 \begin{theorem}
@@ -305,57 +304,57 @@ $$f: D \rightarrow \mathbb{R} $$\\
 \end{theorem}
 
 \begin{definition}
-Нека $f: D \rightarrow \mathbb{R}, a \in \mathbb{R}^m$, а е точка на сгъстяване за D. Казва се че $f(x)$ дивергира към $\infty$ (съответно към $-\infty$) при $x \rightarrow a$ със стойностти $x \neq a$, ако за всяко $A \in \mathbb{R}$ съществува такова $\delta > 0$, че за всяко x от множеството $D \setminus \{a\}$, за което $\rho(x;a) = \Vert x - a \Vert < \delta $ е изпълнено $f(x) > A $( съответно $f(x) < A)$. Записва се
- $$\lim\limits_{x \rightarrow a} f(x) = \infty (-\infty) $$ 
+Нека $f: D \to \mathbb{R}, a \in \mathbb{R}^m$, а е точка на сгъстяване за D. Казва се че $f(x)$ дивергира към $\infty$ (съответно към $-\infty$) при $x \to a$ със стойностти $x \neq a$, ако за всяко $A \in \mathbb{R}$ съществува такова $\delta > 0$, че за всяко x от множеството $D \setminus \{a\}$, за което $\rho(x;a) = \Vert x - a \Vert < \delta $ е изпълнено $f(x) > A $( съответно $f(x) < A)$. Записва се
+ $$\lim\limits_{x \to a} f(x) = \infty (-\infty) $$ 
 \end{definition}
 
 \begin{definition}[Повторна граница]
-Нека $D \subset \mathbb{R}^2, a = (a_1, a_2) \in \mathbb{R}^2$ e точка на сгъстяване за D и функция $f: D \rightarrow \mathbb{R}$. Нека съществува такава околност $U_{a_2} \subset \mathbb{R}$ на точката $а_2$, че за всички стойностти $y \in U_{a_2} $ да съществува  $\lim\limits_{x \rightarrow a_1} f(x,y) = \varphi (y)$. Ако освен това съществува $\lim\limits_{y \rightarrow a_2} \varphi (y) = A$, А се нарича повторна граница и се означава както следва 
-$$A = A_{1,2} =\lim\limits_{y \rightarrow a_2} (\lim\limits_{x \rightarrow a_1} f(x,y) ) $$.\\
+Нека $D \subset \mathbb{R}^2, a = (a_1, a_2) \in \mathbb{R}^2$ e точка на сгъстяване за D и функция $f: D \to \mathbb{R}$. Нека съществува такава околност $U_{a_2} \subset \mathbb{R}$ на точката $а_2$, че за всички стойностти $y \in U_{a_2} $ да съществува  $\lim\limits_{x \to a_1} f(x,y) = \varphi (y)$. Ако освен това съществува $\lim\limits_{y \to a_2} \varphi (y) = A$, А се нарича повторна граница и се означава както следва 
+$$A = A_{1,2} =\lim\limits_{y \to a_2} (\lim\limits_{x \to a_1} f(x,y) ) $$.\\
 Аналогично се съвежда и другата повторна граница 
-$$ A_{2,1} = \lim\limits_{x \rightarrow a_1} (\lim\limits_{y \rightarrow a_2} f(x,y) ) $$
+$$ A_{2,1} = \lim\limits_{x \to a_1} (\lim\limits_{y \to a_2} f(x,y) ) $$
 \end{definition}
 
 \begin{theorem}
-Нека $D \subset \mathbb{R}^2, a = (a_1, a_2) \in \mathbb{R}^2$ e точка на сгъстяване за D и функция $f: D \rightarrow \mathbb{R}$.  Нека
+Нека $D \subset \mathbb{R}^2, a = (a_1, a_2) \in \mathbb{R}^2$ e точка на сгъстяване за D и функция $f: D \to \mathbb{R}$.  Нека
 \begin{enumerate}
-		\item  Съществува такава околност $U_{a_2} \subset \mathbb{R}$ на точката $a_2$, че за всички стойностти $y \in U_{a_2} $ да съществува  $\lim\limits_{x \rightarrow a_1} f(x,y) = \varphi (y)$.
+		\item  Съществува такава околност $U_{a_2} \subset \mathbb{R}$ на точката $a_2$, че за всички стойностти $y \in U_{a_2} $ да съществува  $\lim\limits_{x \to a_1} f(x,y) = \varphi (y)$.
 
-		\item Съществува границата $\lim\limits_{(x, y) \rightarrow (a_1,a_2) } f(x,y) = L$.
+		\item Съществува границата $\lim\limits_{(x, y) \to (a_1,a_2) } f(x,y) = L$.
 \end{enumerate}
-Тогава съществува граница  $\lim\limits_{y \rightarrow a_2} \varphi (y)$ и освен това е в сила равенствотот  $\lim\limits_{y \rightarrow a_2} \varphi (y) = L$
+Тогава съществува граница  $\lim\limits_{y \to a_2} \varphi (y)$ и освен това е в сила равенствотот  $\lim\limits_{y \to a_2} \varphi (y) = L$
 \end{theorem}
 
 \subsection{Непрекъснатост на функция на няколко променливи}
 
 \begin{definition}
-Казва се че функцията $f: D \rightarrow \mathbb{R}$ е непрекъсната в точка $a \in D$ ако $\lim\limits_{x \rightarrow a} f(x) = f(a)$.
+Казва се че функцията $f: D \to \mathbb{R}$ е непрекъсната в точка $a \in D$ ако $\lim\limits_{x \to a} f(x) = f(a)$.
 \end{definition}
 
 \begin{definition}[непрекъснатост по Коши]
-Казва се, че функцията $f: D \rightarrow \mathbb{R}$ е непрекъсната в точка $a \in D$, ако за всяко $\varepsilon > 0$ съществува $\delta > 0$, че за всяко x от множеството $D $, за което $\rho(x;a) = \Vert x - a \Vert < \delta $ е изпълнено $\vert f(x) - f(a) \vert  < \varepsilon$.
+Казва се, че функцията $f: D \to \mathbb{R}$ е непрекъсната в точка $a \in D$, ако за всяко $\varepsilon > 0$ съществува $\delta > 0$, че за всяко x от множеството $D $, за което $\rho(x;a) = \Vert x - a \Vert < \delta $ е изпълнено $\vert f(x) - f(a) \vert  < \varepsilon$.
 \end{definition}
 
 \begin{definition}[непрекъснатост по Хайне]
-Казва се, че функцията $f: D \rightarrow \mathbb{R}$ е непрекъсната в точка $a \in D$ ако за всяка редица  $\{x^{(n)}\}$ (с $x^{(n)} \in D$ за $n \in \mathbb{N}$) сходяща към а, числовата редица $\{f(x^{(n)})\}$ има граница $f(a)$. 
+Казва се, че функцията $f: D \to \mathbb{R}$ е непрекъсната в точка $a \in D$ ако за всяка редица  $\{x^{(n)}\}$ (с $x^{(n)} \in D$ за $n \in \mathbb{N}$) сходяща към а, числовата редица $\{f(x^{(n)})\}$ има граница $f(a)$. 
 \end{definition}
 
 \begin{definition}[за съставна функция]
-Нека $A \subset \mathbb{R}^m$ е отворено множество, $f: А \rightarrow \mathbb{R}$ и $x_k: (\alpha, \beta) \rightarrow \mathbb{R}, k = 1 \div m$. Полагайки  $x(t) = (x_1(t), x_2(t), ... , x_m(t)) \in A$ за всяко $t \in (\alpha, \beta)$ съставната функция $F(t) = f \circ x(t) = f(x(t))$ се дефинира по формулата 
+Нека $A \subset \mathbb{R}^m$ е отворено множество, $f: А \to \mathbb{R}$ и $x_k: (\alpha, \beta) \to \mathbb{R}, k = 1 \div m$. Полагайки  $x(t) = (x_1(t), x_2(t), ... , x_m(t)) \in A$ за всяко $t \in (\alpha, \beta)$ съставната функция $F(t) = f \circ x(t) = f(x(t))$ се дефинира по формулата 
 $$F(t) = f \circ x(t) = f(x(t)) = f(x_1(t), x_2(t), ... , x_m(t))$$
 \end{definition}
 
 \begin{theorem}
-Нека $A \subset \mathbb{R}^m$ е отворено множество и $f: А \rightarrow \mathbb{R}$ интервалът $(\alpha, \beta) \subset \mathbb{R}$ , $x_k: (\alpha, \beta) \rightarrow \mathbb{R} $ за $k = 1 \div m$. Нека освен това $x(t) = (x_1(t), x_2(t), ... , x_m(t)) \in A$ за $\forall t \in (\alpha, \beta)$ и $x_k$ са непрекъснати в точката $t_0 \in (\alpha, \beta) $  за $k = 1 \div m$, а $f$ e непрекъсната в $x^0 = x(t_0)$. Toгава функцията $F(t) = f \circ x(t) = f(x(t)) = f(x_1(t), x_2(t), ... , x_m(t))$ е непрекъсната в точката $t_0$
+Нека $A \subset \mathbb{R}^m$ е отворено множество и $f: А \to \mathbb{R}$ интервалът $(\alpha, \beta) \subset \mathbb{R}$ , $x_k: (\alpha, \beta) \to \mathbb{R} $ за $k = 1 \div m$. Нека освен това $x(t) = (x_1(t), x_2(t), ... , x_m(t)) \in A$ за $\forall t \in (\alpha, \beta)$ и $x_k$ са непрекъснати в точката $t_0 \in (\alpha, \beta) $  за $k = 1 \div m$, а $f$ e непрекъсната в $x^0 = x(t_0)$. Toгава функцията $F(t) = f \circ x(t) = f(x(t)) = f(x_1(t), x_2(t), ... , x_m(t))$ е непрекъсната в точката $t_0$
 \end{theorem}
 
 \subsection{Равномерна непрекъснатост на функция на няколко променливи}
 \begin{definition}
-Нека $A \subset \mathbb{R}^m$ е отворено множество и $f: A \rightarrow \mathbb{R}$. Функцията се нарича равномерно непрекъсната в A, ако за  всяко $\varepsilon > 0$ съществува $\delta = \delta(\epsilon)$, че за всеки две точки $x', x'' \in A$ за които разстоянието $\rho(x';x'') =\Vert x' - x'' \Vert < \delta $, да следва, че $\vert f(x') - f(x'') \vert  < \varepsilon$.
+Нека $A \subset \mathbb{R}^m$ е отворено множество и $f: A \to \mathbb{R}$. Функцията се нарича равномерно непрекъсната в A, ако за  всяко $\varepsilon > 0$ съществува $\delta = \delta(\epsilon)$, че за всеки две точки $x', x'' \in A$ за които разстоянието $\rho(x';x'') =\Vert x' - x'' \Vert < \delta $, да следва, че $\vert f(x') - f(x'') \vert  < \varepsilon$.
 \end{definition}
 
 \begin{theorem}[на Вайерщрас]
-Нека множеството $K \subset \mathbb{R}^m$ е компактно и функцията $f: K \rightarrow \mathbb{R}$ е непрекъсната върху K. Tогава 
+Нека множеството $K \subset \mathbb{R}^m$ е компактно и функцията $f: K \to \mathbb{R}$ е непрекъсната върху K. Tогава 
 
 \begin{enumerate}
 		\item f е ограничена в К, т.е същестуват $m, M \in \mathbb{R}$ такива че за всички $x \in K$ е изпълнено неравенството
@@ -367,7 +366,7 @@ $$f(x^0) = \inf _{x \in K}f(x) ; f(y^0) = \sup_{y \in K} f(x)$$
 \end{theorem}
 
 \begin{theorem}[на Kантор]
-Нека множеството $K \subset \mathbb{R}^m$ е компактно и функцията $f: K \rightarrow \mathbb{R}$ е непрекъсната върху K. Тогава $f$ е равномерно непрекъсната върху K.
+Нека множеството $K \subset \mathbb{R}^m$ е компактно и функцията $f: K \to \mathbb{R}$ е непрекъсната върху K. Тогава $f$ е равномерно непрекъсната върху K.
 \end{theorem}
 
 
@@ -384,13 +383,13 @@ $$f(x^0) = \inf _{x \in K}f(x) ; f(y^0) = \sup_{y \in K} f(x)$$
 	\item $U_{x_i ^ 0} \subset D$ - oколност на $x_i ^ 0$ (i  = 1, 2, ..., m)
 	\item точката $(x_1 ^ 0, x_2 ^ 0, ..., x_{i-1}^0, x_i ^ 0, x_{i+1} ^i, ..., x_m ^ 0) \in U_{x^0}$, за всички стойности на $x_i \in U_{x_i ^ 0}$
 	\item $f$ и $g$ - функции, дефинирани съответно в $D$ и $U_{x_i ^ 0}$. т.е \\
-$f: D \rightarrow \mathbb{R} , g: U_{x_i ^ 0} \rightarrow \mathbb{R}$ и $g(x_i) = f(x_1 ^ 0, x_2 ^ 0, ..., x_{i-1}^0, x_i ^ 0, x_{i+1} ^i, ..., x_m ^ 0)$
+$f: D \to \mathbb{R} , g: U_{x_i ^ 0} \to \mathbb{R}$ и $g(x_i) = f(x_1 ^ 0, x_2 ^ 0, ..., x_{i-1}^0, x_i ^ 0, x_{i+1} ^i, ..., x_m ^ 0)$
 \end{itemize}
  
 \begin{definition}
 Производната, ако съществува на функцията $g$ в точката $x_i ^ 0$ се нарича частна производна на функцията f( по променлива  $x_i ^ 0$) в точката $x^0$. Използва се означението $\dfrac {\partial f(x^0)}{\partial x_i}$ или $f'_{x_i} (x^0)$. \\
-Частната производна на функцията $f$ отностно променливата $x_i$ е равна на границата на функцията $\varphi (h_i)  = \dfrac{g(x_i ^0 + h_i) - g(x_i ^ 0)}{h_i}$ при $h_i \rightarrow 0$ (ако съществува) т.е
-$$\lim_{h_i \rightarrow 0} \varphi (h_i) = \lim_{h_i \rightarrow 0} \dfrac{g(x_i ^0 + h_i) - g(x_i ^ 0)}{h_i} = \dfrac {\partial f(x^0)}{\partial x_i}$$
+Частната производна на функцията $f$ отностно променливата $x_i$ е равна на границата на функцията $\varphi (h_i)  = \dfrac{g(x_i ^0 + h_i) - g(x_i ^ 0)}{h_i}$ при $h_i \to 0$ (ако съществува) т.е
+$$\lim_{h_i \to 0} \varphi (h_i) = \lim_{h_i \to 0} \dfrac{g(x_i ^0 + h_i) - g(x_i ^ 0)}{h_i} = \dfrac {\partial f(x^0)}{\partial x_i}$$
 \end{definition}
 
 \begin{example}
@@ -422,7 +421,7 @@ $f(x,y) = x^3\sin(6y) + x^2y^3 + 2222, f''_{x,y} = ?, f''_{y,x} = ?$
 \end{example}
 
 \begin{theorem}[за равенство на смесени производни]
-Нека точката $(x_0, y_0) \in \mathbb{R}^2$ и нека функцията $f$ е дефинирана в отвореното множество $U=U_{(x_0, y_0)} \subset \mathbb{R}^2$, което е нейната област т.е $f: U \rightarrow \mathbb{R}$. Нека освен това съществуват частните производни $f'_x, f'_y,f''_{x,y},f''_{y,x}$ за всички $(x, y)\in U$ и $f''_{x,y},f''_{y,x}$ са непрекъснати в точката $(x_0, y_0)$. Тогава е изпълнено равенството 
+Нека точката $(x_0, y_0) \in \mathbb{R}^2$ и нека функцията $f$ е дефинирана в отвореното множество $U=U_{(x_0, y_0)} \subset \mathbb{R}^2$, което е нейната област т.е $f: U \to \mathbb{R}$. Нека освен това съществуват частните производни $f'_x, f'_y,f''_{x,y},f''_{y,x}$ за всички $(x, y)\in U$ и $f''_{x,y},f''_{y,x}$ са непрекъснати в точката $(x_0, y_0)$. Тогава е изпълнено равенството 
 $$f''_{x,y}(x_0, y_0) = f''_{y,x}(x_0, y_0)$$
 \end{theorem}
 
@@ -431,13 +430,13 @@ $$f''_{x,y}(x_0, y_0) = f''_{y,x}(x_0, y_0)$$
 \begin{itemize}
 	\item $x^0 \in \mathbb{R}^m$
 	\item $U \subset \mathbb{R}^m$ - отворено множество, което е околност на $x^0$.Без ограничение на общността може да се счита че U e $\delta$-околност на $x^0$ т.е U е отворено кълбо $B(x^0;\delta)$ с център $x^0$ и радиус $\delta$
-	\item $f: U \rightarrow \mathbb{R}$ - функция дефинирана в $U = B(x^0;\delta) $
+	\item $f: U \to \mathbb{R}$ - функция дефинирана в $U = B(x^0;\delta) $
 \end{itemize}
 
 \begin{definition}
 Функцията $f$ се нарича диференцируема в точка $x^0$ ако съществуват числа $A_1, A_2, ..., A_m$ и функция $\varepsilon (x^0, x - x^0)$, дефинирана за всички допустими стойности на $x \in U$ и $x - x^0 = (x_1 - x_1 ^0, x_2 - x_2 ^0,... x_m - x_m ^0)$, като при това 
 $$f(x) - f(x^0) = \sum_{k=1}^{m} A_k(x_k + x_k ^ 0) + \varepsilon (x^0, x - x^0) \Vert x - x^0 \Vert$$ 
-и $\lim\limits_{\Vert x - x^0 \Vert \rightarrow 0}\varepsilon (x^0, x - x^0) = 0$
+и $\lim\limits_{\Vert x - x^0 \Vert \to 0}\varepsilon (x^0, x - x^0) = 0$
 \end{definition}
 
 \begin{definition}
@@ -445,31 +444,31 @@ $$f(x) - f(x^0) = \sum_{k=1}^{m} A_k(x_k + x_k ^ 0) + \varepsilon (x^0, x - x^0)
 \end{definition}
 
 \begin{theorem}
-Ако функцията $f: U \rightarrow \mathbb{R}$ е диференцируема в точката $x^0 \in U$, то тя е непрекъсната. 
+Ако функцията $f: U \to \mathbb{R}$ е диференцируема в точката $x^0 \in U$, то тя е непрекъсната. 
 \end{theorem}
 
 \begin{definition}
-В случай на диференцируемост в точката $x^0$ на функцията $f: U \rightarrow \mathbb{R}$, изразът 
+В случай на диференцируемост в точката $x^0$ на функцията $f: U \to \mathbb{R}$, изразът 
 $$df(x^0) \circ (h) = A_1 h_1 + A_2 h_2 + ... + A_m h_m$$
 (или $df, df(x^0)$) се нарича пълен диференциал на $f(x)$ в точката $x^0$
 \end{definition}
 
 \begin{theorem}
-Ако функцията $f: U \rightarrow \mathbb{R}$ е диференцируема в точката $x^0 \in U$, то съществуват частните производни $\dfrac{\partial f(x^0)}{\partial x_k}$ в точката $x^0$ и освен това $A_k(x^0) = \dfrac{\partial f(x^0)}{\partial x_k}, k = 1 \div m$.
+Ако функцията $f: U \to \mathbb{R}$ е диференцируема в точката $x^0 \in U$, то съществуват частните производни $\dfrac{\partial f(x^0)}{\partial x_k}$ в точката $x^0$ и освен това $A_k(x^0) = \dfrac{\partial f(x^0)}{\partial x_k}, k = 1 \div m$.
 \end{theorem}
 
 \begin{definition}
-Ако функцията $f: U \rightarrow \mathbb{R}$ е диференцируема в точката $x^0 \in U$, то със следната формула се изразява нейната производна в точката $x^0$
+Ако функцията $f: U \to \mathbb{R}$ е диференцируема в точката $x^0 \in U$, то със следната формула се изразява нейната производна в точката $x^0$
 $$f'(x^0) = (f'_{x_1}(x^0), f'_{x_2}(x^0), ..., f'_{x_m}(x^0))$$.
 
 \end{definition}
 
 \begin{theorem}
-Ако функцията $f: U \rightarrow \mathbb{R}$ притежава частни производни $\dfrac{\partial f(x^0)}{\partial x_k}, k = 1 \div m$ в отвореното множество U и освен това са непрекъснати в точката $x^0 \in U$, то $f$ е диференцируема в точката $x^0$.
+Ако функцията $f: U \to \mathbb{R}$ притежава частни производни $\dfrac{\partial f(x^0)}{\partial x_k}, k = 1 \div m$ в отвореното множество U и освен това са непрекъснати в точката $x^0 \in U$, то $f$ е диференцируема в точката $x^0$.
 \end{theorem}
 
 \begin{definition}
-Ако функцията $f: U \rightarrow \mathbb{R}$ притежава частни производни в U и тези частични производни са непрекъснати в точката $x^0 \in U$, то функцията се нарича непрекъснато диференцируема в точката $x^0$. Ако тези производни са непрекъснати в U, то функцията се нарича непрекъсанот диференцируема в това множество. 
+Ако функцията $f: U \to \mathbb{R}$ притежава частни производни в U и тези частични производни са непрекъснати в точката $x^0 \in U$, то функцията се нарича непрекъснато диференцируема в точката $x^0$. Ако тези производни са непрекъснати в U, то функцията се нарича непрекъсанот диференцируема в това множество. 
 \end{definition}
 
 \begin{definition}
@@ -503,8 +502,8 @@ $t_0 \in (\alpha, \beta) \subset R$
 
 \begin{theorem}
 Нека функцията $f$ e дефинирана в U, а $\varphi_k$ - в интервала $(\alpha, \beta)$, т.е \\
-$f: U \rightarrow \mathbb{R}$ и $\varphi_k: (\alpha, \beta)  \rightarrow \mathbb{R} $ $ (k = 1 \div m)$\\
-като при това $x_k = \varphi_k(t)$ за $ k = 1 \div m $, $ \varphi_1(t),  \varphi_2(t), ...,  \varphi_m(t) \in U$ за всички стойности на $t \in (\alpha, \beta)$. Нека $f$ е диференцируема в U, $f'_k$ са непрекъснати в $x^0$ за $ k = 1 \div m$, $\varphi_k$ са диференцируеми в $t_0$ и $F: (\alpha, \beta)  \rightarrow \mathbb{R}$ е дефинирана с равенствово. \\
+$f: U \to \mathbb{R}$ и $\varphi_k: (\alpha, \beta)  \to \mathbb{R} $ $ (k = 1 \div m)$\\
+като при това $x_k = \varphi_k(t)$ за $ k = 1 \div m $, $ \varphi_1(t),  \varphi_2(t), ...,  \varphi_m(t) \in U$ за всички стойности на $t \in (\alpha, \beta)$. Нека $f$ е диференцируема в U, $f'_k$ са непрекъснати в $x^0$ за $ k = 1 \div m$, $\varphi_k$ са диференцируеми в $t_0$ и $F: (\alpha, \beta)  \to \mathbb{R}$ е дефинирана с равенствово. \\
 $$F(t) = f(\varphi_1(t),  \varphi_2(t), ...,  \varphi_m(t)), t \in (\alpha, \beta)$$
 Тогава функцията F е диференцируема в $t_0$ и в сила е следното равенство
 $$F'(t_0) = \sum_{k =1}^m f'_{x_k}(x^0)\varphi '_k (t_0)$$ \\
@@ -536,9 +535,9 @@ $
 
 \begin{definition}
 Границата(ако съществува) 
-$$\lim\limits_{t \rightarrow 0, t > 0} \dfrac{\varphi(t) - \varphi(0)}{t} = \lim\limits_{t \rightarrow 0, t > 0} \dfrac{\varphi(x^0 + t\nu) - \varphi(x^0)}{t} $$
+$$\lim\limits_{t \to 0, t > 0} \dfrac{\varphi(t) - \varphi(0)}{t} = \lim\limits_{t \to 0, t > 0} \dfrac{\varphi(x^0 + t\nu) - \varphi(x^0)}{t} $$
 се нарича производна на $f$ в точката $x^0$ по посока на вектора $\nu$ и се означава $\dfrac{\partial f(x^0)}{\partial \nu}$, т.е
-$$\dfrac{\partial f(x^0)}{\partial \nu} = \lim\limits_{t \rightarrow 0, t > 0} \dfrac{\varphi(t) - \varphi(0)}{t} = \lim\limits_{t \rightarrow 0, t > 0} \dfrac{\varphi(x^0 + t\nu) - \varphi(x^0)}{t}$$ ако същестува границата.\\
+$$\dfrac{\partial f(x^0)}{\partial \nu} = \lim\limits_{t \to 0, t > 0} \dfrac{\varphi(t) - \varphi(0)}{t} = \lim\limits_{t \to 0, t > 0} \dfrac{\varphi(x^0 + t\nu) - \varphi(x^0)}{t}$$ ако същестува границата.\\
 \\
 Ако частните производни съществуват, са производни "по посока на кординатните оси". \\
 \\
@@ -577,7 +576,7 @@ $$\dfrac{\partial f(x^0)}{\partial \nu} = f'_{x_1}(x^0)\cos{\alpha_1} + f'_{x_2}
 \item $(x_0, y_0) \in \mathbb{R}^2$ - точка в $\mathbb{R}^2$
 \item $M_0 (x_0, y_0, z_0) \in \mathbb{R}^3$  точка в $\mathbb{R}^3$
 \item $U = U_{(x_0,y_0)} \subset \mathbb{R}^2 =$ - околност на $(x_0,y_0)$ 
-\item $f: U \rightarrow \mathbb{R}$ - функция 
+\item $f: U \to \mathbb{R}$ - функция 
 \item $z_0 = f(x,y)$ 
 \item $S: z = f(x,y) \Leftrightarrow S: f(x,y) - z = 0$ - уравнение на равнина 
 \item $f'_x, f'_y$ - първи частни производни за всички $(x, y) \in U$,$ f'_x, f'_y$ са непрекъснати в точката $(x_0, y_0)$
@@ -634,9 +633,203 @@ $
 
 \newpage
 
-\section{Лекция 5: }
+\section{Лекция 5: Неявни функции. Съществуване и диференциране }
+
+\subsection{Неявни функции}
+Нека имаме уравнението $F(x,y) = 0$ и да се реши спрямо y. Решението трябва да зависи и от другата променлива. Нека $y = f(x)$ и заместваме в началното уравнение. 
+$$F(x,f(x)) = 0$$
+
+\begin{definition}
+Ако функцията $f(x)$ удовлетворява равенството 
+$$F(x,f(x)) = 0$$
+за всяко $x$ от дефиниционното си множество, то тя се нарича неявна функция, дефинирана от уравнението $F(x;y) = 0$.
+\end{definition}
+Ако диференцираме равенството $F(x,f(x)) = 0$ по x с теоремата за съставни функции получаваме 
+$$F'_x(x,f(x)) + f'(x)F'_y(x,f(x)) = 0 \implies f'(x) - \dfrac{F'_x(x,f(x))}{F'_y(x,f(x))}$$
+Където $F'_y(x,f(x)) \neq 0$
+
+\begin{example}
+$F(x,y) = x^2 +y^2 - 5$
+$$F(x,y) = 0 \Leftrightarrow y^2 = 5-x^2 $$
+$$y_{1,2} = \pm \sqrt{5-x^2}$$
+\end{example}
+Нека $M_0 (x_0, y_0) \text{ точка в } \mathbb{R}^2$, отвореното множество $U = U_{M_0} \subset \mathbb{R}^2$ е нейна околност и нека $F \to \mathbb{R}$. 
+
+\begin{theorem}[Съществуване на неявна функция]
+Нека $M_0 (x_0, y_0) \text{ точка в } \mathbb{R}^2$, отвореното множество $U = U_{M_0} \subset \mathbb{R}^2$ е нейна околност и функцията $F: U \to \mathbb{R}$ удовлетворява следните условия
+\begin{enumerate}
+
+\item F е непрекъсната в U
+
+\item $F(x_0, y_0) = 0$
+
+\item За всяка точка $(x, y) \in U \, \exists F'_y(x,y)$
+
+\item $F'_y \text{ е непрекъсната в } M_0$
+
+\item $F'_y (x_0, y_0) \neq 0$
+\end{enumerate}
+Тогава съществуват околности
+$$X = \{x: \vert x - x_0 \vert < a\} (a>0) \qquad Y = \{y: \vert y - y_0 \vert < b\} (b>0)$$
+такива че правоъгълника $\Pi = X \times Y \subset U$ и съществува единствена функция $y = f(x), f: X \to Y$ , f - непрекъсната в X, $f(x_0) = y_0$ и $\forall x \in X: F(x,f(x)) = 0 $ 
+\end{theorem}
+
+\begin{definition}
+Фунцкията $y = f(x)$ се нарича неявна функция, дефинирана от уравнението $F(x,y) = 0$, в околност на точката $(x_0, y_0)$
+\end{definition}
+
+
+\begin{theorem}[Добавка към 5.1.1]
+Ако освен това $F'_x, F'_y$ са дефинирани в U и непрекъснати в $(x_0, y_0)$ то $f(x)$ е диференцируема в точката $x_0$ и $f'(x_0)$ се изразява
+$$f'(x_0) = - \dfrac{F'_x(x_0,f(x_0))}{F'_y(x_0,f(x_0))} = - \dfrac{F'_x(x_0,y_0)}{F'_y(x_0,y_0)} $$
+\end{theorem}
+Ако $F'_x, F'_y$ са непрекъснати в $U = U_{M_0}$, то f' е непрекъсната в X. Прилагайки формулата за производна в произволна точка в $x \in X$ получаваме
+\begin{equation}
+y' = f'(x) = - \dfrac{F'_x(x,f(x))}{F'_y(x,f(x))} = - \dfrac{F'_x(x,y)}{F'_y(x,y)}
+\end{equation}
+Aналогично се формулира теоремата за неявна функция от уравнението $F(x,y) = 0, \text{ за } x(x_1, x_2, ..., x_m) \in \mathbb{R}^m \, (m >2)$ и $y \in R$ т.е $F(x_1, x_2, ..., x_m, y) = 0$\\
+
+\begin{theorem}[Съществуване на неявна функция]
+Нека точката $x^0 = (x_1 ^0, x_2 ^0, ..., x_m ^0) \in \mathbb{R}^m, M_0 (x^0, y_0) \in \mathbb{R}^{m+1}$ и $U = U_{M_0} \subset \mathbb{R}^{m+1}$ е околност на $M_0$ и функцията $F: U \to \mathbb{R}$ удовлетворява следните условия
+\begin{enumerate}
+
+\item F е непрекъсната в U
+
+\item $F(x^0, y_0) = 0$
+
+\item За всяка точка $(x, y) \in U \, \exists F'_y(x,y)$
+
+\item $F'_y \text{ е непрекъсната в } M_0$
+
+\item $F'_y (x^0, y_0) \neq 0$
+\end{enumerate}
+Тогава съществуват околности:
+$$X = \{x: \vert x - x_k ^0 \vert < a_k\} (a_k>0)\, k =1 \div m; \qquad Y = \{y: \vert y - y_0 \vert < b\} (b>0)$$
+такива че правоъгълника $\Pi = X \times Y \subset U, X = X_1 \times X_2 \times ... \times X_m$ и oсвен това съществува единствена функция $y = f(x), f: X \to Y$ , f - непрекъсната в X, $f(x^0) = y_0$ и $\forall x \in X: F(x;f(x)) = 0 $ \\
+Ако освен това $F'_{x_k}, k =1 \div m $ и $F'_y$ са дефинирани в U и непрекъснати в $(x^0, y_0)$, то $f(x)$ е диференцируема в точката $x^0 \text{ и } f'(x_k ^0)$ се изразява с формулата 
+$$f'(x_k ^0) = - \dfrac{F'_{x_k}(x^0,f(x_0))}{F'_y(x^0,f(x_0))} = - \dfrac{F'_{x_k}(x^0,y_0)}{F'_y(x^0,y_0)} $$
+
+\begin{example}
+$F(x,y) = x^2 + y^2 - 5$. Да се определи дали съществува единствена функция $y = f(x)$ определена от неявно от уравнението $F(x,y) = 0$ в околността (1,2). Aко съществува да се пресметне $f'(1)$. \\
+$$F'_y = 2y; \quad F'_y(1,2) = 4 \neq 0$$
+Съществува единствена неявна функция $y = f(x)$ определена с уравнението $F(x,y) = 0$ в околността (1,2).
+За $f'(1)$ използваме формулата
+
+$$f'(x_0) = - \dfrac{F'_x(x_0,y_0)}{F'_y(x_0,y_0)} $$
+$$F'_x = 2x, \quad F'_x(1,2) = 4 , \quad F'_y = 2y; \quad F'_y(1,2) = 4$$
+$$f'(1) = - \dfrac{2}{4} = - \dfrac{1}{2}$$
+\end{example}
+
+\begin{example}
+$F(x,y) = x^2 + y^2 - 3z^2 - 13 $. Да се определи дали съществува единствена функция $z = f(x,y)$ определена от неявно от уравнението $F(x,y,z) = 0$ в околността (0,1,2). Aко съществува да се пресметне $z'_x(0,1), z'_y(0,1)$. \\
+$$F'_z = 6z \implies F'_z (0,1,2) = 6 \cdot 2 = 12 \neq 0$$
+Същесвува единствена неявна функция $z = f(x,y)$ определена от неявно от уравнението $F(x,y,z) = 0$ в околността (0,1,2).
+$$F'_x = 2x \implies F'_x (0,1,2) = 2 \cdot 0 = 0 $$
+$$F'_y = 2y \implies F'_y (0,1,2) = 2 \cdot 1 = 2 $$
+$$z'_x(x_0,y_0) = - \dfrac{F'_x(x_0,y_0,z_0)}{F'_z(x_0,y_0, z_0)} = - \dfrac{0}{6} = 0$$
+$$z'_y(x_0,y_0) = - \dfrac{F'_x(x_0,y_0,z_0)}{F'_y(x_0,y_0, z_0)} = - \dfrac{2}{6} = - \dfrac{1}{3}$$
+\end{example}
+
+Ако $F'_{x_k}, F'_{y_k}$ са непрекъснати в $U = U_{M_0}$, то $f'_{x_k}$ е непрекъсната в X. Прилагайки формулата за производна в произволна точка в $x \in X$ получаваме
+
+\begin{equation}
+y'_{x_k} = f'_{x_k}(x) = - \dfrac{F'_{x_k}(x,f(x))}{F'_y(x,f(x))} = - \dfrac{F'_{x_k}(x,y)}{F'_y(x,y)}
+\end{equation}
+
+\end{theorem}
+Ако F има непрекъснати частни производни от втори ред, то изразите от дясната страна на (1) (съответно (2)) могат да се диференцират още веднъж по променлива $x (x_j, j = 1 \div m $), при което се получават вторите производни на f. Така се получават формулите
+$$f''(x) = - \dfrac{F''_{xx}(x,y) + 2F''_{xy}y' + F''_{yy}(x,y)y'^2}{F'_y(x,y)}$$
+респективно, изпускайки за удобство променливите получаваме
+$$f''_{{x_k}{x_k}} (x) = f''_{x_k^2}(x) = - \dfrac{F''_{x_k^2} + 2F''_{{x_k}y} y'_{x_k} + F''_{yy} y'^2 _{x_k}}{F'_y} $$
+и за $k \neq j$
+$$f''_{{x_k}{x_j}} (x) = - \dfrac{ F''_{{x_k}{x_j}} + F''_{{x_k}y}y'_{x_j} +  F''_{{x_j}y}y'_{x_k} + F''_{yy} y'_{x_k} y'_{x_j} }
+{F'_y} $$
+98 - 56 + 40
+\begin{example}
+Да се намери $y', y''$ на неявната функция $y = f(x)$, дефинирана от уравнението 
+$$x^2 - 2xy + 5y^2 + 4y = 2x + 9$$
+Да се пресметнат $y'(0), y''(0)$, ако $y(0) = 1$ \\
+Решение: 
+$$F(x,y) = x^2 - 2xy + 5y^2 + 4y = 2x + 9$$
+$$F'_y = -2x + 10y + 4 \neq 0$$
+$$F'_x(x,y) = 2x - 2y - 2$$
+$$F'_y(0,1) = -2 \cdot 0 + 10 \cdot 1 + 4 \neq 0$$
+$$y'(x) = - \dfrac{F'_x(x,y)}{F'_y(x,y)} = - \dfrac{2x - 2y - 2}{-2x + 10y + 4} = - \dfrac{x - y - 1}{- x + 5y + 2}$$
+$$y'(0) = - \dfrac{0 - 1 - 1}{- 0 + 5 \cdot 1 + 2} = - \dfrac{-2}{7} = \dfrac{2}{7}$$
+$$y''(x) = - \dfrac{F''_{xx}(x,y) + 2F''_{xy}y' + F''_{yy}(x,y)y'^2}{F'_y(x,y)}$$
+$$F''_{xx} = 2, \quad F''_{yy} = 10, \quad F''_{xy} = -2$$
+$$F''_{xx}(0,1) = 2, \quad F''_{yy}(0,1) = 10, \quad F''_{xy}(0,1) = -2$$
+$$y''(x) = - \dfrac{2 + 2 \cdot (-2)y' + 10y'^2}{-2x + 10y + 4}$$
+$$y''(x) = - \dfrac{2 + - 4y' + 10y'^2}{-2x + 10y + 4}$$
+$$y''(0) = - \dfrac{2 + - 4 \cdot \dfrac{2}{7} + 10 \cdot \left( \dfrac{2}{7} \right) ^2}{-2 \cdot 0 + 10 \cdot 1 + 4}$$
+$$y''(0) = - \dfrac{2 + - \dfrac{8}{7} + \dfrac{40}{49}}{14}$$
+$$y''(0) = - \dfrac{\dfrac{98 - 56 + 40}{49}}{14} = - \dfrac{\dfrac{82}{49}}{14} = \dfrac{82}{49} \cdot \dfrac{1}{14} = \dfrac{41}{343}$$
+\end{example}
 
 \newpage
+
+\section{Лекция 6}
+
+\newpage
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \section{Упражения}
 
@@ -657,24 +850,24 @@ $
 Решение: \\
 \begin{enumerate}
 
-\item $\lim\limits_{n \rightarrow \infty} \dfrac{1}{n} = 0, \, \dfrac{\vert \sin{n} \vert}{n} \in \left[0, \dfrac{1}{n} \right] \implies 
-\lim\limits_{n \rightarrow \infty} x_n = 1, \, \lim\limits_{n \rightarrow \infty} y_n = 2 \implies 
+\item $\lim\limits_{n \to \infty} \dfrac{1}{n} = 0, \, \dfrac{\vert \sin{n} \vert}{n} \in \left[0, \dfrac{1}{n} \right] \implies 
+\lim\limits_{n \to \infty} x_n = 1, \, \lim\limits_{n \to \infty} y_n = 2 \implies 
 \text{редицата е сходяща; точката (1,2) е нейна граница}$
 
-\item $ \lim\limits_{n \rightarrow \infty} x_n = e , \lim\limits_{n \rightarrow \infty} y_n = \infty \implies 
+\item $ \lim\limits_{n \to \infty} x_n = e , \lim\limits_{n \to \infty} y_n = \infty \implies 
 \text{разходяща редица} $
 
-\item $ \lim\limits_{n \rightarrow \infty} x_n \text{не съществува, защото има две точки на сгъстяване.}, \,  
-\lim\limits_{n \rightarrow \infty} y_n = \infty \implies \text{разходяща редица}$
+\item $ \lim\limits_{n \to \infty} x_n \text{не съществува, защото има две точки на сгъстяване.}, \,  
+\lim\limits_{n \to \infty} y_n = \infty \implies \text{разходяща редица}$
 
-\item $\lim\limits_{n \rightarrow \infty} x_n \text{не съществува, защото има две точки на сгъстяване.}, \,  
-\lim\limits_{n \rightarrow \infty} y_n = 0 \implies \text{разходяща редица}$
+\item $\lim\limits_{n \to \infty} x_n \text{не съществува, защото има две точки на сгъстяване.}, \,  
+\lim\limits_{n \to \infty} y_n = 0 \implies \text{разходяща редица}$
 
-\item $\lim\limits_{n \rightarrow \infty} x_n \text{не съществува}, \,  
-\lim\limits_{n \rightarrow \infty} y_n = \infty \implies \text{разходяща редица}$
+\item $\lim\limits_{n \to \infty} x_n \text{не съществува}, \,  
+\lim\limits_{n \to \infty} y_n = \infty \implies \text{разходяща редица}$
 
-\item $\lim\limits_{n \rightarrow \infty} x_n \text{не съществува}, \,  
-\lim\limits_{n \rightarrow \infty} y_n = 0 \implies \text{разходяща редица}$
+\item $\lim\limits_{n \to \infty} x_n \text{не съществува}, \,  
+\lim\limits_{n \to \infty} y_n = 0 \implies \text{разходяща редица}$
 
 \end{enumerate}
 
@@ -721,9 +914,9 @@ $
 \begin{task}
 Разгледаните по - долу функциите са дефинирани в $D = \mathbb{R}^2 \setminus \{ (0,0) \}$. Кои от границите същестуват и колко са
 $$
-A = \lim\limits_{(x,y) \rightarrow (0,0)} f(x,y) \quad
-A_{1,2} = \lim\limits_{y \rightarrow 0} \left( \lim\limits_{x \rightarrow 0} f(x,y) \right) \quad
-A_{2,1} = \lim\limits_{x \rightarrow 0} \left( \lim\limits_{y \rightarrow 0} f(x,y) \right) \quad
+A = \lim\limits_{(x,y) \to (0,0)} f(x,y) \quad
+A_{1,2} = \lim\limits_{y \to 0} \left( \lim\limits_{x \to 0} f(x,y) \right) \quad
+A_{2,1} = \lim\limits_{x \to 0} \left( \lim\limits_{y \to 0} f(x,y) \right) \quad
 $$
 
 \begin{enumerate}
@@ -741,45 +934,45 @@ $$
 
 \item $
 f(x,y) = \dfrac{x-y}{x+y} \\
-\lim\limits_{x \rightarrow 0} f(x,y) = \dfrac{-y}{y} = -1 \qquad 
-\lim\limits_{y \rightarrow 0} f(x,y) = \dfrac{x}{x} = 1 \\
-A_{1,2} = \lim\limits_{y \rightarrow 0} \left( \lim\limits_{x \rightarrow 0} f(x,y) \right) = \lim\limits_{y \rightarrow 0} \left( -1 \right) = -1\\
-A_{2,1} = \lim\limits_{x \rightarrow 0} \left( \lim\limits_{y \rightarrow 0} f(x,y) \right) = \lim\limits_{x \rightarrow 0} \left( 1 \right) = 1 \\
-A = \lim\limits_{(x,y) \rightarrow (0,0)} f(x,y) \text{ Не съществува, защото трябва }A_{1,2} = A_{2,1}
+\lim\limits_{x \to 0} f(x,y) = \dfrac{-y}{y} = -1 \qquad 
+\lim\limits_{y \to 0} f(x,y) = \dfrac{x}{x} = 1 \\
+A_{1,2} = \lim\limits_{y \to 0} \left( \lim\limits_{x \to 0} f(x,y) \right) = \lim\limits_{y \to 0} \left( -1 \right) = -1\\
+A_{2,1} = \lim\limits_{x \to 0} \left( \lim\limits_{y \to 0} f(x,y) \right) = \lim\limits_{x \to 0} \left( 1 \right) = 1 \\
+A = \lim\limits_{(x,y) \to (0,0)} f(x,y) \text{ Не съществува, защото трябва }A_{1,2} = A_{2,1}
 $
 
 \item $
 f(x,y) = \dfrac{x^2 + y^2}{x^2y^2 + (x - y)^2}\\
-\lim\limits_{x \rightarrow 0} f(x,y) = \dfrac{y^2}{(-y)^2} = 1 \qquad 
-\lim\limits_{y \rightarrow 0} f(x,y) = \dfrac{x^2}{x^2} = 1 \\
-\implies A_{1,2} = A_{2,1} = 1 \implies \exists A = \lim\limits_{(x,y) \rightarrow (0,0)} f(x,y)\\
-\text{Редица: }(x_n, y_n) = (\dfrac{1}{n},\dfrac{1}{n}) \rightarrow (0,0), f(x_n, y_n) = 1 \rightarrow 1\\
-\text{Редица: }(x'_n, y'_n) = (\dfrac{1}{n},\dfrac{-1}{n})  \rightarrow (0,0), f(x'_n, y'_n) = \dfrac{2n^2}{1 + 4n^2} \rightarrow \dfrac{1}{2} \neq 1 \\
-\implies f(x,y) \text{ няма граница при } (x,y) \rightarrow (0,0)
+\lim\limits_{x \to 0} f(x,y) = \dfrac{y^2}{(-y)^2} = 1 \qquad 
+\lim\limits_{y \to 0} f(x,y) = \dfrac{x^2}{x^2} = 1 \\
+\implies A_{1,2} = A_{2,1} = 1 \implies \exists A = \lim\limits_{(x,y) \to (0,0)} f(x,y)\\
+\text{Редица: }(x_n, y_n) = (\dfrac{1}{n},\dfrac{1}{n}) \to (0,0), f(x_n, y_n) = 1 \to 1\\
+\text{Редица: }(x'_n, y'_n) = (\dfrac{1}{n},\dfrac{-1}{n})  \to (0,0), f(x'_n, y'_n) = \dfrac{2n^2}{1 + 4n^2} \to \dfrac{1}{2} \neq 1 \\
+\implies f(x,y) \text{ няма граница при } (x,y) \to (0,0)
 $
 
 \item $
 f(x,y) = \dfrac{xy^2}{x^2+y^4}\\
-\lim\limits_{x \rightarrow 0} f(x,y) = \dfrac{0}{y^4} = 0 \qquad 
-\lim\limits_{y \rightarrow 0} f(x,y) = \dfrac{0}{x^2} = 0 \\
-A_{1,2} = A_{2,1} = 0 \implies \exists A = \lim\limits_{(x,y) \rightarrow (0,0)} f(x,y) \\
-\text{Редица: }(x_n, y_n) = (\dfrac{1}{n^2},\dfrac{1}{n}) \rightarrow (0,0), f(x_n, y_n) = \dfrac{1}{2} \rightarrow \dfrac{1}{2} \neq 0\\
-\implies f(x,y) \text{ няма граница при } (x,y) \rightarrow (0,0)
+\lim\limits_{x \to 0} f(x,y) = \dfrac{0}{y^4} = 0 \qquad 
+\lim\limits_{y \to 0} f(x,y) = \dfrac{0}{x^2} = 0 \\
+A_{1,2} = A_{2,1} = 0 \implies \exists A = \lim\limits_{(x,y) \to (0,0)} f(x,y) \\
+\text{Редица: }(x_n, y_n) = (\dfrac{1}{n^2},\dfrac{1}{n}) \to (0,0), f(x_n, y_n) = \dfrac{1}{2} \to \dfrac{1}{2} \neq 0\\
+\implies f(x,y) \text{ няма граница при } (x,y) \to (0,0)
 $
 
 \item $
 f(x,y) = (x+y) \sin{\dfrac{1}{x}} \cos{\dfrac{1}{y}}\\
-0 \leq \vert f(x,y) \vert \leq \vert x + y \vert \leq  \vert x \vert + \vert y \vert \text{ и } \vert x \vert + \vert y \vert \rightarrow 0 \\
+0 \leq \vert f(x,y) \vert \leq \vert x + y \vert \leq  \vert x \vert + \vert y \vert \text{ и } \vert x \vert + \vert y \vert \to 0 \\
 A = 0 \\
-\lim\limits_{x \rightarrow 0} \sin{\dfrac{1}{x}} \text{ - не съществува} \\
-\lim\limits_{x \rightarrow 0} f(x,y) = y\cos{\dfrac{1}{y}} \lim\limits_{x \rightarrow 0} \sin{\dfrac{1}{x}}\\$
+\lim\limits_{x \to 0} \sin{\dfrac{1}{x}} \text{ - не съществува} \\
+\lim\limits_{x \to 0} f(x,y) = y\cos{\dfrac{1}{y}} \lim\limits_{x \to 0} \sin{\dfrac{1}{x}}\\$
 Аналогично и другата вътрешна граница не съществува. Но тогава и повторните граници $A_{1,2},\, A_{2,1}$ не съществуват. 
 
 \item $f(x,y) = \dfrac{x^4 + y^4}{x^2 + y^2}\\
-\lim\limits_{x \rightarrow 0} f(x,y) = y^2 \qquad 
-\lim\limits_{y \rightarrow 0} f(x,y) = x^2 \\
-A_{1,2} = \lim\limits_{y \rightarrow 0} \left( \lim\limits_{x \rightarrow 0} f(x,y) \right) = \lim\limits_{y \rightarrow 0} \left( y^2 \right) = 0\\
-A_{2,1} = \lim\limits_{x \rightarrow 0} \left( \lim\limits_{y \rightarrow 0} f(x,y) \right) = \lim\limits_{x \rightarrow 0} \left( x^2 \right) = 0 \\
+\lim\limits_{x \to 0} f(x,y) = y^2 \qquad 
+\lim\limits_{y \to 0} f(x,y) = x^2 \\
+A_{1,2} = \lim\limits_{y \to 0} \left( \lim\limits_{x \to 0} f(x,y) \right) = \lim\limits_{y \to 0} \left( y^2 \right) = 0\\
+A_{2,1} = \lim\limits_{x \to 0} \left( \lim\limits_{y \to 0} f(x,y) \right) = \lim\limits_{x \to 0} \left( x^2 \right) = 0 \\
 \implies A = A_{1,2} = A_{2,1} = 0
 $
 
@@ -795,7 +988,7 @@ B = \{ (x,y): x \leq 1, y \geq 0, y<x \} \\
 C = \{ (x,y): x = y , 0 \leq x \leq 1 \} \\
 D = A \cup B \cup C
 $ \\
-и функцията $f: D \rightarrow \mathbb{R} $ зададена по следния начин \\
+и функцията $f: D \to \mathbb{R} $ зададена по следния начин \\
 $f(x,y) = 
 \begin{cases}
 \dfrac{1}{y^2}, & (x,y)\in A \\
@@ -808,12 +1001,12 @@ $f(x,y) =
 $
 (x_0,y_0) = (x_0, x_0) \in C \\
 R = \{ (x_n , y_n) \},\ (x_n , y_n) \in A \\
-\lim\limits_{n \rightarrow \infty} R = (x_0, y_0)\\
-\lim\limits_{n \rightarrow \infty} f(x_n,y_n) = \dfrac{1}{y_0 ^2} = \dfrac{1}{x_0 ^2} \neq 0\\
+\lim\limits_{n \to \infty} R = (x_0, y_0)\\
+\lim\limits_{n \to \infty} f(x_n,y_n) = \dfrac{1}{y_0 ^2} = \dfrac{1}{x_0 ^2} \neq 0\\
 \text{Ако } x_0 \neq 0, \ f(x_0,y_0) = 0 \\
 \implies \text{ функцията е прекъсната в точката } (x_0, x_0) \neq (0,0) \\
-\text{Ако } (x_n , y_n) \in B,\ \lim\limits_{n \rightarrow \infty} f(x_n,y_n) = - \dfrac{1}{x_0 ^2} \neq f(x_0, x_0) \neq 0. \\
-\text{Ако } x_0 = 0,\ \lim\limits_{n \rightarrow \infty} f(x_n,y_n) = \infty(-\infty),\ f(0,0) = 0,\\
+\text{Ако } (x_n , y_n) \in B,\ \lim\limits_{n \to \infty} f(x_n,y_n) = - \dfrac{1}{x_0 ^2} \neq f(x_0, x_0) \neq 0. \\
+\text{Ако } x_0 = 0,\ \lim\limits_{n \to \infty} f(x_n,y_n) = \infty(-\infty),\ f(0,0) = 0,\\
 \implies \text{f е прекъсната в точката (0,0).} 
 $\\
 Функцията е непрексъната в D, с изключение на точките от C, където е прекъсната. 
@@ -846,7 +1039,7 @@ $
 \item $
 f(x,y) = \vert x + y \vert \\
 \dfrac{g(h) - g(0)}{h} = \dfrac{f(0+h,0) - f(0,0)}{h} \\
-\lim\limits_{h \rightarrow 0} \dfrac{f(0+h,0) - f(0,0)}{h} = \lim\limits_{h \rightarrow 0} \dfrac{\vert h \vert}{h} \text{ не съществува} \\
+\lim\limits_{h \to 0} \dfrac{f(0+h,0) - f(0,0)}{h} = \lim\limits_{h \to 0} \dfrac{\vert h \vert}{h} \text{ не съществува} \\
 \implies \nexists f'_x (0,0) \text{(Аналогично се получава за $f'_y(0,0)$)} 
 $ 
 \item $
@@ -858,8 +1051,8 @@ f(x,y) =
 (x,y) \neq (0,0)\\
 f'_x (x,y) = \dfrac{y(y^2 - x^2)}{(x^2 + y^2)^2}\\
 f'_y (x,y) = \dfrac{x(x^2 - y^2)}{(x^2 + y^2)^2}\\
-\lim\limits_{h \rightarrow 0} \dfrac{f(0+h,0) - f(0,0)}{h} = \lim\limits_{h \rightarrow 0} \dfrac{0-0}{h} = \lim\limits_{h \rightarrow 0} = 0 \\
-\lim\limits_{k \rightarrow 0} \dfrac{f(0,0+k) - f(0,0)}{k} =  \lim\limits_{k \rightarrow 0} \dfrac{0-0}{k} = \lim\limits_{k \rightarrow 0} = 0 \\
+\lim\limits_{h \to 0} \dfrac{f(0+h,0) - f(0,0)}{h} = \lim\limits_{h \to 0} \dfrac{0-0}{h} = \lim\limits_{h \to 0} = 0 \\
+\lim\limits_{k \to 0} \dfrac{f(0,0+k) - f(0,0)}{k} =  \lim\limits_{k \to 0} \dfrac{0-0}{k} = \lim\limits_{k \to 0} = 0 \\
 \implies $ Функцията има частни производни във всичко точки на равнината $\mathbb{R}^2$
 \end{enumerate}
 
@@ -869,11 +1062,11 @@ f'_y (x,y) = \dfrac{x(x^2 - y^2)}{(x^2 + y^2)^2}\\
 $f(x,y) = x + (y-1)\arcsin{\sqrt{\dfrac{x}{y}}}\qquad f'_x(x,1) = ?$\\ 
 Решение: \\
 $
-f'_x (a,b) = \lim\limits_{h \rightarrow 0} \dfrac{f(a +h,b) - f(a,b)}{h} \text{(Ако съществува)} \implies \\
-f'_x(x,1) =  \lim\limits_{h \rightarrow 0} \dfrac{f(x +h,1) - f(x,1)}{h} \text{(Ако съществува)}\\
+f'_x (a,b) = \lim\limits_{h \to 0} \dfrac{f(a +h,b) - f(a,b)}{h} \text{(Ако съществува)} \implies \\
+f'_x(x,1) =  \lim\limits_{h \to 0} \dfrac{f(x +h,1) - f(x,1)}{h} \text{(Ако съществува)}\\
 f(x +h,1) = x + h + (1-1)\arcsin{\sqrt{\dfrac{x}{1}}} = x + h + 0 \arcsin{\sqrt{\dfrac{x}{1}}} =  x + h \\
 f(x,1) = x + (1-1)\arcsin{\sqrt{\dfrac{x}{1}}} = x + 0 \arcsin{\sqrt{\dfrac{x}{1}}} =  x \implies \\
-\lim\limits_{h \rightarrow 0} \dfrac{f(x +h,1) - f(x,1)}{h} =  \lim\limits_{h \rightarrow 0} \dfrac{x + h - x}{h} = \lim\limits_{h \rightarrow 0} \dfrac{h}{h} =  \lim\limits_{h \rightarrow 0} 1 \implies f'_x(x,1) = 1
+\lim\limits_{h \to 0} \dfrac{f(x +h,1) - f(x,1)}{h} =  \lim\limits_{h \to 0} \dfrac{x + h - x}{h} = \lim\limits_{h \to 0} \dfrac{h}{h} =  \lim\limits_{h \to 0} 1 \implies f'_x(x,1) = 1
 $
 \end{task}
 
@@ -887,11 +1080,11 @@ $ е прекъсната в точката (0,0) но има частни пр�
 Решение: \\
 $
 \text{Редица } (x_n, y_n) = \left(\dfrac{1}{n}, \dfrac{1}{n^3} \right) \\
-f(x_n, y_n) = \dfrac{ \left( \dfrac{1}{n} \right)^3 \cdot \dfrac{1}{n^3}}{\left( \dfrac{1}{n}\right)^6 + \left( \dfrac{1}{n^3} \right)^3 } = \dfrac{\dfrac{1}{n^6}}{\dfrac{2}{n^6}} = \dfrac{1}{2} \qquad \lim\limits_{n \rightarrow \infty} f(x_n, y_n) = \dfrac{1}{2}  \implies \\
-\lim\limits_{x \rightarrow 0, y \rightarrow 0 } f(x, y) \neq f(0,0) = 0 \implies f(x, y) \text{ е прекъсната в т. }(0,0).\\
+f(x_n, y_n) = \dfrac{ \left( \dfrac{1}{n} \right)^3 \cdot \dfrac{1}{n^3}}{\left( \dfrac{1}{n}\right)^6 + \left( \dfrac{1}{n^3} \right)^3 } = \dfrac{\dfrac{1}{n^6}}{\dfrac{2}{n^6}} = \dfrac{1}{2} \qquad \lim\limits_{n \to \infty} f(x_n, y_n) = \dfrac{1}{2}  \implies \\
+\lim\limits_{x \to 0, y \to 0 } f(x, y) \neq f(0,0) = 0 \implies f(x, y) \text{ е прекъсната в т. }(0,0).\\
 \\
-f'_x (0,0) = \lim\limits_{x \rightarrow 0} \dfrac{f(x,0) - f(0,0)}{x - 0} = \dfrac{ \dfrac{x^3 \cdot 0}{x^6 + 0} - 0}{x - 0} = 0 \\
-f'_y (0,0) = \lim\limits_{y \rightarrow 0} \dfrac{f(0,y) - f(0,0)}{y - 0} = \dfrac{\dfrac{0^3 \cdot y}{0^6 + y^2} - 0}{y - 0} = 0
+f'_x (0,0) = \lim\limits_{x \to 0} \dfrac{f(x,0) - f(0,0)}{x - 0} = \dfrac{ \dfrac{x^3 \cdot 0}{x^6 + 0} - 0}{x - 0} = 0 \\
+f'_y (0,0) = \lim\limits_{y \to 0} \dfrac{f(0,y) - f(0,0)}{y - 0} = \dfrac{\dfrac{0^3 \cdot y}{0^6 + y^2} - 0}{y - 0} = 0
 $
 \end{task}
 
