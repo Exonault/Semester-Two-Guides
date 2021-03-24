@@ -7,20 +7,21 @@
 \usepackage{booktabs}
 
 
+
 \newtheorem{theorem}{Tеорема}[subsection]
 \newtheorem{lemma}[theorem]{Лема}
+\newtheorem{definition}{Дефиниция}[subsection]
 
 \newtheorem{example}{Пример}[subsection]
 
-\newtheorem{task}{Задача}[subsection]
+\newtheorem{task}{Задача}[section]
 
-\newtheorem{definition}{Дефиниция}[subsection]
 
 \title{Математически анализ 2}
 \author{Exonaut}
 
-
 \begin{document}
+
 
 \maketitle
 \pagenumbering{gobble}
@@ -393,9 +394,11 @@ $$\lim_{h_i \to 0} \varphi (h_i) = \lim_{h_i \to 0} \dfrac{g(x_i ^0 + h_i) - g(x
 \end{definition}
 
 \begin{example}
-$$f(x,y) = x^2 + 9xy^2$$
-$$f'_x (x,y) = (x^2)'_x+(9xy^2)'_x = 2x + 9y^2$$
-$$f'_y (x,y) = (x^2)'_y+(9xy^2)'_y = 0 + 9x.2.y = 18xy $$
+\begin{gather*}
+f(x,y) = x^2 + 9xy^2\\
+f'_x (x,y) = (x^2)'_x+(9xy^2)'_x = 2x + 9y^2\\
+f'_y (x,y) = (x^2)'_y+(9xy^2)'_y = 0 + 9x \cdot 2 \cdot y = 18xy \\
+\end{gather*}
 \end{example}
 
 \subsection{Частни производни от по-висок ред}
@@ -405,19 +408,20 @@ $$f'_y (x,y) = (x^2)'_y+(9xy^2)'_y = 0 + 9x.2.y = 18xy $$
 \end{definition}
 
 \begin{example}
-$f(x,y) = x^3\sin(6y) + x^2y^3 + 2222, f''_{x,y} = ?, f''_{y,x} = ?$
-	\begin{enumerate}
-	\item $f''_{x,y} = (f'_x(x,y))'_y$\\
-		\begin{enumerate}
-			\item$f'_x(x,y) =(x^3\sin(6y))'_x + (x^2y^3)'_x + (2222)'_x = 3x^2 \sin(6y) + 2xy^3 + 0 $
-			\item$f''_{x,y} = (3x^2 \sin(6y) + 2xy^3)'_y = (3x^2 \sin(6y))'_y + (2xy^3)'_y  =3x^2 \cos(6y).6 + 2.3xy^2 = 18x^2\cos(6y) + 6xy^2$
-		\end{enumerate}
-	\item $f''_{y,x} = (f'_y(x,y))'_x$
-		\begin{enumerate}
-			\item $f'_y (x,y) =(x^3\sin(6y))'_y + (x^2y^3)'_y + (2222)'_y = x^3 \cos(6y).6 + x^2.3y^2 + 0 = 6x^3 \cos(6y) + 3x^2y^2 $ 
-			\item $f''_{y,x} = (6x^3 \cos(6y) + 3x^2y^2)'_y = (6x^3 \cos(6y))_y + (3x^2y^2)'_y = 6.3.x^2 \cos(6y) + 3.2.xy^2 = 18x^2\cos(6y) + 6xy^2 $
-		\end{enumerate}
-	\end{enumerate}
+\begin{gather*}
+f(x,y) = x^3\sin(6y) + x^2y^3 + 2222, f''_{x,y} = ?, f''_{y,x} = ? \\
+\\
+f''_{x,y} = (f'_x(x,y))'_y\\
+f'_x(x,y) =(x^3\sin(6y))'_x + (x^2y^3)'_x + (2222)'_x = 3x^2 \sin(6y) + 2xy^3 + 0 \\
+f''_{x,y} = (3x^2 \sin(6y) + 2xy^3)'_y \\
+f''_{x,y} = (3x^2 \sin(6y))'_y + (2xy^3)'_y  =3x^2 \cos(6y).6 + 2.3xy^2 = 18x^2\cos(6y) + 6xy^2\\
+\\
+f''_{y,x} = (f'_y(x,y))'_x\\
+f'_y (x,y) =(x^3\sin(6y))'_y + (x^2y^3)'_y + (2222)'_y \\
+f'_y (x,y) = x^3 \cos(6y).6 + x^2.3y^2 + 0 = 6x^3 \cos(6y) + 3x^2y^2 \\
+f''_{y,x} = (6x^3 \cos(6y) + 3x^2y^2)'_y = (6x^3 \cos(6y))_y + (3x^2y^2)'_y \\
+f''_{y,x} = 6.3.x^2 \cos(6y) + 3.2.xy^2 = 18x^2\cos(6y) + 6xy^2 \\
+\end{gather*}
 \end{example}
 
 \begin{theorem}[за равенство на смесени производни]
@@ -482,16 +486,6 @@ Aналогично ако f е n пъти непрекъсната и дифе�
 $$d^n f(x^0) = \left( \dfrac{\partial}{\partial x_1}dx_1 + ... + \dfrac{\partial}{\partial x_m}dx_m\right )^n f(x^0)$$
 \end{definition}
 
-\begin{example}
-$f(x, y) = x^2 + 3xy - 8y^3 + 11, df(0,1) = ? \\
-df(x, y) = f'_x(x, y) dx + f'y(x, y)dy = ? \\
-f'_x(x, y) = 2x + 3y \implies f'_x(0,1) = 2\cdot 0 + 3\cdot 1 = 3 \\
-f'_y(x, y) = 3x -24y^2 \implies f'_y(0,1) = 3 \cdot 0 - 24 \cdot 1 = 24 \\
-df(x, y) = (2x + 3y)dx + (3x -24y^2)dy \\
-df(0,1) = 3dx - 24dy
-$
-\end{example}
-
 \newpage
 
 \section{Лекция 4: Диференциране на съставна функция. Производна по посока. Градиент. Допирателна. Нормална права}
@@ -515,9 +509,8 @@ $$F'(t_0) = f'_x(x_0, y_0)\varphi'(t_0) + f'_y(x_0, y_0)\psi'(t_0)$$
 \begin{example}
 $f(x,y)$ - дефинирана и диференцируема в $U_{(1,2)} \subset \mathbb{R}^2$.\\
 Непрекъснати частни производни $f'_x, f'_y$ в точката (1,2). \\
-Намерете производната $F'(0)$ на съставната фунция F, зададена с равенството $F(t) = f(1+3t, 2+4t)$. \\
-\\
-$
+Намерете производната $F'(0)$ на съставната фунция F, зададена с равенството $F(t) = f(1+3t, 2+4t)$.
+\begin{gather*}
 t_0 = 0 \\
 x = \varphi(t) = 1+3t \\
 y = \psi(t) = 2 + 4t \\
@@ -526,7 +519,7 @@ y_0 = \psi(0) = 2 \\
 \varphi'(t) = 3 \\
 \psi'(t) = 4 \\
 F'(t_0) = f'_x(x_0, y_0)\varphi'(t_0) + f'_y(x_0, y_0)\psi'(t_0) \implies  F'(0) = 3f'_x(1,2) + 4f'_y(1,2)
-$
+\end{gather*}
 \end{example}
 
 \subsection{Производна по посока. Градиент}
@@ -611,24 +604,23 @@ $$n_1 = t_2 \times t_1 \qquad n_2 = t_1 \times t_2$$
 
 \begin{example}
 За повърхнина S, зададена с уранение $S: z= x^2 + y^2 + 3$, да се напишат: \\
-а) допирателната равнина $\tau z  M_0 (0, 0, 3)$ \\
-б) нормалните вектори на $\tau$ в т. $М_0$.\\
-в) нормалата на повърхнината S в т. $М_0$. \\
-Решение: \\
-$z'_x = 2x\; ; z'_y = 2y\; ; M_0(0,0,3) = M_0(x_0, y_0, z_0) $\\
-$z'_x(x_0, y_0) = z'_x(0,0) = 0\; ; z'_y(x_0, y_0) = z'_y(0,0) = 0$\\
-а) $\tau : z - z_0 = z'_x (x_0, y_0)(x - x_0) + z'_y (x_0, y_0)(y - y_0) $\\
-$\tau : z - 3 = 0x + 0y \Leftrightarrow \tau: z = 3$\\
-б)$
+1) допирателната равнина $\tau z  M_0 (0, 0, 3)$ \\
+2) нормалните вектори на $\tau$ в т. $M_0$.\\
+3) нормалата на повърхнината S в т. $M_0$. \\
+Решение:
+\begin{gather*}
+z'_x = 2x\; ; z'_y = 2y\; ; M_0(0,0,3) = M_0(x_0, y_0, z_0) \\
+z'_x(x_0, y_0) = z'_x(0,0) = 0\; ; z'_y(x_0, y_0) = z'_y(0,0) = 0\\
+1) \tau : z - z_0 = z'_x (x_0, y_0)(x - x_0) + z'_y (x_0, y_0)(y - y_0) \\
+\tau : z - 3 = 0x + 0y \Leftrightarrow \tau: z = 3\\
+2)
 \vec {n_1} = (-f'_x (x_0, y_0), -f'_y (x_0, y_0), 1) = (0, 0, 1) \\
 \vec {n_2} = (f'_x (x_0, y_0), f'_y (x_0, y_0), -1) = (0, 0, -1) \\
-$
-в) $
+3) 
 n: \dfrac{x - x_0}{-f'_x (x_0, y_0)} = \dfrac{y-y_0}{-f'_y (x_0, y_0)} = \dfrac{z - z_0}{1} \\
 n: \dfrac{x - 0}{0} = \dfrac{y-0}{0} = \dfrac{z - 3}{1} = \lambda \\
 n (0, 0, \lambda + 3), \lambda \in \mathbb{R}
-$
-\\
+\end{gather*}
 \end{example}
 
 \newpage
@@ -650,8 +642,10 @@ $$F'_x(x,f(x)) + f'(x)F'_y(x,f(x)) = 0 \implies f'(x) - \dfrac{F'_x(x,f(x))}{F'_
 
 \begin{example}
 $F(x,y) = x^2 +y^2 - 5$
-$$F(x,y) = 0 \Leftrightarrow y^2 = 5-x^2 $$
-$$y_{1,2} = \pm \sqrt{5-x^2}$$
+\begin{gather*}
+F(x,y) = 0 \Leftrightarrow y^2 = 5-x^2 \\
+y_{1,2} = \pm \sqrt{5-x^2}
+\end{gather*}
 \end{example}
 Нека $M_0 (x_0, y_0) \text{ точка в } \mathbb{R}^2$, отвореното множество $U = U_{M_0} \subset \mathbb{R}^2$ е нейна околност и нека $F \to \mathbb{R}$. 
 
@@ -710,24 +704,26 @@ $$X = \{x: \vert x - x_k ^0 \vert < a_k\} (a_k>0)\, k =1 \div m; \qquad Y = \{y:
 $$f'(x_k ^0) = - \dfrac{F'_{x_k}(x^0,f(x_0))}{F'_y(x^0,f(x_0))} = - \dfrac{F'_{x_k}(x^0,y_0)}{F'_y(x^0,y_0)} $$
 
 \begin{example}
-$F(x,y) = x^2 + y^2 - 5$. Да се определи дали съществува единствена функция $y = f(x)$ определена от неявно от уравнението $F(x,y) = 0$ в околността (1,2). Aко съществува да се пресметне $f'(1)$. \\
-$$F'_y = 2y; \quad F'_y(1,2) = 4 \neq 0$$
-Съществува единствена неявна функция $y = f(x)$ определена с уравнението $F(x,y) = 0$ в околността (1,2).
-За $f'(1)$ използваме формулата
-
-$$f'(x_0) = - \dfrac{F'_x(x_0,y_0)}{F'_y(x_0,y_0)} $$
-$$F'_x = 2x, \quad F'_x(1,2) = 4 , \quad F'_y = 2y; \quad F'_y(1,2) = 4$$
-$$f'(1) = - \dfrac{2}{4} = - \dfrac{1}{2}$$
+$F(x,y) = x^2 + y^2 - 5$. Да се определи дали съществува единствена функция $y = f(x)$ определена от неявно от уравнението $F(x,y) = 0$ в околността (1,2). Aко съществува да се пресметне $f'(1)$. 
+\begin{gather*}
+F'_y = 2y; \quad F'_y(1,2) = 4 \neq 0\\
+\text{Съществува единствена неявна функция $y = f(x)$ определена с уравнението $F(x,y) = 0$ в околността (1,2). За $f'(1)$ използваме формулата}\\
+f'(x_0) = - \dfrac{F'_x(x_0,y_0)}{F'_y(x_0,y_0)} \\
+F'_x = 2x, \quad F'_x(1,2) = 4 , \quad F'_y = 2y; \quad F'_y(1,2) = 4\\
+f'(1) = - \dfrac{2}{4} = - \dfrac{1}{2}
+\end{gather*}
 \end{example}
 
 \begin{example}
-$F(x,y) = x^2 + y^2 - 3z^2 - 13 $. Да се определи дали съществува единствена функция $z = f(x,y)$ определена от неявно от уравнението $F(x,y,z) = 0$ в околността (0,1,2). Aко съществува да се пресметне $z'_x(0,1), z'_y(0,1)$. \\
-$$F'_z = 6z \implies F'_z (0,1,2) = 6 \cdot 2 = 12 \neq 0$$
-Същесвува единствена неявна функция $z = f(x,y)$ определена от неявно от уравнението $F(x,y,z) = 0$ в околността (0,1,2).
-$$F'_x = 2x \implies F'_x (0,1,2) = 2 \cdot 0 = 0 $$
-$$F'_y = 2y \implies F'_y (0,1,2) = 2 \cdot 1 = 2 $$
-$$z'_x(x_0,y_0) = - \dfrac{F'_x(x_0,y_0,z_0)}{F'_z(x_0,y_0, z_0)} = - \dfrac{0}{6} = 0$$
-$$z'_y(x_0,y_0) = - \dfrac{F'_x(x_0,y_0,z_0)}{F'_y(x_0,y_0, z_0)} = - \dfrac{2}{6} = - \dfrac{1}{3}$$
+$F(x,y) = x^2 + y^2 - 3z^2 - 13 $. Да се определи дали съществува единствена функция $z = f(x,y)$ определена от неявно от уравнението $F(x,y,z) = 0$ в околността (0,1,2). Aко съществува да се пресметне $z'_x(0,1), z'_y(0,1)$.
+\begin{gather*}
+F'_z = 6z \implies F'_z (0,1,2) = 6 \cdot 2 = 12 \neq 0\\
+\text{Същесвува единствена неявна функция $z = f(x,y)$ определена от неявно от уравнението $F(x,y,z) = 0$ в околността (0,1,2).} \\
+F'_x = 2x \implies F'_x (0,1,2) = 2 \cdot 0 = 0 \\
+F'_y = 2y \implies F'_y (0,1,2) = 2 \cdot 1 = 2 \\
+z'_x(x_0,y_0) = - \dfrac{F'_x(x_0,y_0,z_0)}{F'_z(x_0,y_0, z_0)} = - \dfrac{0}{6} = 0\\
+z'_y(x_0,y_0) = - \dfrac{F'_x(x_0,y_0,z_0)}{F'_y(x_0,y_0, z_0)} = - \dfrac{2}{6} = - \dfrac{1}{3}\\
+\end{gather*}
 \end{example}
 
 Ако $F'_{x_k}, F'_{y_k}$ са непрекъснати в $U = U_{M_0}$, то $f'_{x_k}$ е непрекъсната в X. Прилагайки формулата за производна в произволна точка в $x \in X$ получаваме
@@ -744,26 +740,27 @@ $$f''_{{x_k}{x_k}} (x) = f''_{x_k^2}(x) = - \dfrac{F''_{x_k^2} + 2F''_{{x_k}y} y
 и за $k \neq j$
 $$f''_{{x_k}{x_j}} (x) = - \dfrac{ F''_{{x_k}{x_j}} + F''_{{x_k}y}y'_{x_j} +  F''_{{x_j}y}y'_{x_k} + F''_{yy} y'_{x_k} y'_{x_j} }
 {F'_y} $$
-98 - 56 + 40
 \begin{example}
 Да се намери $y', y''$ на неявната функция $y = f(x)$, дефинирана от уравнението 
 $$x^2 - 2xy + 5y^2 + 4y = 2x + 9$$
 Да се пресметнат $y'(0), y''(0)$, ако $y(0) = 1$ \\
 Решение: 
-$$F(x,y) = x^2 - 2xy + 5y^2 + 4y = 2x + 9$$
-$$F'_y = -2x + 10y + 4 \neq 0$$
-$$F'_x(x,y) = 2x - 2y - 2$$
-$$F'_y(0,1) = -2 \cdot 0 + 10 \cdot 1 + 4 \neq 0$$
-$$y'(x) = - \dfrac{F'_x(x,y)}{F'_y(x,y)} = - \dfrac{2x - 2y - 2}{-2x + 10y + 4} = - \dfrac{x - y - 1}{- x + 5y + 2}$$
-$$y'(0) = - \dfrac{0 - 1 - 1}{- 0 + 5 \cdot 1 + 2} = - \dfrac{-2}{7} = \dfrac{2}{7}$$
-$$y''(x) = - \dfrac{F''_{xx}(x,y) + 2F''_{xy}y' + F''_{yy}(x,y)y'^2}{F'_y(x,y)}$$
-$$F''_{xx} = 2, \quad F''_{yy} = 10, \quad F''_{xy} = -2$$
-$$F''_{xx}(0,1) = 2, \quad F''_{yy}(0,1) = 10, \quad F''_{xy}(0,1) = -2$$
-$$y''(x) = - \dfrac{2 + 2 \cdot (-2)y' + 10y'^2}{-2x + 10y + 4}$$
-$$y''(x) = - \dfrac{2 + - 4y' + 10y'^2}{-2x + 10y + 4}$$
-$$y''(0) = - \dfrac{2 + - 4 \cdot \dfrac{2}{7} + 10 \cdot \left( \dfrac{2}{7} \right) ^2}{-2 \cdot 0 + 10 \cdot 1 + 4}$$
-$$y''(0) = - \dfrac{2 + - \dfrac{8}{7} + \dfrac{40}{49}}{14}$$
-$$y''(0) = - \dfrac{\dfrac{98 - 56 + 40}{49}}{14} = - \dfrac{\dfrac{82}{49}}{14} = \dfrac{82}{49} \cdot \dfrac{1}{14} = \dfrac{41}{343}$$
+\begin{gather*}
+F(x,y) = x^2 - 2xy + 5y^2 + 4y = 2x + 9\\
+F'_y = -2x + 10y + 4 \neq 0\\
+F'_x(x,y) = 2x - 2y - 2\\
+F'_y(0,1) = -2 \cdot 0 + 10 \cdot 1 + 4 \neq 0\\
+y'(x) = - \dfrac{F'_x(x,y)}{F'_y(x,y)} = - \dfrac{2x - 2y - 2}{-2x + 10y + 4} = - \dfrac{x - y - 1}{- x + 5y + 2}\\
+y'(0) = - \dfrac{0 - 1 - 1}{- 0 + 5 \cdot 1 + 2} = - \dfrac{-2}{7} = \dfrac{2}{7}\\
+y''(x) = - \dfrac{F''_{xx}(x,y) + 2F''_{xy}y' + F''_{yy}(x,y)y'^2}{F'_y(x,y)}\\
+F''_{xx} = 2, \quad F''_{yy} = 10, \quad F''_{xy} = -2\\
+F''_{xx}(0,1) = 2, \quad F''_{yy}(0,1) = 10, \quad F''_{xy}(0,1) = -2\\
+y''(x) = - \dfrac{2 + 2 \cdot (-2)y' + 10y'^2}{-2x + 10y + 4}\\
+y''(x) = - \dfrac{2 + - 4y' + 10y'^2}{-2x + 10y + 4}\\
+y''(0) = - \dfrac{2 + - 4 \cdot \dfrac{2}{7} + 10 \cdot \left( \dfrac{2}{7} \right) ^2}{-2 \cdot 0 + 10 \cdot 1 + 4}\\
+y''(0) = - \dfrac{2 + - \dfrac{8}{7} + \dfrac{40}{49}}{14}\\
+y''(0) = - \dfrac{\dfrac{98 - 56 + 40}{49}}{14} = - \dfrac{\dfrac{82}{49}}{14} = \dfrac{82}{49} \cdot \dfrac{1}{14} = \dfrac{41}{343}\\
+\end{gather*}
 \end{example}
 
 \newpage
@@ -873,6 +870,7 @@ $$y''(0) = - \dfrac{\dfrac{98 - 56 + 40}{49}}{14} = - \dfrac{\dfrac{82}{49}}{14}
 
 \end{task}
 
+\newpage
 \subsection{Лекция 2}
 
 \begin{task}
@@ -932,16 +930,18 @@ $$
 
 \begin{enumerate}
 
-\item $
+\item 
+\begin{gather*}
 f(x,y) = \dfrac{x-y}{x+y} \\
 \lim\limits_{x \to 0} f(x,y) = \dfrac{-y}{y} = -1 \qquad 
 \lim\limits_{y \to 0} f(x,y) = \dfrac{x}{x} = 1 \\
 A_{1,2} = \lim\limits_{y \to 0} \left( \lim\limits_{x \to 0} f(x,y) \right) = \lim\limits_{y \to 0} \left( -1 \right) = -1\\
 A_{2,1} = \lim\limits_{x \to 0} \left( \lim\limits_{y \to 0} f(x,y) \right) = \lim\limits_{x \to 0} \left( 1 \right) = 1 \\
 A = \lim\limits_{(x,y) \to (0,0)} f(x,y) \text{ Не съществува, защото трябва }A_{1,2} = A_{2,1}
-$
+\end{gather*}
 
-\item $
+\item 
+\begin{gather*}
 f(x,y) = \dfrac{x^2 + y^2}{x^2y^2 + (x - y)^2}\\
 \lim\limits_{x \to 0} f(x,y) = \dfrac{y^2}{(-y)^2} = 1 \qquad 
 \lim\limits_{y \to 0} f(x,y) = \dfrac{x^2}{x^2} = 1 \\
@@ -949,32 +949,38 @@ f(x,y) = \dfrac{x^2 + y^2}{x^2y^2 + (x - y)^2}\\
 \text{Редица: }(x_n, y_n) = (\dfrac{1}{n},\dfrac{1}{n}) \to (0,0), f(x_n, y_n) = 1 \to 1\\
 \text{Редица: }(x'_n, y'_n) = (\dfrac{1}{n},\dfrac{-1}{n})  \to (0,0), f(x'_n, y'_n) = \dfrac{2n^2}{1 + 4n^2} \to \dfrac{1}{2} \neq 1 \\
 \implies f(x,y) \text{ няма граница при } (x,y) \to (0,0)
-$
+\end{gather*}
 
-\item $
+\item 
+\begin{gather*}
 f(x,y) = \dfrac{xy^2}{x^2+y^4}\\
 \lim\limits_{x \to 0} f(x,y) = \dfrac{0}{y^4} = 0 \qquad 
 \lim\limits_{y \to 0} f(x,y) = \dfrac{0}{x^2} = 0 \\
 A_{1,2} = A_{2,1} = 0 \implies \exists A = \lim\limits_{(x,y) \to (0,0)} f(x,y) \\
 \text{Редица: }(x_n, y_n) = (\dfrac{1}{n^2},\dfrac{1}{n}) \to (0,0), f(x_n, y_n) = \dfrac{1}{2} \to \dfrac{1}{2} \neq 0\\
 \implies f(x,y) \text{ няма граница при } (x,y) \to (0,0)
-$
+\end{gather*}
 
-\item $
+\item 
+\begin{gather*}
 f(x,y) = (x+y) \sin{\dfrac{1}{x}} \cos{\dfrac{1}{y}}\\
 0 \leq \vert f(x,y) \vert \leq \vert x + y \vert \leq  \vert x \vert + \vert y \vert \text{ и } \vert x \vert + \vert y \vert \to 0 \\
 A = 0 \\
 \lim\limits_{x \to 0} \sin{\dfrac{1}{x}} \text{ - не съществува} \\
-\lim\limits_{x \to 0} f(x,y) = y\cos{\dfrac{1}{y}} \lim\limits_{x \to 0} \sin{\dfrac{1}{x}}\\$
-Аналогично и другата вътрешна граница не съществува. Но тогава и повторните граници $A_{1,2},\, A_{2,1}$ не съществуват. 
+\lim\limits_{x \to 0} f(x,y) = y\cos{\dfrac{1}{y}} \lim\limits_{x \to 0} \sin{\dfrac{1}{x}}
+\end{gather*}
+Аналогично и другата вътрешна граница не съществува. Но тогава и повторните граници $A_{1,2},\, A_{2,1}$ не съществуват.
 
-\item $f(x,y) = \dfrac{x^4 + y^4}{x^2 + y^2}\\
+
+\item
+\begin{gather*}
+f(x,y) = \dfrac{x^4 + y^4}{x^2 + y^2}\\
 \lim\limits_{x \to 0} f(x,y) = y^2 \qquad 
 \lim\limits_{y \to 0} f(x,y) = x^2 \\
 A_{1,2} = \lim\limits_{y \to 0} \left( \lim\limits_{x \to 0} f(x,y) \right) = \lim\limits_{y \to 0} \left( y^2 \right) = 0\\
 A_{2,1} = \lim\limits_{x \to 0} \left( \lim\limits_{y \to 0} f(x,y) \right) = \lim\limits_{x \to 0} \left( x^2 \right) = 0 \\
 \implies A = A_{1,2} = A_{2,1} = 0
-$
+\end{gather*}
 
 \end{enumerate}
 
@@ -996,9 +1002,11 @@ $f(x,y) =
 -\dfrac{1}{x^2}, & (x,y)\in B
 \end{cases}$\\ 
 Да се изследва непрекъснатостта на тази функция. \\
-Решение: \\
-Функцията f е непрекъсната в А, защото е частно на две функции със знаменател $y^2 \neq 0$, в А. Аналогично е непрекъсната в B защото знаменателя е $x^2 \neq 0$. Остана да се изследва поведението върху C.\\
-$
+Решение:\\
+Функцията f е непрекъсната в А, защото е частно на две функции със знаменател $y^2\neq 0$, в А.\\
+Аналогично е непрекъсната в B защото знаменателя е $x^2 \neq 0$.\\
+Остана да се изследва поведението върху C. \\
+\begin{gather*}
 (x_0,y_0) = (x_0, x_0) \in C \\
 R = \{ (x_n , y_n) \},\ (x_n , y_n) \in A \\
 \lim\limits_{n \to \infty} R = (x_0, y_0)\\
@@ -1008,10 +1016,11 @@ R = \{ (x_n , y_n) \},\ (x_n , y_n) \in A \\
 \text{Ако } (x_n , y_n) \in B,\ \lim\limits_{n \to \infty} f(x_n,y_n) = - \dfrac{1}{x_0 ^2} \neq f(x_0, x_0) \neq 0. \\
 \text{Ако } x_0 = 0,\ \lim\limits_{n \to \infty} f(x_n,y_n) = \infty(-\infty),\ f(0,0) = 0,\\
 \implies \text{f е прекъсната в точката (0,0).} 
-$\\
+\end{gather*}
 Функцията е непрексъната в D, с изключение на точките от C, където е прекъсната. 
 \end{task}
 
+\newpage
 \subsection{Лекция 3}
 
 \begin{task}
@@ -1030,19 +1039,24 @@ f(x,y) =
 Решение: \\
 
 \begin{enumerate}
-\item $
+\item 
+\begin{gather*}
 f(x,y,z) = e^{4x+3y} + xy^2z^3 + 1111e^\pi \\
 f(x,y_0,z_0) \implies f'_x (x_0,y_0,z_0) = 4e^{4x_0+3y_0} + y_0 ^2 z_0 ^3 \\
 f(x_0,y,z_0) \implies f'_y (x_0,y_0,z_0) = 3e^{4x_0+3y_0} + 2x_0 y_0 z_0 ^3 \\
 f(x_0,y_0,z) \implies f'_z (x_0,y_0,z_0) = 3x_0 y_0 ^2 z_0 ^2
-$ 
-\item $
+\end{gather*}
+
+\item 
+\begin{gather*}
 f(x,y) = \vert x + y \vert \\
 \dfrac{g(h) - g(0)}{h} = \dfrac{f(0+h,0) - f(0,0)}{h} \\
 \lim\limits_{h \to 0} \dfrac{f(0+h,0) - f(0,0)}{h} = \lim\limits_{h \to 0} \dfrac{\vert h \vert}{h} \text{ не съществува} \\
 \implies \nexists f'_x (0,0) \text{(Аналогично се получава за $f'_y(0,0)$)} 
-$ 
-\item $
+\end{gather*}
+
+\item 
+\begin{gather*}
 f(x,y) = 
 \begin{cases}
 \dfrac{xy}{x^2 + y^2}, & (x,y) \neq (0,0)  \\
@@ -1053,21 +1067,23 @@ f'_x (x,y) = \dfrac{y(y^2 - x^2)}{(x^2 + y^2)^2}\\
 f'_y (x,y) = \dfrac{x(x^2 - y^2)}{(x^2 + y^2)^2}\\
 \lim\limits_{h \to 0} \dfrac{f(0+h,0) - f(0,0)}{h} = \lim\limits_{h \to 0} \dfrac{0-0}{h} = \lim\limits_{h \to 0} = 0 \\
 \lim\limits_{k \to 0} \dfrac{f(0,0+k) - f(0,0)}{k} =  \lim\limits_{k \to 0} \dfrac{0-0}{k} = \lim\limits_{k \to 0} = 0 \\
-\implies $ Функцията има частни производни във всичко точки на равнината $\mathbb{R}^2$
+\implies  \text{Функцията има частни производни във всичко точки на равнината $\mathbb{R}^2$}
+\end{gather*}
+
 \end{enumerate}
 
 \end{task}
 
 \begin{task}
 $f(x,y) = x + (y-1)\arcsin{\sqrt{\dfrac{x}{y}}}\qquad f'_x(x,1) = ?$\\ 
-Решение: \\
-$
+Решение:
+\begin{gather*}
 f'_x (a,b) = \lim\limits_{h \to 0} \dfrac{f(a +h,b) - f(a,b)}{h} \text{(Ако съществува)} \implies \\
 f'_x(x,1) =  \lim\limits_{h \to 0} \dfrac{f(x +h,1) - f(x,1)}{h} \text{(Ако съществува)}\\
 f(x +h,1) = x + h + (1-1)\arcsin{\sqrt{\dfrac{x}{1}}} = x + h + 0 \arcsin{\sqrt{\dfrac{x}{1}}} =  x + h \\
 f(x,1) = x + (1-1)\arcsin{\sqrt{\dfrac{x}{1}}} = x + 0 \arcsin{\sqrt{\dfrac{x}{1}}} =  x \implies \\
 \lim\limits_{h \to 0} \dfrac{f(x +h,1) - f(x,1)}{h} =  \lim\limits_{h \to 0} \dfrac{x + h - x}{h} = \lim\limits_{h \to 0} \dfrac{h}{h} =  \lim\limits_{h \to 0} 1 \implies f'_x(x,1) = 1
-$
+\end{gather*}
 \end{task}
 
 \begin{task}
@@ -1077,15 +1093,15 @@ $
 0, & x^2 + y^2 = (0,0) 
 \end{cases}
 $ е прекъсната в точката (0,0) но има частни производни в тази точка. \\
-Решение: \\
-$
+Решение:
+\begin{gather*}
 \text{Редица } (x_n, y_n) = \left(\dfrac{1}{n}, \dfrac{1}{n^3} \right) \\
 f(x_n, y_n) = \dfrac{ \left( \dfrac{1}{n} \right)^3 \cdot \dfrac{1}{n^3}}{\left( \dfrac{1}{n}\right)^6 + \left( \dfrac{1}{n^3} \right)^3 } = \dfrac{\dfrac{1}{n^6}}{\dfrac{2}{n^6}} = \dfrac{1}{2} \qquad \lim\limits_{n \to \infty} f(x_n, y_n) = \dfrac{1}{2}  \implies \\
 \lim\limits_{x \to 0, y \to 0 } f(x, y) \neq f(0,0) = 0 \implies f(x, y) \text{ е прекъсната в т. }(0,0).\\
 \\
 f'_x (0,0) = \lim\limits_{x \to 0} \dfrac{f(x,0) - f(0,0)}{x - 0} = \dfrac{ \dfrac{x^3 \cdot 0}{x^6 + 0} - 0}{x - 0} = 0 \\
 f'_y (0,0) = \lim\limits_{y \to 0} \dfrac{f(0,y) - f(0,0)}{y - 0} = \dfrac{\dfrac{0^3 \cdot y}{0^6 + y^2} - 0}{y - 0} = 0
-$
+\end{gather*}
 \end{task}
 
 \begin{task}
@@ -1102,30 +1118,38 @@ $
 
 \begin{enumerate}
 
-\item $
+\item 
+\begin{gather*}
 f(x,y) = \sin{(2x+3)} + 3e^{-x}e^{4y} - 11x^3 + 19e^\pi \\
 f'_x(x,y) = (\sin{(2x+3)})'_x + (3e^{-x}e^{4y})'_x - (11x^3)'_x + (19e^\pi )'_x \\
 f'_x(x,y) = \cos{(2x+3)}\cdot 2 + (-3e^{-x}e^{4y}) - (3 \cdot 11x^2) + 0 \\
 f'_x(x,y) = 2\cos{(2x+3)} -3e^{-x}e^{4y} - 33x^2 \\
 f'_y(x,y) = (\sin{(2x+3)})'_y + (3e^{-x}e^{4y})'_y - (11x^3)'_y + (19e^\pi )'_y \\
 f'_y(x,y) = 0 + (3 \cdot 4 e^{-x}e^{4y}) - 0 + 0 = 12e^{-x}e^{4y}
-$
-\item $f(x,y) = \sqrt{x^2 + y^2} + \arctan {\frac{y}{x}}\\
+\end{gather*}
+
+\item 
+\begin{gather*}
+f(x,y) = \sqrt{x^2 + y^2} + \arctan {\frac{y}{x}}\\
 f'_x(x,y) = \dfrac{1}{2} (x^2)^{- \dfrac{1}{2}} \cdot 2x + \dfrac{1}{1 + \dfrac{y^2}{x^2}} \cdot y \cdot ( - \dfrac{1}{x^2}) \\
 f'_x(x,y) = \dfrac{x}{\sqrt{x^2 + y^2}} - \dfrac{x^2y}{x^2 + y^2} \cdot \dfrac{1}{x^2} \\
 f'_x(x,y) = \dfrac{x}{\sqrt{x^2 + y^2}} - \dfrac{xy}{x^2 + y^2} \\
 f'_y(x,y) = \dfrac{1}{2} (x^2)^{- \dfrac{1}{2}} \cdot 2y + \dfrac{1}{1 + \dfrac{y^2}{x^2}} \cdot  \dfrac{1}{x} \\
 f'_y(x,y) = \dfrac{y}{\sqrt{x^2 + y^2}} + \dfrac{x^2}{x^2 + y^2} \cdot \dfrac{1}{x}\\
 f'_y(x,y) = \dfrac{y}{\sqrt{x^2 + y^2}} + \dfrac{x}{x^2 + y^2}
-$
+\end{gather*}
 
-\item $f(x,y,z) = (xy)^z\\
+\item 
+\begin{gather*}
+f(x,y,z) = (xy)^z\\
 f'_x(x,y,z) = z(xy)^{z-1} \cdot (xy)'x = yz(xy)^{z-1}\\
 f'_y(x,y,z) = z(xy)^{z-1} \cdot (xy)'y = xz(xy)^{z-1}\\
 f'_z(x,y,z) = (xy)^z \ln{(xy)}
-$
+\end{gather*}
 
-\item $\sqrt[3]{x^2+3y^2} e^{x^2 - 5y}\\
+\item 
+\begin{gather*}
+\sqrt[3]{x^2+3y^2} e^{x^2 - 5y}\\
 f'_x(x,y) = \left[ \sqrt[3]{x^2+3y^2} \right]'_x \cdot e^{x^2 - 5y} + \sqrt[3]{x^2+3y^2} \cdot (e^{x^2 - 5y})'_x\\
 f'_x(x,y) = \dfrac{1}{3} (x^2 + 3y^2)^{- \frac{2}{3}} \cdot 2x  \cdot e^{x^2 - 5y} +  \sqrt[3]{x^2+3y^2}\cdot 2x e^{x^2 - 5y} \\
 f'_x(x,y) = \dfrac{2x}{3} \cdot \dfrac{e^{x^2 - 5y}}{\sqrt[3]{(x^2+3y^2)^2}} + 2x \sqrt[3]{x^2+3y^2} \cdot e^{x^2 - 5y} \\
@@ -1137,15 +1161,173 @@ f'_y(x,y) = \dfrac{1}{3} (x^2 + 3y^2)^{- \frac{2}{3}} \cdot 6y  \cdot e^{x^2 - 5
 f'_y(x,y) = 2y \cdot \dfrac{1}{\sqrt[3]{(x^2+3y^2)^2}} \cdot e^{x^2 - 5y} - 5  \sqrt[3]{x^2+3y^2}\cdot e^{x^2 - 5y} \\
 f'_y(x,y) = e^{x^2 - 5y} \cdot \sqrt[3]{(x^2+3y^2)^2} (2y - 5(x^2 + 3y^2)) \\
 f'_y(x,y) = (2y - 5x^2 - 15y^2) \dfrac{e^{x^2 - 5y}}{\sqrt[3]{(x^2+3y^2)^2}}
-$
-
+\end{gather*}
 \end{enumerate}
 
 \end{task}
+\newpage
 \subsection{Лекция 4}
 
+\begin{task}
+$f(x,y) = \sqrt[3]{xy}$\\
+Изследвайте $f(x,y)$ за диференцируемост в $(0,0)$.\\
+$f'_x (0,0) = ?\\
+f'_y (0,0) = ?$ \\
+Решение: 
+\begin{gather*}
+f(x,0) - f(0,0) = \sqrt[3]{x0} - \sqrt[3]{0}\implies \\
+\lim\limits_{x \to 0} \dfrac{f(x,0) - f(0,0)}{x - 0} = \lim\limits_{x \to 0} \dfrac{0}{x} = 0
+f'_x(0,0) = \lim\limits_{x \to 0} \dfrac{f(x,0) - f(0,0)}{x - 0} =  \lim\limits_{x \to 0} \dfrac{0}{x} = 0\\
+f(0,y) - f(0,0) = \sqrt[3]{0y} - \sqrt[3]{0} \implies \\
+f'_y(0,0) = \lim\limits_{y \to 0} \dfrac{f(0,y) - f(0,0)}{y - 0} =  \lim\limits_{y \to 0} \dfrac{0}{y} = 0\\
+\text{Нека:}
+\lim\limits_ {(x \to 0, y \to 0)} \varepsilon (x,y) \to 0, \rho (x,y) = \sqrt{x^2 + y^2}\\
+\text{Проверка за диференцируемост в (0,0):}\\
+ f(x,y) - f(0,0)  = f'_x(0,0)(x - 0) + f'_y(0,0)(y-0) + \varepsilon (x,y) \rho (x,y) \\
+\sqrt[3]{xy} - 0 = 0x + 0y + \varepsilon (x,y)\sqrt{x^2 + y^2} \implies \\
+\varepsilon (x,y) = \dfrac{\sqrt[3]{xy}}{\sqrt{x^2 + y^2}} \to 0? \\
+\text{Разглеждаме редица с общ член } (x_n, y_n) = \left( \dfrac{1}{n^3}, \dfrac{1}{n^3} \right) \text{ за която } (x_n, y_n) \to (0,0), \\
+\varepsilon (x_n, y_n) = \dfrac{\dfrac{1}{n^2}}{\dfrac{\sqrt{2}}{n^3}} = \dfrac{n}{\sqrt{2}} \implies
+\lim\limits_ {(x,y) \to (0,0)}\varepsilon(x_n, y_n) \not\to 0 \implies \\
+ f(x,y) \text{ не е диференцируема в т.} (0,0)
+\end{gather*}
+\end{task}
+
+\begin{task}
+$f(x,y) = \sqrt[3]{x^3 + y^3}$\\
+Изследвайте $f(x,y)$ за диференцируемост в $(0,0)$.\\
+Решение: 
+\begin{gather*}
+f(x,0) - f(0,0) = \sqrt[3]{x^3} - 0 = x\implies \\
+\lim\limits_{x \to 0} \dfrac{f(x,0) - f(0,0)}{x - 0}= \lim\limits_{x \to 0} \dfrac{x}{x} = 1 \implies \exists f'_x(0,0) = 1\\
+f(0,y) - f(0,0) = \sqrt[3]{y^3} - 0 = y \implies \\
+\lim\limits_{y \to 0}\dfrac{f(0,y) - f(0,0)}{y - 0} = \lim\limits_{y \to 0} \dfrac{y}{y} = 1 \implies \exists f'_y(0,0) = 1\\
+\text{Нека:}
+\lim\limits_ {(x \to 0, y \to 0)} \varepsilon (x,y) \to 0, \rho (x,y) = \sqrt{x^2 + y^2}\\
+\text{Проверка за диференцируемост в (0,0):}\\
+f(x,y) - f(0,0)  = f'_x(0,0)(x - 0) + f'_y(0,0)(y-0) + \varepsilon (x,y) \rho (x,y) \\
+\sqrt[3]{x^3 + y^3} = x + y + \varepsilon (x,y) \sqrt{x^2 + y^2} \\
+\varepsilon (x,y) = \dfrac{\sqrt[3]{x^3 + y^3} - x - y}{ \sqrt{x^2 + y^2}} \\
+\lim\limits_ {(x \to 0, y \to 0)} \varepsilon (x,y) \to 0?\\
+\text{Разглеждаме редица с общ член } (x_n, y_n) = \left( \dfrac{1}{n}, \dfrac{1}{n} \right) \text{ за която } (x_n, y_n) \to (0,0), \\
+\varepsilon (x_n, y_n) = \dfrac{\dfrac{\sqrt[3]{2}}{n} - \dfrac{2}{n}}{\dfrac{\sqrt{2}}{n}} = \dfrac{\sqrt[3]{2} - 2}{\sqrt{2}} \implies \lim\limits_ {(x \to 0, y \to 0)} \varepsilon (x,y) \not\to 0 \implies \\
+ f(x,y) \text{ не е диференцируема в т.} (0,0)
+\end{gather*}
+\end{task}
+
+\begin{task}
+Да се изследвай за диференцируемост в $(0,0)$ функцията 
+$f(x,y) = 
+\begin{cases}
+e^{- \dfrac{1}{x^2 + y^2}}, & x^2 + y^2 \neq 0 \\
+0, & x^2 + y^2 = 0
+\end{cases}
+$\\
+Решение: 
+\begin{gather*}
+f(x,0) - f(0,0) = e^{- \dfrac{1}{x^2}} - 0 = e^{- \dfrac{1}{x^2}}\\
+\lim\limits_{x \to 0} \dfrac{f(x,0) - f(0,0)}{x - 0}= \lim\limits_{x \to 0} \dfrac{e^{- \dfrac{1}{x^2}}}{x} = \left[ \dfrac{0}{0}\right]\\
+\lim\limits_{x \to 0} \dfrac{e^{- \dfrac{1}{x^2}}}{x} = \lim\limits_{x \to 0} \dfrac{\dfrac{1}{x}}{e^{\dfrac{1}{x^2}}} = \left[ \dfrac{\infty}{\infty}\right] \\
+\left( \dfrac{1}{x} \right)' = -\dfrac{1}{x^2} \quad \left( e^{\dfrac{1}{x^2}} \right)' = -\dfrac{2}{x^3} e^{\dfrac{1}{x^2}}\\
+\lim\limits_{x \to 0} \dfrac{-\dfrac{1}{x^2}}{-\dfrac{2}{x^3} e^{\dfrac{1}{x^2}}} = \lim\limits_{x \to 0} \dfrac{x}{2e^{\dfrac{1}{x^2}}} = \dfrac{0}{\infty} = 0 \implies f'_x(0,0) = 0\\
+\text{Аналогично} f'_y(0,0) = 0\\
+\text{Нека}: \lim\limits_ {(x \to 0, y \to 0)} \varepsilon (x,y) \to 0, \rho (x,y) = \sqrt{x^2 + y^2}\\
+\text{Проверка за диференцируемост в (0,0):}\\
+f(x,y) - f(0,0)  = f'_x(0,0)(x - 0) + f'_y(0,0)(y-0) + \varepsilon (x,y) \rho (x,y) \\
+e^{- \dfrac{1}{x^2 + y^2}} - 0 = 0(x-0) + 0(y-0) + \varepsilon (x,y)\sqrt{x^2 + y^2}\\
+e^{- \dfrac{1}{x^2 + y^2}} = \varepsilon (x,y)\sqrt{x^2 + y^2}\\
+\varepsilon (x,y) = \dfrac{e^{- \dfrac{1}{x^2 + y^2}}}{\sqrt{x^2 + y^2}}\\
+\lim\limits_ {(x \to 0, y \to 0)} \varepsilon (x,y) \to 0?\\
+\end{gather*}
+
+\begin{gather*}
+\rho (x,y) = \sqrt{x^2 + y^2} \implies \lim\limits_ {(x \to 0, y \to 0)}\rho (x,y) \to 0 \\
+\lim\limits_ {(x \to 0, y \to 0)} \varepsilon (x,y) = \lim\limits_ {\rho \to 0} \dfrac{e^{- \dfrac{1}{\rho^2}}}{\rho} = \left[ \dfrac{\infty}{\infty}\right]\\
+\left( \dfrac{1}{\rho} \right)' = -\dfrac{1}{\rho^2} \quad \left( e^{\dfrac{1}{\rho^2}} \right)' = -\dfrac{2}{\rho^3} e^{\dfrac{1}{\rho^2}} \\
+\lim\limits_ {\rho \to 0} \dfrac{\rho}{2e^{\dfrac{1}{\rho^2}}} = \dfrac{0}{\infty} = 0 \implies \\
+\lim\limits_ {(x \to 0, y \to 0)} \varepsilon (x,y) = \lim\limits_ {\rho \to 0} \dfrac{\dfrac{1}{\rho}}{e^{\dfrac{1}{\rho^2}}} = \lim\limits_ {\rho \to 0} \dfrac{\left( \dfrac{1}{\rho} \right)'}{\left( e^{\dfrac{1}{\rho^2}}\right)'} = 0
+\implies \\
+\lim\limits_ {(x \to 0, y \to 0)} \varepsilon (x,y) = 0 \implies f(x,y) \text{ е диференцируема в } (0,0)
+\end{gather*}
+\end{task}
+
+
+\begin{task}
+$f(x,y) = x^2 + 3xy - 8y^3 + 11, \quad df(0,1) =?$\\
+$f(x,y,z) = x^2 + 3xy - 8y^3 - 2e^{3z}x, \quad df(0,0,4) = ? $\\
+Решение: \\
+\begin{gather*}
+df(x,y) = f'_x(x,y)dx + f'_y(x,y)dy\\
+f'_x(x,y) = 2x + 3y \qquad f'_x(0,1) = 3\\
+f'_y(x,y) = 3x - 24y^2 \qquad f'_y(0,1) = -24\\
+df(x,y) = (2x + 3y)dx + (3x - 24y^2)dy\\
+df(0,1) = 3dx - 24dy\\
+\end{gather*}
+
+\begin{gather*}
+df(x,y,z) = f'_x(x,y,z)dx + f'_y(x,y,z)dy +  f'_z(x,y,z)dz\\
+f'_x(x,y,z) = 2x + 3y - 2e^{3z} \qquad f'_x(0,0,4) = - 2e^{12}\\
+f'_y(x,y,z) = 3x - 24y^2 \qquad f'_y(0,0,4) = 0\\
+f'_z(x,y,z) = 6xe^{3z} \qquad f'_z(0,0,4) = 0\\
+df(x,y,z) =(2x + 3y - 2e^{3z})dx + (3x - 24y^2)dy +  (6xe^{3z})dz\\
+df(x,y,z) = - 2e^{12}dx + 0dy + 0dz = - 2e^{12}dx
+\end{gather*}
+
+\end{task}
+
+\begin{task}
+$f(x,y) = x^6 - 7xy^2 + 14y, f''_{xx} = ?, f''_{yy} = ?, f''_{xy} = ?, d^2f(x,y) = ?$\\
+$f(x,y,z) = x^6 - 7xy +y^2 - xz + z^3 ,  \\
+f''_{xx} = ?, f''_{xy} = ?, f''_{xz} = ?  f''_{yx} = ?, f''_{yy} = ?, f''_{yz} = ?  f''_{zx} = ?, f''_{zy} = ?, f''_{zz} = ?, d^2f(1,0,0)$
+
+\begin{gather*}
+f'_x(x,y,z) = 6x^5 - 7y - z\\
+f''_{xx}(x,y,z) = (6x^5 - 7y - z)'_x = 30x^4 \qquad f''_{xx}(1,0,0) = 30 \\
+f''_{xy}(x,y,z) = (6x^5 - 7y - z)'_y = -7 \qquad f''_{xy}(1,0,0) = -7 \\
+f''_{xz}(x,y,z) = (6x^5 - 7y - z)'_z = -1 \qquad f''_{xz}(1,0,0) = -1 
+\end{gather*}
+
+\begin{gather*}
+f'_y(x,y,z) = -7x + 2y\\
+f''_{yx}(x,y,z) = (-7x + 2y)'_x = -7 \qquad f''_{yx}(1,0,0) = -7 \\
+f''_{yy}(x,y,z) = (-7x + 2y)'_y = 2 \qquad f''_{yy}(1,0,0) = 2 \\
+f''_{yz}(x,y,z) = (-7x + 2y)'_z = 0\qquad f''_{yz}(1,0,0) = 0 
+\end{gather*}
+
+\begin{gather*}
+f'_z(x,y,z) = -x + 3z^2\\
+f''_{zx}(x,y,z) = (-x + 3z^2)'_x = -1 \qquad f''_{zx}(1,0,0) = -1 \\
+f''_{zy}(x,y,z) = (-x + 3z^2)'_y = 0 \qquad f''_{zy}(1,0,0) = 0 \\
+ f''_{zz}(x,y,z) = (-x + 3z^2)'_z = 6z  \qquad f''_{zz}(1,0,0) = 0 
+\end{gather*}
+
+\begin{gather*}
+d^2f = f''_{xx}dx^2 + 2f''_{xy}dxdy + f''_{yy}dy^2 + 2f''_{xz}dxdz +  f''_{zz}dz^2 + f''_{yz}dydz\\
+d^2f(x,y,z) = 30x^4dx^2 +2\cdot(-7) dxdy + 2dy^2 + 2\cdot(-1)dxdz + 6zdz^2 + 2\cdot 0 dydz \\
+d^2f(1,0,0) = 30dx^2 -14dxdy + 2dy^2 - 2dxdz + 0dz^2 + 0 dydz \\
+d^2f(1,0,0) = 30dx^2 + 2dy^2 -14dxdy - 2dxdz 
+\end{gather*}
+
+\end{task}
+
+
+
+
+
+\newpage
 \subsection{Лекция 5}
 
+\begin{task}
+
+\end{task}
+
+\begin{task}
+
+\end{task}
+
+\begin{task}
+
+\end{task}
 
 
 
