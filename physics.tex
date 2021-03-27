@@ -5,6 +5,7 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{booktabs}
+\usepackage{fancyhdr}
 
 \newtheorem{theorem}{Tеорема}[subsection]
 \newtheorem{example}{Пример}[subsection]
@@ -13,6 +14,12 @@
 \title{Физика}
 \author{Exonaut}
 
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\rightmark}
+\rhead{\thepage}
+\cfoot{}
+\renewcommand{\headrulewidth}{0pt}
 
 \begin{document}
 \maketitle
@@ -69,13 +76,13 @@ $$a = \left[ \dfrac{m}{s^2} \right]$$
 \begin{example}
 Тяло се движи по закон $x = 5t^3 + 2t^2 + 1$. Да се намери скоростта и ускорението в момента $t = 1s$. \\
 Решение: \\
-$
+\begin{gather*}
 V(t) = \dfrac{dx}{dt}, \quad a(t) = \dfrac{dV}{dt} \\
 V(t) = 5 \cdot 3 \cdot t^{3-1} + 2 \cdot 2 \cdot t^{2-1} + 0 = 15 \cdot t^2 + 4\cdot t \\
 a(t) = 15\cdot 2 \cdot t^{2-1} + 4 = 30 \cdot t + 4 \\
 V(1) = 15 \cdot 1^2 + 4 \cdot 1 = 15 + 4 = 19 \dfrac{m}{s} \\
 a(1) = 30 \cdot 1 + 4 = 30 + 4 = 34 \dfrac{m}{s^2}
-$
+\end{gather*}
 \end{example}
 
 \subsection{Движение с постоянна скорост}
@@ -98,32 +105,35 @@ $$x = x_0 + V_0t + \dfrac{at^2}{2}$$
 $$V = V_0 - at$$
 $$x = V_0t - \dfrac{at^2}{2}$$
 Oт първото равенство имаме $t = \dfrac{V_0 - V}{a}$ и заместваме във второто равенство
-$$x = V_0 \dfrac{V_0 - V}{a} - \dfrac{1}{2}a \left( \dfrac{V_0 - V}{a}\right)^2 $$
-$$x = \dfrac{V_0 ^2 - VV_0}{a} -  \dfrac{a}{2}  \left( \dfrac{V_0 ^2 - 2VV_0 + V^2}{a^2}\right)$$ 
-$$x =\dfrac{V_0 ^2 - VV_0}{a} - \dfrac{a(V_0 ^2 - 2VV_0 + V^2)}{2a^2}$$
-$$x = \dfrac{2(V_0 ^2 - VV_0)}{2a} - \dfrac{V_0 ^2 - 2VV_0 + V^2}{2a}$$
-$$x = \dfrac{2V_0 ^2 - 2VV_0 - V_0 ^2 + 2VV_0 - V^2}{2a}$$
-$$x = \dfrac{V_0 ^2 - V^2}{2a}$$
+\begin{gather*}
+x = V_0 \dfrac{V_0 - V}{a} - \dfrac{1}{2}a \left( \dfrac{V_0 - V}{a}\right)^2 \\
+x = \dfrac{V_0 ^2 - VV_0}{a} -  \dfrac{a}{2}  \left( \dfrac{V_0 ^2 - 2VV_0 + V^2}{a^2}\right)\\ 
+x =\dfrac{V_0 ^2 - VV_0}{a} - \dfrac{a(V_0 ^2 - 2VV_0 + V^2)}{2a^2}\\
+x = \dfrac{2(V_0 ^2 - VV_0)}{2a} - \dfrac{V_0 ^2 - 2VV_0 + V^2}{2a}\\
+x = \dfrac{2V_0 ^2 - 2VV_0 - V_0 ^2 + 2VV_0 - V^2}{2a}\\
+x = \dfrac{V_0 ^2 - V^2}{2a}
+\end{gather*}
 \end{example}
 
 \begin{example}
 Тяло е хвърлено вертикално нагоре от височина $h_0 = 1m$ с начална скорост $V_0 = 10 \dfrac{m}{s}$. След колко време тялото ще достигне максимална височина? До каква максимална височина ще се издигне тялото? След колко време и с каква скорост тялото ще падне до $h = 0$. \\
 Решение: \\
-Всички тела в близост до земята се движат с ускорение $g = 9,8 \dfrac{m}{s^2} \approx 10 \dfrac{m}{s^2}$. \\
-Записваме закона за скоростта и закона за движение по оста y:
+$g = 9,8 \dfrac{m}{s^2} \approx 10 \dfrac{m}{s^2}$. \\
 $$V = V_0 - gt$$
 $$y = h_0 + V_0t - \dfrac{gt^2}{2}$$
-Знакът пред $V_0$ е положителен, защото посоката й съвпада с посоката на оста $y$, а знакът пред $g$ е отрицателен, защото посоката му е противоположна на оста $y$.\\
-Когато тялото се издига, скоростта му намалява, в най-високата точка става нула, след което тялото започва да пада, скоростта му става отрицателна, понеже е насочена срещу оста $y$. В най-високата точка $V = 0$  или $0 = V_0 - gt$. От тук намираме времето, за което тялото ще достигне най-високата точка : $t = \dfrac{V_0}{g} = \dfrac{10}{10} = 1s$. Заместваме това време в израза за y за да получим максималната височина:
-$$h_max = h_0 + V_0t -  \dfrac{gt^2}{2} = 1+ 10 \cdot 1 -  \dfrac{10 \cdot 1^2}{2} = 11 - 5 = 6m$$
-Времето за падане до $h = 0$  намираме от условието $y = 0$.
-$$0 = h_0 + V_0t - \dfrac{gt^2}{2} $$
-$$0 = 1 + 10t -  \dfrac{10t^2}{2}$$
-$$-5t^2 + 10t  + 1 = 0 $$
-$$D = 10^2 - 4 \cdot (-5) \cdot 1 = 100 + 20 = 120 $$
-$$t_{1,2} = \dfrac{-10 \pm \sqrt{120}}{2 \cdot (-5)} = \dfrac{-10 \pm 2\sqrt{30}}{-10} = \dfrac{-5 \pm \sqrt{30}}{-5}$$
-$$t_1 = \dfrac{-5 -\sqrt{30}}{-5} \approx -0.1 s$$
-$$t_2 = \dfrac{-5 +\sqrt{30}}{-5} \approx 2.1 s$$
+Знакът пред $V_0$ е положителен, защото посоката й съвпада с посоката на оста $y$, а знакът пред $g$ е отрицателен, защото посоката му е противоположна на оста $y$.Когато тялото се издига, скоростта му намалява, в най-високата точка става нула, след което тялото започва да пада, скоростта му става отрицателна, понеже е насочена срещу оста $y$. В най-високата точка $V = 0$  или $0 = V_0 - gt$. От тук намираме времето, за което тялото ще достигне най-високата точка $t = \dfrac{V_0}{g} = \dfrac{10}{10} = 1s$. Заместваме това време в израза за y за да получим максималната височина:
+
+\begin{gather*}
+h_{max} = h_0 + V_0t -  \dfrac{gt^2}{2} = 1+ 10 \cdot 1 -  \dfrac{10 \cdot 1^2}{2} = 11 - 5 = 6m\\
+h = 0  \implies y = 0\\
+0 = h_0 + V_0t - \dfrac{gt^2}{2} \\
+0 = 1 + 10t -  \dfrac{10t^2}{2}\\
+-5t^2 + 10t  + 1 = 0 \\
+D = 10^2 - 4 \cdot (-5) \cdot 1 = 100 + 20 = 120 \\
+t_{1,2} = \dfrac{-10 \pm \sqrt{120}}{2 \cdot (-5)} = \dfrac{-10 \pm 2\sqrt{30}}{-10} = \dfrac{-5 \pm \sqrt{30}}{-5}\\
+t_1 = \dfrac{-5 -\sqrt{30}}{-5} \approx -0.1 s\\
+t_2 = \dfrac{-5 +\sqrt{30}}{-5} \approx 2.1 s
+\end{gather*}
 Физичен смисъл има само положителното време. Заместваме го в израза за скоростта $V = V_0 - gt = 10 - 10 \cdot 2.1 = -11 m/s$ Това е скоростта, с която тялото пада на земята. Тя е отрицателна, защото е насочена срещу оста $y$.
 \end{example}
 
@@ -147,10 +157,9 @@ $$\vec{r} = \vec{r_0} + \vec{V_0}t + \dfrac{\vec{a}t^2}{2}$$
 \begin{example}
 Тяло е хвърлено под ъгъл $\alpha = 30^\circ $ спрямо хоризонта с начална скорост 
 $V_0 = 10 \dfrac{m}{s}$. Намерете максималната височина, до която се издига тялото и разстоянието, което то прелита. \\
-Решение: \\
+Решение: $\vec{r_0} = 0$. \\
 $$\vec{V} = \vec{V_0} + \vec{g}t$$
 $$\vec{r} = \vec{V_0}t + \dfrac{\vec{g}t^2}{2}$$
-$\vec{r_0} = 0$. \\
 Всеки от векторите може да бъде разложен на две компоненти $x$и $y$. \\
 По оста $x$: $V_x = V_{0x}, \quad x = V_{0x}t$ \\
 По оста $y$: $V_y = V_{0y} - gt, \quad y = V_{0y}t - \dfrac{\vec{g}t^2}{2}$ \\
@@ -158,18 +167,17 @@ $\vec{r_0} = 0$. \\
 $$V_{0x} = V_0 \cos{30^\circ} = \dfrac{\sqrt{3}}{2}V_0 \quad V_{0y} = V_0 \sin{30^\circ} = \dfrac{V_0}{2}$$
 В най високата точка $V_y$ е равна на 0: $0 = V_{0y} - gt$ и времето за което тялото достига максимална височина е $t = \dfrac{V_{0y}}{g}$
 Заместваме това време в израза за y и получаваме 
-$$y_{max} = V_{0y} \dfrac{V_{0y}}{g} - \dfrac{g}{2} \cdot \left(  \dfrac{V_{0y}}{g} \right)^2 $$
-$$y_{max} = \dfrac{V_{0y}^2}{g} - \dfrac{1}{2} \cdot \dfrac{V_{0y}^2}{g}$$ 
-$$y_{max} = \dfrac{1}{2} \cdot \dfrac{V_{0y}^2}{g} =  \dfrac{1}{2} \cdot \dfrac{\left( \dfrac{10}{2} \right)^2}{10} = \dfrac{5^2}{20} = \dfrac{25}{20} = 1.25m$$
+\begin{gather*}
+y_{max} = V_{0y} \dfrac{V_{0y}}{g} - \dfrac{g}{2} \cdot \left(  \dfrac{V_{0y}}{g} \right)^2 \\
+y_{max} = \dfrac{V_{0y}^2}{g} - \dfrac{1}{2} \cdot \dfrac{V_{0y}^2}{g}\\
+y_{max} = \dfrac{1}{2} \cdot \dfrac{V_{0y}^2}{g} =  \dfrac{1}{2} \cdot \dfrac{\left( \dfrac{10}{2} \right)^2}{10} = \dfrac{5^2}{20} = \dfrac{25}{20} = 1.25m
+\end{gather*}
 \end{example}
-
 В общия случай, когато ускорението не е постоянно, законът за скоростта се получава с интегриране. 
 $$\vec{a} =  \dfrac{d\vec{V}}{dt} \Leftrightarrow d\vec{V} = \vec{a}dt$$
-Интегрираме и получаваме закона за скоростта в общия случай: 
 $$\vec{V} = \int _0 ^ t  \vec{a}(t)dt + \vec{V_0}$$
 Аналогично закона за движение : 
 $$\vec{V} =  \dfrac{d\vec{r}}{dt} \Leftrightarrow d\vec{r} = \vec{V}dt$$
-Интегрираме и получаваме закона за пътя в общия случай:
 $$\vec{r} = \int _0 ^ t  \vec{V}(t)dt + \vec{r_0}$$
 Ще използваме този резултат за да получим закона за движение при постоянно ускорение. При движение с постоянно ускорение  
 $$\vec{V} = \int _0 ^ t  \vec{a}dt + \vec{V_0} = \vec{V_0} + \vec{a} \int _0 ^ t dt = \vec{V_0} + \vec{a}t$$
@@ -237,9 +245,11 @@ $$\vec{F} = \vec{G} + \vec{N} = m \vec{a} $$
 $$F_x = G_x = ma$$
 $$F_y = N - G_y = 0$$
 Тук сме отчели, че по оста у няма движение и ускорението е нула. В горните изрази: $G_x  =G \sin{\theta} = mg \sin{\theta}, G_y  =G \cos{\theta} = mg \cos{\theta}$\\
-$$G_x = mg \sin{\theta} = ma$$
-$$a =g\sin{\theta}$$
-$$N = G_y = mg \cos{\theta}$$
+\begin{gather*}
+G_x = mg \sin{\theta} = ma\\
+a =g\sin{\theta}\\
+N = G_y = mg \cos{\theta}
+\end{gather*}
 \end{example}
 
 \subsubsection{Сила на триене}
@@ -250,7 +260,7 @@ $$f = kN$$
 \begin{example}
 Автомобил с маса $m = 1000 kg$ се движи по хоризонтален път със скорост $V_0 = 54 km/h$. След задействане на спирачкитеавтомобилът спира за време 5 s. Определете силата на триене и коефициента на триене.\\
 Решение: \\
-Като имаме предвид, че 1 m/s = 3,6 km/h, намираме, че v0 = 54 km/h = 15 m/s. \\
+Като имаме предвид, че 1 m/s = 3,6 km/h, намираме, че $V_0$ = 54 km/h = 15 m/s. \\
 $$V = V_0 - at$$
 В момента на спиране $V = 0$ и $0 = V_0 - at$ или $a = \dfrac{V_0}{t} = \dfrac{15}{5} = 3 \dfrac{m}{s^2}. $\\
 От $f = ma$ получаваме $f =1000 \cdot 3 = 3000 N$ \\
@@ -392,9 +402,11 @@ $E_{k_1} = 0, E_{p_1} = mgh_0 \implies E_1 = E_{k_1} + E_{p_1} = mgh_0$. \\
 На земята: \\
 $E_{k_2} = \dfrac{mV^2}{2}, E_{p_2} = 0 \implies E_2 = E_{k_2} + E_{p_2} = \dfrac{mV^2}{2}$. \\
 ЗЗЕ: 
-$$E_1 = E_2$$
-$$mgh_0 = \dfrac{mV^2}{2}$$
-$$V = \sqrt{2gh_0} = \sqrt{2\cdot 10 \cdot 20} = 20 \dfrac{m}{s}$$
+\begin{gather*}
+E_1 = E_2\\
+mgh_0 = \dfrac{mV^2}{2}\\
+V = \sqrt{2gh_0} = \sqrt{2\cdot 10 \cdot 20} = 20 \dfrac{m}{s}
+\end{gather*}
 \end{example}
 
 \begin{example}
@@ -405,9 +417,11 @@ $E_{k_1} = \dfrac{mV_0^2}{2}, E_{p_1} = mgh_0 \implies E = E_{k_1} + E_{p_1} =  
 На максимална височина: \\
 $E_{k_2} = 0 , E_{p_2} = mgh_{max} \implies E_2 = E_{k_2} + E_{p_2} =  mgh_{max} $. \\
 ЗЗЕ: 
-$$E_1 = E_2$$
-$$mgh_{max} = \dfrac{mV_0^2}{2} + mgh_0  $$
-$$h_{max} = h_0 + \dfrac{V_0^2}{2g} = 1 + \dfrac{10^2}{2 \cdot 10} = 6m$$
+\begin{gather*}
+E_1 = E_2\\
+mgh_{max} = \dfrac{mV_0^2}{2} + mgh_0  \\
+h_{max} = h_0 + \dfrac{V_0^2}{2g} = 1 + \dfrac{10^2}{2 \cdot 10} = 6m
+\end{gather*}
 \end{example}
 
 
@@ -446,10 +460,12 @@ $$a_n = \dfrac{V^2}{R} = R \omega^2$$
 Да се определи ъгловата скорост, скоростта и нормалното ускорение за точка от екватора на Земята. Радиусът на Земята е R = 6370 km.\\
 Решение: \\
 Знаем, че Земята прави едно завъртане около оста си за 24 часа. Т.е. времето за завъртане на ъгъл $\Delta \varphi = 2 \pi$ (едно пълно завъртане) е 
-$$\Delta t = 24h = 24h \cdot 60m \cdot 60s = 86400 s$$
-$$\omega =  \dfrac{\Delta \varphi}{\Delta t} =  \dfrac{2 \cdot 3.14}{86400} = 7,27 \cdot 10^{-5} \dfrac{rad}{s}$$
-$$V = R\omega = 6370000 \cdot  7,27 \cdot 10^{-5} = 463 \dfrac{m}{s} = 1666 \dfrac{km}{h} $$
-$$a_n = \dfrac{V^2}{R} = 0.03 \dfrac{m}{s^2}$$
+\begin{gather*}
+\Delta t = 24h = 24h \cdot 60m \cdot 60s = 86400 s\\
+\omega =  \dfrac{\Delta \varphi}{\Delta t} =  \dfrac{2 \cdot 3.14}{86400} = 7,27 \cdot 10^{-5} \dfrac{rad}{s}\\
+V = R\omega = 6370000 \cdot  7,27 \cdot 10^{-5} = 463 \dfrac{m}{s} = 1666 \dfrac{km}{h} \\
+a_n = \dfrac{V^2}{R} = 0.03 \dfrac{m}{s^2}
+\end{gather*}
 \end{example}
 
 \subsection{Момент на сила и момент на импулса. Основно уравнение}
@@ -527,15 +543,16 @@ $
 \end{example}
 
 \begin{example}
-$l_1 = 1 m,\, F_1 = 20,\, l_2 = 0.1m,\, F_2 = 200N,\,\alpha = \dfrac{\pi}{2}, \\
-A_1 =?,\, A_2 = ? \\
+$l_1 = 1 m,\, F_1 = 20,\, l_2 = 0.1m,\, F_2 = 200N,\,\alpha = \dfrac{\pi}{2}\\
+A_1 =?,\, A_2 = ?$ 
+\begin{gather*}
 s_1 = \dfrac{2\pi l_1}{4} = 1.57m\\
 s_2 = \dfrac{2\pi l_2}{4} = 0.157m\\
 dA = Md\varphi \implies \\
 A_1 = M_1 \dfrac{\pi}{2} = F_1r_1 \dfrac{\pi}{2} = 20 \cdot 1 \cdot \dfrac{3.14}{2} = 31.4J\\
 A_2 = M_2 \dfrac{\pi}{2} = F_2r_2 \dfrac{\pi}{2} = 200 \cdot 0.1 \cdot \dfrac{3.14}{2} = 31.4J\\
 \implies A_1 = A_2
-$
+\end{gather*}
 \end{example}
 
 \subsubsection{Закон за запазване на момента на импулса}
