@@ -13,7 +13,7 @@
 
 \newtheorem{example}{Пример}[subsection]
 
-\newtheorem{task}{Задача}[section]
+\newtheorem{task}{Задача}[subsection]
 
 
 \title{Математически анализ 2}
@@ -577,7 +577,7 @@ $$\dfrac{\partial f(x^0)}{\partial \nu} = f'_{x_1}(x^0)\cos{\alpha_1} + f'_{x_2}
 \item $U = U_{(x_0,y_0)} \subset \mathbb{R}^2 =$ - околност на $(x_0,y_0)$ 
 \item $f: U \to \mathbb{R}$ - функция 
 \item $z_0 = f(x,y)$ 
-\item $S: z = f(x,y) \Leftrightarrow S: f(x,y) - z = 0$ - уравнение на равнина 
+\item $S: z = f(x,y) \iff  S: f(x,y) - z = 0$ - уравнение на равнина 
 \item $f'_x, f'_y$ - първи частни производни за всички $(x, y) \in U$,$ f'_x, f'_y$ са непрекъснати в точката $(x_0, y_0)$
 \end{itemize}
 
@@ -618,7 +618,7 @@ $$n_1 = t_2 \times t_1 \qquad n_2 = t_1 \times t_2$$
 z'_x = 2x\; ; z'_y = 2y\; ; M_0(0,0,3) = M_0(x_0, y_0, z_0) \\
 z'_x(x_0, y_0) = z'_x(0,0) = 0\; ; z'_y(x_0, y_0) = z'_y(0,0) = 0\\
 1) \tau : z - z_0 = z'_x (x_0, y_0)(x - x_0) + z'_y (x_0, y_0)(y - y_0) \\
-\tau : z - 3 = 0x + 0y \Leftrightarrow \tau: z = 3\\
+\tau : z - 3 = 0x + 0y \iff  \tau: z = 3\\
 2)
 \vec {n_1} = (-f'_x (x_0, y_0), -f'_y (x_0, y_0), 1) = (0, 0, 1) \\
 \vec {n_2} = (f'_x (x_0, y_0), f'_y (x_0, y_0), -1) = (0, 0, -1) \\
@@ -649,7 +649,7 @@ $$F'_x(x,f(x)) + f'(x)F'_y(x,f(x)) = 0 \implies f'(x) - \dfrac{F'_x(x,f(x))}{F'_
 \begin{example}
 $F(x,y) = x^2 +y^2 - 5$
 \begin{gather*}
-F(x,y) = 0 \Leftrightarrow y^2 = 5-x^2 \\
+F(x,y) = 0 \iff  y^2 = 5-x^2 \\
 y_{1,2} = \pm \sqrt{5-x^2}
 \end{gather*}
 \end{example}
@@ -773,9 +773,315 @@ y''(0) = - \dfrac{\dfrac{98 - 56 + 40}{49}}{14} = - \dfrac{\dfrac{82}{49}}{14} =
 
 \section{Лекция 6}
 
+\subsection{Формула на Тейлор за функция на няколко променливи}
+Формула на Тейлор за функията f дефинирана и непрекъсната в околност $U = U_{x_0}$ на точката $x_0$, която има производни до (n+1) ред $(n \in \mathbb{N}_0)$
+$$f(x) - f(x_0) = \sum_{k=1} ^n \dfrac{f^{(k)}(x_0)}{k!} (x - x_0)^k  + r_n(x)$$
+с остатъчен член записан във формата на Лагранж
+$$r_n(x) = \dfrac{f^{n+1}(x_0 + \vartheta(x - x_0))}{(n+1)!} (x - x_0)^{n+1} \qquad (0 < \vartheta < 1)$$
+\\
+Нека имаме точката $(x_0,y_0) \in \mathbb{R}^2$, околността $U = U_{(x_0,y_0)} \subset \mathbb{R}^2$, която е звездообразна относно $(x_0,y_0)$ (Всяка точка $(x,y) \in U$ околността съдържа и отсечка, която я свързва с $(x_0,y_0)$). Без ограничение на общостта считаме, че U e $\delta$-околност на $(x_0,y_0)$(отворен кръг с център $(x_0,y_0)$ и радиус $\delta$). Функцията f е дефинирана в U.
+
+\begin{theorem}
+Нека функцията $f: U \to R$ е дефинирана и непрекъсната в $\delta$-околността U на точката $(x_0,y_0)$, заедно с частните производни от n+1-ви ред $(n \in \mathbb{N}_0)$. Нека $\rho = \sqrt{\Delta x^2 + \Delta y^2} < \delta$. \\
+Тогава съществува $\vartheta = \vartheta(\Delta x, \Delta y),  (0 < \vartheta < 1)$ за която
+\begin{gather*}
+\Delta z = f(x_0 + \Delta x, y_0 + \Delta y) - f(x_0, y_0) = \dfrac{\partial f(x_0, y_0) }{\partial x} \Delta x + \dfrac{\partial f(x_0, y_0) }{\partial y} \Delta y + \\
++ \dfrac{1}{2} \left[ \dfrac{\partial^2 f(x_0, y_0) }{\partial x^2} \Delta x^2 + 2\dfrac{\partial^2 f(x_0, y_0) }{\partial x \partial y}\Delta x \Delta y +  \dfrac{\partial^2 f(x_0, y_0) }{\partial y^2} \Delta y^2 \right] + \\
+\dfrac{1}{3!} \left(\dfrac{\partial}{\partial x} \Delta x+ \dfrac{\partial}{\partial y} \Delta y \right)^3 f(x_0, y_0) + ... + \\
+\dfrac{1}{n!} \left(\dfrac{\partial}{\partial x} \Delta x+ \dfrac{\partial}{\partial y} \Delta y \right)^n f(x_0, y_0) + r_n(\Delta x, \Delta y) 
+\end{gather*}
+или по кратко
+\begin{equation}
+\Delta z = \sum_{k=1} ^n \dfrac{1}{k!} \left(\dfrac{\partial}{\partial x} \Delta x+ \dfrac{\partial}{\partial y} \Delta y \right)^k f(x_0, y_0) + r_n(\Delta x, \Delta y) 
+\end{equation}
+където 
+\begin{equation}
+r_n(\Delta x, \Delta y) = \dfrac{1}{(n+1)!} \left(\dfrac{\partial}{\partial x} \Delta x+ \dfrac{\partial}{\partial y} \Delta y \right)^{n+1} f(x_0 + \vartheta \Delta x,  y_0 + \vartheta \Delta y)
+\end{equation}
+\centerline{$(0 < \vartheta < 1)$}
+\end{theorem}
+
+\begin{definition}
+Формулата (3) се нарича формула на Тейлор от ред n за функция f, а функцията $r_n$ - остатъчен член, а записът му във вида (4) се нарича остатъчен член на формулата на Тейлор във формата на Лагранж. \\
+Ако n = 0, първото събираемо изисква разяснение, защото индексът над знака за сумиране е по малък от индекса под знака за сумиране. В този случай  по дефиниция този член е равен на нула, т.е формулата има вид
+$$\Delta z = r_0 (\Delta x, \Delta y)$$
+\end{definition}
+
+\begin{theorem}
+Нека функцията $f: U \to R$ дефинирана и непрекъсната в $\delta$-околността U на точката $x^0$, заедно с частните производни от n+1-ви ред $(n \in \mathbb{N}_0)$. Нека $\rho = \sqrt{\Delta x_1 ^2 + \Delta x_2 ^2 + ... + \Delta x_m ^2} < \delta$. \\
+Тогава съществува $\vartheta = \vartheta(\Delta x) = \vartheta(\Delta x_1, \Delta x_2, ..., \Delta x_n) ,  (0 < \vartheta < 1)$ за която
+\begin{gather*}
+\Delta z = f(x) - f(x^0) = f(x^0 + \Delta x) - f(x^0) =\\
+= f(x_1^0 + \Delta x_1, x_2^0 + \Delta x_2,...,x_m^0 + \Delta x_m) - f(x_1^0, x_2^0, ..., x_m ^0) = \\
+=\sum_{k=1} ^ n \left( \dfrac{\partial}{\partial x_1} \Delta x_1 + ... + \dfrac{\partial}{\partial x_m} \Delta x_m\right)^k f(x_1^0,..., x_m^0) + r_n(\Delta x_1, ... , \Delta x_m)\\
+\text{Където}\\
+r_n(\Delta x) = \dfrac{1}{(n+1)!} \left(\dfrac{\partial}{\partial x_1} \Delta x_1 + ... + \dfrac{\partial}{\partial x_m} \Delta x_m  \right)^{n+1} f(x^0 + \vartheta \Delta x),\\
+(x^0 + \vartheta \Delta x) = (x_1^0 + \vartheta\Delta x_1 , ... ,x_m^0 + \vartheta\Delta x_m) \qquad (0 < \vartheta < 1) \\
+\text{Записано с диференциали}\\
+\Delta z = f(x) - f(x^0) = \sum_{k=1} ^n d^k f(x^0) + r_n(\Delta x)
+\end{gather*}
+\begin{gather*}
+\text{при n = 1}\\
+\Delta z = f(x,y) - f(x_0, y_0) = f(x_0 + \Delta x, y_0 + \Delta y) - f(x_0, y_0) = \\
+= \dfrac{\partial f(x_0, y_0) }{\partial x} \Delta x + \dfrac{\partial f(x_0, y_0) }{\partial y} \Delta y + r_1(\Delta x,\Delta y)\\
+r_1(\Delta x,\Delta y) = \dfrac{1}{2} \left[ \dfrac{\partial^2 f(x_0 + \theta \Delta x, y_0 + \theta \Delta y)}{\partial x^2} \Delta x^2 \right] + \dfrac{\partial^2 f(x_0 + \theta \Delta x, y_0 + \theta \Delta y)}{\partial x \partial y } \Delta x \Delta y \\
+ +\dfrac{1}{2} \left[ \dfrac{\partial^2 f(x_0 + \theta \Delta x, y_0 + \theta \Delta y)}{\partial y^2} \Delta y^2 \right]
+\end{gather*}
+\end{theorem}
+
+\begin{example}
+Да се напише формулата на Тейлор за $f(x,y) = e^{x+y}$ в точката $(x_0,y_0) = (0,0), n = 1$\\
+\begin{gather*}
+f'_x = e^{x+y}\,  f'_y = e^{x+y} \qquad f''_{xx} = f''_{xy} = f''_{yx} = f''_{yy} =  e^{x+y}\\
+f(0,0) = f'_x (0,0) = f'_y(0,0) = 1 \\
+\xi = (\xi_1, \xi_2), \quad \xi_1 = \vartheta x, \quad \xi_2 = \vartheta y, \quad \vartheta \in (0,1)\\
+f''_{xx}(\xi_1, \xi_2) = f''_{xy}(\xi_1, \xi_2) = f''_{yx}(\xi_1, \xi_2) = f''_{yy}(\xi_1, \xi_2) =  e^{\xi_1 + \xi_2} =  e^{\vartheta(x+y)}\\
+f(x,y) = 1 + 1x + 1y + \dfrac{1}{2!} \left(e^{\vartheta(x+y)}x^2 + 2e^{\vartheta(x+y)}xy + e^{\vartheta(x+y)}y^2 \right)\\
+= 1+(x+y) + \dfrac{e^{\vartheta(x+y)}}{2!}(x+y)^2
+\end{gather*}
+\end{example}
+
+\subsection{Локални екстремуми на функция на няколко променливи}
+
+\begin{definition}
+Казваме че функцията $f: D \to \mathbb{R}$ има локален максимум в точката $x^0 \in D$, ако съществува околност $U_{x^0} \subset D$ на точката $x^0$, че
+$$f(x^0) \geq f(x), \quad \forall x \in U_{x^0}$$
+\end{definition}
+
+\begin{definition}
+Казваме че функцията $f: D \to \mathbb{R}$ има локален минимум в точката $x^0 \in D$, ако съществува околност $U_{x^0} \subset D$ на точката $x^0$, че
+$$f(x^0) \leq f(x), \quad \forall x \in U_{x^0}$$
+\end{definition}
+
+\begin{definition}
+Локалните максимуми и локалните минимуми се наричат по - общо локални екстремуми. 
+\end{definition}
+
+
+\begin{definition}
+Aко неравенството в дефинииците (6.2.1) или (6.2.2)  е строго при $x \neq x^0$, то съответния локален екстремум се нарича строг локален екстремум(строг локален максимум или строг локален минимум).
+\end{definition}
+
+\begin{theorem}[Необходимо условие]
+Нека функцията $f: D \to \mathbb{R}$ притежава локален екстремум в $x^0 \in D \subset \mathbb{R}^m$ и освен това съществуват първите частни производни $f'_{x_k}(x^0)$ в точката $x^0, \, k = 1 \div m$ тогава
+$$f'_{x_k}(x^0) = 0 \quad  k = 1 \div m$$ 
+\end{theorem}
+
+\begin{definition}
+Точката $x^0$ се нарича стационарна точка за функцията f, диференцируема в нея, ако $grad \, f(x^0) = 0$.
+\end{definition}
+
+\begin{example}
+Тук са разгледани две функции които са дефинирани и диференцируеми в цялата равнина $\mathbb{R}^2$, но нямат локални екстремуми
+\begin{gather*}
+f(x,y) = e^{x+y}\\
+f'_x(x,y) = f'_y(x,y) = e^{x+y} \neq 0 \forall (x,y) \in \mathbb{R}^2
+\end{gather*}
+\begin{gather*}
+f(x,y) = xy \\
+f'_x(x,y) = x \qquad f'_y(x,y) = y\\
+grad\, f(x,y) = (y,x) = (0,0)\\
+f(x,y) - f(0,0) = xy-0 = xy \implies 
+\end{gather*}
+няма локален екстремум (сменя знака си във всяка произволно взета околност на точката (0,0)). Точката (0,0) e седловина на хиперболичната повърхнина $z = xy$.
+\end{example}
+
+\subsection{Достатъчни условия за съществуване на локален екстремум на функция}
+
+\begin{theorem}[Достатъчно условие]
+Нека функцията $f: D \to \mathbb{R}$ притежава непрекъснати частни производни $ f''_{xx}, f''_{xy}, f''_{yx}, f''_{yy}$ от втори ред в околността U и точката $(x_0, y_0)$ е стационарна точка f, т.е
+$$f'_x(x_0, y_0) = f'_y(x_0, y_0) = 0$$
+Тогава 
+\begin{enumerate}
+\item Ако
+$$\Delta = f''_{xx}(x_0, y_0) \cdot f''_{yy}(x_0, y_0) - \left[f''_{xy}(x_0, y_0)\right]^2 > 0$$
+то $f(x, y)$ има локален екстермум в $(x_0, y_0)$. 
+\item Ако
+$$\Delta = f''_{xx}(x_0, y_0) \cdot f''_{yy}(x_0, y_0) - \left[f''_{xy}(x_0, y_0)\right]^2 < 0$$
+то $f(x, y)$ няма локален екстермум в $(x_0, y_0)$. 
+\item Ако
+$$\Delta = f''_{xx}(x_0, y_0) \cdot f''_{yy}(x_0, y_0) - \left[f''_{xy}(x_0, y_0)\right]^2 = 0$$
+то $f(x, y)$ може да има локален екстремум в $(x_0, y_0)$, така и да няма такъв. 
+\end{enumerate}
+\end{theorem}
+
+\begin{example}
+Да се намерят екстремумите на (ако съществуват) и да се определи видът им. 
+\begin{itemize}
+\item $f(x,y) = x^2 + y^2$
+\item $f(x,y) = -x^2 - y^2$
+\item $f(x,y) = x^2 - y^2$
+\end{itemize}
+\begin{gather*}
+f(x,y) = x^2 + y^2\\
+f'_x = 2x \qquad f'_y = 2y\\ 
+\begin{cases}
+2x = 0\\ 
+2y = 0
+\end{cases} \implies M_0 (0,0) - \text{стационарна точка} \\
+f''_{xx} = 2 \quad f''_{yy} = 2 \quad f''_{xy} = 0 \\
+\Delta = f''_{xx} \cdot f''_{yy} - \left[ f''_{xy} \right]^2 = 2 \cdot 2 - 0 = 4 >0 \implies \exists \text{екстремум}\\
+f''_{xx} = 2 > 0 \implies \text{екстремума е минимум}
+f_{min} = f(0,0) = 0^2 + 0^2 = 0 
+\end{gather*}
+
+\begin{gather*}
+f(x,y) = -x^2 - y^2\\
+f'_x = -2x \qquad f'_y = -2y\\ 
+\begin{cases}
+-2x = 0\\ 
+-2y = 0
+\end{cases} \implies M_0 (0,0) - \text{стационарна точка} \\
+f''_{xx} = -2 \quad f''_{yy} = -2 \quad f''_{xy} = 0 \\
+\Delta = f''_{xx} \cdot f''_{yy} - \left[ f''_{xy} \right]^2 = (-2)(-2) - 0 = 4 >0 \implies \exists \text{екстремум}\\
+f''_{xx} = -2 < 0 \implies \text{екстремума е максимум}
+f_{max} = f(0,0) = -0^2 - 0^2 = 0 
+\end{gather*}
+
+\begin{gather*}
+f(x,y) = x^2 - y^2\\
+f'_x = 2x \qquad f'_y = -2y\\ 
+\begin{cases}
+2x = 0\\ 
+-2y = 0
+\end{cases} \implies M_0 (0,0) - \text{стационарна точка} \\
+f''_{xx} = 2 \quad f''_{yy} = -2 \quad f''_{xy} = 0 \\
+\Delta = f''_{xx} \cdot f''_{yy} - \left[ f''_{xy} \right]^2 = 2(-2) - 0 = -4 < 0 \implies \text{няма екстремум}\\ 
+\end{gather*}
+\end{example}
+
+\begin{example}
+Да се намерят екстремумите на (ако съществуват) и да се определи видът им. 
+\begin{itemize}
+\item $f(x,y) = y^4 + x^2$
+\item $f(x,y) =  -y^4 - x^2$
+\item $f(x,y) = y^3 + x^2$
+\item $f(x,y) = xy^3$
+\item $f(x,y) = (x+y)^2$
+\item $f(x,y) = -(x+y)^2$
+\end{itemize}
+\end{example}
+
+\begin{gather*}
+f(x,y) = y^4 + x^2 \\
+f'_x = 2x \quad f'_y = 4y^3  \\
+\begin{cases}
+2x = 0\\ 
+4y^3 = 0
+\end{cases} \implies M_0 (0,0) - \text{стационарна точка} \\
+f''_{xx} = 2 \quad f''_{yy} = 12y^2 \quad f''_{xy} = 0 \\
+\Delta = f''_{xx} \cdot f''_{yy} - \left[ f''_{xy} \right]^2 = 2(12y^2) - 0 = 24y^2 =  0 \implies \text{трябва допълнително изследване}\\ 
+f(x,y) - f(0,0) = y^4 + x^2 - (0^4 + 0^2)  = y^4 + x^2 \geq 0 \\
+y^4 + x^2 = 0 \iff x = y = 0 \\
+f(x,y) - f(0,0) \geq 0 \iff f(x,y) \geq f(0,0) \text{ в } \mathbb{R}^2 \implies \text{локален минимум}\\
+f_{min} = f(0,0) = 0^4 + 0^2 = 0
+\end{gather*}
+
+\begin{gather*}
+f(x,y) = -y^4 - x^2\\
+f'_x = -2x \quad f'_y = -4y^3  \\
+\begin{cases}
+-2x = 0\\ 
+-4y^3 = 0
+\end{cases} \implies M_0 (0,0) - \text{стационарна точка} \\
+f''_{xx} = -2 \quad f''_{yy} = -12y^2 \quad f''_{xy} = 0 \\
+\Delta = f''_{xx} \cdot f''_{yy} - \left[ f''_{xy} \right]^2 = -2(-12y^2) - 0 = 24y^2 =  0 \implies \text{допълнително изследване}\\ 
+f(x,y) - f(0,0) = -y^4 - x^2 - ( -0^4 - 0^2)  = -y^4 - x^2 \geq 0  \iff y^4 + x^2 \leq 0 \\
+y^4 + x^2 = 0 \iff  x = y = 0 \\
+f(x,y) - f(0,0) \leq 0 \iff  f(x,y) \leq f(0,0) \text{ в } \mathbb{R}^2 \implies \text{локален максимум}\\
+f_{max} = f(0,0) = -0^4 + -0^2 = 0
+\end{gather*}
+
+\begin{gather*}
+f(x,y) = y^3 + x^2
+f'_x = 2x \quad f'_y = 3y^2  \\
+\begin{cases}
+2x = 0\\ 
+3y^2 = 0
+\end{cases} \implies M_0 (0,0) - \text{стационарна точка} \\
+f''_{xx} = 2 \quad f''_{yy} = 6y \quad f''_{xy} = 0 \\
+\Delta = f''_{xx} \cdot f''_{yy} - \left[ f''_{xy} \right]^2 = 2(6y) - 0 = 12y^2 =  0 \implies \text{допълнително изследване}\\ 
+f(x,y) - f(0,0) = y^3 + x^2 - ( 0^3 + 0^2)  = y^3 + x^2\\
+\text{За всяка точка от положителната ординатна ос } (x>0, y>0) f(x,y) - f(0,0) > 0 \\
+\text{За всяка точка от отрицателната ординатна ос } (x<0, y<0) f(x,y) - f(0,0) < 0 \\
+\implies f(x,y) - f(0,0) \text{ Няма постоянен знак във всяка околност на $M_0$} \\
+\implies f(x,y) \text{ няма локален екстремум в $М_0$ и точката $M_0$ е седловинна точка}
+\end{gather*}
+
+\begin{gather*}
+f(x,y) = xy^3
+f'_x = y^3 \quad f'_y = 3xy^2  \\
+\begin{cases}
+y^3 = 0 \implies y = 0\\ 
+3xy^2 = 0 \implies x = 0 \text{ или } x \neq 0
+\end{cases} 
+\implies \\
+\text{Cтационарните точки са безкрайно много}\\
+\centerline{$M_0 (x,0) (x \in \mathbb{R})$} 
+\end{gather*}
+\begin{enumerate}
+\item
+$x_0 = 0, y = 0 \implies M_0 = (0,0)$
+\begin{gather*}
+f(x,y) - f(0,0) = xy^3 - 0 = xyy^2\\
+\text{I и III квадрант - $xy>0$, a във II  и IV  - $xy<0$, $y^2 > 0$} \implies \\
+\text{Сменя знака си } \implies \text{f няма локален екстремум в $М_0$} 
+\end{gather*}
+\item 
+$x_0 \neq 0, y = 0 \implies M_1 = (x_0,0)$
+\begin{gather*}
+\Delta f = f(x_0,y) - f(x_0,0) = x_0y^3 - x_0 0^3 \implies \\
+\Delta f = y^2(x_0y)\\
+x_0 > 0 \implies 
+\begin{cases}
+\Delta f > 0, \quad y>0 \\
+\Delta f< 0, \quad y<0
+\end{cases}
+\implies \Delta f \text{ сменя знака си в околността на } M_1
+\end{gather*}
+Аналогично за $x_0 < 0$ знакът не се запазва \\
+$\implies$ f няма локален екстремум в точката $M_1 \implies $  f няма локални екстремуми
+\end{enumerate}
+
+\begin{gather*}
+f(x,y) = (x+y)^2\\
+f'_x = 2(x+y) \quad f'_y = 2(x+y)  \\
+\begin{cases}
+2(x+y)= 0 \\ 
+2(x+y) = 0 
+\end{cases} 
+\iff x+y = 0 \iff -x = y \implies \\
+\text{Стационарни точки са всички точки от ъглополовящата на II и IV квадрант} \\
+\text{ -  от правата x+y = 0, т.е $M(x_0, -x_0), x_0 \in \mathbb{R}$} \\
+f''_{xx} = 2, \quad f''_{yy} = 2, \quad f''_{xy} = 2, \\
+\Delta = 2 \cdot 2 - (2)^2 = 0 \implies \text{допълнително изследване} \\
+f(x,y) - f(x_0, -x_0) =  (x+y)^2 - (x_0 -x_0) ^2 = (x+y)^2 \geq 0 \implies \\
+f \text{ има локален минимум във всяка точка от вида } M(x_0, -x_0) и той е нестрог, \\
+f_{min} = (x_0 -x_0) ^2 = 0
+\end{gather*}
+
+\begin{gather*}
+f(x,y) = -(x+y)^2\\
+f'_x = -2(x+y) \quad f'_y = -2(x+y)  \\
+\begin{cases}
+-2(x+y)= 0 \\ 
+-2(x+y) = 0 
+\end{cases} 
+\iff x+y = 0 \iff -x = y \implies \\
+\text{Стационарни точки са всички точки от ъглополовящата на II и IV квадрант} \\
+\text{ -  от правата x+y = 0, т.е $M(x_0, -x_0), x_0 \in \mathbb{R}$} \\
+f''_{xx} = -2, \quad f''_{yy} = -2, \quad f''_{xy} = -2, \\
+\Delta = (-2)(-2) - (-2)^2 = 0 \implies \text{допълнително изследване} \\
+f(x,y) - f(x_0, -x_0) =  -(x+y)^2 + (x_0 -x_0) ^2 = -(x+y)^2 \leq 0 \implies \\
+f \text{ има локален максимум във всяка точка от вида } M(x_0, -x_0) и той е нестрог, \\
+f_{max} = (x_0 -x_0) ^2 = 0
+\end{gather*}
+
 \newpage
 
+\section{Лекция 7}
 
+\newpage
 
 
 
