@@ -6,14 +6,18 @@
 \usepackage{amssymb}
 \usepackage{booktabs}
 \usepackage{fancyhdr}
+\usepackage{amsthm}
 
+\theoremstyle{definition}
 \newtheorem{theorem}{Tеорема}[subsection]
 \newtheorem{lemma}[theorem]{Лема}
+
 \newtheorem{definition}{Дефиниция}[subsection]
 
 \newtheorem{example}{Пример}[subsection]
 
 \newtheorem{task}{Задача}[subsection]
+
 
 
 \title{Математически анализ 2}
@@ -1776,8 +1780,136 @@ A \neq B \implies \text{Тъждението не е изпълнено.}
 \newpage
 \subsection{Упражнение към лекция 6}
 
+\begin{task}
+Дадени са функцията $z(x,y) = \varphi(x+y) + \psi(x-y)$, където $\varphi, \psi$ - непрекъснато диференцируеми
+Да се намерят първите частни производни.
+\begin{gather*}
+z(x,y) = \varphi(x+y) + \psi(x-y) \\
+z'_x = \varphi'(x+y)(x+y)'_x + \psi'(x-y)(x-y)'_x  = \varphi'(x+y)1 + \psi'(x-y)1\\
+z'_x = \varphi'(x+y) + \psi'(x-y)\\
+z'_y = \varphi'(x+y)(x+y)'_y + \psi'(x-y)(x-y)'_y = \varphi'(x+y)1 + \psi'(x-y)(-1) \\
+z'_y = \varphi'(x+y) - \psi'(x-y)
+\end{gather*}
+\end{task}
 
+\begin{task}
+Да се провери дали $w(x,y,z)$ удволетворява тъждествено равенството:
+$$x w_x + y w_y+z w_z = w + \dfrac{xy}{z}$$
+Ако $w = \dfrac{xy}{z} + \ln{x} + x \cdot \varphi \left(\dfrac{y}{x}, \dfrac{z}{x}\right), \varphi$ е непрекъснато диференцируема.\\
+Решение: \\ 
+\begin{gather*}
+u = \dfrac{y}{x} \qquad v = \dfrac{z}{x}\\
+u'_x = - \dfrac{y}{x^2} \qquad u'_y = \dfrac{1}{x} \qquad u'_z = 0 \\
+v'_x = - \dfrac{z}{x^2} \qquad v'_y = 0 \qquad v'_z = \dfrac{1}{x} \\
+w'_x = \dfrac{y}{z} \ln{x} + \dfrac{xy}{z} \cdot \dfrac{1}{x} + \varphi \left(\dfrac{y}{x}, \dfrac{z}{x}\right) + x(\varphi'_u u'_x + \varphi'_v v_x) =\\
+w'_x =\dfrac{y}{z} \ln{x} + \dfrac{y}{z}+ \varphi \left(\dfrac{y}{x}, \dfrac{z}{x}\right) -\dfrac{y}{x}\varphi'_u  - \dfrac{z}{x}\varphi'_v\\
+w'_y = \dfrac{x}{z} \ln{x} + x(\varphi'_u u'_y + \varphi'_v v_y) = \dfrac{x}{z} \ln{x} + \varphi'_u \\
+w'_z = -\dfrac{xy}{z^2} \ln{x} + x(\varphi'_u u'_z + \varphi'_v v_z) =  -\dfrac{xy}{z^2} \ln{x} + \varphi'_v\\
+x w_x + y w_y+z w_z = \\
+= \dfrac{xy}{z} \ln{x} + \dfrac{xy}{z}+ x \varphi \left(\dfrac{y}{x}, \dfrac{z}{x}\right) -y\varphi'_u  - z\varphi'_v + \dfrac{xy}{z} \ln{x} + y\varphi'_u + -\dfrac{xy}{z} \ln{x} + z\varphi'_v =\\
+= \dfrac{xy}{z} + \ln{x} + x \cdot \varphi \left(\dfrac{y}{x}, \dfrac{z}{x}\right) +\dfrac{xy}{z} = w +\dfrac{xy}{z} 
+\end{gather*}
+\end{task}
 
+\begin{task}
+Дадени са функциите и точката М(2,1). Да се пресметне gradf(M) и $\Vert grad f(M)\Vert$
+\begin{enumerate}
+\item $ f(x,y) = x^2 + 11y^2 - 3$
+\item $ f(x,y) = x^2 - y^2$
+\item $ f(x,y) = \ln{(x^2 + y^2)}$
+\end{enumerate}
+Решение grad f = $(f'_x, f'_y)$
+\begin{gather*}
+ f(x,y) = x^2 + 11y^2 - 3\\
+f'_x = 2x \qquad f'_y = 22y\\ 
+gradf(x,y) = (2x, 22y)\\ 
+gradf(M) = (2\cdot 2, 22 \cdot 1) = (4,22)\\
+\Vert grad f(M)\Vert = \sqrt{4^2 + 22^2} = \sqrt{500} =  10\sqrt{5}
+\end{gather*}
+
+\begin{gather*}
+f(x,y) = x^2 - y^2\\
+f'_x = 2x \qquad f'_y = -2y\\ 
+gradf(x,y) = (2x, -2y)\\ 
+gradf(M) = (2\cdot 2, -2 \cdot 1) = (4,-2)\\
+\Vert grad f(M)\Vert = \sqrt{4^2 + (-2)^2} = \sqrt{20} =  2\sqrt{5}
+\end{gather*}
+
+\begin{gather*}
+f(x,y) = \ln{(x^2 + y^2)}\\
+f'_x = \dfrac{2x}{x^2+y^2} \qquad f'_y = \dfrac{2y}{x^2+y^2}\\ 
+gradf(x,y) = \left(\dfrac{2x}{x^2+y^2} , \dfrac{2y}{x^2+y^2} \right)\\ 
+gradf(M) = \left(\dfrac{2 \cdot 2}{2^2+1^2}, \dfrac{2 \cdot 1}{2^2+1^2} \right) = \left(\dfrac{4}{5} , \dfrac{2}{5} \right) \\
+\Vert grad f(M)\Vert = \sqrt{\left( \dfrac{4}{5} \right) ^2 + \left( \dfrac{2}{5} \right) ^2} = \sqrt{\dfrac{20}{25}} = \dfrac{2}{\sqrt{5}}
+\end{gather*}
+
+\end{task}
+
+\begin{task}
+Дадени са функциите и точката М(2,1). \\
+Да се пресметне $\dfrac{\partial f(M)}{\partial \nu}, \nu = \left( \dfrac{\sqrt{3}}{2} , \dfrac{1}{2}\right)$ 
+\begin{enumerate}
+\item $ f(x,y) = x^2 + 11y^2 - 3$
+\item $ f(x,y) = x^2 - y^2$
+\item $ f(x,y) = \ln{(x^2 + y^2)}$
+\end{enumerate}
+Решение: $\dfrac{\partial f(M)}{\partial \nu} = (grad f, \nu)$
+\begin{gather*}
+ f(x,y) = x^2 + 11y^2 - 3\\
+gradf(M) = (2\cdot 2, 22 \cdot 1) = (4,22)\\
+\dfrac{\partial f(M)}{\partial \nu} = 4 \cdot \dfrac{\sqrt{3}}{2} + 22 \cdot \dfrac{1}{2} = 2\sqrt{3} + 11
+\end{gather*}
+
+\begin{gather*}
+f(x,y) = x^2 - y^2\\
+gradf(M) = (2\cdot 2, -2 \cdot 1) = (4,-2)\\
+\dfrac{\partial f(M)}{\partial \nu} = 4 \cdot \dfrac{\sqrt{3}}{2} -2 \cdot \dfrac{1}{2} = 2\sqrt{3} - 1
+\end{gather*}
+
+\begin{gather*}
+f(x,y) = \ln{(x^2 + y^2)}\\
+gradf(M) = \left(\dfrac{2 \cdot 2}{2^2+1^2}, \dfrac{2 \cdot 1}{2^2+1^2} \right) = \left(\dfrac{4}{5} , \dfrac{2}{5} \right) \\
+\dfrac{\partial f(M)}{\partial \nu} = \dfrac{4}{5} \cdot \dfrac{\sqrt{3}}{2} + \dfrac{2}{5} \cdot \dfrac{1}{2} = \dfrac{4\sqrt{3}}{10} + \dfrac{1}{5} = \dfrac{4\sqrt{3} + 2}{10}
+\end{gather*}
+
+\end{task}
+
+\begin{task}
+Да се определи ъгъла между градиентите на функцията 
+$$u = x^2 + y^2 + z^2 - 111$$
+в точките А$(\varepsilon,0,0)$ и B $(0,\varepsilon,0), \varepsilon >0$\\
+Решение: 
+\begin{gather*}
+u'_x = 2x \qquad u'_y = 2y \qquad u'_z = 2z \\
+grad u(A) = (2\varepsilon,0,0) \qquad grad u(B) = (0,2\varepsilon,0) \\
+(grad u(A), grad u(B))= 2\varepsilon \cdot 0 + 0 \cdot 2\varepsilon + 0 \cdot 0 = 0 \\
+(grad u(A), grad u(B)) = \Vert u(A) \Vert \cdot \Vert u(B) \Vert \cdot \cos{\alpha} \\
+\cos{\alpha} = 0 \Leftrightarrow \alpha = \dfrac{\pi}{2}
+\end{gather*}
+\end{task}
+
+\begin{task}
+Да се намери $y', y''$ на неявната функция $y = f(x)$, дефинирана от уравнението 
+$$x^2 - 2xy + 5y^2 + 4y = 2x + 9$$
+Да се пресметнат $y'(0), y''(0)$, ако $y(0) = 1$ \\
+Решение: 
+\begin{gather*}
+F(x,y) = x^2 - 2xy + 5y^2 + 4y = 2x + 9\\
+F'_y = -2x + 10y + 4 \neq 0\\
+F'_x(x,y) = 2x - 2y - 2\\
+F'_y(0,1) = -2 \cdot 0 + 10 \cdot 1 + 4 \neq 0\\
+y'(x) = - \dfrac{F'_x(x,y)}{F'_y(x,y)} = - \dfrac{2x - 2y - 2}{-2x + 10y + 4} = - \dfrac{x - y - 1}{- x + 5y + 2}\\
+y'(0) = - \dfrac{0 - 1 - 1}{- 0 + 5 \cdot 1 + 2} = - \dfrac{-2}{7} = \dfrac{2}{7}\\
+y''(x) = - \dfrac{F''_{xx}(x,y) + 2F''_{xy}y' + F''_{yy}(x,y)y'^2}{F'_y(x,y)}\\
+F''_{xx} = 2, \quad F''_{yy} = 10, \quad F''_{xy} = -2\\
+F''_{xx}(0,1) = 2, \quad F''_{yy}(0,1) = 10, \quad F''_{xy}(0,1) = -2\\
+y''(x) = - \dfrac{2 + 2 \cdot (-2)y' + 10y'^2}{-2x + 10y + 4}\\
+y''(x) = - \dfrac{2 + - 4y' + 10y'^2}{-2x + 10y + 4}\\
+y''(0) = - \dfrac{2 + - 4 \cdot \dfrac{2}{7} + 10 \cdot \left( \dfrac{2}{7} \right) ^2}{-2 \cdot 0 + 10 \cdot 1 + 4}\\
+y''(0) = - \dfrac{2 + - \dfrac{8}{7} + \dfrac{40}{49}}{14}\\
+y''(0) = - \dfrac{\dfrac{98 - 56 + 40}{49}}{14} = - \dfrac{\dfrac{82}{49}}{14} = \dfrac{82}{49} \cdot \dfrac{1}{14} = \dfrac{41}{343}\\
+\end{gather*}
+\end{task}
 
 
 
