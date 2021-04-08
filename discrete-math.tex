@@ -16,7 +16,6 @@
 \newtheorem{theorem}{Теорема}[subsection]
 \newtheorem{lemma}{Лема}[subsection]
 
-
 \title{Дискретна математика}
 \author{Exonaut}
 
@@ -1786,25 +1785,305 @@ Aкo m-арно дърво с височина h има l листа, то $h \g
 \end{enumerate}
 
 \newpage
-\section{Лекция 9:}
+\section{Лекция 9: Комбинаторика и теория на вероятностите}
+
+\newpage
+\section{Лекция 10: Теория на алгоритмите}
+
+\newpage
+\section{Лекция 11: Математическа индукция}
+
+\newpage
+\section{Лекция 12: Рекурсия}
+
+\newpage
+\section{Лекция 13: Крайни автомати}
 
 
+\newpage
+\section{Упражнения}
 
+\subsection{Лекция 1}
 
+\subsection*{Задача 1}
+Кои от следните изречения са съждения? Какъв е резултатът от тези съждения?
+\begin{enumerate}
+\item "Китай е държава с най - много жители в света." (Съждение с резултат "Истина")
+\item "София е най - големия град в света." (Съждение с резултат "Лъжа")
+\item "Не пресичай улицата!" (Не е съждение, а команда)
+\item "Колко е часът?" (Не е съждение, а въпрос)
+\item $4 + 1 = 5$ (Съждение с резултат "Истина")
+\item $4 + x = 5$ (Предикат: Истина, ако $x = 1$; Лъжа, ако $x \neq 1$)
+\item $4 + x = 5$, ако $x = 1$ (Съждение с резултат "Истина")
+\end{enumerate}
 
+\subsection*{Задача 2}
+Нека p, q, r са следните прости съждения:\\
+p: "Разболяваш се." \\
+q: "\textbf{Не} можеш да вземеш финалния изпит." \\
+r: "Посещавал си теоретични курсове" \\
+Да се опишат семантично следните комбинирани съждения:
+\begin{enumerate}
+\item $p \to q$ - "Ако си болен, няма да можеш да си вземеш финалния изпит."
+\item $q \Leftrightarrow \neg r$ - "Няма да вземеш финалния изпит тогава и само тогава, когато не си посещавал теоретичния курс."
+\item $q \to \neg r$ - "Ако не си взел финалния изпит, то тогава следва, че не си посещавал теоретичния курс."
+\item $p \lor q \lor r$ - "(Ти си болен) или (не си взел финалния изпит) или (не си посещавал теоретичния курс) или и трите заедно."
+\item $(p \to \neg r) \lor (q \to \neg r)$ - "(Ако си болен, тогава не си посещавал теоретичния курс) или (ако не си взел финалния изпит, тно не си посещавал теоретичния курс) - или и двете заедно."
+\item $(p \land q) \lor (\neg q \land r)$ - "[(Болен си) и (не си взел финалния изпит)] или [(си взел финалния изпит) и (си посещавал теоретичния курс)]."
+\end{enumerate}
 
+\subsection*{Задача 3}
+Нека p, q, r са следните прости съждения:\\
+p: "Получил си 6 за годината." \\
+q: "Решил си правилно всички домашни работи." \\
+r: "Получил си 6 за всеки учебен срок." \\
+Да се опишат следните комбинирани съждения с логически изрази:
+\begin{enumerate}
+\item  "(Получил си 6 за всеки от сроковете), но (не си решил правилно всички домашни работи)" - $r \land \neg q$
+\item "(Получил си 6 за годината) и ( си решил правилно всички домашни работи) и (си получил си 6 за всеки учебен срок)." - $p \land q \land r$
+\item "Ако (имаш 6 за всеки учебен срок), то (ще имаш 6 за годината)." - $ r \to q$
+\item "(Получил си 6 за всеки учебен срок), но (не си решил правилно всички домашни работи), но въпреки това (си получил 6 за годината)." - $r \land  \neg q \land p$
+\item "(Получаването на 6 за всеки учебен срок) и (правилното решаване на всички домашни работи) е достатъчно условие за (получаване на 6 за годината)." - $(r \land q) \to p$
+\item "(Ти си получил 6 за годината) тогава и само тогава когато [(си решил  правилно всички домашни работи) и (си получил 6 за всеки учебен срок)]." - $р \Leftrightarrow (q \land r)$ 
+\end{enumerate}
 
+\subsection*{Задача 4}
+Да се състави таблица на истинност за следните комбинирани съждения:
+\begin{enumerate}
+\item $\neg p \otimes \neg p$
+\item $(p \lor q) \land \neg r$
+\item $(p \to q) \to r$
+\item $(p \land \neg q) \Leftrightarrow (p \land r)$
+\end{enumerate}
+Решение: 
+\begin{enumerate}
+\item $\neg p \otimes \neg p$
+\begin{table}[htp]
+  \begin{center}
+    \begin{tabular}{|c|c|c|c|c|} 
+\hline
+      \textbf{p} & \textbf{q}  & \textbf{ $\neg p$ } & \textbf{$\neg q$} & \textbf{ $\neg p \otimes \neg p$}\\
+      \hline
+	F & F & T & T & F\\
+\hline
+	F & T & T & F & T\\
+\hline
+	T & F & F  & T & T\\
+\hline
+ 	T & T & F  & F & F\\
+\hline
+    \end{tabular}
+  \end{center}
+\end{table}
 
+\item $(p \lor q) \land \neg r$
+\begin{table}[htp]
+  \begin{center}
+    \begin{tabular}{|c|c|c|c|c|c|} 
+\hline
+      p & q  &  r & $p \lor q$ & $\neg r$ & $(p \lor q) \land \neg r$\\
+      \hline
+	F & F & F & F & T & F\\
+\hline
+	F & F & T & F & F & F\\
+\hline
+	F & T & F  & T & T & T\\
+\hline
+ 	F & T & T  & T & F & F\\
+\hline
+	T & F & F & T & T & T\\
+\hline
+	T & F & T & T & F & F\\
+\hline
+	T & T & F  & T & T & T\\
+\hline
+ 	T & T & T  & T & F & F\\
+\hline
+    \end{tabular}
+  \end{center}
+\end{table}
+\newpage
+\item $(p \to q) \to r$
+\begin{table}[htp]
+  \begin{center}
+    \begin{tabular}{|c|c|c|c|c|} 
+\hline
+      p & q  & $p \to q$  & r & $(p \to q) \to r$\\
+      \hline
+	F & F & T & F & F\\
+\hline
+	F & F & T & T & T\\
+\hline
+	F & T & T  & F & F\\
+\hline
+ 	F & T & T  & T & T\\
+\hline
+	T & F & F & F & T\\
+\hline
+	T & F & F & T & T\\
+\hline
+	T & T & T  & F & F\\
+\hline
+ 	T & T & T  & T & T\\
+\hline
+    \end{tabular}
+  \end{center}
+\end{table}
 
+\item $(p \land \neg q) \Leftrightarrow (p \land r)$
+\begin{table}[htp]
+  \begin{center}
+    \begin{tabular}{|c|c|c|c|c|c|c|} 
+\hline
+      p & q  &  r & $ \neg q$ & $p \land \neg q$ & $p \land r$ & $(p \land \neg q) \Leftrightarrow (p \land r)$\\
+      \hline
+	F & F & F & T & F & F & T\\
+\hline
+	F & F & T & T & F & F & T\\
+\hline
+	F & T & F  & F & F & F & T\\
+\hline
+ 	F & T & T  & F & F & F & T\\
+\hline
+	T & F & F & T & T & F & F\\
+\hline
+	T & F & T & T & T & T & T\\
+\hline
+	T & T & F  & F & F & F & T\\
+\hline
+ 	T & T & T  & F & F & T & T\\
+\hline
+    \end{tabular}
+  \end{center}
+\end{table}
+\end{enumerate}
 
+\subsection*{Задача 5}
+Да се докаже по 2 начина, че всеки от следните логически изрази е тавтология:\\
+1. Чрез таблица на истинност. \\
+2. Чрез закони за еквивалентно преобразувание. \\
+\begin{enumerate}
+\item $(p \land q) \to q$
+\item $[\neg p \land (p \lor q)] \to q$
+\item $[p \land (p \to q)] \to q$
+\end{enumerate}
+Решение:
+\begin{enumerate}
+\item $(p \land q) \to q$
+\begin{table}[htp]
+  \begin{center}
+    \begin{tabular}{|c|c|c|c|} 
+\hline
+      p & q  & $p \land q$  & $(p \land q) \to q$  \\
+      \hline
+	F & F & F & T \\
+\hline
+	F & T & F & T\\
+\hline
+	T & F & F  & T \\
+\hline
+ 	T & T & T  & T \\
+\hline
+    \end{tabular}
+  \end{center}
+\end{table}
+\begin{gather*}
+(p \land q) \to q \\
+\Leftrightarrow \neg(p \land q) \lor q \quad \text{(закон за импликация)} \\
+\Leftrightarrow (\neg p \lor q) \land q \quad\text{(закон на де Морган)} \\
+\Leftrightarrow \neg p \lor (\neg q \lor q) \quad \text{(асоциативен закон)} \\
+\Leftrightarrow \neg p \lor T \quad \text{(закон за тривиална тавтология)} \\
+\Leftrightarrow T \quad \text{(закон за доминиране)} \\
+\end{gather*}
+\item $[\neg p \land (p \lor q)] \to q$
+\begin{table}[htp]
+  \begin{center}
+    \begin{tabular}{|c|c|c|c|c|c|} 
+\hline
+      p & q  & $ \neg p$  & $p \lor q$ & $\neg p \land (p \lor q)$ & $[\neg p \land (p \lor q)] \to q$\\
+      \hline
+	F & F & T & F &F & T\\
+\hline
+	F & T & T & T & T &T \\
+\hline
+	T & F & F  & T & F & T \\
+\hline
+ 	T & T & F  & T & F & T \\
+\hline
+    \end{tabular}
+  \end{center}
+\end{table}
+\begin{gather*}
+[\neg p \land (p \lor q)] \to q \\
+\Leftrightarrow \neg [\neg p \land (p \lor q)] \lor q  \quad \text{(закон за импликация)} \\
+\Leftrightarrow [\neg \neg p \lor (p \lor q)] \lor q \quad\text{(закон на де Морган)} \\
+\Leftrightarrow [ p \lor \neg(p \lor q)] \lor q \quad \text{(закон за двойното отрицание)} \\
+\Leftrightarrow  (p \lor q) \lor \neg (p \lor q) \quad \text{(асоциативен закон)} \\
+\Leftrightarrow T \quad \text{(закон тривиална тавтология)} \\
+\end{gather*}
+\item $[p \land (p \to q)] \to q$
+\begin{table}[htp]
+  \begin{center}
+    \begin{tabular}{|c|c|c|c|c|} 
+\hline
+      p & q  & $ p \to q$  & $p \land (p \to q) $ & $[p \land (p \to q)] \to q$ \\
+      \hline
+	F & F & T & F &T \\
+\hline
+	F & T & T & F & T  \\
+\hline
+	T & F & F  & F & T  \\
+\hline
+ 	T & T & T  & T & T \\
+\hline
+    \end{tabular}
+  \end{center}
+\end{table}
+\begin{gather*}
+[p \land (p \to q)] \to q\\
+\Leftrightarrow [p \land (\neg p \lor q)] \to q  \quad \text{(закон за импликация)} \\
+\Leftrightarrow [(p \land \neg p) \lor (p \land q)] \to q \quad\text{(дистрибутивен закон)} \\
+\Leftrightarrow [F \lor (p \land q)] \to q\quad \text{(закон за тривиално опровержение)} \\
+\Leftrightarrow (p \land q) \to q  \quad \text{(комутативен закон и закон за идентичност)} \\
+\Leftrightarrow T \quad \text{(доказано в 1.)} \\
+\end{gather*}
+\end{enumerate}
 
+\newpage
+\subsection{Лекция 2}
 
+\newpage
+\subsection{Лекция 3}
 
+\newpage
+\subsection{Лекция 4}
 
+\newpage
+\subsection{Лекция 5}
 
+\newpage
+\subsection{Лекция 6}
 
+\newpage
+\subsection{Лекция 7}
 
+\newpage
+\subsection{Лекция 8}
 
+\newpage
+\subsection{Лекция 9}
+
+\newpage
+\subsection{ Лекция 10}
+
+\newpage
+\subsection{ Лекция 11}
+
+\newpage
+\subsection{ Лекция 12}
+
+\newpage
+\subsection{ Лекция 13}
 
 
 
