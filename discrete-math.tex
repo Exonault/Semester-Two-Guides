@@ -1803,7 +1803,7 @@ Aкo m-арно дърво с височина h има l листа, то $h \g
 \newpage
 \section{Упражнения}
 
-\subsection{Лекция 1}
+\subsection{Упражнение 1: Логика и логически оператори}
 
 \subsection*{Задача 1}
 Кои от следните изречения са съждения? Какъв е резултатът от тези съждения?
@@ -2050,40 +2050,239 @@ r: "Получил си 6 за всеки учебен срок." \\
 \end{enumerate}
 
 \newpage
-\subsection{Лекция 2}
+\subsection{Упражнение 2: Предикати и предикатни функции}
+
+\subsection*{Задача 1}
+Нека $P(x,y)$ е  предикатна  функция,  съответстваща  на  следното твърдение $x + 2y = x+y$, където x и y са цели числа.  Какъв е резултатът от:
+\begin{enumerate}
+\item $P(1,-1)$
+$$P(1,-1) \Leftrightarrow 1 + 2 \cdot (-1) = 1 - 1  \Leftrightarrow -1 = 0 \quad \text{Лъжа}$$  
+\item $P(0,0)$
+$$P(0,0) \Leftrightarrow 0 + 2 \cdot 0= 0 + 0  \Leftrightarrow 0 = 0 \quad \text{Истина}$$  
+\item $P(2,1)$
+$$P(2,1) \Leftrightarrow 2 + 2 \cdot 1 = 2 + 1 \Leftrightarrow 4 = 3 \quad \text{Лъжа}$$  
+\end{enumerate}
+
+\subsection*{Задача 2}
+Нека $Q(x)$ е предикатна функция, съответстваща на следното твърдение $x+1 = 2x$, където x е реално число.  Какъв е резултатът от:
+\begin{enumerate}
+\item $Q(2)$
+$$Q(2) \Leftrightarrow 2+1 = 2 \cdot 2 \Leftrightarrow 3 = 4 \quad \text{Лъжа}$$  
+\item $\forall x Q(x)$
+$$\forall x Q(x) \implies \quad \text{Лъжа}$$  
+\item $\exists x Q(x)$
+$$\exists x Q(x) \Leftrightarrow \exists x = 1 \text{ което е решение на } Q(x)$$  
+\end{enumerate}
+
+\subsection*{Задача 3}
+Нека $R(x)$ е предикатна функция, съответстваща на следното твърдение: "ако $x+3 = 6$, то $x + 8 = 16$". Какъв е резултатът от:
+\begin{enumerate}
+\item $R(3)$
+$$3 + 3 = 6 \, T \quad 3+8 = 16 \, F \implies \text{ Лъжа}$$  
+\item $R(8)$
+$$8 + 3 = 6 \, F \quad 8+8 = 16 \, T \implies \text{ Истина}$$  
+\item $R(2)$
+$$2 + 3 = 6 \, F \quad 2+8 = 16 \, F \implies \text{ Истина}$$  
+\item $\exists (x)(R(x)) \quad x \in \mathbb{Z}$
+$$x + 3 = 6, x=3 \, T \quad 3+8 = 16 \, F \implies \text{ Лъжа}$$  
+\end{enumerate}
+
+\subsection*{Задача 4}
+Нека е известно: \\
+X -  множеството на всички хора, \\
+$x \in X$\\
+C(x) е предикат: "x е комик" \\
+F(x) е предикат:  "x умее да разказва смешни истории" \\
+Да се опишат семантично следните комбинирани предикати:
+\begin{enumerate}
+\item $\exists x C(x)$ - "Съществува човек, който е комик."
+\item $\exists x \neg C(x)$ - "Не всеки човек е комик." или " Съществува човек, който не е комик."
+\item $\forall x \neg C(x)$ - "Всеки човек е комик."
+\item $\neg \forall x C(x)$ - "Никой не е комик."
+\item $\exists x \neg F(x)$ - "Съществува човек, който не умее да разказва смешни истории."
+\item $\forall x \neg F(x)$ - "Никой (нито един човек) не умее да разказва смешни истории."
+\item $\forall x (C(x) \to F(x))$ - "Всеки  човек, който  е  комик, умее  да  разказва  смешни истории."
+\item $\exists x (C(x) \land \neg F(x))$ - "Съществува човек, който е комик, но не умее да разказва смешни истории."
+\item $\exists x (F(x) \land \neg C(x))$ - "Съществува човек, който умее да разказва смешни истории, но не е комик."
+\item $\forall x (C(x) \land F(x))$ - "Всеки човек е комик и умее да разказва смешни истории."
+\item $\exists x (C(x) \land F(x))$ - "Съществува човек, който е комик и умее да разказва смешни истории."
+\end{enumerate}
+
+\subsection*{Задача 5}
+Ако с X е означено множеството навсички студенти от ФКСУ, нека са известни следните предикати:\\
+$P(x)$: "x е взел изпита по ДС" , \\
+$Q(x)$: "x знае да програмира на езика C ++".   \\
+Опишете  чрез  логически  изрази  следните  комбинирани  предикати,  на  простите предикати  P(x) и   Q(x), изпо лзвайки кванторите за общност и съществуване  $\forall \text{ и } \exists$ и необходимите логически оператори. 
+\begin{enumerate}
+\item "Съществува студентот ФКСУ, който е взел изпита по ДС и знае  да програмира на езика C ++." - 
+$\exists x(P(x) \land Q(x))$
+\item "Съществува студентот ФКСУ,който не знае да програмира на езика C++, но е взел изпита по ДС." - 
+$\exists x(P(x) \land \neg Q(x))$
+\item "Всички студенти от ФКСУ, които знаят да програмират на езика С++, са взели изпита по ДС."  - 
+$\forall x(Q(x) \to P(x))$
+\item "Само някои от студентитеот ФК СУ, които знаят да програмират на езика С++, са взели из   пита по ДС." - 
+$\exists x(Q(x) \to P(x))$
+\item "Всички студенти от ФКСУ знаят да програмират на езика С++ ИЛИса взели изпита по ДС."-
+$\forall x(P(x) \lor Q(x))$
+\end{enumerate}
+
+\subsection*{Задача 6}
+Да се определи резултатът от следните твърдения: 
+\begin{enumerate}
+\item $\exists x(x^3 = -1 \land x \in \mathbb{R})$
+$$\exists x(x^3 = -1 \land x \in \mathbb{R}) \Leftrightarrow x = -1 \in \mathbb{R} \implies \text{ Истина}$$  
+\item $\exists x(x^3 = -1 \land x \in \mathbb{N})$
+$$\exists x(x^3 = -1 \land x \in \mathbb{N}) \Leftrightarrow x = -1 \notin \mathbb{N} \implies \text{ Лъжа}$$  
+\item $\forall x(2x > x \land x \in \mathbb{R})$
+$$\forall x(2x > x \land x \in \mathbb{R}) \Leftrightarrow x>0 \land x \in R \implies \text{ Лъжа} $$  
+\item $\forall x(2x \geq x \land x \in \mathbb{N})$
+$$\forall x(2x > x \land x \in \mathbb{R}) \Leftrightarrow x \geq 0 \land x \in R \implies \text{ Истина} $$  
+\end{enumerate}
+\newpage
+\subsection{Упражнение 3: Теория на множествата}
+
+\subsection*{Задача 1}
+Нека А е универсалното множество, а\\
+$F(A)$ е предикат "A е крайно множество.",  \\
+$I(A)$ е предикат " A е безкрайно множество.", \\
+$S(A, B)$ е предикат " A се съдържа в B.", \\
+$E(A)$ е предикат "Aе празно множество."  \\
+Да се запишат с логически изрази следните съждения:\\
+\begin{enumerate}
+\item "Не всички множества са крайни."
+$$\exists A I(A) \qquad \exists A \neg F(A)$$
+\item "Всяко подмножество на крайно множество е крайномножество." 
+$$\exists A \exists B [(S(A,B) \land F(B)) \to F(A)]$$
+\item "Никое безкрайно множество не се съдържа в крайно множество."
+$$\exists A \exists B [(I(A) \land S(A,B) \land F(B)) \to \varnothing]$$
+\item "Празното множество е подмножество на всяко крайно множество." 
+$$\exists A \exists B [(E(A) \land F(B)) \to S(A,B)]$$
+\item "Празното множество е подмножество на всяко безкрайно множество."
+$$\exists A \exists B [(E(A) \land I(B)) \to S(A,B)]$$
+\end{enumerate}
+
+\subsection*{Задача 2}
+Да се запишат членовете на всяко от следните множества:
+\begin{enumerate}
+\item $X\{x \vert x \in \mathbb{Z} \land x^2 = 4 \} = \{-2,2\}$
+\item $X\{x \vert x \in \mathbb{N} \land x^2 = 4 \} = \{2\}$
+\item $X\{x \vert x \in \mathbb{Z} \land x^2 = 5 \} = \{\} = \varnothing$
+\item $X\{5x \vert x \in \mathbb{Z} \land -2 \leq x^2 \leq 2\} = \{-5,0,5\}$
+\item $X\{x \vert x \in \mathbb{N} \land x^2 \in \{1, 4, 9\} \} = \{ 1,2,3\}$
+\item $X\{x \vert x \in \mathbb{Z} \land x^2 \in \{1, 4, 9\} \} = \{ -3,-2,-1,1,2,3\}$
+\end{enumerate}
+
+\subsection*{Задача 3}
+Да  се  запишат  посочените  множества  чрез  използване  на  функция  на принадлежност към даденото множество
+\begin{enumerate}
+\item $X = \{0,3,6,9,12 \} = \{3x \vert x \in Z  \land 0 \leq x \leq 4 \}$
+\item $X = \{-3,-2,-1,0,1,2,3 \} = \{x \vert x \in Z  \land \vert x \vert \geq 3 \}$
+\item $X =\{1,4,8,16,25,36,49 \} = \{x^2 \vert x \in Z \land  -7 \leq x \leq 7 \land x \neq 0\}$
+\end{enumerate}
+
+\subsection*{Задача 4}
+
+\subsection*{Задача 5}
+
+\subsection*{Задача 6}
+
+\subsection*{Задача 7}
+
+\subsection*{Задача 9}
+
+\subsection*{Задача 10}
+
 
 \newpage
-\subsection{Лекция 3}
+\subsection{Упражнение 4: Математически доказателства}
+
+\subsection*{Задача 1}
+
+\subsection*{Задача 2}
+
+\subsection*{Задача 3}
+
+\subsection*{Задача 4}
+
+\subsection*{Задача 5}
+
+\subsection*{Задача 6}
+
+\subsection*{Задача 7}
 
 \newpage
-\subsection{Лекция 4}
+\subsection{Упражнение 5: Булева алгебра}
+
+\subsection*{Задача 1}
+
+\subsection*{Задача 2}
 
 \newpage
-\subsection{Лекция 5}
+\subsection{Упражнение 6: Релации }
+
+\subsection*{Задача 1}
+
+\subsection*{Задача 2}
+
+\subsection*{Задача 3}
+
+\subsection*{Задача 4}
+
+\subsection*{Задача 5}
+
+\subsection*{Задача 6}
+
+\subsection*{Задача 7}
+
 
 \newpage
-\subsection{Лекция 6}
+\subsection{Упражнение 7: Функции и суми}
+
+\subsection*{Задача 1}
+
+\subsection*{Задача 2}
+
+\subsection*{Задача 3}
+
+\subsection*{Задача 4}
+
+\subsection*{Задача 5}
+
+\subsection*{Задача 6}
 
 \newpage
-\subsection{Лекция 7}
+\subsection{Упражнение 8: Графи и дървета}
+
+\subsection*{Задача 1}
+
+\subsection*{Задача 2}
+
+\subsection*{Задача 3}
+
+\subsection*{Задача 4}
+
+\subsection*{Задача 5}
+
+\subsection*{Задача 6}
+
+\subsection*{Задача 7}
+
+\subsection*{Задача 8}
 
 \newpage
-\subsection{Лекция 8}
+\subsection{Упражнение 9}
 
 \newpage
-\subsection{Лекция 9}
+\subsection{ Упражнение 10}
 
 \newpage
-\subsection{ Лекция 10}
+\subsection{ Упражнение 11}
 
 \newpage
-\subsection{ Лекция 11}
+\subsection{ Упражнение 12}
 
 \newpage
-\subsection{ Лекция 12}
-
-\newpage
-\subsection{ Лекция 13}
+\subsection{ Упражнение 13}
 
 
 
