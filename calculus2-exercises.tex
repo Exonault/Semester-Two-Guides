@@ -43,20 +43,23 @@
 \newpage
 
 \section{Упражнение към лекция 1}
+\subsection{Задачи}
 
-\begin{task}
+\subsection*{Задача 1}
 Да се покаже дали посочените редици $\{ X_n \} = \{ x_n, y_n \}$ са сходящи или разходящи. За сходящите да се намери границите им.\\
 \begin{enumerate}
-
 \item $x_n = 1 + \dfrac{1}{n}, \, y_n = 2 + \dfrac{\sin{n}}{n}$
 \item $x_n = \left( 1 + \dfrac{1}{n} \right) ^n, \, y_n = 2 + n $
 \item $x_n = (-1)^n, \, y_n = n$
 \item $x_n = (-1)^n, \, y_n = \dfrac{1}{n}$
 \item $x_n =\sin{\dfrac{n \pi }{2}}, \, y_n = (-1)^n$
 \item $x_n = \sin{n}, \, y_n = \dfrac{(-1)^n}{n}$
-
 \end{enumerate}
-Решение: \\
+
+\newpage
+\subsection{Решения}
+
+\subsection*{Задача 1}
 \begin{enumerate}
 
 \item $\lim\limits_{n \to \infty} \dfrac{1}{n} = 0, \, \dfrac{\vert \sin{n} \vert}{n} \in \left[0, \dfrac{1}{n} \right] \implies 
@@ -77,19 +80,16 @@
 
 \item $\lim\limits_{n \to \infty} x_n \text{не съществува}, \,  
 \lim\limits_{n \to \infty} y_n = 0 \implies \text{разходяща редица}$
-
 \end{enumerate}
-
-\end{task}
 
 \newpage
 \section{Упражнение към лекция 2}
 
-\begin{task}
+\subsection{Задачи}
+
+\subsection*{Задача 1}
 Нека $D \subset \mathbb{R}^m$ и са разгледани няколко функции. Да се напишат дефиниционните им множества и да се даде пояснение.  
-
 \begin{enumerate}
-
 \item $z(x, y) = x^2 + y^2 $
 \item $z(x, y) = \sqrt{ y^2 - 2x }$
 \item $z(x, y) = \ln \sqrt{ y^2 - 2x } $
@@ -103,7 +103,44 @@
 $
 \end{enumerate}
 
-Решение: 
+\subsection*{Задача 2}
+
+Разгледаните по - долу функциите са дефинирани в $D = \mathbb{R}^2 \setminus \{ (0,0) \}$. Кои от границите същестуват и колко са
+$$
+A = \lim\limits_{(x,y) \to (0,0)} f(x,y) \quad
+A_{1,2} = \lim\limits_{y \to 0} \left( \lim\limits_{x \to 0} f(x,y) \right) \quad
+A_{2,1} = \lim\limits_{x \to 0} \left( \lim\limits_{y \to 0} f(x,y) \right) \quad
+$$
+
+\begin{enumerate}
+\item $f(x,y) = \dfrac{x-y}{x+y}$
+\item $f(x,y) = \dfrac{x^2 + y^2}{x^2y^2 + (x - y)^2}$
+\item $f(x,y) = \dfrac{xy^2}{x^2+y^4}$
+\item $f(x,y) = (x+y) \sin{\dfrac{1}{x}} \cos{\dfrac{1}{y}}$
+\item $f(x,y) = \dfrac{x^4 + y^4}{x^2 + y^2}$
+\end{enumerate}
+
+\subsection*{Задача 3}
+Нека $A,B,C,D$ са подмножества на $\mathbb{R}^2$ дефинирани както следва \\
+$
+A = \{ (x,y): x \geq 0, y \leq 1, y>x \} \\
+B = \{ (x,y): x \leq 1, y \geq 0, y<x \} \\
+C = \{ (x,y): x = y , 0 \leq x \leq 1 \} \\
+D = A \cup B \cup C
+$ \\
+и функцията $f: D \to \mathbb{R} $ зададена по следния начин \\
+$f(x,y) = 
+\begin{cases}
+\dfrac{1}{y^2}, & (x,y)\in A \\
+0, & x = y \\
+-\dfrac{1}{x^2}, & (x,y)\in B
+\end{cases}$\\ 
+Да се изследва непрекъснатостта на тази функция. \\
+
+\newpage
+\subsection{Решения}
+
+\subsection*{Задача 1}
 \begin{enumerate}
 \item $z(x, y) = x^2 + y^2 \\ D= \mathbb{R}^2$
 
@@ -119,29 +156,9 @@ $
 \item $D \subset \mathbb{R}^m $
 \end{enumerate}
 
-\end{task}
-
-\begin{task}
-Разгледаните по - долу функциите са дефинирани в $D = \mathbb{R}^2 \setminus \{ (0,0) \}$. Кои от границите същестуват и колко са
-$$
-A = \lim\limits_{(x,y) \to (0,0)} f(x,y) \quad
-A_{1,2} = \lim\limits_{y \to 0} \left( \lim\limits_{x \to 0} f(x,y) \right) \quad
-A_{2,1} = \lim\limits_{x \to 0} \left( \lim\limits_{y \to 0} f(x,y) \right) \quad
-$$
+\subsection*{Задача 2}
 
 \begin{enumerate}
-
-\item $f(x,y) = \dfrac{x-y}{x+y}$
-\item $f(x,y) = \dfrac{x^2 + y^2}{x^2y^2 + (x - y)^2}$
-\item $f(x,y) = \dfrac{xy^2}{x^2+y^4}$
-\item $f(x,y) = (x+y) \sin{\dfrac{1}{x}} \cos{\dfrac{1}{y}}$
-\item $f(x,y) = \dfrac{x^4 + y^4}{x^2 + y^2}$
-
-\end{enumerate}
-Решение: 
-
-\begin{enumerate}
-
 \item 
 \begin{gather*}
 f(x,y) = \dfrac{x-y}{x+y} \\
@@ -183,7 +200,6 @@ A = 0 \\
 \end{gather*}
 Аналогично и другата вътрешна граница не съществува. Но тогава и повторните граници $A_{1,2},\, A_{2,1}$ не съществуват.
 
-
 \item
 \begin{gather*}
 f(x,y) = \dfrac{x^4 + y^4}{x^2 + y^2}\\
@@ -193,28 +209,9 @@ A_{1,2} = \lim\limits_{y \to 0} \left( \lim\limits_{x \to 0} f(x,y) \right) = \l
 A_{2,1} = \lim\limits_{x \to 0} \left( \lim\limits_{y \to 0} f(x,y) \right) = \lim\limits_{x \to 0} \left( x^2 \right) = 0 \\
 \implies A = A_{1,2} = A_{2,1} = 0
 \end{gather*}
-
 \end{enumerate}
 
-\end{task}
-
-\begin{task}
-Нека $A,B,C,D$ са подмножества на $\mathbb{R}^2$ дефинирани както следва \\
-$
-A = \{ (x,y): x \geq 0, y \leq 1, y>x \} \\
-B = \{ (x,y): x \leq 1, y \geq 0, y<x \} \\
-C = \{ (x,y): x = y , 0 \leq x \leq 1 \} \\
-D = A \cup B \cup C
-$ \\
-и функцията $f: D \to \mathbb{R} $ зададена по следния начин \\
-$f(x,y) = 
-\begin{cases}
-\dfrac{1}{y^2}, & (x,y)\in A \\
-0, & x = y \\
--\dfrac{1}{x^2}, & (x,y)\in B
-\end{cases}$\\ 
-Да се изследва непрекъснатостта на тази функция. \\
-Решение:\\
+\subsection*{Задача 3}
 Функцията f е непрекъсната в А, защото е частно на две функции със знаменател $y^2\neq 0$, в А.\\
 Аналогично е непрекъсната в B защото знаменателя е $x^2 \neq 0$.\\
 Остана да се изследва поведението върху C. \\
@@ -230,12 +227,12 @@ R = \{ (x_n , y_n) \},\ (x_n , y_n) \in A \\
 \implies \text{f е прекъсната в точката (0,0).} 
 \end{gather*}
 Функцията е непрексъната в D, с изключение на точките от C, където е прекъсната. 
-\end{task}
 
 \newpage
 \section{Упражнение към лекция 3}
+\subsection{Задачи}
 
-\begin{task}
+\subsection*{Задача 1}
 Да се намерят първите частни производни на следните функции
 \begin{enumerate}
 
@@ -248,7 +245,32 @@ f(x,y) =
 0, & (x,y) = (0,0) 
 \end{cases}$ в равнината $\mathbb{R}^2$ 
 \end{enumerate}
-Решение: \\
+
+\subsection*{Задача 2}
+$$f(x,y) = x + (y-1)\arcsin{\sqrt{\dfrac{x}{y}}}\qquad f'_x(x,1) = ?$$
+
+\subsection*{Задача 3}
+Да се докаже че функцията $f(x,y) = 
+\begin{cases}
+\dfrac{x^3y}{x^6 + y^2}, & (x,y) \neq (0,0)  \\
+0, & x^2 + y^2 = (0,0) 
+\end{cases}
+$ \\
+е прекъсната в точката (0,0) но има частни производни в тази точка. 
+
+\subsection*{Задача 4}
+Да се намерят първите частни производни на следните функции:
+\begin{enumerate}
+\item $f(x,y) = \sin{(2x+3)} + 3e^{-x}e^{4y} - 11x^3 + 19e^\pi$
+\item $f(x,y) = \sqrt{x^2 + y^2} + \arctan {\frac{y}{x}}$
+\item $f(x,y,z) = (xy)^z$
+\item $\sqrt[3]{x^2+3y^2} e^{x^2 - 5y}$
+\end{enumerate}
+
+\newpage
+\subsection{Решения}
+
+\subsection*{Задача 1}
 
 \begin{enumerate}
 \item 
@@ -281,14 +303,9 @@ f'_y (x,y) = \dfrac{x(x^2 - y^2)}{(x^2 + y^2)^2}\\
 \lim\limits_{k \to 0} \dfrac{f(0,0+k) - f(0,0)}{k} =  \lim\limits_{k \to 0} \dfrac{0-0}{k} = \lim\limits_{k \to 0} = 0 \\
 \implies  \text{Функцията има частни производни във всичко точки на равнината $\mathbb{R}^2$}
 \end{gather*}
-
 \end{enumerate}
 
-\end{task}
-
-\begin{task}
-$f(x,y) = x + (y-1)\arcsin{\sqrt{\dfrac{x}{y}}}\qquad f'_x(x,1) = ?$\\ 
-Решение:
+\subsection*{Задача 2}
 \begin{gather*}
 f'_x (a,b) = \lim\limits_{h \to 0} \dfrac{f(a +h,b) - f(a,b)}{h} \text{(Ако съществува)} \implies \\
 f'_x(x,1) =  \lim\limits_{h \to 0} \dfrac{f(x +h,1) - f(x,1)}{h} \text{(Ако съществува)}\\
@@ -296,16 +313,9 @@ f(x +h,1) = x + h + (1-1)\arcsin{\sqrt{\dfrac{x}{1}}} = x + h + 0 \arcsin{\sqrt{
 f(x,1) = x + (1-1)\arcsin{\sqrt{\dfrac{x}{1}}} = x + 0 \arcsin{\sqrt{\dfrac{x}{1}}} =  x \implies \\
 \lim\limits_{h \to 0} \dfrac{f(x +h,1) - f(x,1)}{h} =  \lim\limits_{h \to 0} \dfrac{x + h - x}{h} = \lim\limits_{h \to 0} \dfrac{h}{h} =  \lim\limits_{h \to 0} 1 \implies f'_x(x,1) = 1
 \end{gather*}
-\end{task}
 
-\begin{task}
-Да се докаже че функцията $f(x,y) = 
-\begin{cases}
-\dfrac{x^3y}{x^6 + y^2}, & (x,y) \neq (0,0)  \\
-0, & x^2 + y^2 = (0,0) 
-\end{cases}
-$ е прекъсната в точката (0,0) но има частни производни в тази точка. \\
-Решение:
+\subsection*{Задача 3}
+
 \begin{gather*}
 \text{Редица } (x_n, y_n) = \left(\dfrac{1}{n}, \dfrac{1}{n^3} \right) \\
 f(x_n, y_n) = \dfrac{ \left( \dfrac{1}{n} \right)^3 \cdot \dfrac{1}{n^3}}{\left( \dfrac{1}{n}\right)^6 + \left( \dfrac{1}{n^3} \right)^3 } = \dfrac{\dfrac{1}{n^6}}{\dfrac{2}{n^6}} = \dfrac{1}{2} \qquad \lim\limits_{n \to \infty} f(x_n, y_n) = \dfrac{1}{2}  \implies \\
@@ -314,18 +324,8 @@ f(x_n, y_n) = \dfrac{ \left( \dfrac{1}{n} \right)^3 \cdot \dfrac{1}{n^3}}{\left(
 f'_x (0,0) = \lim\limits_{x \to 0} \dfrac{f(x,0) - f(0,0)}{x - 0} = \dfrac{ \dfrac{x^3 \cdot 0}{x^6 + 0} - 0}{x - 0} = 0 \\
 f'_y (0,0) = \lim\limits_{y \to 0} \dfrac{f(0,y) - f(0,0)}{y - 0} = \dfrac{\dfrac{0^3 \cdot y}{0^6 + y^2} - 0}{y - 0} = 0
 \end{gather*}
-\end{task}
 
-\begin{task}
-Да се намерят първите частни производни на следните функции:
-\begin{enumerate}
-\item $f(x,y) = \sin{(2x+3)} + 3e^{-x}e^{4y} - 11x^3 + 19e^\pi$
-\item $f(x,y) = \sqrt{x^2 + y^2} + \arctan {\frac{y}{x}}$
-\item $f(x,y,z) = (xy)^z$
-\item $\sqrt[3]{x^2+3y^2} e^{x^2 - 5y}$
-\end{enumerate}
-Решение: \\
-
+\subsection*{Задача 4}
 \begin{enumerate}
 \item 
 \begin{gather*}
@@ -369,17 +369,46 @@ f'_y(x,y) = e^{x^2 - 5y} \cdot \sqrt[3]{(x^2+3y^2)^2} (2y - 5(x^2 + 3y^2)) \\
 f'_y(x,y) = (2y - 5x^2 - 15y^2) \dfrac{e^{x^2 - 5y}}{\sqrt[3]{(x^2+3y^2)^2}}
 \end{gather*}
 \end{enumerate}
-\end{task}
 
 \newpage
 \section{Упражнение към лекция 4}
 
-\begin{task}
+\subsection{Задачи}
+
+\subsection*{Задача 1}
 $f(x,y) = \sqrt[3]{xy}$\\
 Изследвайте $f(x,y)$ за диференцируемост в $(0,0)$.\\
 $f'_x (0,0) = ?\\
-f'_y (0,0) = ?$ \\
-Решение: 
+f'_y (0,0) = ?$ 
+
+\subsection*{Задача 2}
+$f(x,y) = \sqrt[3]{x^3 + y^3}$\\
+Изследвайте $f(x,y)$ за диференцируемост в $(0,0)$.
+
+\subsection*{Задача 3}
+Да се изследвай за диференцируемост в $(0,0)$ функцията 
+$$f(x,y) = 
+\begin{cases}
+e^{- \dfrac{1}{x^2 + y^2}}, & x^2 + y^2 \neq 0 \\
+0, & x^2 + y^2 = 0
+\end{cases}
+$$
+
+\subsection*{Задача 4}
+$f(x,y) = x^2 + 3xy - 8y^3 + 11, \quad df(0,1) =?$\\
+$f(x,y,z) = x^2 + 3xy - 8y^3 - 2e^{3z}x, \quad df(0,0,4) = ? $
+
+\subsection*{Задача 5}
+$f(x,y) = x^6 - 7xy^2 + 14y,\\
+f''_{xx} = ?, f''_{yy} = ?, f''_{xy} = ?, d^2f(x,y) = ?$\\
+$f(x,y,z) = x^6 - 7xy +y^2 - xz + z^3 ,  \\
+f''_{xx} = ?, f''_{xy} = ?, f''_{xz} = ?  f''_{yx} = ?, f''_{yy} = ?, f''_{yz} = ?  f''_{zx} = ?, f''_{zy} = ?, f''_{zz} = ?, d^2f(1,0,0)$
+
+\newpage
+\subsection{Решения} 
+
+\subsection*{Задача 1}
+
 \begin{gather*}
 f(x,0) - f(0,0) = \sqrt[3]{x0} - \sqrt[3]{0}\implies \\
 \lim\limits_{x \to 0} \dfrac{f(x,0) - f(0,0)}{x - 0} = \lim\limits_{x \to 0} \dfrac{0}{x} = 0
@@ -397,12 +426,8 @@ f'_y(0,0) = \lim\limits_{y \to 0} \dfrac{f(0,y) - f(0,0)}{y - 0} =  \lim\limits_
 \lim\limits_ {(x,y) \to (0,0)}\varepsilon(x_n, y_n) \not\to 0 \implies \\
  f(x,y) \text{ не е диференцируема в т.} (0,0)
 \end{gather*}
-\end{task}
 
-\begin{task}
-$f(x,y) = \sqrt[3]{x^3 + y^3}$\\
-Изследвайте $f(x,y)$ за диференцируемост в $(0,0)$.\\
-Решение: 
+\subsection*{Задача 2}
 \begin{gather*}
 f(x,0) - f(0,0) = \sqrt[3]{x^3} - 0 = x\implies \\
 \lim\limits_{x \to 0} \dfrac{f(x,0) - f(0,0)}{x - 0}= \lim\limits_{x \to 0} \dfrac{x}{x} = 1 \implies \exists f'_x(0,0) = 1\\
@@ -419,17 +444,8 @@ f(x,y) - f(0,0)  = f'_x(0,0)(x - 0) + f'_y(0,0)(y-0) + \varepsilon (x,y) \rho (x
 \varepsilon (x_n, y_n) = \dfrac{\dfrac{\sqrt[3]{2}}{n} - \dfrac{2}{n}}{\dfrac{\sqrt{2}}{n}} = \dfrac{\sqrt[3]{2} - 2}{\sqrt{2}} \implies \lim\limits_ {(x \to 0, y \to 0)} \varepsilon (x,y) \not\to 0 \implies \\
  f(x,y) \text{ не е диференцируема в т.} (0,0)
 \end{gather*}
-\end{task}
 
-\begin{task}
-Да се изследвай за диференцируемост в $(0,0)$ функцията 
-$f(x,y) = 
-\begin{cases}
-e^{- \dfrac{1}{x^2 + y^2}}, & x^2 + y^2 \neq 0 \\
-0, & x^2 + y^2 = 0
-\end{cases}
-$\\
-Решение: 
+\subsection*{Задача 3}
 \begin{gather*}
 f(x,0) - f(0,0) = e^{- \dfrac{1}{x^2}} - 0 = e^{- \dfrac{1}{x^2}}\\
 \lim\limits_{x \to 0} \dfrac{f(x,0) - f(0,0)}{x - 0}= \lim\limits_{x \to 0} \dfrac{e^{- \dfrac{1}{x^2}}}{x} = \left[ \dfrac{0}{0}\right]\\
@@ -454,13 +470,8 @@ e^{- \dfrac{1}{x^2 + y^2}} = \varepsilon (x,y)\sqrt{x^2 + y^2}\\
 \implies \\
 \lim\limits_ {(x \to 0, y \to 0)} \varepsilon (x,y) = 0 \implies f(x,y) \text{ е диференцируема в } (0,0)
 \end{gather*}
-\end{task}
 
-
-\begin{task}
-$f(x,y) = x^2 + 3xy - 8y^3 + 11, \quad df(0,1) =?$\\
-$f(x,y,z) = x^2 + 3xy - 8y^3 - 2e^{3z}x, \quad df(0,0,4) = ? $\\
-Решение: \\
+\subsection*{Задача 4}
 \begin{gather*}
 df(x,y) = f'_x(x,y)dx + f'_y(x,y)dy\\
 f'_x(x,y) = 2x + 3y \qquad f'_x(0,1) = 3\\
@@ -477,13 +488,8 @@ df(x,y,z) =(2x + 3y - 2e^{3z})dx + (3x - 24y^2)dy +  (6xe^{3z})dz\\
 df(x,y,z) = - 2e^{12}dx + 0dy + 0dz = - 2e^{12}dx
 \end{gather*}
 
-\end{task}
+\subsection*{Задача 5}
 
-\begin{task}
-$f(x,y) = x^6 - 7xy^2 + 14y,\\
-f''_{xx} = ?, f''_{yy} = ?, f''_{xy} = ?, d^2f(x,y) = ?$\\
-$f(x,y,z) = x^6 - 7xy +y^2 - xz + z^3 ,  \\
-f''_{xx} = ?, f''_{xy} = ?, f''_{xz} = ?  f''_{yx} = ?, f''_{yy} = ?, f''_{yz} = ?  f''_{zx} = ?, f''_{zy} = ?, f''_{zz} = ?, d^2f(1,0,0)$
 \begin{gather*}
 f'_x(x,y,z) = 6x^5 - 7y - z\\
 f''_{xx}(x,y,z) = (6x^5 - 7y - z)'_x = 30x^4 \qquad f''_{xx}(1,0,0) = 30 \\
@@ -509,11 +515,12 @@ d^2f(1,0,0) = 30dx^2 -14dxdy + 2dy^2 - 2dxdz + 0dz^2 + 0 dydz \\
 d^2f(1,0,0) = 30dx^2 + 2dy^2 -14dxdy - 2dxdz 
 \end{gather*}
 
-\end{task}
 \newpage
 \section{Упражнение към лекция 5}
 
-\begin{task}
+\subsection{Задачи}
+
+\subsection*{Задача 1}
 Да се намерят посочените частни производни на следните функции.\\
 \begin{enumerate}
 \item $u(x,y) = x^4 + 11x^2y^3, \qquad u''_{xx} = ?,\, u''_{xy} = ?$ 
@@ -522,6 +529,27 @@ d^2f(1,0,0) = 30dx^2 + 2dy^2 -14dxdy - 2dxdz
 \item $u(x,y) = \ln{(x + 2y)}, \qquad u'''_{xxy} = ?$
 \item $u(x,y,z) = e^{xy^2z^3}, \qquad u'''_{xyz} = ?$
 \end{enumerate}
+
+\subsection*{Задача 2}
+Дали са верни равенствата: \\
+\begin{itemize}
+\item Ако $z = y\ln{(x^2+y^2)}$ то $\quad \dfrac{1}{x} z'_x + \dfrac{1}{y} z'_y = \dfrac{z}{y^2}$
+\item Ако $u = \ln{(x^3+y^3 + z^3 - 3xyz)} $ то $ \quad u'_x + u'_y + u'_z = \dfrac{3}{x+y+z}$
+\end{itemize}
+
+\subsection*{Задача 3}
+Да се докаже, че функцията: $z(x,y) = \arctan{\left( \dfrac{x+y}{x-y} \right)}$ удовлетворява тъждеството: $z'_x + z'_y = \dfrac{x-y}{x^2 + y^2}$
+
+\subsection*{Задача 4}
+Да се провери тъждеството на Ойлер за следните функции:
+$z(x,y) = \dfrac{1}{(x^2+y^2)^2}\qquad u(x,y,z) = \sqrt{x^2+y^2+z^2}\cdot \ln{\left( \dfrac{y}{x}\right)}$\\
+Тъждество на Ойлер($f:D \to R, D\subset \mathbb{R}^m$)
+$$x_1f'_{x_1} + x_2f'_{x_2} + ... +x_mf'_{x_m} = mf$$
+
+\newpage
+\subsection{Решения}
+
+\subsection*{Задача 1}
 \begin{gather*}
 u(x,y) = x^4 + 11x^2y^3 \\
 u'_x = 4x^3 + 22xy^3 \\
@@ -586,14 +614,8 @@ u'''_{xyz} = 6yz^2e^{xy^2z^3} + 6xy^3z^5e^{xy^2z^3} + 6xy^3z^5e^{xy^2z^3} + 6x^2
 u'''_{xyz} = 6yz^2e^{xy^2z^3} + 18xy^3z^5e^{xy^2z^3} + 6x^2y^5z^8e^{xy^2z^3}\\
 u'''_{xyz} = 6yz^2e^{xy^2z^3} \left[1 + 3xy^2z^3 + x^2y^4z^6 \right]
 \end{gather*}
-\end{task}
 
-\begin{task}
-Дали са верни равенствата: \\
-\begin{itemize}
-\item Ако $z = y\ln{(x^2+y^2)}$ то $\quad \dfrac{1}{x} z'_x + \dfrac{1}{y} z'_y = \dfrac{z}{y^2}$
-\item Ако $u = \ln{(x^3+y^3 + z^3 - 3xyz)} $ то $ \quad u'_x + u'_y + u'_z = \dfrac{3}{x+y+z}$
-\end{itemize}
+\subsection*{Задача 2}
 \begin{gather*}
 z = y\ln{(x^2+y^2)} \\
 z'_x = y\dfrac{1}{x^2 + y^2} 2x = \dfrac{2xy}{x^2 + y^2}\\
@@ -612,10 +634,8 @@ u'_x + u'_y + u'_z  = \dfrac{3x^2 - 3yz}{x^3+y^3 + z^3 - 3xyz} + \dfrac{3y^2 - 3
 \dfrac{3(x^2 + y^2 + z^2 -xy -xz -yz)}{x^3+y^3 + z^3 - 3xyz} \cdot \dfrac{x+y+z}{x+y+z} = \dfrac{3(x^3+y^3 + z^3 - 3xyz)}{(x^3+y^3 + z^3 - 3xyz)(x+y+z)} =\\
 \dfrac{3}{x+y+z} \implies \text{Равенството е вярно.}
 \end{gather*}
-\end{task}
 
-\begin{task}
-Да се докаже, че функцията: $z(x,y) = \arctan{\left( \dfrac{x+y}{x-y} \right)}$ удовлетворява тъждеството: $z'_x + z'_y = \dfrac{x-y}{x^2 + y^2}$
+\subsection*{Задача 3}
 \begin{gather*}
 z'_x = \dfrac{1}{1 + \left( \dfrac{x+y}{x-y} \right)^2} \cdot \left( \dfrac{x+y}{x-y} \right)'_x =  \dfrac{1}{\dfrac{(x-y)^2 + (x+y)^2}{(x-y)^2}} \cdot \dfrac{x-y-x-y}{(x-y)^2} \\
 z'_x = \dfrac{(x-y)^2}{(x-y)^2 + (x+y)^2} \cdot \dfrac{-2y}{(x-y)^2}\dfrac{-2y}{x^2 -2xy+y^2 + x^2+2xy+y^2} \\
@@ -624,13 +644,9 @@ z'_y = \dfrac{1}{1 + \left( \dfrac{x+y}{x-y} \right)^2} \cdot \left( \dfrac{x+y}
 z'_y = \dfrac{(x-y)^2}{(x-y)^2 + (x+y)^2} \cdot \dfrac{2x}{(x-y)^2} = \dfrac{2x}{x^2 -2xy+y^2 + x^2+2xy+y^2} = \dfrac{x}{x^2+y^2}\\
 z'_x + z'_y = -\dfrac{y}{x^2+y^2} + \dfrac{x}{x^2+y^2} = \dfrac{x-y}{x^2+y^2} \implies \text{тъжеството е вярно}
 \end{gather*}
-\end{task}
 
-\begin{task}
-Да се провери тъждеството на Ойлер за следните функции:
-$z(x,y) = \dfrac{1}{(x^2+y^2)^2}\qquad u(x,y,z) = \sqrt{x^2+y^2+z^2}\cdot \ln{\left( \dfrac{y}{x}\right)}$\\
-Тъждество на Ойлер($f:D \to R, D\subset \mathbb{R}^m$)
-$$x_1f'_{x_1} + x_2f'_{x_2} + ... +x_mf'_{x_m} = mf$$
+\subsection*{Задача 4}
+
 \begin{gather*}
 z(x,y) = \dfrac{1}{(x^2+y^2)^2} \\
 xz'_x +yz'_y = 2z \\
@@ -671,14 +687,53 @@ A = \dfrac{x^2\ln{\left( \dfrac{y}{x}\right)} \ln{\left( \dfrac{y}{x}\right)} + 
 B = 3u = 3\sqrt{x^2+y^2+z^2}\cdot \ln{\left( \dfrac{y}{x}\right)} \implies
 A \neq B \implies \text{Тъждението не е изпълнено.}
 \end{gather*}
-\end{task}
+
 
 \newpage
 \section{Упражнение към лекция 6}
 
-\begin{task}
+\subsection{Задачи}
+
+\subsection*{Задача 1}
 Дадени са функцията $z(x,y) = \varphi(x+y) + \psi(x-y)$, където $\varphi, \psi$ - непрекъснато диференцируеми
 Да се намерят първите частни производни.
+
+\subsection*{Задача 2}
+Да се провери дали $w(x,y,z)$ удволетворява тъждествено равенството:
+$$x w_x + y w_y+z w_z = w + \dfrac{xy}{z}$$
+Ако $w = \dfrac{xy}{z} + \ln{x} + x \cdot \varphi \left(\dfrac{y}{x}, \dfrac{z}{x}\right), \varphi$ е непрекъснато диференцируема.
+
+\subsection*{Задача 3}
+Дадени са функциите и точката М(2,1). Да се пресметне gradf(M) и $\Vert grad f(M)\Vert$
+\begin{enumerate}
+\item $ f(x,y) = x^2 + 11y^2 - 3$
+\item $ f(x,y) = x^2 - y^2$
+\item $ f(x,y) = \ln{(x^2 + y^2)}$
+\end{enumerate}
+
+\subsection*{Задача 4}
+Дадени са функциите и точката М(2,1). \\
+Да се пресметне $\dfrac{\partial f(M)}{\partial \nu}, \nu = \left( \dfrac{\sqrt{3}}{2} , \dfrac{1}{2}\right)$ 
+\begin{enumerate}
+\item $ f(x,y) = x^2 + 11y^2 - 3$
+\item $ f(x,y) = x^2 - y^2$
+\item $ f(x,y) = \ln{(x^2 + y^2)}$
+\end{enumerate}
+
+\subsection*{Задача 5}
+Да се определи ъгъла между градиентите на функцията 
+$$u = x^2 + y^2 + z^2 - 111$$
+в точките А$(\varepsilon,0,0)$ и B $(0,\varepsilon,0), \varepsilon >0$
+
+\subsection*{Задача 6}
+Да се намери $y', y''$ на неявната функция $y = f(x)$, дефинирана от уравнението 
+$$x^2 - 2xy + 5y^2 + 4y = 2x + 9$$
+Да се пресметнат $y'(0), y''(0)$, ако $y(0) = 1$ 
+
+\newpage
+\subsection{Решения}
+
+\subsection*{Задача 1}
 \begin{gather*}
 z(x,y) = \varphi(x+y) + \psi(x-y) \\
 z'_x = \varphi'(x+y)(x+y)'_x + \psi'(x-y)(x-y)'_x  = \varphi'(x+y)1 + \psi'(x-y)1\\
@@ -686,13 +741,8 @@ z'_x = \varphi'(x+y) + \psi'(x-y)\\
 z'_y = \varphi'(x+y)(x+y)'_y + \psi'(x-y)(x-y)'_y = \varphi'(x+y)1 + \psi'(x-y)(-1) \\
 z'_y = \varphi'(x+y) - \psi'(x-y)
 \end{gather*}
-\end{task}
 
-\begin{task}
-Да се провери дали $w(x,y,z)$ удволетворява тъждествено равенството:
-$$x w_x + y w_y+z w_z = w + \dfrac{xy}{z}$$
-Ако $w = \dfrac{xy}{z} + \ln{x} + x \cdot \varphi \left(\dfrac{y}{x}, \dfrac{z}{x}\right), \varphi$ е непрекъснато диференцируема.\\
-Решение: \\ 
+\subsection*{Задача 2}
 \begin{gather*}
 u = \dfrac{y}{x} \qquad v = \dfrac{z}{x}\\
 u'_x = - \dfrac{y}{x^2} \qquad u'_y = \dfrac{1}{x} \qquad u'_z = 0 \\
@@ -705,16 +755,11 @@ x w_x + y w_y+z w_z = \\
 = \dfrac{xy}{z} \ln{x} + \dfrac{xy}{z}+ x \varphi \left(\dfrac{y}{x}, \dfrac{z}{x}\right) -y\varphi'_u  - z\varphi'_v + \dfrac{xy}{z} \ln{x} + y\varphi'_u + -\dfrac{xy}{z} \ln{x} + z\varphi'_v =\\
 = \dfrac{xy}{z} + \ln{x} + x \cdot \varphi \left(\dfrac{y}{x}, \dfrac{z}{x}\right) +\dfrac{xy}{z} = w +\dfrac{xy}{z} 
 \end{gather*}
-\end{task}
 
-\begin{task}
-Дадени са функциите и точката М(2,1). Да се пресметне gradf(M) и $\Vert grad f(M)\Vert$
-\begin{enumerate}
-\item $ f(x,y) = x^2 + 11y^2 - 3$
-\item $ f(x,y) = x^2 - y^2$
-\item $ f(x,y) = \ln{(x^2 + y^2)}$
-\end{enumerate}
-Решение grad f = $(f'_x, f'_y)$
+
+
+\subsection*{Задача 3}
+$$ grad f = (f'_x, f'_y)$$
 \begin{gather*}
  f(x,y) = x^2 + 11y^2 - 3\\
 f'_x = 2x \qquad f'_y = 22y\\ 
@@ -739,17 +784,8 @@ gradf(M) = \left(\dfrac{2 \cdot 2}{2^2+1^2}, \dfrac{2 \cdot 1}{2^2+1^2} \right) 
 \Vert grad f(M)\Vert = \sqrt{\left( \dfrac{4}{5} \right) ^2 + \left( \dfrac{2}{5} \right) ^2} = \sqrt{\dfrac{20}{25}} = \dfrac{2}{\sqrt{5}}
 \end{gather*}
 
-\end{task}
-
-\begin{task}
-Дадени са функциите и точката М(2,1). \\
-Да се пресметне $\dfrac{\partial f(M)}{\partial \nu}, \nu = \left( \dfrac{\sqrt{3}}{2} , \dfrac{1}{2}\right)$ 
-\begin{enumerate}
-\item $ f(x,y) = x^2 + 11y^2 - 3$
-\item $ f(x,y) = x^2 - y^2$
-\item $ f(x,y) = \ln{(x^2 + y^2)}$
-\end{enumerate}
-Решение: $\dfrac{\partial f(M)}{\partial \nu} = (grad f, \nu)$
+\subsection*{Задача 4}
+$$\dfrac{\partial f(M)}{\partial \nu} = (grad f, \nu)$$
 \begin{gather*}
  f(x,y) = x^2 + 11y^2 - 3\\
 gradf(M) = (2\cdot 2, 22 \cdot 1) = (4,22)\\
@@ -767,14 +803,7 @@ f(x,y) = \ln{(x^2 + y^2)}\\
 gradf(M) = \left(\dfrac{2 \cdot 2}{2^2+1^2}, \dfrac{2 \cdot 1}{2^2+1^2} \right) = \left(\dfrac{4}{5} , \dfrac{2}{5} \right) \\
 \dfrac{\partial f(M)}{\partial \nu} = \dfrac{4}{5} \cdot \dfrac{\sqrt{3}}{2} + \dfrac{2}{5} \cdot \dfrac{1}{2} = \dfrac{4\sqrt{3}}{10} + \dfrac{1}{5} = \dfrac{4\sqrt{3} + 2}{10}
 \end{gather*}
-
-\end{task}
-
-\begin{task}
-Да се определи ъгъла между градиентите на функцията 
-$$u = x^2 + y^2 + z^2 - 111$$
-в точките А$(\varepsilon,0,0)$ и B $(0,\varepsilon,0), \varepsilon >0$\\
-Решение: 
+\subsection*{Задача 5}
 \begin{gather*}
 u'_x = 2x \qquad u'_y = 2y \qquad u'_z = 2z \\
 grad u(A) = (2\varepsilon,0,0) \qquad grad u(B) = (0,2\varepsilon,0) \\
@@ -782,13 +811,8 @@ grad u(A) = (2\varepsilon,0,0) \qquad grad u(B) = (0,2\varepsilon,0) \\
 (grad u(A), grad u(B)) = \Vert u(A) \Vert \cdot \Vert u(B) \Vert \cdot \cos{\alpha} \\
 \cos{\alpha} = 0 \Leftrightarrow \alpha = \dfrac{\pi}{2}
 \end{gather*}
-\end{task}
 
-\begin{task}
-Да се намери $y', y''$ на неявната функция $y = f(x)$, дефинирана от уравнението 
-$$x^2 - 2xy + 5y^2 + 4y = 2x + 9$$
-Да се пресметнат $y'(0), y''(0)$, ако $y(0) = 1$ \\
-Решение: 
+\subsection*{Задача 6}
 \begin{gather*}
 F(x,y) = x^2 - 2xy + 5y^2 + 4y = 2x + 9\\
 F'_y = -2x + 10y + 4 \neq 0\\
@@ -805,16 +829,41 @@ y''(0) = - \dfrac{2 + - 4 \cdot \dfrac{2}{7} + 10 \cdot \left( \dfrac{2}{7} \rig
 y''(0) = - \dfrac{2 + - \dfrac{8}{7} + \dfrac{40}{49}}{14}\\
 y''(0) = - \dfrac{\dfrac{98 - 56 + 40}{49}}{14} = - \dfrac{\dfrac{82}{49}}{14} = \dfrac{82}{49} \cdot \dfrac{1}{14} = \dfrac{41}{343}\\
 \end{gather*}
-\end{task}
+
 \newpage
 \section{Упражнение към лекция 7}
 
-\begin{task}
+\subsection{Задачи}
+
+\subsection*{Задача 1}
 Да се намерят локалните екстремуми на функциите
 \begin{itemize}
 \item $z = \sin{x} + \sin{y} + \sin{(x+y)} \quad (0 < x < \frac{\pi}{2}, 0 < y < \frac{\pi}{2})$
 \item $z = x^4 + y^4 - 4xy$
 \end{itemize}
+
+\subsection*{Задача 2}
+Да се намерят локалните екстремуми на функциите
+\begin{itemize}
+\item $u = x^2 + y^2 + z^2 + 2x + 4y - 6z$
+\item $u = x^3 + y^2 + z^2 - 3x + 6y - 2z$
+\item $u = x^3 + y^2 + z^2 - 3x -2y$
+\end{itemize}
+
+\subsection*{Задача 3}
+Да се намерят $y'(0), y''(0)$ ако $y(0) = 2$ на неявната функция $y = f(x)$ дефинирана от уравнението 
+$$\frac{x^2}{9} + \frac{y^2}{4} = 1$$
+
+\subsection*{Задача 4}
+Да се покаже, че функцията $z = f(x,y)$ дефинирана неявно от уравнението 
+$$z = x \varphi (\frac{z}{y})$$
+$\varphi $ - непрекъснато диференцируема, удовелетворява тъждествено уравнението
+$$xz'_x + yz'_y = z$$
+
+\newpage
+\subsection{Решения}
+\subsection*{Задача 1}
+
 
 \begin{gather*}
 z = \sin{x} + \sin{y} + \sin{(x+y)} \quad (0 < x < \frac{\pi}{2}, 0 < y < \frac{\pi}{2})\\
@@ -898,15 +947,8 @@ d^2z(M_1) =
 z_{min} = z(M_1) = 1^4 + 1^4 - 4 \cdot 1 \cdot 1 = -2\\
 \text{Аналогично и за $M_2$ има лок. мин $z_{min} = -2$}
 \end{gather*} 
-\end{task}
 
-\begin{task}
-Да се намерят локалните екстремуми на функциите
-\begin{itemize}
-\item $u = x^2 + y^2 + z^2 + 2x + 4y - 6z$
-\item $u = x^3 + y^2 + z^2 - 3x + 6y - 2z$
-\item $u = x^3 + y^2 + z^2 - 3x -2y$
-\end{itemize}
+\subsection*{Задача 2}
 
 \begin{gather*}
 u = x^2 + y^2 + z^2 + 2x + 4y - 6z\\
@@ -1035,64 +1077,48 @@ d^2u(M_1) =
 \end{vmatrix} = -24 < 0 \implies \\
 d^2u \text{ e не е дефинитна квадратична форма} \implies \text{няма лок. екстремуми}
 \end{gather*}
-\end{task}
-
-\newpage
-\begin{task}
-Да се намерят $y'(0), y''(0)$ ако $y(0) = 2$на неявната функция $y = f(x)$ дефинирана от уравнението 
-$$\frac{x^2}{9} + \frac{y^2}{4} = 1$$
-
+\subsection*{Задача 3}
 \begin{gather*}
 F(x,y) = \frac{x^2}{9} + \frac{y^2}{4} - 1 \quad M_0(0,2)\\
 F'_y = \frac{2y}{4} = \frac{y}{2} \neq 0 
 y'(x) = - \frac{F'_x}{F'_y} \qquad y''(x) = - \frac{F"_{xx} + 2F''_{xy}y' + F''_{yy}(y')^2}{F'_y}\\
 F'_x = \frac{2}{9} x \quad F'_y = \frac{2y}{4} \quad F''_{xx} = \frac{2}{9} \quad F''_{xy} = F''_{yx} = 0 \quad F''_{yy} = \frac{1}{2} \\
 F'_x(0,2) = 0 \quad F'_y(0,2) = 1 \quad F''_{xx}(0,2) = \frac{2}{9} \quad F''_{xy}(0,2) = F''_{yx}(0,2) = 0 \quad F''_{yy}(0,2) = \frac{1}{2} \\
-y'(0) = - \frac{0}{1} = 0 \qquad y''(0) = - \frac{\frac{2}{9} + 2 \cdot 0 \cdot 0 + \frac{1}{2} \cdot 0^2}{1} = - \frac{2}{9}\\
+y'(0) = - \frac{0}{1} = 0 \qquad y''(0) = - \frac{\frac{2}{9} + 2 \cdot 0 \cdot 0 + \frac{1}{2} \cdot 0^2}{1} = - \frac{2}{9}
 \end{gather*}
-\end{task}
 
-\begin{task}
-Да се покаже, че функцията $z = f(x,y)$ дефинирана неявно от уравнението 
-$$z = x \varphi (\frac{z}{y})$$
-$\varphi $ - непрекъснато диференцируема, удовелетворява тъждествено уравнението
-$$xz'_x + yz'_y = z$$
-\begin{figure}
+\subsection*{Задача 4}
+\begin{figure}[htp!]
   \includegraphics{Pics/calc/ex7-task4.png}
 \end{figure}
-\end{task}
+
 
 \newpage
 \section{Упражнение към лекция 8}
+\subsection{Задачи}
 
-\begin{task}
+\subsection*{Задача 1}
 Да се изследва за локален екстремум следната функция.
 $$z = 1-\sqrt{x^2-y^2}$$
-$$z(\Delta x, \Delta y) - z(0,0) = 1-\sqrt{\Delta x^2 - \Delta y^2} - 1 = -\sqrt{\Delta x^2 - \Delta y^2}< 0$$
-Имаме строг локален максимум в $z(0,0) = 1$
-\end{task}
 
-\begin{task}
+\subsection*{Задача 2}
 Намерете точките на условен екстремум и екстремумите на следните функции.
 \begin{itemize}
 \item $z = x^2 + y^2$, aко $x+y=1$
 \item $u = x^2 + y^2 - 12x + 16y$, aко $x^2+y^2=25$
 \item $u = x + y + z$, ако $z = 1$ и $x^2 + y^2 = 1$
 \end{itemize}
-\end{task}
 
-\begin{task}
+\subsection*{Задача 3}
 Да се изследва функцията $u = xy + yz$ за условен екстремум, при ограничения.
 $$x^2+y^2 = 2$$
 $$y+z = 2$$
-\end{task}
 
-\begin{task}
+\subsection*{Задача 4}
 Да се изследва функцията $z = x+y$ за условен екстремум, при ограничения.
 $$xy = 1$$
-\end{task}
 
-\begin{task}
+\subsection*{Задача 5}
 Да се намери дефиниционното множество на функциите.
 \begin{itemize}
 \item $z = \sqrt{1 - x^2 - y^2 + 2x}$
@@ -1101,18 +1127,15 @@ $$xy = 1$$
 \item $w = \frac{1}{\sqrt{xy}}$
 \end{itemize}
 
-\end{task}
-
-\begin{task}
+\subsection*{Задача 6}
 Да се намерят границите ако съществуват.
 \begin{itemize}
 \item $\lim\limits_{(x,y) \to (0,0)} \frac{\tan(xy)}{xy}$
 \item $\lim\limits_{(x,y) \to (0,0)} \frac{y}{\sin{(xy)}}$
 \item $\lim\limits_{(x,y) \to (0,0)} \frac{1 - \sqrt{1 - xy}}{xy}$
 \end{itemize}
-\end{task}
 
-\begin{task}
+\subsection*{Задача 7}
 Да се провери дали уравнението удовлетворява посочената функция.
 \begin{itemize}
 \item $\frac{\partial^2 z}{\partial x \partial y} = \frac{\partial^2 z}{\partial y \partial z}, z(x,y) = \ln(x^2+y^2+1)$
@@ -1120,9 +1143,8 @@ $$xy = 1$$
 \item $2 \frac{\partial^2 z}{\partial x^2 } + \frac{\partial^2 z}{\partial x \partial y} = 0, z(x,y) = 2\cos^2(y - \frac{x}{2})$
 \item $\frac{\partial u}{\partial x} + \frac{\partial u}{\partial y} + \frac{\partial u}{\partial z} = 1, u(x,y,z) = x + \frac{x-y}{y-z}$
 \end{itemize}
-\end{task}
 
-\begin{task}
+\subsection*{Задача 8}
 Да се изследват за локален екстремум следните функции.
 \begin{itemize}
 \item $z = x^4 + y^4- x^2- 2xy - y^2$
@@ -1130,9 +1152,8 @@ $$xy = 1$$
 \item $z = x^3 - y^3 - 3x + 3y + 2$
 \item $u = x^3 + y^3 + z^2 - 12xy + 2z$
 \end{itemize}
-\end{task}
 
-\begin{task}
+\subsection*{Задача 9}
 Да се изследват за локален екстремум следните неявно зададени функции.
 \begin{itemize}
 \item $x^3 + y^3 = 3xy, y = y(x)$
@@ -1140,9 +1161,8 @@ $$xy = 1$$
 \item $x^2 + y^2 + z^2 - xz -yz + 2x + 2y + 2z - 2 = 0, z = z(x,y)$
 \item $2x^2 + 2y^2 + z^2 + 8xz -8yz + 8 = 0, z = z(x,y)$
 \end{itemize}
-\end{task}
 
-\begin{task}
+\subsection*{Задача 10}
 Да се изследва за условен екстремум
 \begin{itemize}
 \item $z = xy$, aко $2x+y=1$
@@ -1150,24 +1170,74 @@ $$xy = 1$$
 \item $u = x^2 + y^2 + z^2$, ако $\frac{x^2}{16} + \frac{y^2}{9} + \frac{z^2}{4} = 1$
 \item $u = xyz$, ако $x + y + z = 5, xy+yz+zx = 8$ 
 \end{itemize}
-\end{task}
 
-\begin{task}
+\subsection*{Задача 11}
 Намерете точките на условен екстремум и екстремумите на следните функции.
 \begin{itemize}
 \item $u = x^2 + y^2+ z^2 +2x + 4y -6z $, aко $ x^2 + y^2+ z^2 = 14$
 \item $u = x^2 + y^2 + z^2 + 2x + 4y $, ако $x^2 + y^2 = 20$
 \item $u = x^2 + y^2+ z^2 +6x - 2y + 4z $, ако $x^2 + y^2+ z^2 = 56$ 
 \end{itemize}
-\end{task}
 
-\begin{task}
+\subsection*{Задача 12}
 Намерете абсолютните екстремуми на следните функции и определете вида им (условен, локален, минимум, максимум)
 \begin{itemize}
 \item $u = x^2 + y^2 - 12x + 16y$, aко $ x^2 + y^2 \leq 25, x^2 + y^2 \leq 400, x^2 + y^2 \leq 100$
 \item $u = x^2 + y^2+ z^2 +2x + 4y -6 $, ако $x^2 + y^2 + z^2 \leq 9$
 \item $u = x^2 + 2y^2+ 3z^2$, ако $x^2 + y^2+ z^2 \leq 100$ 
 \end{itemize}
-\end{task}
+
+\newpage
+\subsection{Решения}
+\subsection*{Задача 1}
+$$z(\Delta x, \Delta y) - z(0,0) = 1-\sqrt{\Delta x^2 - \Delta y^2} - 1 = -\sqrt{\Delta x^2 - \Delta y^2}< 0$$
+Имаме строг локален максимум в $z(0,0) = 1$
+
+\subsection*{Задача 2}
+
+\subsection*{Задача 3}
+
+\subsection*{Задача 4}
+
+\subsection*{Задача 5}
+
+\subsection*{Задача 6}
+
+\subsection*{Задача 7}
+
+\subsection*{Задача 8}
+
+\subsection*{Задача 9}
+
+\subsection*{Задача 10}
+
+\subsection*{Задача 11}
+
+\subsection*{Задача 12}
+
+\newpage 
+\section{Упражнение към лекция 9}
+
+\subsection{Задачи}
+
+\newpage
+\subsection{Решения}
+
+\newpage 
+\section{Упражнение към лекция 10}
+
+\subsection{Задачи}
+
+\newpage
+\subsection{Решения}
+
+\newpage 
+\section{Упражнение към лекция 11}
+
+\subsection{Задачи}
+
+\newpage
+\subsection{Решения}
+
 
 \end{document}
