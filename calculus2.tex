@@ -9,15 +9,14 @@
 \usepackage{amsthm}
 \usepackage{graphicx}
 
-\theoremstyle{definition}
+
 \newtheorem{theorem}{Tеорема}[subsection]
 \newtheorem{lemma}[theorem]{Лема}
 
 \newtheorem{definition}{Дефиниция}[subsection]
 
+\theoremstyle{definition}
 \newtheorem{example}{Пример}[subsection]
-
-\newtheorem{task}{Задача}[subsection]
 
 
 
@@ -1424,11 +1423,266 @@ f(-1,-1) = 2  \quad f(2,-1) = 5 \quad f(-1,2) = 5
 \end{example}
 
 \newpage
-\section{Лекция 9}
+\section{Лекция 9: Двоен интеграл}
 
+\subsection{Понятие за обем в $\mathbb{R}^m$. Множество с мярка нула}
+Нека $T_k (k=0,1,2...)$ е съвкупността от всички затворени кубове от вида 
+$$Q^m = Q^{m,k} = \left \{ x: x \in \mathbb{R}^m,  \frac{l_i}{10^k} \leq x_i \leq  \frac{l_i + 1}{10^k}, i = 1,2,...,m \right \}$$
+където $l_i \in \mathbb{Z}$ За удобство кубовете се означават просто $Q^m$.
 
+\begin{definition}
+Системата $T_k$ се нарича разделяне на $\mathbb{R}^m$ от ранг k, а кубовете $Q^m$ - кубове от ранг k.
+\end{definition}
+В частност за $m = 1$ множествата $Q^m$ са интервали, а за $m = 2$ -  квадрати. По нататък ще предполагаме, че $m \geq 2$
+\begin{definition}
+Числото $\frac{1}{10^{km}}$ се нарича m-мерен обем на куба $Q^m$ и е използвано означението $\mu(Q^m)$.
+$$\mu(Q^m) = \frac{1}{(10^k)^m} = \frac{1}{10^{km}}, k = 0,1,2,...$$
+\end{definition}
+ 
+\begin{definition}
+Ако $E \subset \mathbb{R}^m$ и Е представлява обеднинение на крайно или изброимо много кубове $Q_j ^m$ от даден ранг k, т.е. $E = \cup_j Q_j ^m$, то $\mu(E)$ се дефинира като 
+$$\mu(E) = \sum_j \mu(Q_j ^m)$$
+\end{definition}
+Нека $G \subset \mathbb{R}^m$ G - отворено. Да означим със $S_k = S_k(G)$ множеството от точки на всички m-мерни кубове от ранг k, изцяло лежащи в G. Тогава
+$$S_0 \subset S_1 \subset S_2 \subset ... \subset S_k \subset S_{k+1} \subset ...$$
+и следователно
+$$\mu(S_0) \leq \mu(S_1) \leq ... \leq \mu(S_k) \leq \mu(S_{k+1}) \leq ... $$
+и поради това съществува крайна или безкрайна граница $\lim\limits_{k \to \infty} \mu(S_k)$.
 
+\begin{definition}
+Крайната или безкрайната граница $\lim\limits_{k \to \infty} \mu(S_k(G))$ се нарича m-мерна мярка или m-мерен ожем на множеството G и се означава с $\mu(G)$
+$$\mu(G) = \lim\limits_{k \to \infty} \mu(S_k(G))$$
+\end{definition}
+По силата на тази дефиниция $\mu(G) >0$ за всяко отворено непразно множество $G \subset \mathbb{R}^m$ и $\mu(G) < \infty$ ако G е и ограничено.\\
 
+\begin{lemma}[адитивност на мярка]
+Нека $G', G'' \subset \mathbb{R}^m$ са отворени множества и $G' \cap G'' = \varnothing$ тогава е в сила
+$$\mu (G' \cup G'') = \mu(G') + \mu(G'')$$
+\end{lemma}
+
+\begin{lemma}[полуадитивност на мярка]
+Нека $G', G'' \subset \mathbb{R}^m$ са отворени множества. Тогава е в сила
+$$\mu (G' \cup G'') \leq \mu(G') + \mu(G'')$$
+\end{lemma}
+
+\begin{lemma}[адитивност на мярка]
+Нека $G', G'' \subset \mathbb{R}^m$ са отворени множества и $G' \subset G''$ тогава е в сила
+$$ \mu(G') \leq \mu(G'')$$
+\end{lemma}
+
+\begin{definition}
+Границата $\lim\limits_{k \to \infty} \mu(S_k ^*(G))$ се нарича горна m-мерна мярка на множеството D и се означава с $\overline{\mu}(D)$
+$$\overline{\mu}(D) = \lim\limits_{k \to \infty} \mu(S_k ^*(G))$$
+\end{definition}
+
+\begin{lemma}[монотонност на горната мярка]
+Ако $D',D'' \subset \mathbb{R}^m$ то в сила е неравенството
+$$\overline{\mu}(D') \leq \overline{\mu}(D'')$$
+\end{lemma}
+
+\begin{lemma}[полуадитивност на горната мярка]
+Ако $D_i \subset \mathbb{R}^m, i = 1 \div s$ и $D = \cup_{i =1} ^s D_i$ то в сила е неравенството
+$$\overline{\mu}(D) \leq \sum_{i=1}^s \overline{\mu}(D_i)$$ 
+\end{lemma}
+
+\begin{definition}
+Ако $\overline{\mu}(D) = 0$ то множеството D се нарича множество с мярка нула и се записва $\mu(D) = 0$. Празното множество по дефиниция има мярка нула $\mu(\varnothing) = 0$
+\end{definition}
+
+\subsection{Измерими множества в $\mathbb{R}^m$}
+Нека $G \subset \mathbb{R}^m$ е ограничено множество, $[G]$ е негова затворена обвивка. Да означим с $S_k ^* ([G])$ множеството от точки на всички m-мерни кубове от ранг k, всеки който се пресича с [G] а със $S_k (G)$ множеството от точки на всички m-мерни кубове от ранг k, съдържащи се във G. От $S_k \subset S_k ^*$ следва 
+$$\mu(S_k) \leq \mu(S_k ^*)$$
+откъдето при $k \to \infty$ се получава че
+$$\mu(G) \leq \overline{\mu}([G])$$
+
+\begin{definition}
+Множеството $G \subset \mathbb{R}^m$ (G - отворено и ограничено) се нарича измеримо(кубируемо, а при $m = 2$ - квадратируемо), ако неговата мярка е равна на горната мярка на [G]
+$$\mu(G) = \overline{\mu}([G])$$
+\end{definition}
+
+\begin{theorem}
+Ограниченото и отвореното множество $G \subset \mathbb{R}^m$ e измеримо, тогава и само тогава, когато контурът му има мярка нула.
+$$\mu(\partial G) = 0$$
+\end{theorem}
+
+\begin{definition}
+Затворената обвивка [G] на отвореното и измеримо множество $G \subset \mathbb{R}^m$ също се нарича измеримо и по дефиниция 
+$$\mu([G]) = \mu(G)$$
+\end{definition}
+
+\subsection{Дефиниция на многократен интеграл}
+Нека $G \subset \mathbb{R}^m$ e отворено и измеримо множество.
+
+\begin{definition}
+Системата $\tau = \{ G_i\}_{i=1}^{i_0}$ oт измерими множества $G_i$ се нарича разделяне на множеството G, ако
+
+\begin{enumerate}
+\item $G_i \subset G, i = 1 \div i_0$
+\item $G_i \cap G_j = \varnothing, i \neq j$
+\item $\cup[G_i] = [G]$
+\end{enumerate}
+
+\end{definition}
+
+\begin{definition}
+Числото $$\delta_{\tau} = \max_{1 \leq i \leq i_0} d(G_i)$$
+Където $d(G_i)$ е диаметър на множеството $G_i$, се нарича диаметър на разделянето $\tau$
+\end{definition}
+
+\begin{lemma}
+Ако $\tau = \{ G_i\}_{i=1}^{i_0}$ е разделянето на G, то
+$$\mu(G) = \sum_{i=1}^{i_0} \mu(G_i)$$
+\end{lemma}
+
+\begin{definition}
+Нека $\tau = \{ G_i\}$ и $\tau' = \{ G'_j\}$ са две разделяния от отвореното и измеримо множество G. Разделянето $\tau'$ се нарича вписано в $\tau$ ако за всеки елемент $G'_j \in \tau'$ съществува елемент $G_i \in \tau$, такъв че $G'_j \subset G_i$ Записва се $\tau' \succ \tau$ или $\tau \prec \tau'$.
+\end{definition}
+
+\begin{lemma}
+В сила са следните свойства
+
+\begin{enumerate}
+\item Ако $\tau \prec \tau'$ и $\tau' \prec \tau''$, то $\tau \prec \tau''$ .
+\item За всеки две разделяния $\tau' = \{ G'_i\}$ и $\tau'' = \{ G''_j\}$ на отвореното и измеримо множество G съществува разделяне $\tau$, такова че $\tau' \prec \tau$ и $\tau'' \prec \tau$.
+\end{enumerate}
+
+\end{lemma}
+
+\begin{definition}
+Нека $G \subset \mathbb{R}^m$, функцията $f: [G] \to \mathbb{R}$ и $\tau = \{ G_i\}_{i=1}^{i_0}$ e разделяне на множеството G. Тогава сумата 
+$$\sigma_\tau (f) = \sum_{i=1} ^{i_0} f(\xi^{(i)})\mu(G_i)$$
+където 
+$$\xi^{(i)} \in [G_i], i = 1,2,..., i_0$$
+се нарича риманова интегрална сума на функцията f. 
+\end{definition}
+
+\begin{definition}
+Крайната граница 
+$$\lim\limits_{\delta_\tau \to 0} \sigma_\tau (f)$$
+ако съществува се нарича многократен интеграл от функцията f върху измеримото и отворено множеството G(или [G]) а функцията се нарича интегруема в риманов смисъл върху множеството G(или [G]). Означава се по един от следните начини 
+$$\int f dG, \int f(x) dG, \int ... \int f(x_1, x_2,..., x_m) dx_1dx_2...dx_m$$
+Множеството G([G]) се нарича област на интегриране.
+\end{definition}
+
+\begin{definition}
+Числото А се нарича интеграл от функцията f върху отвореното и измеримо множество G, ако за всяка редица от разделяния $\tau_n = \left \{ G_i ^{(n)}\right \}_{i=1} ^{i_0 ^{(n)}}$ на множеството G, с $\delta_{\tau_n} \to 0$ при $n \to \infty$ и каквито и да са точките
+$$\xi^{(i_n)} \in [G_i ^{(n)}], i_n = 1,2,... i_0 , n = 1,2,...$$
+е изпълнено равенството 
+$$\lim\limits_{n \to \infty} \sigma_{\tau_n} (f;\xi_n ^{(1)}, \xi_n ^{(2)}, ..., \xi_n ^{(i_0 ^ {(n)})}) =  A$$
+\end{definition}
+
+\subsection{Съществуване на многократния интеграл}
+
+\begin{theorem}
+Нека $G \subset \mathbb{R}^m$ отворено e измеримо множество и функцията $f: [G] \to \mathbb{R}$ е интегруема върху него. Тогава f  е ограничена върху множеството [G]. 
+\end{theorem}
+
+\subsection{Свойства на многократните интеграли}
+За класа на функции, интегруеми в риманов смисъл в дадено отворено и измеримо множество G е използвано означението $\Re(G)$. \\
+Нека $G \subset \mathbb{R}^m$, G - измеримо и отворено множество.\\
+Oсвен това $f,g: [G] \to \mathbb{R}, f,g \in \Re(G)$, a $\lambda, \nu$ - производни реални константи.
+
+\begin{theorem}
+В сила са следните свойства на многократните интеграли
+\begin{enumerate}
+\item $\int dG = \int 1 dG = \mu(G)$
+\item $\int (\lambda f + \nu g)dG = \lambda \int f dG + \nu \int g dG$ (Линейност на интеграла)\\
+В частност
+\begin{enumerate}
+\item $\lambda = \nu = 1 \implies \int (f+g) dG  = \int f dG + \int g dG$ 
+\item $\lambda = 1,  \nu = -1 \implies \int (f-g) dG  = \int f dG - \int g dG$ 
+\item $\lambda = const,  \nu = 0 \implies \int \lambda f dG  = \lambda \int f dG$ 
+\end{enumerate}
+\item $f \geq 0$ върху G $\implies \int f dG \geq 0$
+\end{enumerate}
+\end{theorem}
+Oт тези три свойства се получва следствието 
+$$f \geq g \implies \int f dG \geq \int g dG$$
+
+\begin{theorem}
+Ако $G', G''$ са измеримо множество, $[G] = [G'] \cup [G'']$ и $G' \cap G'' = \varnothing$ то следва
+$$\int f dG = \int fd(G' \cup G'') =\int f dG' + \int f dG'' $$
+\end{theorem}
+
+\begin{theorem}[адитивност относно множества]
+Ако $G' \subset G$ е измеримо множество, то $f \in \Re(G')$
+\end{theorem}
+Oт тази теорема следва монотонноста на интеграла: Ако $\Gamma \subset G$ е измеримо множество и $f \geq 0$ върху  G, то 
+$$\int f dG \geq \int f d\Gamma$$
+
+\begin{theorem}
+Произведението $f \cdot g \in \Re(G)$
+\end{theorem}
+
+\begin{theorem}
+Функцията $\vert f \vert \in \Re(G)$ и освен това е изпълнено неравенството 
+$$\left \vert \int f dG \right \vert \leq \int \vert f \vert dG$$
+\end{theorem}
+
+\newpage
+\subsection{Свеждане на кратни интеграли до повторни}
+
+\subsubsection{Двумерен случай}
+Нека равнината $\mathbb{R}^2$ е фиксирана правоъгълна кординатна система с кординати x и y.
+
+\begin{definition}
+Нека $G \subset \mathbb{R}^2$. G се нарича елементарна област отностно $Оу$, ако $\partial G$ се състои от графиките на две непрекъснати функции $\varphi(x), \psi(x)$, дефинирани в интервал [a,b] и $\varphi(x) \leq \psi(x), x\in [a,b]$, и може да съдържа и отсечки от правите $x = a, x = b$. Аналогично се дефинира област, елементарна отностно $Ox$.
+\begin{figure}[htp!]
+  \includegraphics{Pics/calc/lec9-1.png}
+\end{figure}
+\end{definition}
+
+\begin{theorem}[Теорема на Фубини]
+Нека G е елементарна фигура отностно $Oy, G \subset \mathbb{R}^2, \partial G$ границата на G, се състои от графиките на непрекъснатите функции $\varphi(x) \psi(x), \varphi(x) \leq \psi(x), x\in [a,b]$ и евентуално от отсечки от правите $x = a, x = b$. Нека $f: [G] \to \mathbb{R}$ и f е непрекъсната върху [G]. Тогава
+$$\iint_G f(x,y) dx dy = \int_a ^b \left( \int_{\varphi(x)} ^{\psi(x)}  f(x,y) dy \right) dx$$
+\end{theorem}
+
+\begin{definition}
+Интегралът в дясната страна на формулата от Теорема 9.6.1 се нарича повторен и обикновенно се записва във вида
+$$\int_a ^b dx \int_{\varphi(x)} ^{\psi(x)}  f(x,y) dy$$ 
+\end{definition}
+
+\begin{lemma}
+При предпложенията от Теорема 9.6.1 функцията 
+$$F(x) = \int_{\varphi(x)} ^{\psi(x)}  f(x,y) dy$$
+е непрекъсната функция на x в интервала [a,b]. 
+\end{lemma}
+Aко областта G е елементарна отностно $Ox$ и границата ѝ се състои от графиките на непрекъснатите функции $\alpha (y), \beta(y), \alpha (y) \leq \beta(y), c \leq y \leq d$ и евентуално отсечки от правите $y = c, y = d$ и функцията $f(x,y)$ е непрекъсната в компактното множество [G] то е в сила формулата 
+$$\iint_G f(x,y) dx dy = \int_c ^d dy  \int_{\alpha(y)} ^{\beta(y)}  f(x,y) dx$$
+
+\begin{example}
+$z = x^2y$ заградена между $y = x^2, y = 1$. 
+Имаме: $\iint_G x^2y \,dx dy$, 
+$G =
+\begin{cases}
+y = x^2 \\
+y = 1
+\end{cases}$\\
+$$
+\begin{array}{|l@{}}
+y = x^2 \\
+y = 1
+\end{array} \implies
+x^2 = 1 \implies x_{1,2} = \pm 1 
+$$
+Абсцисите на пресечните точки на кривата $y = x^2$ и $y = 1$. \\
+Фигурата G се намира между правите $x = -1$ и $x = 1$ и освен това е оградена и от параболата $y = x^2$ и правата $y = 1$.  По точно
+$$G = 
+\begin{cases}
+-1 \leq x \leq 1 \\
+x^2 \leq y \leq 1
+\end{cases}$$
+Тогава 
+\begin{gather*}
+\iint_G x^2y \,dxdy = \int_{-1} ^ 1 x^2dx \int _{x^2} ^ 1 y dy \qquad \left( \int _{x^2} ^ 1 y dy  = \frac{y^2}{2}  \Big|_{x^2} ^ 1\right) \\
+ \frac{1}{2} \int_{-1} ^1 x^2 (1-x^4) dx = \frac{1}{2} \cdot 2 \int_0 ^1 (x^2 - x^6) dx =  \\
+\frac{x^3}{3} - \frac{x^7}{7} \Big|_0 ^ 1 = \frac{1}{3} - \frac{1}{7} = \frac{4}{21}
+\end{gather*}
+
+\end{example}
+
+\newpage
+\section{Лекция 10}
 
 
 
