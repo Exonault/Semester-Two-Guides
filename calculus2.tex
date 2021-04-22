@@ -12,7 +12,6 @@
 
 \newtheorem{theorem}{Tеорема}[subsection]
 \newtheorem{lemma}[theorem]{Лема}
-
 \newtheorem{definition}{Дефиниция}[subsection]
 
 \theoremstyle{definition}
@@ -1560,7 +1559,7 @@ $$\xi^{(i)} \in [G_i], i = 1,2,..., i_0$$
 Крайната граница 
 $$\lim\limits_{\delta_\tau \to 0} \sigma_\tau (f)$$
 ако съществува се нарича многократен интеграл от функцията f върху измеримото и отворено множеството G(или [G]) а функцията се нарича интегруема в риманов смисъл върху множеството G(или [G]). Означава се по един от следните начини 
-$$\int f dG, \int f(x) dG, \int ... \int f(x_1, x_2,..., x_m) dx_1dx_2...dx_m$$
+$$\int f \, dG, \int f(x) \,dG, \int ... \int f(x_1, x_2,..., x_m) \,dx_1 \, dx_2 \, ... \, dx_m$$
 Множеството G([G]) се нарича област на интегриране.
 \end{definition}
 
@@ -1585,30 +1584,30 @@ Oсвен това $f,g: [G] \to \mathbb{R}, f,g \in \Re(G)$, a $\lambda, \nu$ -
 \begin{theorem}
 В сила са следните свойства на многократните интеграли
 \begin{enumerate}
-\item $\int dG = \int 1 dG = \mu(G)$
-\item $\int (\lambda f + \nu g)dG = \lambda \int f dG + \nu \int g dG$ (Линейност на интеграла)\\
+\item $\int \, dG = \int 1 \, dG = \mu(G)$
+\item $\int (\lambda f + \nu g) \, dG = \lambda \int f \, dG + \nu \int g \, dG$ (Линейност на интеграла)\\
 В частност
 \begin{enumerate}
-\item $\lambda = \nu = 1 \implies \int (f+g) dG  = \int f dG + \int g dG$ 
-\item $\lambda = 1,  \nu = -1 \implies \int (f-g) dG  = \int f dG - \int g dG$ 
-\item $\lambda = const,  \nu = 0 \implies \int \lambda f dG  = \lambda \int f dG$ 
+\item $\lambda = \nu = 1 \implies \int (f+g) \, dG  = \int f \, dG + \int g \, dG$ 
+\item $\lambda = 1,  \nu = -1 \implies \int (f-g) \, dG  = \int f \, dG - \int g \, dG$ 
+\item $\lambda = const,  \nu = 0 \implies \int \lambda f \, dG  = \lambda \int f \, dG$ 
 \end{enumerate}
-\item $f \geq 0$ върху G $\implies \int f dG \geq 0$
+\item $f \geq 0$ върху G $\implies \int f \, dG \geq 0$
 \end{enumerate}
 \end{theorem}
 Oт тези три свойства се получва следствието 
-$$f \geq g \implies \int f dG \geq \int g dG$$
+$$f \geq g \implies \int f \, dG \geq \int g \, dG$$
 
 \begin{theorem}
 Ако $G', G''$ са измеримо множество, $[G] = [G'] \cup [G'']$ и $G' \cap G'' = \varnothing$ то следва
-$$\int f dG = \int fd(G' \cup G'') =\int f dG' + \int f dG'' $$
+$$\int f \, dG = \int f \, d(G' \cup G'') =\int f \, dG' + \int f \, dG'' $$
 \end{theorem}
 
 \begin{theorem}[адитивност относно множества]
 Ако $G' \subset G$ е измеримо множество, то $f \in \Re(G')$
 \end{theorem}
 Oт тази теорема следва монотонноста на интеграла: Ако $\Gamma \subset G$ е измеримо множество и $f \geq 0$ върху  G, то 
-$$\int f dG \geq \int f d\Gamma$$
+$$\int f \, dG \geq \int f \, d\Gamma$$
 
 \begin{theorem}
 Произведението $f \cdot g \in \Re(G)$
@@ -1616,7 +1615,7 @@ $$\int f dG \geq \int f d\Gamma$$
 
 \begin{theorem}
 Функцията $\vert f \vert \in \Re(G)$ и освен това е изпълнено неравенството 
-$$\left \vert \int f dG \right \vert \leq \int \vert f \vert dG$$
+$$\left \vert \int f \, dG \right \vert \leq \int \vert f \vert \, dG$$
 \end{theorem}
 
 \newpage
@@ -1634,30 +1633,30 @@ $$\left \vert \int f dG \right \vert \leq \int \vert f \vert dG$$
 
 \begin{theorem}[Теорема на Фубини]
 Нека G е елементарна фигура отностно $Oy, G \subset \mathbb{R}^2, \partial G$ границата на G, се състои от графиките на непрекъснатите функции $\varphi(x) \psi(x), \varphi(x) \leq \psi(x), x\in [a,b]$ и евентуално от отсечки от правите $x = a, x = b$. Нека $f: [G] \to \mathbb{R}$ и f е непрекъсната върху [G]. Тогава
-$$\iint_G f(x,y) dx dy = \int_a ^b \left( \int_{\varphi(x)} ^{\psi(x)}  f(x,y) dy \right) dx$$
+$$\iint_G f(x,y) \, dx \, dy = \int_a ^b \left( \int_{\varphi(x)} ^{\psi(x)}  f(x,y) \, dy \right) \, dx$$
 \end{theorem}
 
 \begin{definition}
 Интегралът в дясната страна на формулата от Теорема 9.6.1 се нарича повторен и обикновенно се записва във вида
-$$\int_a ^b dx \int_{\varphi(x)} ^{\psi(x)}  f(x,y) dy$$ 
+$$\int_a ^b \, dx \int_{\varphi(x)} ^{\psi(x)}  f(x,y) \, dy$$ 
 \end{definition}
 
 \begin{lemma}
 При предпложенията от Теорема 9.6.1 функцията 
-$$F(x) = \int_{\varphi(x)} ^{\psi(x)}  f(x,y) dy$$
+$$F(x) = \int_{\varphi(x)} ^{\psi(x)}  f(x,y) \, dy$$
 е непрекъсната функция на x в интервала [a,b]. 
 \end{lemma}
 Aко областта G е елементарна отностно $Ox$ и границата ѝ се състои от графиките на непрекъснатите функции $\alpha (y), \beta(y), \alpha (y) \leq \beta(y), c \leq y \leq d$ и евентуално отсечки от правите $y = c, y = d$ и функцията $f(x,y)$ е непрекъсната в компактното множество [G] то е в сила формулата 
-$$\iint_G f(x,y) dx dy = \int_c ^d dy  \int_{\alpha(y)} ^{\beta(y)}  f(x,y) dx$$
+$$\iint_G f(x,y) \, dx \, dy = \int_c ^d \, dy  \int_{\alpha(y)} ^{\beta(y)}  f(x,y) \, dx$$
 
 \begin{example}
-$z = x^2y$ заградена между $y = x^2, y = 1$. 
-Имаме: $\iint_G x^2y \,dx dy$, 
+$z = x^2y$ заградена между $y = x^2, y = 1$. \\
+Имаме: $\iint_G x^2y \,dx \, dy$, 
 $G =
 \begin{cases}
 y = x^2 \\
 y = 1
-\end{cases}$\\
+\end{cases}$ 
 $$
 \begin{array}{|l@{}}
 y = x^2 \\
@@ -1674,8 +1673,9 @@ x^2 \leq y \leq 1
 \end{cases}$$
 Тогава 
 \begin{gather*}
-\iint_G x^2y \,dxdy = \int_{-1} ^ 1 x^2dx \int _{x^2} ^ 1 y dy \qquad \left( \int _{x^2} ^ 1 y dy  = \frac{y^2}{2}  \Big|_{x^2} ^ 1\right) \\
- \frac{1}{2} \int_{-1} ^1 x^2 (1-x^4) dx = \frac{1}{2} \cdot 2 \int_0 ^1 (x^2 - x^6) dx =  \\
+\iint_G x^2y \,dx \, dy = \int_{-1} ^ 1 x^2 \, dx \int _{x^2} ^ 1 y \, dy \qquad 
+\left( \int _{x^2} ^ 1 y \, dy  = \frac{y^2}{2}  \Big|_{x^2} ^ 1\right) \\
+ \frac{1}{2} \int_{-1} ^1 x^2 (1-x^4) \, dx = \frac{1}{2} \cdot 2 \int_0 ^1 (x^2 - x^6) \, dx =  \\
 \frac{x^3}{3} - \frac{x^7}{7} \Big|_0 ^ 1 = \frac{1}{3} - \frac{1}{7} = \frac{4}{21}
 \end{gather*}
 
