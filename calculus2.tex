@@ -11,7 +11,7 @@
 
 
 \newtheorem{theorem}{Tеорема}[subsection]
-\newtheorem{lemma}[theorem]{Лема}
+\newtheorem{lemma}{Лема}[subsection]
 \newtheorem{definition}{Дефиниция}[subsection]
 
 \theoremstyle{definition}
@@ -307,7 +307,7 @@ $$f: D \to \mathbb{R} $$\\
 \end{definition}
 
 \begin{definition}[Хайне]
-Нека $f: D \to \mathbb{R}, a \in \mathbb{R}^m$, а е точка на сгъстяване за D. Казва се че $f(x)$ има граница L при $x \to a$ със стойностти $x \neq a$ ако за всяка редица  $\{x^{(n)}\} ,x^{(n)} \in D, x^{(n)} \neq a$ сходяща към а, числовата редица $\{f(x^{(n)})\}$ има граница L. 
+Нека $f: D \to\mathbb{R}, a \in \mathbb{R}^m$, а е точка на сгъстяване за D. Казва се че $f(x)$ има граница L при $x \to a$ със стойностти $x \neq a$ ако за всяка редица  $\{x^{(n)}\} ,x^{(n)} \in D, x^{(n)} \neq a$ сходяща към а, числовата редица $\{f(x^{(n)})\}$ има граница L. 
 \end{definition}
 
 \begin{theorem}
@@ -320,7 +320,7 @@ $$f: D \to \mathbb{R} $$\\
 \end{definition}
 
 \begin{definition}[Повторна граница]
-Нека $D \subset \mathbb{R}^2, a = (a_1, a_2) \in \mathbb{R}^2$ e точка на сгъстяване за D и функция $f: D \to \mathbb{R}$. Нека съществува такава околност $U_{a_2} \subset \mathbb{R}$ на точката $а_2$, че за всички стойностти $y \in U_{a_2} $ да съществува  $\lim\limits_{x \to a_1} f(x,y) = \varphi (y)$. Ако освен това съществува $\lim\limits_{y \to a_2} \varphi (y) = A$, А се нарича повторна граница и се означава както следва 
+Нека $D \subset \mathbb{R}^2, a = (a_1, a_2) \in \mathbb{R}^2$ e точка на сгъстяване за D и функция $f: D\to \mathbb{R}$. Нека съществува такава околност $U_{a_2} \subset \mathbb{R}$ на точката $а_2$, че за всички стойностти $y \in U_{a_2} $ да съществува  $\lim\limits_{x \to a_1} f(x,y) = \varphi (y)$. Ако освен това съществува $\lim\limits_{y \to a_2} \varphi (y) = A$, А се нарича повторна граница и се означава както следва 
 $$A = A_{1,2} =\lim\limits_{y \to a_2} (\lim\limits_{x \to a_1} f(x,y) ) $$.\\
 Аналогично се съвежда и другата повторна граница 
 $$ A_{2,1} = \lim\limits_{x \to a_1} (\lim\limits_{y \to a_2} f(x,y) ) $$
@@ -351,12 +351,12 @@ $$ A_{2,1} = \lim\limits_{x \to a_1} (\lim\limits_{y \to a_2} f(x,y) ) $$
 \end{definition}
 
 \begin{definition}[за съставна функция]
-Нека $A \subset \mathbb{R}^m$ е отворено множество, $f: А \to \mathbb{R}$ и $x_k: (\alpha, \beta) \to \mathbb{R}, k = 1 \div m$. Полагайки  $x(t) = (x_1(t), x_2(t), ... , x_m(t)) \in A$ за всяко $t \in (\alpha, \beta)$ съставната функция $F(t) = f \circ x(t) = f(x(t))$ се дефинира по формулата 
+Нека $A \subset \mathbb{R}^m$ е отворено множество, $f: A \to \mathbb{R}$ и $x_k: (\alpha, \beta) \to \mathbb{R}, k = 1 \div m$. Полагайки  $x(t) = (x_1(t), x_2(t), ... , x_m(t)) \in A$ за всяко $t \in (\alpha, \beta)$ съставната функция $F(t) = f \circ x(t) = f(x(t))$ се дефинира по формулата 
 $$F(t) = f \circ x(t) = f(x(t)) = f(x_1(t), x_2(t), ... , x_m(t))$$
 \end{definition}
 
 \begin{theorem}
-Нека $A \subset \mathbb{R}^m$ е отворено множество и $f: А \to \mathbb{R}$ интервалът $(\alpha, \beta) \subset \mathbb{R}$ , $x_k: (\alpha, \beta) \to \mathbb{R} $ за $k = 1 \div m$. Нека освен това $x(t) = (x_1(t), x_2(t), ... , x_m(t)) \in A$ за $\forall t \in (\alpha, \beta)$ и $x_k$ са непрекъснати в точката $t_0 \in (\alpha, \beta) $  за $k = 1 \div m$, а $f$ e непрекъсната в $x^0 = x(t_0)$. Toгава функцията $F(t) = f \circ x(t) = f(x(t)) = f(x_1(t), x_2(t), ... , x_m(t))$ е непрекъсната в точката $t_0$
+Нека $A \subset \mathbb{R}^m$ е отворено множество и $f: A \to \mathbb{R}$ интервалът $(\alpha, \beta) \subset \mathbb{R}$ , $x_k: (\alpha, \beta) \to \mathbb{R} $ за $k = 1 \div m$. Нека освен това $x(t) = (x_1(t), x_2(t), ... , x_m(t)) \in A$ за $\forall t \in (\alpha, \beta)$ и $x_k$ са непрекъснати в точката $t_0 \in (\alpha, \beta) $  за $k = 1 \div m$, а $f$ e непрекъсната в $x^0 = x(t_0)$. Toгава функцията $F(t) = f \circ x(t) = f(x(t)) = f(x_1(t), x_2(t), ... , x_m(t))$ е непрекъсната в точката $t_0$
 \end{theorem}
 
 \subsection{Равномерна непрекъснатост на функция на няколко променливи}
@@ -1633,7 +1633,7 @@ $$\left \vert \int f \, dG \right \vert \leq \int \vert f \vert \, dG$$
 
 \begin{theorem}[Теорема на Фубини]
 Нека G е елементарна фигура отностно $Oy, G \subset \mathbb{R}^2, \partial G$ границата на G, се състои от графиките на непрекъснатите функции $\varphi(x) \psi(x), \varphi(x) \leq \psi(x), x\in [a,b]$ и евентуално от отсечки от правите $x = a, x = b$. Нека $f: [G] \to \mathbb{R}$ и f е непрекъсната върху [G]. Тогава
-$$\iint_G f(x,y) \, dx \, dy = \int_a ^b \left( \int_{\varphi(x)} ^{\psi(x)}  f(x,y) \, dy \right) \, dx$$
+$$\iint\limits_{G} f(x,y) \, dx \, dy = \int_a ^b \left( \int_{\varphi(x)} ^{\psi(x)}  f(x,y) \, dy \right) \, dx$$
 \end{theorem}
 
 \begin{definition}
@@ -1647,11 +1647,11 @@ $$F(x) = \int_{\varphi(x)} ^{\psi(x)}  f(x,y) \, dy$$
 е непрекъсната функция на x в интервала [a,b]. 
 \end{lemma}
 Aко областта G е елементарна отностно $Ox$ и границата ѝ се състои от графиките на непрекъснатите функции $\alpha (y), \beta(y), \alpha (y) \leq \beta(y), c \leq y \leq d$ и евентуално отсечки от правите $y = c, y = d$ и функцията $f(x,y)$ е непрекъсната в компактното множество [G] то е в сила формулата 
-$$\iint_G f(x,y) \, dx \, dy = \int_c ^d \, dy  \int_{\alpha(y)} ^{\beta(y)}  f(x,y) \, dx$$
+$$\iint\limits_{G} f(x,y) \, dx \, dy = \int_c ^d \, dy  \int_{\alpha(y)} ^{\beta(y)}  f(x,y) \, dx$$
 
 \begin{example}
 $z = x^2y$ заградена между $y = x^2, y = 1$. \\
-Имаме: $\iint_G x^2y \,dx \, dy$, 
+Имаме: $\iint\limits_{G} x^2y \,dx \, dy$, 
 $G =
 \begin{cases}
 y = x^2 \\
@@ -1673,7 +1673,7 @@ x^2 \leq y \leq 1
 \end{cases}$$
 Тогава 
 \begin{gather*}
-\iint_G x^2y \,dx \, dy = \int_{-1} ^ 1 x^2 \, dx \int _{x^2} ^ 1 y \, dy \qquad 
+\iint\limits_{G} x^2y \,dx \, dy = \int_{-1} ^ 1 x^2 \, dx \int _{x^2} ^ 1 y \, dy \qquad 
 \left( \int _{x^2} ^ 1 y \, dy  = \frac{y^2}{2}  \Big|_{x^2} ^ 1\right) \\
  \frac{1}{2} \int_{-1} ^1 x^2 (1-x^4) \, dx = \frac{1}{2} \cdot 2 \int_0 ^1 (x^2 - x^6) \, dx =  \\
 \frac{x^3}{3} - \frac{x^7}{7} \Big|_0 ^ 1 = \frac{1}{3} - \frac{1}{7} = \frac{4}{21}
@@ -1682,7 +1682,229 @@ x^2 \leq y \leq 1
 \end{example}
 
 \newpage
-\section{Лекция 10}
+\section{Лекция 10: Смяна на променливите на двоен интеграл}
+
+\subsection{Матрица на Якоби}
+Нека $x \in D \subset \mathbb{R}^m, f: D \to \mathbb{R}^n \implies y \in \mathbb{R}^m$ се задава със системата от функции
+$$\begin{array}{|l@{}}
+y_1 = f_1(x_1, x_2, ..., x_m) \\
+y_2 = f_2(x_1, x_2, ..., x_m) \\
+...\\
+y_n = f_n(x_1, x_2, ..., x_m) 
+\end{array}$$
+
+\begin{definition}
+Нека в точката $x^0 \in D$ съществуват първите частни производни на функциите $f_i (i = 1 \div m)$ от системата дефинирана по горе, тогава матрицата от всички частни производни в точката $x^0$
+$$
+\begin{bmatrix}
+\frac{\partial y_1}{\partial x_1} &  \frac{\partial y_1}{\partial x_2}  & ... &\frac{\partial y_1}{\partial x_m}\\ 
+\frac{\partial y_2}{\partial x_1} &  \frac{\partial y_2}{\partial x_2}  & ... &\frac{\partial y_2}{\partial x_m}\\ 
+...& ... & ... & ... \\
+\frac{\partial y_n}{\partial x_1} &  \frac{\partial y_n}{\partial x_2}  & ... &\frac{\partial y_n}{\partial x_m}
+\end{bmatrix}
+$$
+се нарича матрица на Якоби за изображението $f(x)$.\\
+Ако $m = n$ може да се пресметне детерминантата $J(x_1, x_2, ..., x_m)$ за матрицата на Якоби. 
+$$J(f;x_1, x_2, ..., x_m) = \frac{D(y_1, y_2, ..., y_m)}{D(x_1, x_2, ..., x_m)} = 
+\begin{bmatrix}
+\frac{\partial y_1}{\partial x_1} &  \frac{\partial y_1}{\partial x_2}  & ... &\frac{\partial y_1}{\partial x_m}\\ 
+\frac{\partial y_2}{\partial x_1} &  \frac{\partial y_2}{\partial x_2}  & ... &\frac{\partial y_2}{\partial x_m}\\ 
+...& ... & ... & ... \\
+\frac{\partial y_m}{\partial x_1} &  \frac{\partial y_m}{\partial x_2}  & ... &\frac{\partial y_m}{\partial x_m}
+\end{bmatrix}$$
+\end{definition}
+
+\begin{definition}
+Детерминанта на матрицата на Якоби се нарича още якобиан на изображението $f(x)$. Означава се  $J(x_1, x_2, ..., x_m)$ или $J(f)$
+\end{definition}
+
+\begin{definition}
+Изображението $f: G \to \mathbb{R}^m (G \subset \mathbb{R}^m) $ дадено със системата 
+$$\begin{array}{|l@{}}
+y_1 = f_1(x_1, x_2, ..., x_m) \\
+y_2 = f_2(x_1, x_2, ..., x_m) \\
+...\\
+y_n = f_n(x_1, x_2, ..., x_m) 
+\end{array}$$
+се нарича непрекъснато диференцируемо изображение, ако всички първи частни производни на $f_i (i = 1 \div m)$ съществуват в G и са непрекъснати там. 
+\end{definition}
+
+\begin{theorem}
+Нека 
+$$y = f(x) = \{y_i = f_i(x_1, x_2, ..., x_m), i = 1 \div m \}$$
+е взаимно еднозначно непрекъснато диференцируемо изображение от отвореното множество $G \subset \mathbb{R}^m$ върху отвореното множество $ \widetilde{G} \subset \mathbb{R}^m$. Нека освен това и обратното изображение
+$$x = f^{-1}(y) = \{x_i = f_i  ^{-1} (y_1, y_2, ..., y_m), i = 1 \div m\}$$
+което е еднозначно непрекъснато диференцируемо изображение от своето дефиниционно множество $ \widetilde{G}$.  Тогава е в сила формулата 
+$$\frac{D(y_1, y_2, ..., y_m)}{D(x_1, x_2, ..., x_m)} \cdot  \frac{D(x_1, x_2, ..., x_m)}{D(y_1, y_2, ..., y_m)} = 1$$
+което може да се запише във вида
+$$\frac{D(x_1, x_2, ..., x_m)}{D(y_1, y_2, ..., y_m)} = \frac{1}{\frac{D(y_1, y_2, ..., y_m)}{D(x_1, x_2, ..., x_m)}} $$
+т.е якобианът на изображението, което е обратно на даденото изображение е равен  на реципрочната стойност на якобиана на даденото изображение.\\
+Нито един от двата якобиана не е нула, защото произведението им е равно на 1. \\
+При $m = 1$ формулата се свежда до формулата за производна на обратна функция
+$$\frac{dy}{dx} = \frac{1}{\frac{dx}{dy}}$$
+
+\end{theorem}
+
+\begin{theorem}
+Нека $G \subset \mathbb{R}^m$ e отворено множество, $f: G \to \mathbb{R}^m$
+$$y = f(x) = 
+\begin{array}{|l@{}}
+y_1 = f_1(x_1, x_2, ..., x_m) \\
+y_2 = f_2(x_1, x_2, ..., x_m) \\
+...\\
+y_n = f_n(x_1, x_2, ..., x_m) 
+\end{array}$$
+е непрекъснато диференцируемо изображение и нека точката $x^{(0)}  \in G $ а $ y^{(0)} = f(x^{(0)}) \in \mathbb{R}^m$.
+Освен това, ако якобианът на това изображение е различен от нула в точката $x^{(0)}$, то съществува такива околностти $U_{x^{(0)}}, \, U_{y^{(0)}}$ съответно в точките $x^{(0)}, \, y^{(0)}$,
+ че изображението f е взаимно еднозначно изображение от $U_{x^{(0)}}$ върху $U_{y^{(0)}}$, 
+т.е $f: U_{x^{(0)}}, \to U_{y^{(0)}}$ и обратното му изображение е непрекъснато диференцируемо в множеството $ U_{y^{(0)}}$.
+\\
+\\
+Следствие: Нека $G \subset \mathbb{R}^m$ е отворено множество и $F: G \to \mathbb{R}^m$ е непрекъснато диференцируема в G, а якобианът J(F) е различен от нула върху G. Тогава F(G) също е отворено множество. 
+\end{theorem}
+
+\begin{theorem}[Принцип за запазване на областта]
+Образътна m-мерна област в m-мерното пространство при непрекъснато диференцируемо изображение с ненулев якобиан е област, т.е ако
+\begin{enumerate}
+\item $G \subset \mathbb{R}^m$ е област
+\item $F: G \to \mathbb{R}^m$ e непрекъснато диференцируемо изображение
+\item $J(F) \neq 0$ върху G
+\end{enumerate}
+то F(G) също е област. 
+\end{theorem}
+По нататък е разгледан въпросът за геометричен смисъл на модула на якобиана. За по голяма яснота е разгледано в $\mathbb{R}^2$. \\
+Нека $G, G^* \subset \mathbb{R}^2$ са отворени множества и изображението $F: G \to G^*$, като F e зададена с двойката функции
+$$x = x(u,v), \qquad y = y(u,v)$$
+и предполагаме, че F удовлетворява следните условия
+\begin{enumerate}
+\item F е взаимно еднозначно изображение от G върху $G^*$
+\item F e непрекъснато диференцируемо върху G
+\item Якобианът $J(u,v) = \frac{\partial (x,y)}{\partial (u,v)} \neq 0$ върху G
+\end{enumerate}
+Изображението $F^{-1}$ което е обратно на F също е непрекъснато диференцируемо взаимно еднозначно изображение и якобианът му е различен от нула в $G^*$
+
+\begin{lemma}
+Ако $\gamma \subset G$ е по части гладка крива, то и нейния образ $\gamma^* = F(\gamma)$ е също по части гладка крива.
+\\
+\\
+Забележка: Ако $\gamma \subset G$ е прост затворен контур, то поради взаимната еднозначност на F, неговия образ $\gamma^* = F(\gamma)$ е също прост затворен контур. 
+\end{lemma}
+
+
+\begin{lemma}
+Ако $\Gamma$ е отворено и ограничено множество и $[\Gamma] \subset G$ тогава $\Gamma^* = F(\Gamma)$ е също отворено и ограничено множество и 
+$$\partial F(\Gamma) = F(\partial \Gamma)$$
+Aко $\partial \Gamma$ се състои от краен брой по част гладки криви, то отворените множества $\Gamma$ и $F(\Gamma)$ са квадрируеми. 
+\end{lemma}
+Нека $(u_0, v_0) \in G$ и $h \in \mathbb{R}$ е реално число, и да разгледаме затворения квадрат S с върхове 
+$$A(u_0, v_0) \qquad B(u_0+h, v_0) \qquad C(u_0 + h, v_0 + h) \qquad D(u_0, v_0 + h)$$
+Нека $S \subset G$ (за "достатъчно малки" h това включване винаги се изпълнява). 
+Границата $\partial S$ на квадрата S която се състои от четирите му страни е прост затворен по части гладък контур. 
+Поради Лема 10.1.2 множеството $S^* = F(S)$ е затворена квадратируема област (факта, че $S^*$ е затворена област, следва от принципа за запзаване на областа). В сила е следната теорема
+
+\begin{theorem}
+Нека изображението F от отвореното множество $G \subset \mathbb{R}^2$ върху отвореното множество $G^* \subset \mathbb{R}^2$ е взаимно еднозначно и непрекъснато диференцируемо върху G и нека якобианът му $J(u,v) \neq 0 $ върху G.
+Тогава ако S е квадрат с върховете по горе, то
+$$\frac{\mu(F(S))}{\mu(S)} = \vert J(u_0,v_0)\vert + \varepsilon (u_0, v_0, h)$$
+където $\varepsilon = \varepsilon (u_0, v_0, h)$ клони към нула, когато $h \to 0$. При това сходимостта е равномерна отностно $(u_0, v_0)$, върху всяко затворено и ограничено множество $A \subset G$ за което $(u_0, v_0) \in A$.\\
+\\
+Следствие: За всяка точка $(u_0, v_0)$ на отворено множество G е изпълнено равенството 
+$$\lim\limits_{h \to 0} \frac{\mu(F(S))}{\mu(S)} = \vert J(u_0,v_0)\vert  $$
+\end{theorem}
+В общия случай за m-мерно пространство тази теорема се обобщава по следния начин.
+
+\begin{theorem}
+Нека множествата $G, G^* \subset \mathbb{R}^m$ са отворени множества и изображението $F: G \to G^*$, е зададено с m-торка функции
+$$x = F(t) = \{x_i = x_i(t_1,t_2, ..., t_m), i = 1 \div m \}$$
+Нека F е взаимно еднозначно и непрекъснато диференцируемо върху G и якобианът му
+$$J(t) = \frac{\partial (x_1, ..., x_m)}{\partial (t_1, ..., t_m)} \neq 0, \quad t \in G$$
+а S е m-мерния куб
+$$S - \{t: t_i ^0 \leq t_i \leq t_i ^ 0 + h, i = 1, 2, ..., m \} \subset G, t^0 = (t_1 ^0, t_2 ^0, ..., t_m ^0)$$
+Тогава 
+$$\lim\limits_{h \to 0} \frac{\mu(F(S))}{\mu(S)} = \vert J(t^0)\vert  $$
+при това, ако 
+$$\frac{\mu(F(S))}{\mu(S)} = \vert J(t^0)\vert + \varepsilon (t^0, h)$$
+то за всяко ограничено и затворено множество $A \subset G$, функцията $\varepsilon = \varepsilon (t^0,h)$, дефинирана за $t^0 \in A$, клони равномерно към нула върху множеството A, при $h \to 0$.
+\\
+\\
+Ако $G,G^* \subset{R}^3, \quad F:G \to G^*$ е зададено с тройка функции
+$$x= x(u,v,w) \qquad y= y(u,v,w) \qquad  z= z(u,v,w) $$
+\end{theorem}
+
+\begin{lemma}
+Ако $S \subset G$ е по части гладка повърхнина в $\mathbb{R}^3$, то и нейния образ $S^* = F(S)$ е също по части гладка повърхнина. 
+\\
+\\
+Забележка: Ако $S \subset G$ е проста затворена повърхнина, то поради взаимната еднозначност на F, неговия образ $S^* = F(S)$ е същопроста затворена повърхнина. 
+\end{lemma}
+
+\begin{lemma}
+Ако $\Gamma$ е отворено и ограничено множество и $[\Gamma] \subset G$ тогава $\Gamma^* = F(\Gamma)$ е също отворено и ограничено множество и 
+$$\partial F(\Gamma) = F(\partial \Gamma)$$
+Aко $\partial \Gamma$ се състои от краен брой по част гладки повърхнини, то отворените множества $\Gamma$ и $F(\Gamma)$ са измерими. 
+\end{lemma}
+
+\newpage
+\subsection{Смяна на променливите в многократен интеграл}
+Нека
+\begin{itemize}
+\item F е непрекъснато диференцируемо изображение от отвореното множество $G \subset \mathbb{R}^2$ върху отвореното множество $G^2 \subset \mathbb{R}^2$
+\item Якобиан $J(F) \neq 0$ в G
+\item $\Gamma, \Gamma^*$ са квадратируеми (следователно ограничени) и отворени множества 
+\item $[\Gamma] \subset G, [\Gamma^*] \subset G^*$
+\item $F([\Gamma]) = [\Gamma^*]$
+\item F изобразява вътрепните точки на $\Gamma$ във вътрешни точки на $\Gamma^*$ а контура $\partial \Gamma$ - в контура $\partial \Gamma^*$
+\end{itemize}
+
+\begin{theorem}[за смяна на променливите на двукратен интеграл]
+Нека функцията 
+$$f: [\Gamma^*] \to \mathbb{R}$$
+е непрекъсната върху $[\Gamma]$. Тогава в сила е формулата
+$$\iint\limits_{\Gamma^*} f(x,y) \, dx \, dy = \iint\limits_{\Gamma} f(x(u,v),y(u,v) \left| \frac{\partial (x,y)}{\partial (u,v)} \right| \, du \, dv$$
+\end{theorem}
+Верността на (10.2.1) остава в сила и при малко по-общия случай, когато якобианът на изображението F, става нула върху границата на областта на интегриране, а самото изображение не е взаимно еднозначно върху тази граница. По-точно е в сила следната теорема.
+\begin{theorem}
+Нека $G,G^* \subset \mathbb{R}^2$ са отворени измерими множества и 
+$$x = x(u,v), \qquad y = y(u,v)$$
+е непрекъснато изображение от [G] върху $[G^*]$, което е взаимно еднозначно и непрекъснато диференцируемо изображение от G върху $G^*$. Нека якобианът на това изображение
+$$J(u,v) = \frac{\partial (x,y)}{\partial (u,v)}$$
+е различен от нула в G и е непрекъснато продължим върху [G]. Нека освен това функцията 
+$$f: [G^*] \to \mathbb{R}$$
+е непрекъсната върхи множеството $[G^*]$. Тогава е в сила формулата
+$$\iint\limits_{G^*} f(x,y) \, dx \, dy = \iint\limits_{G} f(x(u,v),y(u,v) \left| \frac{\partial (x,y)}{\partial (u,v)} \right| \, du \, dv$$
+\end{theorem}
+
+\begin{theorem}
+Нека $G,G^* \subset \mathbb{R}^m$ са отворени кубируеми множества. Нека $F: [G] \to [G^*] $ е непрекъснато изображение, зададено с уравненията 
+$$x = F(t) = \{x_i = x_i(t_1,t_2, ..., t_m), i = 1 \div m \}$$
+взаимно еднозначно и непрекъснато диференцируемо върху G, и якобианът му
+$$J(t) = \frac{\partial (x_1, ..., x_m)}{\partial (t_1, ..., t_m)} \neq 0, \quad t \in G$$
+е непрекъснато продължим върху [G]. Тогава, ако функцията 
+$$f: [G^*] \to \mathbb{R}$$
+е непрекъсната върху $[G^*]$ то
+$$\int f(x) \, dG^* = \int f(x(t)) \vert J(t) \vert dG$$
+\end{theorem}
+
+\begin{example}
+Да се пресметне интеграла
+$$\iint\limits_{x^2+y^2 < 1} \cos (\pi \sqrt{x^2 + y^2}) \, dx \, dy$$
+\end{example}
+
+\begin{example}
+Да се пресметне лицето на фигурата
+$$A^* = \{(x,y) : x^{\frac{2}{3}} + y^{\frac{2}{3}} \leq a^{\frac{2}{3}}, a>0\}$$
+\end{example}
+
+\newpage
+\section{Лекция 11}
+
+\newpage
+\section{Лекция 12}
+
+\newpage
+\section{Лекция 13}
+
+
 
 
 
