@@ -33,7 +33,447 @@
 \pagenumbering{arabic}
 
 \tableofcontents
-\newpage
 
+\newpage
+\section{Лекция 1: Кинематика}
+
+\subsection{Теория}
+
+\begin{itemize}
+\item Материална точка (МТ) - Точка с пренебрежителни размери и форма
+\item Отправно тяло (ОТ) - Тяло, спрямо което отчитаме движението 
+\item Отправна система (ОС) - ОT, кординатна система и часовник
+\item Радиус вектор - Вектор от началото на ОС до точка. Бележи се с $\vec{r}(t)$
+\item Траектория - Линия, описвана от МТ при джиението ѝ 
+\item Път - Дължината на траекторията до края 
+\item Преместване - Вектор от началото до края 
+\item Праволинейно движение - Движение по едно направление
+\end{itemize}
+
+\begin{center}
+\begin{tabular}{ |c|c|c|c|}
+\hline
+\textbf{Понятие} &\textbf{Означение} & \textbf{Мерни единици}\\
+\hline
+Средна скорост & $V(t)$ & Основна - $\frac{m}{s}$, Ползва се и $\frac{km}{h}$\\
+\hline
+Моментна скорост & $V(t)$ & Основна - $\frac{m}{s}$, Ползва се и $\frac{km}{h}$\\
+\hline
+Средно ускорение & $a(t)$ & $\frac{m}{s^2}$\\
+\hline
+Моментно ускорение & $a(t)$ & $\frac{m}{s^2}$\\
+\hline
+\end{tabular}
+\end{center}
+
+\newpage
+\subsection{Формули}
+
+\begin{itemize}
+\item Радиус вектор (x,y,z - кординати в тримерното пространство)
+$$r= \sqrt{x^2 + y^2 + z^2}$$
+\item Средна скорост
+$$\vec{V_{\text{ср}}} = \frac{\Delta \vec{r}}{\Delta t}$$
+\item Момента скорост
+$$V = \frac{d\vec{r}}{dt}$$
+\item Средно ускорение
+$$\vec{a_{\text{ср}}} = \frac{\Delta \vec{V}}{\Delta t} $$
+\item Моменто ускорение
+$$a = \frac{d\vec{V}}{dt} = \frac{d^2 \vec{r}}{dt^2}$$
+\item Закон за скоростта ($V_0$ - начална скорост)
+$$V = V_0 + at$$
+\item Закон за движение ($x_0$ - начален път,$V_0$ - начална скорост)
+$$x = x_0 + V_0t \pm \frac{at^2}{2}$$
+\item Скорост при неправолинейно движение
+$$V_x = \frac{dx}{dt} \quad V_y = \frac{dy}{dt} \quad V_z = \frac{dz}{dt} \quad V = \sqrt{V_x^2 + V_y^2 + V_z^2}$$
+\item Ускорение при неправолинейно движение
+$$a_x = \frac{dV_x}{dt} \quad a_y = \frac{dV_y}{dt} \quad a_z = \frac{dV_z}{dt}  \quad a = \sqrt{a_x^2 + a_y^2 + a_z^2}$$
+\item Скорост спрямо ъгъл ($V_0$ - начална скорост, $\alpha$ - ъгъл)
+$$V_x = V_0 \cos \alpha \qquad V_y = V_0 \sin \alpha$$
+\item Закон за движение при падане
+$$y = y_0 + V_{0y} - \frac{gt^2}{2} $$
+\item Други формули
+$$x = x_0 + Vt \qquad V = V_0 \pm at \qquad \tan \alpha = \frac{V_y}{V_x}$$
+\item Превръщане от $\frac{m}{s}$ в $\frac{km}{h}$ 
+$$1 \frac{m}{s} = 3.6 \frac{km}{h}$$
+\end{itemize}
+
+\newpage
+\section{Лекция 2: Динамика на материална точка}
+
+\subsection{Теория}
+
+\begin{itemize}
+\item I-ви принцип на Нютон: \textbf{Всяко тяло запазва състоянието си на покой или на праволинейно
+равномерно движение, докато външно въздействие не го изведе от това състояние.}
+\item III-ви принцип на Нютон: \textbf{Силите на взаимодействие между две тела са равни
+по големина и противоположни по посока.}
+\item Закон на Нютон за гравитацията: \textbf{Между всеки две материални точки
+действа сила на привличане, която е правопропорционална на произведението на
+масите им и обратно пропорционална на квадрата на разстоянието между тях.}
+\item Консервативни сили - сили, чиято работа не зависи от вида на траекторията, а се определя само от началното и крайното положение. Пример: гравитационната сила, силата на тежестта, еластичните сили, електростатичните сили
+\item Закона за запазване на енергията: \textbf{В една затворена механична система, в която
+действат само консервативни сили, пълната механична енергия е константа.}
+\end{itemize}
+
+\begin{center}
+\begin{tabular}{ |c|c|c|}
+\hline
+\textbf{Понятие} &\textbf{Означение} & \textbf{Мерни единици}\\
+\hline
+Маса & $m$ & kg \\
+\hline
+Сила & $\vec{F}$ & N (Нютон) \\
+\hline 
+Импулс & $\vec{p}$ & $\frac{kg \cdot m}{s}$ \\
+\hline
+Сила на тежестта & $G$ & N\\
+\hline
+Реакция на опората & $N$ & N \\
+\hline
+Сила на триене & $f$ & N \\
+\hline
+Работа & $A$ & J (Джаул)\\
+\hline
+Мощност & $P$ & W (Ват)\\
+\hline
+Кинетична енергия & $E_k$ & J \\
+\hline
+Потенциална енергия & $E_p$ & J \\
+\hline
+\end{tabular}
+\end{center}
+
+\newpage
+\subsection{Формули}
+\begin{itemize}
+\item Импулс
+$$\vec{p} = m \vec{V}$$
+\item II-ри закон на Нютон
+$$\vec{F} = \frac{d \vec{p}}{dt} \qquad F= ma$$
+\item Гравитационна сила
+$$F = \gamma \frac{m_1 m_2}{r^2}$$
+\item Сила на тежестта (М - маса на земята, R - разстояние до центъра на земята)
+$$G = \gamma \frac{mM}{R^2} \qquad G = mg$$
+\item Реакция на опората
+$$N = mg$$
+\item Сила на триене
+$$f = kN \qquad k(\text{коефициент на триене}$$
+\item Закон за запазване на импулса (ЗЗИ) 
+$$\vec{p} = const$$
+\item Работа ($\alpha$ - ъгъл между силата и преместването, $F_x, F_y, F_z$ - компоненти на силата, $dx,dy,dz$ - копоненти на преместването. $\Delta r$ - преместване от един радиус вектор в друг радиус вектор)
+$$dA = \vec{F} d\vec{r} = F dr \cos \alpha \qquad dA = F_x dx + F_y dy + F_z dz \qquad A = F \Delta r \cos \alpha$$
+\item Мощност 
+$$P = \frac{dA}{dt}$$
+\item Кинетична енергия 
+$$E_k = \frac{mV^2}{2}$$
+\item Потенциална енергия (h - височина над земята)
+$$E_p = mgh$$
+\item Пълна механична енергия на система
+$$E = E_k + E_p$$
+\item Закон за запазване на енергията (ЗЗЕ)
+$$Е_1 = Е_2 \Leftrightarrow E_{k1} + E_{p1} = E_{k2} + E_{p2}$$
+\end{itemize}
+\newpage
+\subsection{Константи}
+
+\begin{center}
+\begin{tabular}{ |c|c|c|}
+\hline
+\textbf{Означение} & \textbf{Наименование}&\textbf{Стойност}\\
+\hline
+$\gamma$ & гравитационна константа & $6.67 \cdot 10^{-11} \frac{N m^2}{kg^2}$ \\
+\hline
+$g$ & земно ускорение & $\approx 9.8 \frac{m}{s^2}$ \\
+\hline
+\end{tabular}
+\end{center}
+
+\newpage
+\section{Лекция 3: Механика на идеално твърдо тяло}
+
+\subsection{Теория}
+
+\begin{center}
+\begin{tabular}{ |c|c|c|}
+\hline
+\textbf{Понятие} &\textbf{Означение} & \textbf{Мерни единици}\\
+\hline
+Ъгъл на завъртане & $\varphi $ & \\
+\hline
+Средна ъгълова скорост & $\omega_{\text{ср}} (t)$ & $\frac{rad}{s}$\\
+\hline
+Моментна ъгълова скорост & $\omega (t)$ & $\frac{rad}{s}$\\
+\hline
+Средно ъгълово ускорение & $\alpha_{\text{ср}} (t)$ & $\frac{rad}{s^2}$\\
+\hline
+Моментно ъгълово ускорение & $\alpha (t)$ & $\frac{rad}{s^2}$\\
+\hline
+Период & $T$ & $s$ \\
+\hline 
+Честота & $\nu$ & $\text{Hz} = \frac{1}{s}$ (Херц)\\
+\hline 
+Момент на силата & $ \vec{M} $ & $Nm$\\
+\hline 
+Момент на импулса & $ \vec{L} $ & $\frac{kg \cdot m^2}{s}$\\
+\hline
+Инерчен момент & $I$ & $kg \cdot m^2$\\
+\hline
+\end{tabular}
+\end{center}
+\newpage
+\subsection{Формули}
+
+\begin{itemize}
+\item Средна ъглова скорост
+$$\vec{\omega_{\text{ср}}} = \frac{\Delta \vec{\varphi}}{\Delta t}$$
+\item Моментна ъглова скорост
+$$\vec{\omega} = \frac{d\vec{\varphi}}{dt}$$
+\item Средно ъглово ускорение
+$$\vec{\alpha_{\text{ср}}} = \frac{\Delta \vec{\omega}}{\Delta t}$$
+\item Моментно ъглово ускорение
+$$\vec{\alpha} = \frac{d\vec{\omega}}{dt} = \frac{d^2 \vec{\varphi}}{d^2 t}$$
+\item Период, честота и връзка между тях
+$$\nu \qquad T = \frac{1}{\nu} \qquad T\nu = 1$$
+\item Скорост изразена чрез честота и период
+$$\omega = \frac{\Delta \varphi}{\Delta t} = \frac{2 \pi }{T} = 2 \pi \nu$$
+\item Закон за ъглова скорост($\omega_0$ - начална ъглова скорост)
+$$\omega = \omega_0 + \alpha t$$
+\item Закон за ъглово движение ($\varphi_0$ - начален път, $\omega_0$ - начална ъглова скорост)
+$$\varphi = \varphi_0 + \omega_0 + \frac{\alpha t^2}{2}$$
+\item Изминат път изразен чрез ъглъл на завъртане
+$$S = R \Delta \varphi $$
+\item Скорост изразена чрез ъглова скорост
+$$V = R \omega$$
+\item Тангенциално ускорение изразено чрез ъглово ускорение
+$$a_t = R \alpha$$
+\item Нормално ускорение изразено чрез ъглова скорост
+$$a_n = \frac{V^2}{R} = \omega^2 R$$
+\item Mомент на силата
+$$\vec{M} = \vec{r} \times \vec{F}$$
+\item Момент на импулса 
+$$\vec{L} = \vec{r} \times \vec{p} = \vec{r} \times m \vec{V} \qquad L = \sum_{i=1} ^m \vec{L_i} = \sum_{i=1} ^m \left( \vec{r_i} \times \vec{p_i}\right) (\text{за система от n точки})$$
+\item Oсновно уравнение на динамиката на въртеливи движение
+$$\vec{M} = \frac{d \vec{L}}{dt}$$
+\item Закон за запазване на момент на импулса
+$$\frac{d \vec{L}}{dt} = 0 \qquad \vec{L} = const$$
+\item Инерчен момент
+$$I = mr^2, I = \sum_{i=1} ^m m_i r_i ^2$$
+\item Момент на импулса (2)
+$$L = I \omega$$
+\item Oсновно уравнение (2)
+$$M = I \alpha$$
+\item Кинетична енергия 
+$$E_k = \frac{I \omega^2}{2}$$
+\item Работа
+$$dA = M d\varphi$$
+\end{itemize}
+
+\newpage
+\section{Лекция 4: Термодинамика}
+
+\subsection{Теория}
+
+\begin{itemize}
+\item Термодинамична система - наричаме тяло или система от тела,
+съставени от голям брой частици. Телата взаимодействат и обменят енергия както
+помежду си, така и с външната среда.
+\item Термодинамично равновесие - ако параметрите не променят стойностите си и в системата няма потоци. 
+\item Идеален газ - газ на който собственият обем на молекулите се пренебрегва и между молекулите няма сили на взаимодействие.
+\item Видове процеси
+\begin{itemize}
+\item Изотермен - температурата e постоянна.
+\item Изобарен – налягането е постоянно.
+\item Изохорен - обемът е постоянен.
+\item Адиабатен - няма топлообмен с околната среда.
+\end{itemize}
+\item I-ви принцип на термодинамиката - \textbf{Aко на една
+термодинамична система предадем определено количество топлина
+$Q $, то се изразходва за изменение на вътрешната енергия
+$\Delta U$ и за извършване на работа $A$.}
+\item Видове процеси
+\begin{itemize}
+\item Равновесен процес - процес, при който термодинамичната система 
+преминава през последователност от равновесни състояния. Само безкрайно бавни процеси могат да се разглеждат като равновесни.
+\item Обратим процес - протича в права и обратна посока през едни и
+същи междинни положения.
+\item Кръгов процес (цикъл) - процес, при който
+термодинамичната система се връща в началното си
+положение.
+\end{itemize}
+\item Цикъл на Карно - цикъл с 2 изотермни и 2 адиабатни процеса
+\item II-ри принцип на термодинамиката 
+\begin{itemize}
+\item Формулировка на Клаузиус (1850г.): \textbf{Не е възможен термодинамичен процес,
+единственият краен резултат от който да е предаване на количество топлина от
+термодинамична система с по-ниска температура на термодинамична система с по-висока температура.}
+\item Формулировка на Келвин (1851г.): \textbf{Не е възможен кръгов процес,
+единственият краен резултат от който е извършване на работа за сметка на охлаждане на една термодинамична система.}
+\end{itemize}
+\end{itemize}
+
+\begin{center}
+\begin{tabular}{ |c|c|c|}
+\hline
+\textbf{Понятие} &\textbf{Означение} & \textbf{Мерни единици}\\
+\hline
+Обем & $V$ & $m^3$ \\
+\hline
+Налягаме & $p$ & Pa (Паскал) $ = \frac{N}{m^2}$ \\
+\hline
+Температура & $t, \, T$& t - C (Целзий), T - K(Келвин) \\
+\hline
+Mаса на газа& $m$ & kg\\
+\hline
+Моларна маса & $M$ & $\frac{g}{mol}, \, \frac{kg}{mol}$\\
+\hline
+Брой молове & $\nu$ & mol\\
+\hline
+Количество топлина & $Q$ & J \\
+\hline
+Вътрешна енергия & $U$ & J \\
+\hline
+Топлинен капацитет & $C$& $\frac{J}{kg \cdot K}$ \\
+\hline
+Моларен топлинен капацитет & $C_m$& $\frac{J}{kg \cdot K}$ \\
+\hline
+Топлинен капацитет при пост. обем & $C_V$& $\frac{J}{kg \cdot K}$ \\
+\hline
+Топлинен капацитет при пост. налягане& $C_p$& $\frac{J}{kg \cdot K}$ \\
+\hline
+Коефициент полезно действие (КПД)& $\eta$&  \% \\
+\hline
+\end{tabular}
+\end{center}
+
+\newpage
+\subsection{Формули}
+
+\begin{itemize}
+\item Налягане(S - площ)
+$$p = \frac{F}{S}$$
+\item Връзка между температура в Целзий и Келвин
+$$T = t + 273$$
+\item Закон на Бойл-Мариот($T = const, N = const$, N - брой частици)
+$$pV = const \qquad p_1 V_1 = p_2 V_2 \text{(за две състояния)}$$
+\item Закон на Шарл ($V = const, N = const$)
+$$\frac{p}{T} = const \qquad \frac{p_1}{T_1} = \frac{p_2}{T_2} \text{(за две състояния)}$$
+\item Закон на Гей-Люсак($p = const, N = const$)
+$$\frac{V}{T} = const \qquad \frac{V_1}{T_1} = \frac{V_2}{T_2} \text{(за две състояния)}$$
+\item Закон на Далтон (Смес от няколко газа, $p_1, p_2,...$ - налягания на газовете в сместа (парциално налягане))
+$$p = p_1 + p_2 + ... p_n$$
+\item Уравнение за състоянието на идеален газ (Закон на Клапейрон - Менделеев)
+$$pV = \nu R T$$
+\item I-ви принцип на термодинамиката
+$$Q = \Delta U + A \qquad \delta Q = dU + \delta A \Leftrightarrow \delta Q = dU + p dV\text{(за безкрайно малки измерения)} $$
+\item Топлинен капацитет
+$$C = \frac{Q}{m \Delta T}$$
+\item Моларен топлинен капацитет
+$$C_m = \frac{Q}{\nu \Delta T} \quad C_m = \frac{\delta Q}{dT} \quad C_m = \frac{dU + pdV}{dT}$$
+\item Топлинен капацитет при постоянен обем
+$$ dV = 0 \implies C_V = \frac{dU}{dT}$$
+\item Топлинен капацитет при постоянно налягане
+$$ dp = 0 \implies C_p =\frac{dU + pdV}{dT} = \frac{dU}{dT} +  p\frac{dV}{dT} = C_V + p\frac{dV}{dT} \left( p\frac{dV}{dT} = R \text{(ур-е на състоянието)} \right)$$
+\item Изопроцеси и работа при тях
+\begin{center}
+\begin{tabular}{ |c|c|c|c|c| } 
+\hline
+Процес & Изобарен  & Изохорен & Изотермен & Адиабатен \\
+\hline
+Осн. зависимости & $V = V_0 \alpha T$ & $p = p_0 \alpha T$ & $pV = const$ & $pV^\gamma = const$ \\
+\hline 
+I-ви принцип на ТД  & $\delta Q = dU + \delta A$ & $\delta Q = dU$ & $\delta Q = \delta A$ & $dU = - \delta A$\\
+\hline
+Работа  & $A = p(V_2 - V_1)$ & A = 0 & $A = \nu RT \ln {\frac{V_2}{V_1}}$ & $A = \nu C_V (T_1 - T_2)$\\
+\hline
+\end{tabular}
+\end{center}
+\item
+\item Уравнение на Майер
+$$C_p = C_V + R$$
+\item Коефициент полезно действие (КПД)
+$$\eta = \frac{A}{Q}$$
+\item КПД на цикъл на Карно
+$$\eta = 1 - \frac{T_2}{T_1}$$
+
+\end{itemize}
+
+\newpage
+\subsection{Константи}
+
+\begin{center}
+\begin{tabular}{ |c|c|c|}
+\hline
+\textbf{Означение} & \textbf{Наименование}&\textbf{Стойност}\\
+\hline
+$\alpha$ & коефициент на температурата & $\frac{1}{273} K^{-1}$\\
+\hline
+$N_A$ & Число на Авогадро & $6.022 \cdot 10^{-23} mol^{-1}$\\
+\hline
+R & Универсална газова константа & $8.314 \frac{J}{mol \cdot K}$\\
+\hline
+\end{tabular}
+\end{center}
+
+\newpage
+\section{Лекция 5: Молекулна физика}
+
+\subsection{Формули}
+\begin{itemize}
+\item Основно уравнение на молекулно-кинетичната теория (N - брой молекули, $\overline{v_i}$ - средна скорост на една молекула)
+$$pV = \frac{1}{3} Nm \overline{v_i ^2}$$
+\item Средна кинетична енергия на молекулите
+$$\overline{E_k} = \frac{m \overline{v_i ^2}}{2}$$
+\item Основно уравнение на молекулно-кинетичната теория(2)
+$$pV = \frac{2}{3} N\overline{E_k}$$
+\item Основно уравнение на молекулно-кинетичната теория при $N = N_A$
+$$pV = \frac{3}{2} k \overline{E_k}$$
+\item Вътрешна енергия на идеален газ
+$$U = \sum_{i=1} ^N E_{ki} = N \overline{E_k}$$
+\item Представяне на налягане чрез температура(n - концентрация, N - брой молекули)
+$$p = nkT, \qquad n = \frac{N}{V}$$
+\item Функция на разпределение на Максуел
+$$f(v) = 4 \pi \left( \frac{m}{2 \pi k T}\right)^{\frac{3}{2}} \cdot v^2 \cdot \exp \left(- \frac{m v^2}{2 k T} \right)$$
+\item Разпределение на Болцман($n_0$ - концентрация при $E_p = 0$)
+$$n = n_0 \cdot \exp \left( - \frac{E_p}{kT}\right)$$
+\end{itemize}
+
+\newpage
+\subsection{Константи}
+
+\begin{center}
+\begin{tabular}{ |c|c|c|}
+\hline
+\textbf{Означение} & \textbf{Наименование}&\textbf{Стойност}\\
+\hline
+k & Константа на Болцман & $k = \frac{R}{N_A} = 1.38 \cdot 10^{-23} \frac{J}{K}$ \\
+\hline
+\end{tabular}
+\end{center}
+
+\newpage
+\section{Лекция 6: Електростатика}
+
+\subsection{Теория}
+
+\newpage
+\subsection{Формули}
+
+
+\newpage
+\section{Лекция 7: Електричен ток}
+
+\subsection{Теория}
+
+\newpage
+\subsection{Формули}
+
+\newpage
+\section{Лекция 8: Магнетизъм}
+
+\subsection{Теория}
+
+\newpage
+\subsection{Формули}
 
 \end{document}
