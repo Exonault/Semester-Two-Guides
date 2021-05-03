@@ -1138,7 +1138,7 @@ $$xy = 1$$
 \subsection*{Задача 7}
 Да се провери дали уравнението удовлетворява посочената функция.
 \begin{itemize}
-\item $\frac{\partial^2 z}{\partial x \partial y} = \frac{\partial^2 z}{\partial y \partial z}, z(x,y) = \ln(x^2+y^2+1)$
+\item $\frac{\partial^2 z}{\partial x \partial y} = \frac{\partial^2 z}{\partial y \partial x}, z(x,y) = \ln(x^2+y^2+1)$
 \item $\frac{x}{y}\frac{\partial z}{\partial x} + \frac{1}{\ln x} \frac{\partial z}{\partial y } = 2z, z(x,y) =x^y$
 \item $2 \frac{\partial^2 z}{\partial x^2 } + \frac{\partial^2 z}{\partial x \partial y} = 0, z(x,y) = 2\cos^2(y - \frac{x}{2})$
 \item $\frac{\partial u}{\partial x} + \frac{\partial u}{\partial y} + \frac{\partial u}{\partial z} = 1, u(x,y,z) = x + \frac{x-y}{y-z}$
@@ -1194,26 +1194,294 @@ $$z(\Delta x, \Delta y) - z(0,0) = 1-\sqrt{\Delta x^2 - \Delta y^2} - 1 = -\sqrt
 Имаме строг локален максимум в $z(0,0) = 1$
 
 \subsection*{Задача 2}
+\begin{gather*}
+z = x^2 + y^2, \quad x+y = 1\\
+F(x,y\lambda) = x^2 + y^2 + \lambda(x+y-1) , \quad \lambda \neq 0\\
+F'_x = 2x + \lambda \qquad F'_y = 2y + \lambda \\
+\begin{array}{|l@{}}
+2x + \lambda = 0 \\
+2y + \lambda = 0\\
+x+y = 1
+\end{array}
+\Leftrightarrow
+\begin{array}{|l@{}}
+x = -\frac{\lambda}{2}\\
+y = -\frac{\lambda}{2} \\
+ -\frac{\lambda}{2}   -\frac{\lambda}{2} = 1
+\end{array}
+\Leftrightarrow
+\begin{array}{|l@{}}
+x = \frac{1}{2} \\
+y = \frac{1}{2} \\
+\lambda = -1
+\end{array} \implies M_0 \left(\frac{1}{2}, \frac{1}{2}, -1 \right) \\
+F"_{xx} = 2 \quad F"_{yy} = 2 \qquad F"_{xy} = F"_{yx} = 0 \\
+\Delta = F''_{xx}F_{yy} - F''_{xy}F''_{yx} = 4 \Big|_{M_0} = 4 > 0 \\
+F''_{xx} \Big|_{M_0} = 2 > 0 \implies z_{min} = z\left(\frac{1}{2}, \frac{1}{2} \right) = \frac{1}{4} + \frac{1}{4} = \frac{1}{2}
+\end{gather*}
+
+\begin{gather*}
+u = x^2 + y^2 - 12x + 16y, \quad x^2 + y^2 = 25\\
+F(x,y,\lambda) = x^2 + y^2 - 12x - 16x + \lambda(x^2 + y^2 - 25) \quad \lambda \neq 0\\
+F'_x = 2x + 16 + 2\lambda x \qquad F'_y = 2y - 12 + 2\lambda y \\
+\begin{array}{|l@{}}
+2x + 16 + 2\lambda x = 0\\
+2y - 12 + 2\lambda y = 0 \\
+x^2 + y^2 = 25
+\end{array}\Leftrightarrow 
+\begin{array}{|l@{}}
+x = \frac{6}{1 + \lambda} \\
+y = - \frac{8}{1 + \lambda}\\
+\frac{36}{(1+\lambda)^2} + \frac{64}{(1+ \lambda)^2}=25
+\end{array}\Leftrightarrow
+\begin{array}{|l@{}}
+x = -3 \land x = 3\\
+y = 4 \land y = -4\\
+\lambda = -3 \land \lambda = 1
+\end{array}\\
+\implies M_1(-3,4,-3) \land M_2(3,-4,1)\\
+F''_{xx} = 2+ 2\lambda \quad F''_{yy} = 2 + 2\lambda \quad F''_{xy} = F"_{yx} = 0\\
+\Delta = F''_{xx}F_{yy} - F''_{xy}F''_{yx} = 4(1+\lambda)^2\\
+\end{gather*}
+\begin{gather*}
+\Delta \Big|_{M_1} = 4(1+(-3))^2 = 16 > 0 \\
+F''_{xx} \Big|_{M_1} = 2 + 2\cdot -3 = -4 < 0 \implies \\
+u_{max} = u(-3,4) = (-3)^2 + 4^2 - 12(-3) + 16(4) = 125 \\
+\Delta \Big|_{M_2} = 4(1+1)^2 = 16\\
+F''_{xx} \Big|_{M_2} = 2 + 2 \cdot 1 = 4 >0 \implies \\
+u_{min} = u(3,-4) = 3^2 + (-4)^2 - 12\cdot 3 + 16(-4) = -75
+\end{gather*}
+
+\begin{gather*}
+u= x+y+z, \qquad z = 1, \, x^2 + y^2 = 1\\
+F(x,y,z,\lambda, \nu) = x+y+z + \lambda(z-1) + \nu(x^2+y^2-1), \quad \lambda, \nu \neq 0\\
+F'_x = 1 + 2\nu x \qquad F'_y = 1 + 2\nu y \qquad F'_z = 1 + \lambda \\
+\begin{array}{|l@{}}
+1 + 2\nu x = 0 \\
+1 + 2\nu y = 0\\
+1 + \lambda = 0\\
+z = 1 \\
+x^2+y^2 = 1
+\end{array}\Leftrightarrow 
+\begin{array}{|l@{}}
+x = - \frac{1}{2\nu} \\
+y = - \frac{1}{2\nu} \\
+z = 1\\
+\lambda = -1 \\
+\frac{1}{4\nu^2} + \frac{1}{4\nu^2} = 1
+\end{array}\Leftrightarrow 
+\begin{array}{|l@{}}
+x = -\frac{1}{\sqrt{2}} \land \frac{1}{\sqrt{2}}\\
+y = -\frac{1}{\sqrt{2}} \land \frac{1}{\sqrt{2}}\\
+z = 1\\
+\lambda = -1\\
+\nu = \frac{1}{\sqrt{2}} \land -\frac{1}{\sqrt{2}}\\
+\end{array} \implies \\
+M_1 \left( -\frac{1}{\sqrt{2}}, -\frac{1}{\sqrt{2}}, 1, -1, \frac{1}{\sqrt{2}}\right)\land
+M_2  \left( \frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}}, 1, -1, -\frac{1}{\sqrt{2}}\right)\\
+F''_{xx} = 2\nu \quad F"_{yy} = 2\nu \quad F''_{zz} = F''_{xy} = F''_{xz} = F''_{yx} = F''_{yz} = F''_{zx} = F''_{zy} = 0\\
+d^2F = \begin{pmatrix}
+2\nu & 0 & 0 \\
+0 & 2\nu & 0 \\
+0 & 0 & 0 \\
+\end{pmatrix} \\
+\Delta_1 = F''_{xx} = 2\mu \Big|_{M_1} =\frac{2}{\sqrt{2}} > 0 \quad \Delta_2 = 4\nu^2 \Big|_{M_1} = 2 > 0 \quad \Delta_3 = 0 \Big|_{M_1} = 0 \\ 
+\Delta_1 = F''_{xx} = 2\mu \Big|_{M_2} = -\frac{2}{\sqrt{2}} < 0 \quad \Delta_2 = 4\nu^2 \Big|_{M_2} = 2 > 0 \quad \Delta_3 = 0 \Big|_{M_2} = 0 \\ 
+d^2 F = 2\nu \, dx^2 + 2\nu \, dy^2\\
+x^2 + y^2 = 1 \implies x\, dx + y\, dy = 0 (x=y \in M_1, M_2) \implies dx + dy = 0  \implies dy = -dx \\
+d^2F= 2\nu \, dx^2 + 2\nu\, (-dx)^2 = 4\nu \, dx^2\\
+d^2F \Big|_{M_1} >0 \implies u_{min} = u \left( -\frac{1}{\sqrt{2}}, -\frac{1}{\sqrt{2}}\right) = -\sqrt{2} + 1 \\
+d^2F \Big|_{M_2} < 0 \implies u_{max} = u \left( \frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}}\right) = \sqrt{2} + 1 \\
+\end{gather*}
 
 \subsection*{Задача 3}
+\begin{gather*}
+u = xy+yz \quad x^2 + y^2 = 2, \, y+z = 2 \\
+F(x,y,z,\lambda, \nu) = xy + yz + \lambda(x^2 + y^2 - 2) + \nu(y + z - 2), \qquad \lambda, \nu \neq 0 \\
+F'_x = 2\lambda x + y \qquad F'_y = 2 \lambda y + \nu + x + z \qquad F'_z = y + \nu \\
+\begin{array}{|l@{}}
+2\lambda x + y = 0 \\
+2 \lambda y + \nu + x + z  = 0 \\
+y + \nu = 0 \\
+x^2 + y^2 = 2 \\
+y+z = 2 
+\end{array} \Leftrightarrow 
+\begin{array}{|l@{}}
+x = 1 \land x = -1\\
+y = 1 \\
+z = 1 \\
+\lambda = - \frac{1}{2} \land \lambda = \frac{1}{2} \\
+\nu = -1
+\end{array} \implies M \left(1,1,1,-\frac{1}{2}, -1 \right) \land N \left(-1,1,1,\frac{1}{2}, -1 \right) \\
+F''_{xx} = 2\lambda \qquad F''_{yy} = 2\lambda \qquad F''_{zz} = 0 \\
+F''_{xy} = F''_{yx} = F''_{yz} = F''_{zy} = 1 \\
+F''_{xz} = F''_{zx} = 0 \\
+d^2 F = 
+\begin{pmatrix}
+2\lambda & 1 & 0 \\
+1 & 2\lambda & 1 \\
+0 & 1 & 0
+\end{pmatrix} \implies d^2 F = 2\lambda \,dx^2 + 2\lambda \,dy^2 + 2 \, dx \,dy + 2 \,dy \,dz \\
+2x \,dx + 2y\,dy = 0 \qquad dy + dz = 0 \\
+d^2 L(M) = -dx^2 - dy^2 + 2 \, dx \, dy + 2 \, dy \, dz \quad (dx + dy = 0, dy + dz = 0, dx + dz = -2 \, dy ) \\
+d^2 L(M) = -dx^2 - dy^2 + 2 (dx + dz) dy = -dx^2 -dy^2 - 2dy^2 < 0 \implies \\
+u_{max} =u(1,1,1) = 1 \cdot 1 + 1 \cdot 1 = 2\\
+d^2(N) = dx^2 + dy^2 + 2(dx + dz)dy \quad (-dx + dy = 0, dy+dz = 0, dx + dz = 0)\\
+d^2 (N)= dx^2 dy^2 - 2(dx + dz)dy = dx^2+dy^2 >0 \implies \\
+u_{min} = u(-1,1,1) = -1 \cdot 1 + 1 \cdot 1 = 0 
+\end{gather*}
 
 \subsection*{Задача 4}
+\begin{gather*}
+z = x + y \qquad xy = 1\\
+F = x + y + \lambda(xy - 1) \implies F'_x = 1 + \lambda y \quad F'_y = 1 + \lambda x \\
+\begin{array}{|l@{}}
+1 + \lambda y = 0\\
+1 + \lambda x = 0 \\
+xy = 1
+\end{array}\Leftrightarrow 
+\begin{array}{|l@{}}
+x = 1 \land x = -1\\
+y = 1 \land y = -1\\
+\lambda = -1 \land \lambda = 1
+\end{array} \implies M(1,1,-1) \land N(-1,-1,1) \\
+F''_{xx} = F''_{yy} = 0 ,\qquad F''_{xy} = F''_{yx} = \lambda \implies d^2 F = 2\lambda \, dx \, dy \\
+x \, dx + y \, dy = 0 \implies dx+dy =0 (x,y \in M, N)  \implies d^2 F = -2 \lambda \, dx^2\\
+d^2 F(M) = 2 dx^2 > 0 \implies u_{min} = u(1,1) = 1+1 = 2 \\ 
+d^2 F(N) = -2 dx^2 < 0 \implies u_{max} = u(-1,-1) = -1 + (-1) = -2 
+\end{gather*}
 
 \subsection*{Задача 5}
+\begin{itemize}
+\item $z = \sqrt{1 - x^2 - y^2 + 2x}$
+$$D: (x, y \in \mathbb{R}: x^2 + y^2 \leq 2x + 1)$$
+\item $z = \frac{x^2y}{2x+y}$
+$$D: (x,y \in \mathbb{R}: 2x + y \neq 0)$$
+\item $z = \arcsin{(x+y)}$
+$$D: (x,y \in \mathbb{R}: -1 \leq x+y \leq 1)$$
+\item $w = \frac{1}{\sqrt{xy}}$
+$$D: (x,y \in \mathbb{R} \setminus 0: xy > 0)$$
+\end{itemize}
 
 \subsection*{Задача 6}
+\begin{itemize}
+\item $\lim\limits_{(x,y) \to (0,0)} \frac{\tan(xy)}{xy}$\\
+При заместване се получават недефинирани форми от вида $\left[ \frac{0}{0}\right]$
+\begin{gather*}
+\lim\limits_{(x,y) \to (0,0)} \frac{\tan(xy)}{xy} = \lim\limits_{(x,y) \to (0,0)} \frac{\sin(xy)}{xy\cos(xy)} = \lim\limits_{(x,y) \to (0,0)} \\
+\frac{\sin(xy)}{xy} =  \lim\limits_{(x,y) \to (0,0)} \frac{y\cos(xy)}{y} =  \lim\limits_{(x,y) \to (0,0)} \cos(xy) = 1
+\end{gather*}
+\item $\lim\limits_{(x,y) \to (0,0)} \frac{y}{\sin(xy)}$\\
+\begin{gather*}
+\lim\limits_{y \to 0} \frac{y}{\sin(xy)} = \left[ \frac{0}{0} \right] \implies \lim\limits_{y \to 0} \frac{1}{x\cos(xy)} = \frac{1}{x} \\
+\lim\limits_{x \to 0} \frac{1}{x} = \frac{1}{0} = \infty \\
+\lim\limits_{x \to 0} \frac{y}{\sin{xy}} = \left[ \frac{0}{0} \right] \implies \lim\limits_{x \to 0} \frac{0}{y} = 0 \\
+\lim\limits_{y \to 0} 0 = 0 \\
+0 \neq \infty \implies \text{Няма граница.}
+\end{gather*} 
+\item $\lim\limits_{(x,y) \to (0,0)} \frac{1 - \sqrt{1 - xy}}{xy}$
+\begin{gather*}
+\lim\limits_{y \to 0} \frac{1 - \sqrt{1 - xy}}{xy} = \left[ \frac{0}{0} \right] \implies 
+\lim\limits_{y \to 0} \frac{x}{2\sqrt{1-xy}} \cdot \frac{1}{x} = \lim\limits_{y \to 0} \frac{1}{2\sqrt{1-xy}} = \frac{1}{2} \\
+\lim\limits_{x \to 0} \frac{1}{2} = \frac{1}{2}\\
+\lim\limits_{x \to 0} \frac{1 - \sqrt{1 - xy}}{xy} = \left[ \frac{0}{0} \right] \implies 
+\lim\limits_{x \to 0} \frac{y}{2\sqrt{1-xy}} \cdot \frac{1}{y} = \lim\limits_{x \to 0} \frac{1}{2\sqrt{1-xy}} = \frac{1}{2} \\
+\lim\limits_{y \to 0} \frac{1}{2} = \frac{1}{2}
+\end{gather*}
+\end{itemize}
 
 \subsection*{Задача 7}
 
+\begin{itemize}
+\item $\frac{\partial^2 z}{\partial x \partial y} = \frac{\partial^2 z}{\partial y \partial x}, z(x,y) = \ln(x^2+y^2+1)$
+\begin{gather*}
+z'_x = \frac{2x}{x^2 + y^2 + 1} \qquad z'_y = \frac{2y}{x^2 + y^2 + 1} \\
+z''_{xy} = -\frac{4xy}{(x^2+y^2 + 1)^2} \qquad z''_{yx} = -\frac{4xy}{(x^2+y^2 + 1)^2} \implies \\
+\frac{\partial^2 z}{\partial x \partial y} = \frac{\partial^2 z}{\partial y \partial x} \text{ e вярно}
+\end{gather*}
+
+\item $\frac{x}{y}\frac{\partial z}{\partial x} + \frac{1}{\ln x} \frac{\partial z}{\partial y } = 2z, z(x,y) =x^y$
+\begin{gather*}
+z'_x = \frac{x^y y}{x} \qquad z'_y = x^y \ln(x) \\
+A = \frac{x}{y} \cdot z'_x = \frac{x}{y} \cdot  \frac{x^y y}{x} = x^y \\
+B = \frac{1}{\ln(x)} \cdot z'_y = \frac{1}{\ln(x)} \cdot x^y \ln(x) = x^y \\
+A + B = 2x^y \qquad 2z = 2x^y \implies \\
+\frac{x}{y}\frac{\partial z}{\partial x} + \frac{1}{\ln x} \frac{\partial z}{\partial y } = 2z \text{ e вярно}
+\end{gather*}
+
+\item $2 \frac{\partial^2 z}{\partial x^2 } + \frac{\partial^2 z}{\partial x \partial y} = 0, z(x,y) = 2\cos^2(y - \frac{x}{2})$
+\begin{gather*}
+z'_x = -2 \cos \left (-y + \frac{x}{2} \right) \sin \left (-y + \frac{x}{2} \right) \\
+z''_{xx} = -2 \cos^2 \left (-y + \frac{x}{2} \right) + 1 \qquad z''_{xy} = 4 \cos^2 \left (-y + \frac{x}{2} \right) - 2 \\
+2z''_{xx} = -4 \cos^2 \left (-y + \frac{x}{2} \right) + 2 \\
+2z''_{xx} + z''_{xy} = -4 \cos^2 \left (-y + \frac{x}{2} \right) + 2 + 4 \cos^2 \left (-y + \frac{x}{2} \right) - 2 = 0 \implies \\
+2 \frac{\partial^2 z}{\partial x^2 } + \frac{\partial^2 z}{\partial x \partial y} = 0 \text{ e вярно}
+\end{gather*}
+\item $\frac{\partial u}{\partial x} + \frac{\partial u}{\partial y} + \frac{\partial u}{\partial z} = 1, u(x,y,z) = x + \frac{x-y}{y-z}$ 
+\begin{gather*}
+u'_x = \frac{y-z+1}{y-z} \qquad u'_y = \frac{z-x}{(y-x)^2} \qquad u'_z = \frac{x-y}{(y-z)^2} \\
+u'_x + u'_y + u'_z = \frac{y-z+1}{y-z} + \frac{z-x}{(y-x)^2} + \frac{x-y}{(y-z)^2} = \\
+\frac{(y-z+1)(y-z) +z-x + x-y}{(y-z)^2} = \frac{y^2 - yz -yz + z^2 +y- z +z -y}{(y-z)^2} = \\ = \frac{y^2 -2yz + z^2}{(y-z)^2} = 1 \implies \\
+\frac{\partial u}{\partial x} + \frac{\partial u}{\partial y} + \frac{\partial u}{\partial z} = 1 \text{ e вярно}
+\end{gather*}
+\end{itemize}
+
 \subsection*{Задача 8}
 
+\begin{itemize}
+\item $z = x^4 + y^4- x^2- 2xy - y^2$
+\begin{gather*}
+z'_x = 4x^3 + 2x -2y \qquad z'_y = 4y^3 - 2y - 2x \\
+\begin{array}{|l@{}}
+4x^3 + 2x - 2y = 0 \\
+4y^3 - 2y - 2x = 0 
+\end{array} \Leftrightarrow 
+\begin{array}{|l@{}}
+x=0 \\ 
+y=0 
+\end{array} \implies M(0,0)\\
+z''_{xx}  = 12x^2 + 2 \qquad z''_{yy} = 12y^2 - 2 \qquad z'_{xy} = z'_{yx} = -2 \\
+\Delta = z''_{xx}z''_{yy} - z''_{xy}z''_{yx} = (144y^2 - 24)x^2 + 24y^2 - 8 \\
+\Delta(M) = -8 \implies z'_{max} = z(0,0) = 0
+\end{gather*}
+\item $z = xy(1 - x - y)$
+\item $z = x^3 - y^3 - 3x + 3y + 2$
+\item $u = x^3 + y^3 + z^2 - 12xy + 2z$
+\end{itemize}
+
 \subsection*{Задача 9}
+\begin{itemize}
+\item $x^3 + y^3 = 3xy, y = y(x)$
+\item $y^2 -3y - \sin(x)= 0, y = y(x)$
+\item $x^2 + y^2 + z^2 - xz -yz + 2x + 2y + 2z - 2 = 0, z = z(x,y)$
+\item $2x^2 + 2y^2 + z^2 + 8xz -8yz + 8 = 0, z = z(x,y)$
+\end{itemize}
 
 \subsection*{Задача 10}
 
+\begin{itemize}
+\item $z = xy$, aко $2x+y=1$
+\item $z = x^2 + y^2$, aко $x - y =1$
+\item $u = x^2 + y^2 + z^2$, ако $\frac{x^2}{16} + \frac{y^2}{9} + \frac{z^2}{4} = 1$
+\item $u = xyz$, ако $x + y + z = 5, xy+yz+zx = 8$ 
+\end{itemize}
+
 \subsection*{Задача 11}
 
+\begin{itemize}
+\item $u = x^2 + y^2+ z^2 +2x + 4y -6z $, aко $ x^2 + y^2+ z^2 = 14$
+\item $u = x^2 + y^2 + z^2 + 2x + 4y $, ако $x^2 + y^2 = 20$
+\item $u = x^2 + y^2+ z^2 +6x - 2y + 4z $, ако $x^2 + y^2+ z^2 = 56$ 
+\end{itemize}
+
 \subsection*{Задача 12}
+
+\begin{itemize}
+\item $u = x^2 + y^2 - 12x + 16y$, aко $ x^2 + y^2 \leq 25, x^2 + y^2 \leq 400, x^2 + y^2 \leq 100$
+\item $u = x^2 + y^2+ z^2 +2x + 4y -6 $, ако $x^2 + y^2 + z^2 \leq 9$
+\item $u = x^2 + 2y^2+ 3z^2$, ако $x^2 + y^2+ z^2 \leq 100$ 
+\end{itemize}
+
 
 \newpage 
 \section{Упражнение към лекция 9}
