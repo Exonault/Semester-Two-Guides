@@ -1150,7 +1150,7 @@ $$xy = 1$$
 \item $z = x^4 + y^4- x^2- 2xy - y^2$
 \item $z = xy(1 - x - y)$
 \item $z = x^3 - y^3 - 3x + 3y + 2$
-\item $u = x^3 + y^3 + z^2 - 12xy + 2z$
+\item $u = x^3 + y^2 + z^2 + 12xy + 2z$
 \end{itemize}
 
 \subsection*{Задача 9}
@@ -1430,6 +1430,7 @@ u'_x + u'_y + u'_z = \frac{y-z+1}{y-z} + \frac{z-x}{(y-x)^2} + \frac{x-y}{(y-z)^
 
 \begin{itemize}
 \item $z = x^4 + y^4- x^2- 2xy - y^2$
+
 \begin{gather*}
 z'_x = 4x^3 + 2x -2y \qquad z'_y = 4y^3 - 2y - 2x \\
 \begin{array}{|l@{}}
@@ -1437,33 +1438,317 @@ z'_x = 4x^3 + 2x -2y \qquad z'_y = 4y^3 - 2y - 2x \\
 4y^3 - 2y - 2x = 0 
 \end{array} \Leftrightarrow 
 \begin{array}{|l@{}}
-x=0 \\ 
-y=0 
-\end{array} \implies M(0,0)\\
+x = 0 \land x = 1 \land x = -1\\ 
+y = 0 \land y = 1 \land y = -1
+\end{array} \implies L(0,0),\, M(1,1), \, N(-1,-1)\\
 z''_{xx}  = 12x^2 + 2 \qquad z''_{yy} = 12y^2 - 2 \qquad z'_{xy} = z'_{yx} = -2 \\
-\Delta = z''_{xx}z''_{yy} - z''_{xy}z''_{yx} = (144y^2 - 24)x^2 + 24y^2 - 8 \\
-\Delta(M) = -8 \implies z'_{max} = z(0,0) = 0
+\Delta = z''_{xx}z''_{yy} - z''_{xy}z''_{yx} = (12x^2 - 2)(12y^2 - 2) - 4 \\
+z''_{xx}(L) = -2< 0 \qquad \Delta(L) =0 \implies \text{Няма екстремум.}\\
+z''_{xx}(M) = 10 > 0 \qquad \Delta(M) = 96>0 \implies \\
+z'_{min1} = z(1,1) = -2 \\
+z''_{xx}(N) = 10 > 0 \qquad \Delta(N) = 96>0 \implies \\
+z'_{min2} = z(-1,-1) = -2 
 \end{gather*}
+
 \item $z = xy(1 - x - y)$
+
+\begin{gather*}
+z'_x = y(1- x - y)- xy \qquad z'_y =  x(1- x - y)- xy \\
+\begin{array}{|l@{}}
+y(1- x - y)- xy= 0 \\
+x(1- x - y)- xy = 0
+\end{array} \Leftrightarrow 
+\begin{array}{|l@{}}
+x= 0 \land x = 0 \land x = 1 \land x=\frac{1}{3}\\
+y= 0 \land y = 1 \land y = 0 \land y=\frac{1}{3}
+\end{array} \implies \\
+A(0,0), \, B(0,1), \, C(1,0), \, D \left(\frac{1}{3},\frac{1}{3} \right) \\
+z''_{xx} -2y = \qquad z''_{yy} = -2y \qquad z''_{xy} = z''_{yx} = 1 - 2x - 2y\\
+\Delta = z''_{xx}z''_{yy} - z''_{xy}z''_{yx} = 4xy - (1 - 2x - 2y)^2 \\
+z''_{xx}(A) = 0 \qquad \Delta(A) = -1 \implies \text{Няма екстремум.} \\
+z''_{xx}(B) = -2 \qquad \Delta(A) = -1 \implies \text{Няма екстремум.} \\
+z''_{xx}(C) = 0 \qquad \Delta(C) = -1 \implies \text{Няма екстремум.} \\
+z''_{xx}(D) = -\frac{2}{3} \qquad \Delta(D) = \frac{1}{3} \implies z_{max} = z\left(\frac{1}{3},\frac{1}{3} \right) = \frac{1}{27}
+\end{gather*}
+
 \item $z = x^3 - y^3 - 3x + 3y + 2$
-\item $u = x^3 + y^3 + z^2 - 12xy + 2z$
+
+\begin{gather*}
+z'_x = 3x^2 - 3 \qquad z'_y =  -3y^2 + 3\\
+\begin{array}{|l@{}}
+3x^2 - 3 = 0 \\
+-3y^2 + 3 = 0
+\end{array} \Leftrightarrow 
+\begin{array}{|l@{}}
+x = 1 \land x =-1 \\
+x = 1 \land x =-1 
+\end{array} \implies A(1,1), \, B(1,-1), \, C(-1, 1), \, D(-1,-1)\\
+z''_{xx}  6x= \qquad z''_{yy} = -6y \qquad z''_{xy} = z''_{yx} = 0\\
+\Delta = z''_{xx}z''_{yy} - z''_{xy}z''_{yx} = -36xy\\
+z''_{xx}(A) = 6>0 \qquad \Delta(A) = -36<0 \implies \text{Няма екстремум.}\\
+z''_{xx}(B) = 6>0 \qquad \Delta(A) = 36>0 \implies z_{min} = z(1,-1) = -2\\
+z''_{xx}(C) = -6<0 \qquad \Delta(A) = 36>0 \implies z_{max} = z(-1,1) = 6\\
+z''_{xx}(D) = -6<0 \qquad \Delta(A) = -36<0 \implies \text{Няма екстремум.} 
+\end{gather*}
+
+\item $u = x^3 + y^2 + z^2 + 12xy + 2z$
+
+\begin{gather*}
+u'_x = 3x^2 - 12y \qquad u'_y = 3y^2 - 12x \qquad u'_z = 2z^2 + 2\\
+\begin{array}{|l@{}}
+3x^2 - 12y = 0\\
+3y^2 - 12x = 0\\
+2z^2 + 2 = 0
+\end{array} \Leftrightarrow 
+\begin{array}{|l@{}}
+x = 0 \land x = 24 \\
+y = 0 \land y = -144 \\
+z = -1 
+\end{array} \implies A(0,0,-1), \, B(24,-144,-1) \\
+u''_{xx} = 6x \qquad u''_{xy} = 12 \qquad u''_{xz} = 0\\
+u''_{yx} = 12 \qquad u''_{yy} = 2 \qquad u''_{yz} = 0\\
+u''_{zx} = 0 \qquad u''_{zy} = 0 \qquad u''_{zz} = 2 \\
+\Delta_1 = u''_{xx} = 6x \\
+\Delta_2  = \begin{vmatrix} u''_{xx} & u''_{xy} \\ u''_{yx} & u''_{yy} \end{vmatrix} = \begin{vmatrix} 6x & 12 \\ 12 & 2 \end{vmatrix} = 12x - 144\\
+\Delta_3 = \begin{vmatrix}
+u''_{xx} & u''_{xy}  & u''_{xz}\\ u''_{yx} & u''_{yy} & u''_{yz} \\ u''_{zx} & u''_{zy} & u''_{zz} \end{vmatrix} =
+\begin{vmatrix} 6x & 12 & 0 \\ 12 & 2 & 0 \\ 0 & 0 & 2 \end{vmatrix} = 24x - 288 \\
+\Delta_1 (A) = 0 \qquad \Delta_2 (A) = -144 \qquad \Delta_3 (A) = -288 \implies \text{Няма екстремум.}\\
+\Delta_1 (B) = 144 > 0 \qquad \Delta_2 (B) = 144 > 0 \qquad \Delta_3 (B) = 288 > 0\implies\\
+u_{min} = u(24,-144,-1) = -6913
+\end{gather*}
+
 \end{itemize}
 
 \subsection*{Задача 9}
 \begin{itemize}
 \item $x^3 + y^3 = 3xy, y = y(x)$
+
+\begin{gather*}
+F = x^3 + y^3 - 3xy \\
+F'_x = 3x^2 - 3y \qquad F'_y = 3y^2 - 3x \\
+y' = -\frac{f'_x}{f'_y} = - \frac{3x^2 - 3y}{3y^2 - 3x} \\
+\begin{array}{|l@{}}
+- \frac{3x^2 - 3y}{3y^2 - 3x} = 0 \\
+x^3 + y^3 = 3xy \\
+3y^2 - 3x \neq 0 
+\end{array} \Leftrightarrow 
+\begin{array}{|l@{}}
+x = \sqrt[3]{2} \\
+y = \sqrt[3]{2^2}
+\end{array} \implies A = (\sqrt[3]{2}, \sqrt[3]{2^2}) \\
+F''_{xx} = 6x \\
+y'' = -\frac{f''_{xx}}{f'_y} = -\frac{6x}{3y^2-3x}\\
+y''(A) = -2 <0 \implies y_{max} = y(\sqrt[3]{2}) = \sqrt[3]{2^2}
+\end{gather*}
+
 \item $y^2 -3y - \sin(x)= 0, y = y(x)$
+
+\begin{gather*}
+F = y^2 -3y - \sin(x) \\
+F'_x = -\cos(x) \qquad F'_y = 2y-3 \\
+y' = -\frac{f'_x}{f'_y} = \frac{\cos(x)}{2y-3} \\
+\begin{array}{|l@{}}
+\frac{\cos(x)}{2y-3} = 0 \\
+y^2 -3y - \sin(x)= 0 \\
+2y-3 \neq 0 
+\end{array} \Leftrightarrow 
+\begin{array}{|l@{}}
+x = \frac{\pi}{2} \land x = -\frac{\pi}{2} \\
+y = \frac{3 +\sqrt{13}}{2} \land y = \frac{3 - \sqrt{5}}{2}
+\end{array} \implies \\
+A = \left(\frac{\pi}{2} + 2k\pi, \frac{3 +\sqrt{13}}{2} \right), \, B \left(-\frac{\pi}{2}+2k\pi, \frac{3 - \sqrt{5}}{2} \right) \\
+F''_{xx} = \sin(x) \\
+y'' = -\frac{f''_{xx}}{f'_y} = -\frac{\sin(x)}{2y - 3}\\
+y''(A) = -\frac{\sqrt{13}}{13} < 0 \implies y_{max,k} = y\left( \frac{\pi}{2} + 2k\pi \right) = \frac{3 +\sqrt{13}}{2}\\
+y''(B) = -\frac{\sqrt{5}}{5} < 0 \implies y_{min,k} =  y\left( -\frac{\pi}{2} + 2k\pi \right) = \frac{3 - \sqrt{5}}{2} \\
+\text{(Панева, как тва е минимум беее)}
+\end{gather*}
+
 \item $x^2 + y^2 + z^2 - xz -yz + 2x + 2y + 2z - 2 = 0, z = z(x,y)$
+
+\begin{gather*}
+F = x^2 + y^2 + z^2 - xz -yz + 2x + 2y + 2z - 2\\
+F'_x = 2x - z + 2 \qquad F'_y = 2y - z + 2 \qquad F'_z = -x -y + 2z + 2 \\
+z'_x = - \frac{F'_x}{F'_z} = - \frac{2x - z + 2}{-x -y + 2z + 2}\qquad z'_y = -\frac{F'_y}{F'_z} = -\frac{2y - z + 2}{-x -y + 2z + 2}\\
+\begin{array}{|l@{}}
+- \frac{2x - z + 2}{-x -y + 2z + 2} = 0 \\
+-\frac{2y - z + 2}{-x -y + 2z + 2} = 0 \\
+x^2 + y^2 + z^2 - xz -yz + 2x + 2y + 2z - 2 = 0\\
+ -x -y + 2z + 2 \neq 0
+\end{array}\Leftrightarrow 
+\begin{array}{|l@{}}
+x = -3 + \sqrt{6} \\
+y = -3 + \sqrt{6} \\
+z = -4 + 2\sqrt{6}
+\end{array} \implies \\
+A( -3 + \sqrt{6},-3 + \sqrt{6}, -4 + 2\sqrt{6})
+\end{gather*}
+\begin{gather*}
+F''_{xx} =  2 \qquad F''_{xy} =  0 \qquad F''_{yx} = 0 \qquad F''_{yy} = 2 \\
+\Delta = \begin{vmatrix} -\frac{F''_{xx}}{F'_z} &  -\frac{F''_{xy}}{F'_z} \\  -\frac{F''_{yx}}{F'_z} &  -\frac{F''_{yy}}{F'_z} \end{vmatrix} = \begin{vmatrix} -\frac{2}{ -x -y + 2z + 2 } & 0 \\  0 &  -\frac{2}{ -x -y + 2z + 2 } \end{vmatrix} = \frac{4}{( -x -y + 2z + 2 )^2} \\
+-\frac{F''_{xx}}{F'_z} (A) = -\frac{\sqrt{6}}{6} \qquad \Delta(A) = \frac{1}{6} \implies z_{max} = z( -3 + \sqrt{6},-3 + \sqrt{6}) =  -4 + 2\sqrt{6}\\
+\text{от къде дойде втората точка в решението на Панева}
+\end{gather*}
+
 \item $2x^2 + 2y^2 + z^2 + 8xz -8yz + 8 = 0, z = z(x,y)$
+
+\begin{gather*}
+F = 2x^2 + 2y^2 + z^2 + 8xz -8yz + 8 \\
+F'_x = 4x+ 8z \qquad F'_y = 4y - 8z \qquad F'_z = 8x - 8y + 2z \\
+z'_x = - \frac{F'_x}{F'_z} = - \frac{4x+ 8z}{8x - 8y + 2z}\qquad z'_y = -\frac{F'_y}{F'_z} = - \frac{4y - 8z}{8x - 8y + 2z}\\
+\begin{array}{|l@{}}
+- \frac{4x+ 8z}{8x - 8y + 2z} = 0 \\
+- \frac{4y - 8z}{8x - 8y + 2z} = 0\\
+2x^2 + 2y^2 + z^2 + 8xz -8yz + 8 = 0\\
+8x - 8y + 2z \neq 0\\
+\end{array}\Leftrightarrow 
+\begin{array}{|l@{}}
+x = - \frac{4 \sqrt{30}}{15}\\
+y = \frac{4 \sqrt{30}}{15}\\
+z = \frac{2 \sqrt{30}}{15}
+\end{array} \implies 
+A \left( - \frac{4 \sqrt{30}}{15}, \frac{4 \sqrt{30}}{15}, \frac{2 \sqrt{30}}{15}\right) \\
+F''_{xx} = 4 \qquad F''_{xy} = 0 \qquad  F''_{yx} = 0 \qquad  F''_{yy} =4 \\
+\Delta = \begin{vmatrix} -\frac{F''_{xx}}{F'_z} &  -\frac{F''_{xy}}{F'_z} \\  -\frac{F''_{yx}}{F'_z} &  -\frac{F''_{yy}}{F'_z} \end{vmatrix} = \begin{vmatrix} -\frac{4}{8x - 8y + 2z} & 0 \\  0 &  -\frac{4}{ 8x - 8y + 2z} \end{vmatrix} = \frac{16}{(8x - 8y + 2z)^2} \\
+-\frac{F''_{xx}}{F'_z} (A) = \frac{\sqrt{30}}{30}>0 \qquad \Delta(A) = \frac{1}{30}>0 \implies z_{min} = z\left( - \frac{4 \sqrt{30}}{15}, \frac{4 \sqrt{30}}{15} \right) = \frac{2 \sqrt{30}}{15}
+\end{gather*}
 \end{itemize}
 
 \subsection*{Задача 10}
 
 \begin{itemize}
 \item $z = xy$, aко $2x+y=1$
+\begin{gather*}
+F(x,y,\lambda)   = xy + \lambda(2x+y-1) \quad \lambda \neq 0\\
+F'_x = 2\lambda +y \qquad F'_y = \lambda + x \\
+\begin{array}{|l@{}}
+2\lambda +y= 0 \\
+\lambda + x = 0\\
+2x+y=1 
+\end{array}\Leftrightarrow 
+\begin{array}{|l@{}}
+x = \frac{1}{4} \\
+y = \frac{1}{2} \\
+\lambda = -\frac{1}{4}
+\end{array} \implies 
+A \left( \frac{1}{4}, \frac{1}{2}, -\frac{1}{4}\right) \\
+F''_{xx} = 0 \qquad F''_{xy} = 1 \qquad F''_{yx} = 1 \qquad F''_{yy} = 0\\
+\Delta =  F''_{xx}F''_{yy} - F''_{xy}F''_{yx} = -1
+\end{gather*}
+
 \item $z = x^2 + y^2$, aко $x - y =1$
+
+\begin{gather*}
+F(x,y,\lambda)  = x^2 + y^2 + \lambda(x-y-1)  \quad \lambda \neq 0 \\
+F'_x = \lambda + 2x \qquad F'_y = 2y - \lambda \\
+\begin{array}{|l@{}}
+\lambda + 2x = 0\\
+2y - \lambda = 0\\
+x-y = 1
+\end{array}\Leftrightarrow 
+\begin{array}{|l@{}}
+x = \frac{1}{2} \\
+y = -\frac{1}{2} \\
+\lambda = -1
+\end{array}
+\implies 
+A \left( \frac{1}{2}, -\frac{1}{2}, -1\right) \\
+F''_{xx} = 2 \qquad F''_{xy} = 0 \qquad F''_{yx} = 0 \qquad F''_{yy} = 2\\
+\Delta =  F''_{xx}F''_{yy} - F''_{xy}F''_{yx} = 4 \\
+F''_{xx}(A) = 2>0 \qquad \Delta(A) = 4 >0 \implies z_{min} = z \left( \frac{1}{2}, -\frac{1}{2}\right) = \frac{1}{2}
+\end{gather*}
+
 \item $u = x^2 + y^2 + z^2$, ако $\frac{x^2}{16} + \frac{y^2}{9} + \frac{z^2}{4} = 1$
+
+\begin{gather*}
+F(x,y,z,\lambda) = x^2 + y^2 + z^2 + \lambda\left( \frac{x^2}{16} + \frac{y^2}{9} + \frac{z^2}{4} - 1 \right)   \quad \lambda \neq 0 \\
+F'_x = \frac{1}{8}\lambda x + 2x \qquad F'_y = \frac{2}{9}\lambda y+ 2y \qquad F'_z = \frac{1}{2}\lambda z + 2z\\
+\begin{array}{|l@{}}
+\frac{1}{8}\lambda x + 2x= 0\\
+\frac{2}{9}\lambda y+ 2y = 0 \\
+\frac{1}{2}\lambda z + 2z = 0\\
+\frac{x^2}{16} + \frac{y^2}{9} + \frac{z^2}{4} = 1
+\end{array}\Leftrightarrow 
+\begin{array}{|l@{}}
+x =  4 \land x = -4 \land x = 0\\
+y =  0 \land y = 3 \land y = -3\\
+z = 0 \land z = 2 \land z = -2 \\
+\lambda = -16 \land \lambda = -9 \land \lambda = -4
+\end{array} \implies \\ 
+A (4,0,0,-16), \, 
+B(-4,0,0,-16), \, 
+C(0,3,0,-9), \\
+D(0,-3,0,-9) \, 
+E(0,0,2,-4), \, 
+F(0,0,-2,-4) 
+\end{gather*}
+
+\begin{gather*}
+F''_{xx} = \frac{1}{8} \lambda + 2 \qquad  F''_{yy} = \frac{2}{9} \lambda + 2 \qquad  F''_{zz} = \frac{1}{2} \lambda + 2 \\
+F''_{xy} = F''_{xz} = F''_{yx} = F''_{yz} = F''_{zx} = F''_{zy} = 0 \\ 
+\Delta_1 = F''_{xx} =  \frac{1}{8} \lambda \\
+\Delta_2 = \begin{vmatrix} F''_{xx} & F''_{xy} \\ F''_{yx} & F''_{yy} \end{vmatrix} = \begin{vmatrix} \frac{1}{8} \lambda + 2 & 0 \\  0 & \frac{2}{9} \lambda + 2  \end{vmatrix} = \left( \frac{1}{8} \lambda + 2 \right)\left( \frac{2}{9} \lambda + 2 \right) \\
+\Delta_3 = \begin{vmatrix} F''_{xx} & F''_{xy} & F''_{xz}\\ F''_{yx} & F''_{yy} & F''_{yz} \\ F''_{zx} & F''_{zy} & F''_{zz}\end{vmatrix} = \begin{vmatrix} \frac{1}{8} \lambda + 2 & 0 & 0 \\0 & \frac{2}{9} \lambda + 2 & 0 \\ 0 & 0 & \frac{1}{2} \lambda + 2 \end{vmatrix} = \left( \frac{1}{8} \lambda + 2 \right)\left( \frac{2}{9} \lambda + 2 \right) \left( \frac{1}{2} \lambda + 2 \right)
+\end{gather*}
+
+\begin{gather*}
+\Delta_1(A) = 0 \qquad \Delta_2(A) = 0 \qquad \Delta_3(A) = 0 \implies \text{Няма екстремум.}\\
+\Delta_1(B) = 0 \qquad \Delta_2(B) = 0 \qquad \Delta_3(B) = 0 \implies \text{Няма екстремум.}\\
+\Delta_1(C) = 0 \qquad \Delta_2(C) = 0 \qquad \Delta_3(C) = 0 \implies \text{Няма екстремум.}\\
+\Delta_1(D) = 0 \qquad \Delta_2(D) = 0 \qquad \Delta_3(D) = 0 \implies \text{Няма екстремум.}\\
+\Delta_1(E) = 0 \qquad \Delta_2(E) = 0 \qquad \Delta_3(E) = 0 \implies \text{Няма екстремум.}\\
+\Delta_1(F) = 0 \qquad \Delta_2(F) = 0 \qquad \Delta_3(F) = 0 \implies \text{Няма екстремум.}\\
+\text{Панева кво стааа?!}
+\end{gather*}
+
 \item $u = xyz$, ако $x + y + z = 5, xy+yz+zx = 8$ 
+
+\begin{gather*}
+F(x,y,z,\lambda, \mu)= xyz +\lambda(x+y+z - 5) + \mu(xy+yz+zx - 8)  \quad \lambda,\mu \neq 0\\
+F'_x = \lambda + \mu(y+z) + yz \qquad F'_y = \lambda + \mu(x+z) + xz \qquad F'_z = \lambda + \mu(y+x) + yx\\
+\begin{array}{|l@{}}
+\lambda + \mu(y+z) + yz = 0\\
+\lambda + \mu(x+z) + xz = 0\\
+\lambda + \mu(y+x) + yx = 0\\
+x + y + z = 5\\
+xy+yz+zx = 8
+\end{array}\Leftrightarrow 
+\begin{array}{|l@{}}
+x = 1 \land x = 2 \land x = \frac{4}{3} \land x = \frac{7}{3} \\
+y = 2 \land y = 1 \land y = \frac{4}{3} \land y = \frac{7}{3} \\
+z = 2 \land z = 1 \land z = \frac{4}{3}\\
+\lambda = 4  \land \lambda = \frac{16}{9} \\
+\mu = -2 \land \mu = -\frac{4}{3}
+\end{array} \implies \\
+A \left(1,2,2,4,-2 \right), \, 
+B \left(2,2,1,4,-2 \right), \,
+C \left(2,1,2,4,-2 \right) \\
+D \left(\frac{4}{3},\frac{7}{3},\frac{4}{3},\frac{16}{9},-\frac{4}{3} \right), \,
+E \left(\frac{7}{3},\frac{4}{3},\frac{4}{3},\frac{16}{9},-\frac{4}{3} \right), \,
+F \left(\frac{4}{3},\frac{4}{3},\frac{7}{3},\frac{16}{9},-\frac{4}{3} \right) \\
+\end{gather*}
+
+\begin{gather*}
+F''_{xx} = F''_{yy} =  F''_{zz} = 0 \\
+F''_{xy} = F''_{yx} = \mu + z \\
+F''_{xz} = F''_{zx} = \mu + y \\
+F''_{yz} = F''_{zy} = \mu + x \\ 
+\Delta_1 = F''_{xx} =  0 \\
+\Delta_2 = \begin{vmatrix} F''_{xx} & F''_{xy} \\ F''_{yx} & F''_{yy} \end{vmatrix} = \begin{vmatrix} 0 & \mu + z  \\   \mu + z  & 0 \end{vmatrix} = -(\mu + z)^2 \\
+\Delta_3 = \begin{vmatrix} F''_{xx} & F''_{xy} & F''_{xz}\\ F''_{yx} & F''_{yy} & F''_{yz} \\ F''_{zx} & F''_{zy} & F''_{zz}\end{vmatrix} = \begin{vmatrix} 0 &  \mu + z  &  \mu + y  \\ \mu + z  &  0  &  \mu + x  \\  \mu + y  &  \mu + x  & 0 \end{vmatrix} = 2( \mu + z)( \mu + y )( \mu + x )
+\end{gather*}
+
+\begin{gather*}
+\Delta_1(A) = 0 \qquad \Delta_2(A) = 0 \qquad \Delta_3(A) = 0 \implies \text{Няма екстремум.}\\
+\Delta_1(B) = 0 \qquad \Delta_2(B) = -1 \qquad \Delta_3(B) = 0 \implies \text{Няма екстремум.}\\
+\Delta_1(C) = 0 \qquad \Delta_2(C) = 0 \qquad \Delta_3(C) = 0 \implies \text{Няма екстремум.}\\
+\Delta_1(D) = 0 \qquad \Delta_2(D) = 0 \qquad \Delta_3(D) = 0 \implies \text{Няма екстремум.}\\
+\Delta_1(E) = 0 \qquad \Delta_2(E) = 0 \qquad \Delta_3(E) = 0 \implies \text{Няма екстремум.}\\
+\Delta_1(F) = 0 \qquad \Delta_2(F) = -1 \qquad \Delta_3(F) = 0 \implies \text{Няма екстремум.}\\
+\text{Панева кво стааа?!}
+\end{gather*}
+
 \end{itemize}
 
 \subsection*{Задача 11}
