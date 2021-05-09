@@ -1634,21 +1634,21 @@ $$\left \vert \int f \, dG \right \vert \leq \int \vert f \vert \, dG$$
 
 \begin{theorem}[Теорема на Фубини]
 Нека G е елементарна фигура отностно $Oy, G \subset \mathbb{R}^2, \partial G$ границата на G, се състои от графиките на непрекъснатите функции $\varphi(x) \psi(x), \varphi(x) \leq \psi(x), x\in [a,b]$ и евентуално от отсечки от правите $x = a, x = b$. Нека $f: [G] \to \mathbb{R}$ и f е непрекъсната върху [G]. Тогава
-$$\iint\limits_{G} f(x,y) \, dx \, dy = \int_a ^b \left( \int_{\varphi(x)} ^{\psi(x)}  f(x,y) \, dy \right) \, dx$$
+$$\iint\limits_{G} f(x,y) \, dx \, dy = \int\limits_a ^b \left( \int\limits_{\varphi(x)} ^{\psi(x)}  f(x,y) \, dy \right) \, dx$$
 \end{theorem}
 
 \begin{definition}
 Интегралът в дясната страна на формулата от Теорема 9.6.1 се нарича повторен и обикновенно се записва във вида
-$$\int_a ^b \, dx \int_{\varphi(x)} ^{\psi(x)}  f(x,y) \, dy$$ 
+$$\int\limits_a ^b \int\limits_{\varphi(x)} ^{\psi(x)}  f(x,y) \, dy \, dx $$ 
 \end{definition}
 
 \begin{lemma}
 При предпложенията от Теорема 9.6.1 функцията 
-$$F(x) = \int_{\varphi(x)} ^{\psi(x)}  f(x,y) \, dy$$
+$$F(x) = \int\limits_{\varphi(x)} ^{\psi(x)}  f(x,y) \, dy$$
 е непрекъсната функция на x в интервала [a,b]. 
 \end{lemma}
 Aко областта G е елементарна отностно $Ox$ и границата ѝ се състои от графиките на непрекъснатите функции $\alpha (y), \beta(y), \alpha (y) \leq \beta(y), c \leq y \leq d$ и евентуално отсечки от правите $y = c, y = d$ и функцията $f(x,y)$ е непрекъсната в компактното множество [G] то е в сила формулата 
-$$\iint\limits_{G} f(x,y) \, dx \, dy = \int_c ^d \, dy  \int_{\alpha(y)} ^{\beta(y)}  f(x,y) \, dx$$
+$$\iint\limits_{G} f(x,y) \, dx \, dy = \int\limits_c ^d \int\limits_{\alpha(y)} ^{\beta(y)}  f(x,y) \, dx  \,dy  $$
 
 \begin{example}
 $z = x^2y$ заградена между $y = x^2, y = 1$. \\
@@ -1674,9 +1674,9 @@ x^2 \leq y \leq 1
 \end{cases}$$
 Тогава 
 \begin{gather*}
-\iint\limits_{G} x^2y \,dx \, dy = \int_{-1} ^ 1 x^2 \, dx \int _{x^2} ^ 1 y \, dy \qquad 
-\left( \int _{x^2} ^ 1 y \, dy  = \frac{y^2}{2}  \Big|_{x^2} ^ 1\right) \\
- \frac{1}{2} \int_{-1} ^1 x^2 (1-x^4) \, dx = \frac{1}{2} \cdot 2 \int_0 ^1 (x^2 - x^6) \, dx =  \\
+\iint\limits_{G} x^2y \,dx \, dy = \int\limits_{-1} ^ 1 x^2 \int\limits_{x^2} ^ 1 y \, dy \, dx  \qquad 
+\left( \int\limits _{x^2} ^ 1 y \, dy  = \frac{y^2}{2}  \Big|_{x^2} ^ 1\right) \\
+ \frac{1}{2} \int\limits_{-1} ^1 x^2 (1-x^4) \, dx = \frac{1}{2} \cdot 2 \int\limits_0 ^1 (x^2 - x^6) \, dx =  \\
 \frac{x^3}{3} - \frac{x^7}{7} \Big|_0 ^ 1 = \frac{1}{3} - \frac{1}{7} = \frac{4}{21}
 \end{gather*}
 
@@ -1861,7 +1861,7 @@ Aко $\partial \Gamma$ се състои от краен брой по част
 Нека функцията 
 $$f: [\Gamma^*] \to \mathbb{R}$$
 е непрекъсната върху $[\Gamma]$. Тогава в сила е формулата
-$$\iint\limits_{\Gamma^*} f(x,y) \, dx \, dy = \iint\limits_{\Gamma} f(x(u,v),y(u,v) \left| \frac{\partial (x,y)}{\partial (u,v)} \right| \, du \, dv$$
+$$\iint\limits_{\Gamma^*} f(x,y) \, dx \, dy = \iint\limits_{\Gamma} f(x(u,v),y(u,v)) \left| \frac{\partial (x,y)}{\partial (u,v)} \right| \, du \, dv$$
 \end{theorem}
 Верността на (10.2.1) остава в сила и при малко по-общия случай, когато якобианът на изображението F, става нула върху границата на областта на интегриране, а самото изображение не е взаимно еднозначно върху тази граница. По-точно е в сила следната теорема.
 \begin{theorem}
@@ -1873,17 +1873,6 @@ $$J(u,v) = \frac{\partial (x,y)}{\partial (u,v)}$$
 $$f: [G^*] \to \mathbb{R}$$
 е непрекъсната върхи множеството $[G^*]$. Тогава е в сила формулата
 $$\iint\limits_{G^*} f(x,y) \, dx \, dy = \iint\limits_{G} f(x(u,v),y(u,v) \left| \frac{\partial (x,y)}{\partial (u,v)} \right| \, du \, dv$$
-\end{theorem}
-
-\begin{theorem}
-Нека $G,G^* \subset \mathbb{R}^m$ са отворени кубируеми множества. Нека $F: [G] \to [G^*] $ е непрекъснато изображение, зададено с уравненията 
-$$x = F(t) = \{x_i = x_i(t_1,t_2, ..., t_m), i = 1 \div m \}$$
-взаимно еднозначно и непрекъснато диференцируемо върху G, и якобианът му
-$$J(t) = \frac{\partial (x_1, ..., x_m)}{\partial (t_1, ..., t_m)} \neq 0, \quad t \in G$$
-е непрекъснато продължим върху [G]. Тогава, ако функцията 
-$$f: [G^*] \to \mathbb{R}$$
-е непрекъсната върху $[G^*]$ то
-$$\int f(x) \, dG^* = \int f(x(t)) \vert J(t) \vert dG$$
 \end{theorem}
 
 \begin{example}
@@ -1903,10 +1892,43 @@ $$G = K \setminus \{ (x,y) : x \leq 0, y=0\}$$
 $$[G] = [K] = \{ (x,y): x^2 + y^2 < 1 \}$$
 при което контура $[G]$ вече не е взаимно еднозначно. Якобианът на изображението на смяната е непрекъснат върху $[G]$ а в една точка от контура(кординатното начало) е нула. Следователно това изображение удовлетворява всички условия от Теорема (10.2.2), и затова може да се приложи формулата за смяна на променливите на интеграла. Така се получава
 \begin{gather*}
-\iint\limits_{x^2+y^2 < 1} \cos (\pi \sqrt{x^2 + y^2}) \, dx \, dy = \iint\limits_{G} \rho \cos(\pi \rho) \, d\rho \, d \varphi = \int\limits_{-\pi} ^{\pi} d\varphi \int\limits_0 ^1 \rho \cos(\pi \rho) \, d\rho = - \frac{4}{\pi}
+\iint\limits_{x^2+y^2 < 1} \cos (\pi \sqrt{x^2 + y^2}) \, dx \, dy = \iint\limits_{G} \rho \cos(\pi \rho) \, d\rho \, d \varphi = \int\limits_{-\pi} ^{\pi}  \int\limits_0 ^1 \rho \cos(\pi \rho) \, d\rho \, d\varphi= - \frac{4}{\pi}
 \end{gather*}
 \end{example}
 
+
+\begin{theorem}
+Нека $G,G^* \subset \mathbb{R}^m$ са отворени кубируеми множества. Нека $F: [G] \to [G^*] $ е непрекъснато изображение, зададено с уравненията 
+$$x = F(t) = \{x_i = x_i(t_1,t_2, ..., t_m), i = 1 \div m \}$$
+взаимно еднозначно и непрекъснато диференцируемо върху G, и якобианът му
+$$J(t) = \frac{\partial (x_1, ..., x_m)}{\partial (t_1, ..., t_m)} \neq 0, \quad t \in G$$
+е непрекъснато продължим върху [G]. Тогава, ако функцията 
+$$f: [G^*] \to \mathbb{R}$$
+е непрекъсната върху $[G^*]$ то
+$$\int f(x) \, dG^* = \int f(x(t)) \vert J(t) \vert dG$$
+\end{theorem}
+
+\subsubsection{Полярна смяна}
+При $m = 2$ често използвана е полярна смяна, зададена с равенства 
+$$F(\rho, \varphi) = \begin{cases} x = \rho \cos \varphi \\  y = \rho \sin \varphi \end{cases}$$
+За да се опише $\mathbb{R}^2$, променливите $\rho, \varphi$ се изменят както следва 
+$$\rho \geq 0 \qquad 0 \leq \varphi < 2\pi$$
+я якобианът има стойност
+$$J(\rho, \varphi) = \begin{vmatrix} x'_{\rho} &   x'_{\varphi} \\  y'_{\rho} &  y'_{\varphi}\end{vmatrix} = \rho \cos^2 \varphi + \rho \sin^2 \varphi = \rho$$
+А неговия модул 
+$$\Delta = |J(\rho, \varphi)| = \rho $$
+Една обощена полярна смяна е следната 
+$$F(\rho, \varphi) = \begin{cases} x = a\rho \cos \varphi \\  y = b\rho \sin \varphi \end{cases} \qquad (a,b > 0)$$
+известна като обобщена полярна смяна, за която в общия случай
+$$\rho \geq 0 \qquad 0 \leq \varphi < 2\pi$$
+А неговия модул 
+$$\Delta = |J(\rho, \varphi)| = ab\rho $$
+Друга обощена полярна смяна е следната 
+$$F(\rho, \varphi) = \begin{cases} x = a\rho \cos^k \varphi \\  y = b\rho \sin^k \varphi \end{cases} \qquad (a,b > 0m k = 2, 3, ...)$$
+известна също като обобщена полярна смяна, за която в общия случай
+$$\rho \geq 0 \qquad 0 \leq \varphi < 2\pi$$
+А неговия модул 
+$$\Delta = |J(\rho, \varphi)| = abk\rho |\cos^{k-1} \varphi \sin^{k-1} \varphi|$$
 \begin{example}
 Да се пресметне лицето на фигурата
 $$A^* = \{(x,y) : x^{\frac{2}{3}} + y^{\frac{2}{3}} \leq a^{\frac{2}{3}}, a>0\}$$
@@ -1924,7 +1946,133 @@ $$\Delta = |J (\rho, \varphi ) | = 3\rho \cos^2 \varphi \sin^2 \varphi $$
 \end{example}
 
 \newpage
-\section{Лекция 11}
+\section{Лекция 11: Пресмятане на тройни интеграли}
+
+\subsection{Пресмятане на тройни интеграли, чрез свеждане до повторни интеграли}
+Нека $\mathbb{R}^3 = \{(x,y,z), x \in \mathbb{R}, \, y \in \mathbb{R}, \, z \in \mathbb{R}\}$. Нека областта $G \subset \mathbb{R}$ и D е нейна ортогонална проекция върху равнината $xOy$. т.е $D \subset \mathbb{R}^2$ или
+$$D = \{ (x,y): \exists z, (x,y,z) \in G \}$$
+
+\begin{definition}
+Областта $G$ се нарича елементарна отностно оста $Oz$ ако нейната проекция $D$ е кубируема (измерима), а границата ѝ се състои от две функции $\varphi(x,y) \, \psi(x,y)$, непрекъснати върху множеството такива че 
+$$\varphi(x,y) \leq \psi(x,y) \qquad (x,y) \in D$$
+и евентуално част от цилиндъра с онсова границата $\partial D$ на проекцията $D$. \\
+\end{definition}
+
+\begin{itemize}
+\item Ако $G$ е елементарна отностно oста $Oz$, то тя е измерима. \\
+Нейната проекция $D$ е измерима област, следователно ограничена. 
+Поради това границата на областта $G$, койято се състои от графиките на непрекъснатите функции върху компактното множество $[D]$ и евентуално част от цилиндър с основа, която има мярка нула
+$$\mu(\partial D) = 0$$
+\item Ако 
+$$f: [G] \to \mathbb{R}$$
+е непрекъсната функция, то Теоремата на фубини се обобщава и е валидна следната формула
+$$\iiint\limits_G f(x,y,z) \, dx \, dy \, dz = \iint\limits_G \, dx \, dy \int\limits_{\varphi(x,y)} ^{\psi(x,y)} f(x,y,z) \, dz =  \iint\limits_G \left[ \int\limits_{\varphi(x,y)} ^{\psi(x,y)} f(x,y,z) \, dz  \right]\, dx \, dy $$
+\end{itemize}
+
+\newpage
+\begin{example}
+Нека $\iiint\limits_T \, dx \, dy \, dz$ по ограничената област Т, заградена от повърхнините с уравнения $x=0, \, y=0, \, z=0, \, x+y+z=1$.
+\begin{center}
+  \includegraphics[width = \linewidth]{Pics/calc/lec11-1-1.png}
+\end{center}
+Повърхнината $x+y+z = 1$ е равнина пресичаща и трите кординатни оси с отрези от тях равни на 1. $x=0, \, y=0, \, z=0$ са кординатните равнини. Проекцията на D на тялото се получава от 
+$$\begin{cases} x+y+z = 1 \\ x=0 \\y=0 \\ z= 0 \end{cases} \implies D: \begin{cases} x+y= 1 \\ x=0 \\y=0 \end{cases}$$
+\begin{center}
+  \includegraphics{Pics/calc/lec11-1-2.png}
+\end{center}
+Имаме
+$$A: \begin{array}{|l@{}} y = 1 - x \\ y=0 \end{array} \implies A(1,0) \implies \begin{cases} 0 \leq x \leq 1 \\ 0 \leq y \leq 1-x \end{cases}$$
+По нататък 
+$$0 \leq z \qquad x+y+z \leq 1 \implies 0 \leq z \leq 1 - x - y$$
+Тогава получаваме 
+\begin{gather*}
+\iiint\limits_T \, dx \, dy \, dz = \int\limits_0 ^1 \int\limits_0 ^{1-x} \int\limits_0 ^{1-x-y} \, dz \, dy \, dx  \\
+\int\limits_0 ^{1-x-y} \, dz = z\Big|_0 ^{1-x-y} = 1-x-y \\
+I =  \int\limits_0 ^1 \int\limits_0 ^{1-x} 1-x-y \, dy \, dx \\
+\int\limits_0 ^{1-x} 1-x-y \, dy = (1-x) \Big|_0 ^{1-x} - \frac{y^2}{2}  \Big|_0 ^{1-x} = \frac{(1-x)^2}{2} \\
+I = \frac{1}{2} \int\limits_0 ^1 (1-x)^2 \, dx =  \frac{1}{2} \int\limits_0 ^1 (x-1)^2 \, dx =   \frac{1}{2} \int\limits_0 ^1 (x-1)^2 \, d(x-1) \\
+I = \frac{1}{2} \frac{(x-1)^3}{3} \Big|_0 ^1 = \frac{1}{6} [0 - (-1)^3] = \frac{1}{6}
+\end{gather*}
+\end{example}
+
+\subsection{Приложение на многократните интеграли}
+Нека $G \subset \mathbb{R}^m$ е измеримо (кубируемо) множество. Както е известно от Теорема (9.5.1) мярката на G се изразява с формулата по долу
+$$\mu (G) = \int \, dG$$
+По такъв начин посредством m-кратен интеграл може да се пресметне мярката на кубируемо множество в m-мерното простраство(лице - в двумерно, обем - в тримерното пространства). Ако m-кратнията интеграл може да се сведе до повторен, то пресмятането на мярката на кубируемото множество G, се свежда до пресмятане на (m-1)-кратен интеграл. \\
+Ако $m=2$, площта на измеримата на равнинна област $D \subset \mathbb{R}^2$ се пресмята по формулата 
+$$S(D) = \mu(D) = \iint\limits_D \, dx \, dy$$
+Ако $m=3$, обема на измеримата на равнинна област $T \subset \mathbb{R}^3$ се пресмята по формулата 
+$$V(T) = \mu(T) = \iiint\limits_T \, dx \, dy \, dz$$
+Освен това този интеграл може да се сведе до повторен и D е проекция на тялото T върху $\mathbb{R}^2$ а, Т e разположено повърхнините $z = f_1(x,y) \, z = f_2 (x,y)$ като е изпълнено неравенството $ f_1(x,y) \leq f_2 (x,y), \quad (x,y) \in D$ формулата за обем може да се запише
+$$V(T) = \mu(T) = \iint\limits_D \left[ f_2 (x,y) - f_1 (x,y)\right] \, dx \, dy$$
+Друга полезна формула е тази за намиране на част от повърхнина заключена в цилиндрична повърхнина. С други думи, ако $D \subset \mathbb{R}^2$ е квадратируема област и повърхнината S е дефинирана в затвореното множество $[D]$
+$$S: z = f(x,y) \qquad f:[D] \to \mathbb{R}$$
+Като при това f е непрекъснато диференцируема в D, то лицето на тази повърхнина се дава с формулата
+$$\sigma = \sigma(S) = \iint\limits_D \sqrt{1 + (z'_x)^2 + (z'_y)^2} \, dx \, dy$$
+
+\begin{example}
+Да се пресметне лицето на частта от повърхнината $S: z = \sqrt{x^2 + y^2}$, разположена във вътрешността на цилиндрична повърхнина с уравнение $x^2 + y^2 = 2x$ \\
+D е отворения кръг с център точката (1,0) и радиус 1, защото 
+$$x^2 + y^2 = 2x \Leftrightarrow (x-1)^2 + y^2 = 1$$
+Oсвен това
+$$z'_x = \frac{x}{\sqrt{x^2 + y^2}} \qquad z'_y = \frac{y}{\sqrt{x^2 + y^2}} \qquad \sqrt{1 + (z'_x)^2 + (z'_y)^2} = \sqrt{2}$$
+Oт формулата имаме
+$$\sigma = \sigma(S) = \iint\limits_D \sqrt{2}\, dx \, dy =  \sqrt{2} \iint\limits_D \, dx \, dy = \sqrt{2} \mu(D) = \sqrt{2} \pi $$
+\end{example}
+
+\subsection{Смяна на променливите на троен интеграл}
+
+\begin{theorem}
+Нека $G,G^* \subset \mathbb{R}^3$ са отворени измерими множества. Нека $F: [G] \to [G^*]$ е непрекъснато изображение зададено чрез системата функция
+$$F(u,v,w) = \begin{cases} x = x(u,v,w) \\ y = y(u,v,w) \\ z = z(u,v,w)\end{cases}$$
+взаимно еднозначно и непрекъснато диференцируемо изображение от G върху $G^*$. Нека якобианът на това изображение
+$$J(u,v,w) = \frac{D(x,y,z)}{D (u,v,w)} = \begin{vmatrix} x'_u & x'_v & x'_w \\  y'_u & y'_v & y'_w \\ z'_u & z'_v & z'_w \end{vmatrix} \neq 0 \quad (u,v,w) \in G$$
+е непрекъснато продължим върху [G]. Нека освен това функцията 
+$$f: [G^*] \to \mathbb{R}$$
+е непрекъсната върхи множеството $[G^*]$. Тогава е в сила формулата
+$$\iiint\limits_{G^*} f(x,y) \, dx \, dy = \iiint\limits_{G} f(x(u,v,w),\,y(u,v,w),\,z(u,v,w)) |J(u,v,w) | \, du \, dv \, dw$$
+\end{theorem}
+
+\subsubsection{Цилиндрична смяна}
+Честно използвани смени на променливите при тройни интеграли са цилиндричната смяна, зададена с уравнения
+$$F(\rho, \varphi, z) = \begin{cases} x = \rho \cos \varphi \\  y = \rho \sin \varphi  \\ z = z \end{cases}$$
+и обобщена цилиндрична смяна 
+$$F(\rho, \varphi, z) = \begin{cases} x = a\rho \cos \varphi \\  y = b\rho \sin \varphi  \\ z = z \end{cases} \quad (a,b > 0)$$
+За да се опише цялото $\mathbb{R}^3$, диапазонът на изменение на променливите е както следва 
+$$\rho \geq 0 \qquad 0 \leq \varphi < 2\pi \qquad -\infty < z < \infty$$
+А неговия модул съответно
+$$\Delta = |J(\rho, \varphi, z)| = \rho \qquad \Delta = |J(\rho, \varphi, z)| = ab\rho $$
+
+\subsubsection{Сферична смяна}
+Друга смяна е сферичната смяна, зададена с уравнения 
+$$F(\rho, \varphi, \psi) = \begin{cases} x = \rho \sin \psi \cos \varphi \\  y = \rho \sin \psi \sin \varphi  \\ z = \rho \cos \psi \end{cases}$$
+За да се опише цялото $\mathbb{R}^3$, диапазонът на изменение на променливите е както следва 
+$$0 \leq \rho \qquad 0 \leq \varphi < 2 \pi \qquad 0 \leq \psi \leq \pi$$
+a модула на якобиана се дава с равенсвото
+$$\Delta = |J(\rho, \varphi, \psi)| = \rho^2 \sin \psi$$
+Понякога се дава и следната вариация на сферична смяна
+$$F(\rho, \varphi, \theta) = \begin{cases} x = \rho \cos \theta \cos \varphi \\  y = \rho \cos \theta \sin \varphi  \\ z = \rho \sin \theta \end{cases}$$
+с диапазон на изменение на променливите
+$$0 \leq \rho \qquad 0 \leq \varphi < 2 \pi \qquad -\frac{\pi}{2} \leq \psi \leq \frac{\pi}{2}$$
+и модул на якобиана
+$$\Delta = |J(\rho, \varphi, \theta)| = \rho^2 \cos \theta$$
+
+\begin{example}
+Да се пресметне обемът на тялото
+$$T^* = \{ (x,y,z) : x^2 + y^2 \leq z, \, z \leq 4\}$$
+Ако направим цилиндрична смяна получаваме
+$$\mu(T^*) = \iiint\limits_{T^*} \, dx \, dy \, dz = \int\limits_ 0 ^{2\pi} \int\limits_ 0 ^{2} \rho \int\limits_ {\rho^2} ^{4} \, dz \, d\rho \, d\varphi = 8\pi$$
+Проекцията $D^* \text{ на } T^*$ върху $xOy$ се определя от 
+$$x^2 + y^2 \leq z, \quad z \leq 4 \implies x^2 + y^2 \leq 4 \implies D^* \{ (x,y) : x^2 + y^2 \leq 4 \}$$
+От $D^*$ се определят границите за x и y. \\
+Границите за променливата z са
+$$x^2 + y^2 \leq z \leq 4$$
+След цилиндричната замяна се получава
+$$x^2 + y^2 = \rho^2 \cos^2 \varphi + \rho^2 \sin^2 \varphi  = \rho^2 ( \cos^2 \varphi +  \sin^2 \varphi) = \rho^2 \leq 4 $$
+$$\rho^2 \leq 4 \qquad \rho > 0 \implies 0 \leq \rho \leq 2 $$ 
+$$x^2 + y^2 \leq z \leq 4 \implies \rho^2 \leq z \leq 4 $$
+а $\varphi$ остава в $0 \leq \varphi < 2 \pi$, защото няма нови ограничения. 
+\end{example}
 
 \newpage
 \section{Лекция 12}
@@ -1932,6 +2080,11 @@ $$\Delta = |J (\rho, \varphi ) | = 3\rho \cos^2 \varphi \sin^2 \varphi $$
 \newpage
 \section{Лекция 13}
 
+\newpage
+\section{Лекция 14}
+
+\newpage
+\section{Лекция 15}
 
 
 
