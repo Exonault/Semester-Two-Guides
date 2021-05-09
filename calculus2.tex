@@ -1629,6 +1629,7 @@ $$\left \vert \int f \, dG \right \vert \leq \int \vert f \vert \, dG$$
 \begin{figure}[htp!]
   \includegraphics{Pics/calc/lec9-1.png}
 \end{figure}
+
 \end{definition}
 
 \begin{theorem}[Теорема на Фубини]
@@ -1888,11 +1889,38 @@ $$\int f(x) \, dG^* = \int f(x(t)) \vert J(t) \vert dG$$
 \begin{example}
 Да се пресметне интеграла
 $$\iint\limits_{x^2+y^2 < 1} \cos (\pi \sqrt{x^2 + y^2}) \, dx \, dy$$
+Нека въведем нови променливи $\rho, \varphi$ по формулите
+$$x = \rho \cos \varphi \qquad y = \rho \sin \varphi $$
+Тогава модулът на якобиана на смяната се дава със израза 
+$$\Delta = |J(\rho, \varphi)| = \rho$$
+Изображението на новите променливи е правоъгълника
+$$G = \{ (\rho, \varphi): 0 < \rho < 1, -\pi < \varphi < \pi \}$$
+взаимно еднозначно и непрекъснато диференцируемо и с якобиан, различен от нула върху кръга
+$$K: \{ (x,y):x^2 + y^2 < 1 \}$$
+от който е премахнат радиусът, лежащ върху отрицателната част на оста $Ox$, т.е G се изобразява върху множеството
+$$G = K \setminus \{ (x,y) : x \leq 0, y=0\}$$
+Освен това изображението на смяната изобразява затвореният правоъгълник $[G]$ върху затворения кръг
+$$[G] = [K] = \{ (x,y): x^2 + y^2 < 1 \}$$
+при което контура $[G]$ вече не е взаимно еднозначно. Якобианът на изображението на смяната е непрекъснат върху $[G]$ а в една точка от контура(кординатното начало) е нула. Следователно това изображение удовлетворява всички условия от Теорема (10.2.2), и затова може да се приложи формулата за смяна на променливите на интеграла. Така се получава
+\begin{gather*}
+\iint\limits_{x^2+y^2 < 1} \cos (\pi \sqrt{x^2 + y^2}) \, dx \, dy = \iint\limits_{G} \rho \cos(\pi \rho) \, d\rho \, d \varphi = \int\limits_{-\pi} ^{\pi} d\varphi \int\limits_0 ^1 \rho \cos(\pi \rho) \, d\rho = - \frac{4}{\pi}
+\end{gather*}
 \end{example}
 
 \begin{example}
 Да се пресметне лицето на фигурата
 $$A^* = \{(x,y) : x^{\frac{2}{3}} + y^{\frac{2}{3}} \leq a^{\frac{2}{3}}, a>0\}$$
+\begin{center}
+  \includegraphics{Pics/calc/lec10-1.png}
+\end{center}
+Поради симетрията на дадената фигура, нейното лице може да се пресметни като първо се намери лицето на часта $A_1 ^*$ разположена в първи квадрант и получения резултат да се умножи по 4. За да се пресметне това може да се извърши следната смяна
+$$x = \rho \cos^3 \varphi \qquad y = \rho \sin^3 \varphi $$
+която води до ограничения $0 \leq \rho \leq a, 0 \leq \varphi \leq 2\pi, \quad (\rho, \varphi ) \in A$ и има якобиан с модул
+$$\Delta = |J (\rho, \varphi ) | = 3\rho \cos^2 \varphi \sin^2 \varphi $$
+поради което 
+\begin{gather*}
+\mu(A^*) = 4\mu(A_1 ^*) = 4 \iint\limits_{A_1 ^*} = 12 \int\limits_{0} ^{\frac{\pi}{2}} \cos^2 \varphi \sin^2 \varphi \, d\varphi \int\limits_0 ^a \rho \, d\rho = \frac{3\pi a^2}{8}
+\end{gather*}
 \end{example}
 
 \newpage
