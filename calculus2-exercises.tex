@@ -1860,22 +1860,22 @@ u_{min} = u(-6,2,-4) = 0\\
 \subsection*{Задача 1}
 Да се пресметнат интегралите
 \begin{itemize}
-\item $I = \iint\limits_D xy \,dx \,dy$, $D: \begin{cases} 0 \leq x \leq 1 \\ 0 \leq y \leq 2 \end{cases}$
-\item $I = \iint\limits _D xy \,dx \,dy$, ако D e oградена от $\begin{cases} xy = 1 \\ x+y = \frac{5}{2} \end{cases}$
-\item $I = \iint\limits _D \,dx \,dy$, ако D e оградена от кривите$D: \begin{cases} 4y = x^2 - 4x \\ x - y - 3 = 0 \end{cases}$
+\item $I = \iint\limits_D xy \,dx \ dy, \qquad D: \begin{cases} 0 \leq x \leq 1 \\ 0 \leq y \leq 2 \end{cases}$
+\item $I = \iint\limits _D xy \,dx \ dy$, ако D e oградена от $\begin{cases} xy = 1 \\ x+y = \frac{5}{2} \end{cases}$
+\item $I = \iint\limits _D \,dx \ dy$, ако D e оградена от кривите $D: \begin{cases} 4y = x^2 - 4x \\ x - y - 3 = 0 \end{cases}$
 \end{itemize}
 
 \subsection*{Задача 2}
 Да се определят границите на интегриране и да се пресметне интеграла
-$$\iint\limits_D (x^2 + y^2) \, dx \, dy, \qquad D: \begin{cases} y = x , \quad y =2 \\ y = x + 2, \quad y = 6 \end{cases}$$
+$$\iint\limits_D (x^2 + y^2) \, dx \ dy, \qquad D: \begin{cases} y = x , \quad y =2 \\ y = x + 2, \quad y = 6 \end{cases}$$
 
 \subsection*{Задача 3}
 Да се пресметне интеграла
-$$\iint\limits_D (x+y) \, dx \, dy, \qquad \partial D: \begin{cases} y^2 = 2x \\ x+y = 4 \\ x+y = 12 \end{cases}$$
+$$\iint\limits_D (x+y) \, dx \ dy, \qquad \partial D: \begin{cases} y^2 = 2x \\ x+y = 4 \\ x+y = 12 \end{cases}$$
 
 \subsection*{Задача 4}
 Да се пресметне интеграла
-$$\iint\limits_D (x+y) \, dx \, dy$$
+$$\iint\limits_D (x+y) \, dx \ dy$$
 Където D е триъгълник $\triangle ABO$ с върхове $A(1,0),\, B = (1,1),\, O = (0,0)$
 
 \newpage
@@ -1883,13 +1883,14 @@ $$\iint\limits_D (x+y) \, dx \, dy$$
 
 \subsection*{Задача 1}
 \begin{itemize}
-\item $I = \iint\limits_D xy \,dx \,dy$, $D: \begin{cases} 0 \leq x \leq 1 \\ 0 \leq y \leq 2 \end{cases}$
+\item $I = \iint\limits_D xy \,dx \ dy, \qquad D: \begin{cases} 0 \leq x \leq 1 \\ 0 \leq y \leq 2 \end{cases}$
 \begin{gather*}
-I = \int\limits_0 ^1 x \int\limits_0 ^2 y \, dy \, dx   \qquad \left( \int\limits_0 ^2 y \, dy = \frac{y^2}{2} \Big|_0 ^2 = 2 \right) \\
+I = \int\limits_0 ^1 x \int\limits_0 ^2 y \, dy \ dx   \
+\int\limits_0 ^2 y \, dy = \frac{y^2}{2} \Big|_0 ^2 = 2 \\
 I = 2 \int\limits_0 ^1 x \, dx = 2\frac{x^2}{2} \Big|_0 ^1 = 1
 \end{gather*}
 
-\item $I = \iint\limits _D xy \,dx \,dy$, ако D e oградена от $\begin{cases} xy = 1 \\ x+y = \frac{5}{2} \end{cases}$
+\item $I = \iint\limits _D xy \,dx \ dy$, ако D e oградена от $\begin{cases} xy = 1 \\ x+y = \frac{5}{2} \end{cases}$
 \begin{gather*}
 \begin{array}{|l@{}}
 xy = 1 \\
@@ -1903,13 +1904,16 @@ D: \begin{cases}
 \frac{1}{2} \leq x \leq 2 \\
 \frac{1}{x} \leq y \leq \frac{5}{2} - x
 \end{cases}\\
-I = \int\limits_{\frac{1}{2}} ^2 x \int\limits_{\frac{1}{x}} ^{\frac{5}{2} - x} y \, dy \, dx \\
-\int\limits_{\frac{1}{x}} ^{\frac{5}{2} - x} y \, dy  = \frac{y^2}{2} \Big|_{\frac{1}{x}} ^{\frac{5}{2} - x} = \frac{1}{2}\left[ \left( \frac{5}{2} - x\right)^2 - \frac{1}{x^2} \right] \\
+I = \int\limits_{\frac{1}{2}} ^2 x \int\limits_{\frac{1}{x}} ^{\frac{5}{2} - x} y \, dy \ dx \\
+\int\limits_{\frac{1}{x}} ^{\frac{5}{2} - x} y \, dy  = 
+\frac{y^2}{2} \Big|_{\frac{1}{x}} ^{\frac{5}{2} - x} = 
+\frac{1}{2}\left[ \left( \frac{5}{2} - x\right)^2 - \frac{1}{x^2} \right] \\
 I = \frac{1}{2} \int\limits_{\frac{1}{2}} ^2 x \left[ \left( \frac{5}{2} - x\right)^2 - \frac{1}{x^2} \right] \, dx = \frac{1}{2} \int\limits_{\frac{1}{2}} ^2 x \left( \frac{25}{4} - 5x + x^2 - \frac{1}{x^2} \right) \, dx = \\
-= \frac{1}{2} \int\limits_{\frac{1}{2}} ^2  \left( \frac{25}{4}x - 5x^2 + x^3 - \frac{1}{x} \right) \, dx = \frac{1}{2} \left[ \frac{x^4}{4} - \frac{5x^3}{3} + \frac{25x^2}{8} - \ln|x| \right] \Big|_{\frac{1}{2}} ^2 = \frac{165}{128} - \ln(2)
+= \frac{1}{2} \int\limits_{\frac{1}{2}} ^2  \left( \frac{25}{4}x - 5x^2 + x^3 - \frac{1}{x} \right) \, dx = 
+\frac{1}{2} \left[ \frac{x^4}{4} - \frac{5x^3}{3} + \frac{25x^2}{8} - \ln|x| \right] \Big|_{\frac{1}{2}} ^2 = \frac{165}{128} - \ln(2)
 \end{gather*}
 
-\item $I = \iint\limits _D \,dx \,dy$, ако D e оградена от кривите$D: \begin{cases} 4y = x^2 - 4x \\ x - y - 3 = 0 \end{cases}$
+\item $I = \iint\limits _D \,dx \ dy$, ако D e оградена от кривите $D: \begin{cases} 4y = x^2 - 4x \\ x - y - 3 = 0 \end{cases}$
 \begin{gather*}
 \begin{array}{|l@{}}
 4y = x^2 - 4x \\ 
@@ -1922,14 +1926,18 @@ y = x - 3 \\
 2 \leq x \leq 6 \\
 \frac{x^2}{4}- x \leq y \leq x - 3 
 \end{cases}\\
-I = \int\limits_2 ^6 \int\limits_{\frac{x^2}{4} - x} ^{x - 3} \, dy \,dx  \\
-\int\limits_{\frac{x^2}{4} - x} ^{x - 3} \, dy  = y \Big|_{\frac{x^2}{4} - x} ^{x - 3} = \left[ x- 3 - \left( \frac{x^2}{4} - x\right) \right] \\
-I = \int\limits_2 ^6 \left[ x- 3 - \left( \frac{x^2}{4} - x\right) \right] \, dx = \int\limits_2 ^6 \left[ 2x- 3 - \frac{x^2}{4} \right] \, dx = \left[ x^2- 3x - \frac{x^3}{12} \right] \Big|_2 ^6 = \frac{8}{3}
+I = \int\limits_2 ^6 \int\limits_{\frac{x^2}{4} - x} ^{x - 3} \, dy \ dx  \\
+\int\limits_{\frac{x^2}{4} - x} ^{x - 3} \, dy  =
+ y \Big|_{\frac{x^2}{4} - x} ^{x - 3} = 
+\left[ x- 3 - \left( \frac{x^2}{4} - x\right) \right] \\
+I = \int\limits_2 ^6 \left[ x- 3 - \left( \frac{x^2}{4} - x\right) \right] \, dx = 
+\int\limits_2 ^6 \left[ 2x- 3 - \frac{x^2}{4} \right] \, dx = 
+\left[ x^2- 3x - \frac{x^3}{12} \right] \Big|_2 ^6 = \frac{8}{3}
 \end{gather*}
 
 \end{itemize}
 \subsection*{Задача 2}
-$$I = \iint\limits_D (x^2 + y^2) \, dx \, dy, \qquad D: \begin{cases} y = x , \quad y =2 \\ y = x + 2, \quad y = 6 \end{cases}$$
+$$I = \iint\limits_D (x^2 + y^2) \, dx \ dy, \qquad D: \begin{cases} y = x , \quad y =2 \\ y = x + 2, \quad y = 6 \end{cases}$$
 \begin{gather*}
 D_1: \begin{cases} 
 0\leq x \leq 2 \\
@@ -1943,32 +1951,35 @@ D_3: \begin{cases}
 4\leq x \leq 6 \\
 x \leq y \leq 6
 \end{cases} \\
-I_1 = \int\limits_0 ^2 x^2 \int\limits_{2} ^{x+2} y^2\, dy \, dx  \qquad
-I_2 = \int\limits_2 ^4 x^2 \int\limits_{x} ^{x+2} y^2 \, dy\, dx  \qquad  
-I_3 = \int\limits_4 ^6 x^2 \int\limits_{x} ^{6} y^2\, dy \, dx 
+I_1 = \int\limits_0 ^2 x^2 \int\limits_{2} ^{x+2} y^2\, dy \ dx  \qquad
+I_2 = \int\limits_2 ^4 x^2 \int\limits_{x} ^{x+2} y^2 \, dy\ dx  \qquad  
+I_3 = \int\limits_4 ^6 x^2 \int\limits_{x} ^{6} y^2\, dy \ dx 
 \end{gather*}
 
 \begin{gather*}
-I_1 = \int\limits_0 ^2 x^2 \int\limits_{2} ^{x+2} y^2\, dy \, dx\\
+I_1 = \int\limits_0 ^2 x^2 \int\limits_{2} ^{x+2} y^2\, dy \ dx\\
 \int\limits_{2} ^{x+2} y^2\, dy  \frac{y^3}{3} \Big|_{2} ^{x+2} = \frac{(x+2)^3}{3} - \frac{8}{3}\\
-I_1 = \int\limits_0 ^2 x^2 \left(\frac{(x+2)^3}{3} - \frac{8}{3} \right) =  \int\limits_0 ^2 \left(\frac{x^2(x+2)^3}{3} - \frac{8x^2}{3} \right) = \frac{56}{3} 
+I_1 = \int\limits_0 ^2 x^2 \left(\frac{(x+2)^3}{3} - \frac{8}{3} \right) =  
+\int\limits_0 ^2 \left(\frac{x^2(x+2)^3}{3} - \frac{8x^2}{3} \right) = \frac{56}{3} 
 \end{gather*}
 
 \begin{gather*}
-I_2 = \int\limits_2 ^4 x^2 \int\limits_{x} ^{x+2} y^2 \, dy\, dx \\
+I_2 = \int\limits_2 ^4 x^2 \int\limits_{x} ^{x+2} y^2 \, dy\ dx \\
 \int\limits_{x} ^{x+2} y^2\, dy  \frac{y^3}{3} \Big|_{x} ^{x+2} = \frac{(x+2)^3}{3} - \frac{x^3}{3}\\
-I_2 = \int\limits_2 ^4 x^2 \left(\frac{(x+2)^3}{3} - \frac{x^3}{3} \right) =  \int\limits_0 ^2 \left(\frac{x^2(x+2)^3}{3} - \frac{x^5}{3} \right) = 104 
+I_2 = \int\limits_2 ^4 x^2 \left(\frac{(x+2)^3}{3} - \frac{x^3}{3} \right) =  
+\int\limits_0 ^2 \left(\frac{x^2(x+2)^3}{3} - \frac{x^5}{3} \right) = 104 
 \end{gather*}
 
 \begin{gather*}
-I_3 = \int\limits_4 ^6 x^2 \int\limits_{x} ^{6} y^2\, dy \, dx \\
+I_3 = \int\limits_4 ^6 x^2 \int\limits_{x} ^{6} y^2\, dy \ dx \\
 \int\limits_{x} ^{6} y^2\, dy = \frac{y^3}{3} \Big|_{x} ^{6} = 72 - \frac{x^3}{3} \\
-I_3 = \int\limits_4 ^6 x^2 \left( 72 - \frac{x^3}{3}\right) \, dx =  \int\limits_4 ^6 \left( 72x^2 - \frac{x^5}{3}\right) \, dx = \frac{304}{3} \\
+I_3 = \int\limits_4 ^6 x^2 \left( 72 - \frac{x^3}{3}\right) \, dx =  
+\int\limits_4 ^6 \left( 72x^2 - \frac{x^5}{3}\right) \, dx = \frac{304}{3} \\
 I = I_1 + I_2 + I_3 = \frac{56}{3} + 104 + \frac{304}{3} = 224
 \end{gather*}
 
 \subsection*{Задача 3}
-$$\iint\limits_D (x+y) \, dx \, dy, \qquad \partial D: \begin{cases} y^2 = 2x \\ x+y = 4 \\ x+y = 12 \end{cases}$$
+$$\iint\limits_D (x+y) \, dx \ dy, \qquad \partial D: \begin{cases} y^2 = 2x \\ x+y = 4 \\ x+y = 12 \end{cases}$$
 \begin{gather*}
 \begin{array}{|l@{}}
 y^2 = 2x \\
@@ -1986,28 +1997,35 @@ x+y = 12
 y = 12 - x \\
 (12-x)^2 = 2x
 \end{array} \implies D_2 =  \begin{cases} 8 \leq x \leq 18 \\ -\sqrt{2x} \leq y \leq 12-x \end{cases} \\
-I_1 = \int\limits_2 ^8 \int\limits_{4-x} ^{\sqrt{2x}} (x+y)\, dy \,dx  \qquad I_2 = \int\limits_8 ^{18} \int\limits_{-\sqrt{2x}} ^{12-x} (x+y)\, dy \,dx
+I_1 = \int\limits_2 ^8 \int\limits_{4-x} ^{\sqrt{2x}} (x+y)\, dy \ dx \qquad 
+I_2 = \int\limits_8 ^{18} \int\limits_{-\sqrt{2x}} ^{12-x} (x+y)\, dy \ dx
 \end{gather*}
 
 \begin{gather*}
-I_1 = \int\limits_2 ^8 \int\limits_{4-x} ^{\sqrt{2x}} (x+y)\, dy \,dx   \\
-\int\limits_{4-x} ^{\sqrt{2x}} (x+y)\, dy  = xy + \frac{y^2}{2} \Big|_{4-x} ^{\sqrt{2x}} = \sqrt{2} x^{\frac{3}{2}} + \frac{x^2}{2} + x - 8 \\
+I_1 = \int\limits_2 ^8 \int\limits_{4-x} ^{\sqrt{2x}} (x+y)\, dy \ dx   \\
+\int\limits_{4-x} ^{\sqrt{2x}} (x+y)\, dy  = 
+xy + \frac{y^2}{2} \Big|_{4-x} ^{\sqrt{2x}} = 
+\sqrt{2} x^{\frac{3}{2}} + \frac{x^2}{2} + x - 8 \\
 I_1 = \int\limits_2 ^8  \sqrt{2} x^{\frac{3}{2}} + \frac{x^2}{2} + x - 8 \, dx  = \frac{826}{5} \\
-I_2 = \int\limits_8 ^{18} \int\limits_{-\sqrt{2x}} ^{12-x} (x+y)\, dy \,dx \\
-\int\limits_{-\sqrt{2x}} ^{12-x} (x+y)\, dy  = xy + \frac{y^2}{2} \Big|_{-\sqrt{2x}} ^{12-x} = \sqrt{2} x^{\frac{3}{2}} - \frac{x^2}{2} - x + 72 \\
+I_2 = \int\limits_8 ^{18} \int\limits_{-\sqrt{2x}} ^{12-x} (x+y)\, dy \ dx \\
+\int\limits_{-\sqrt{2x}} ^{12-x} (x+y)\, dy  = 
+xy + \frac{y^2}{2} \Big|_{-\sqrt{2x}} ^{12-x} =
+\sqrt{2} x^{\frac{3}{2}} - \frac{x^2}{2} - x + 72 \\
 I_2 = \int\limits_8 ^{18} \sqrt{2} x^{\frac{3}{2}} - \frac{x^2}{2} - x + 72 \,dx = \frac{5678}{15}\\
 I = I_1 + I_2 = \frac{8156}{15}
 \end{gather*}
 
 \subsection*{Задача 4}
-$$\iint\limits_D (x+y) \, dx \, dy$$
+$$\iint\limits_D (x+y) \, dx \ dy$$
 Където D е триъгълник $\triangle ABO$ с върхове $A(1,0),\, B = (1,1),\, O = (0,0)$
 
 \begin{gather*}
 D = \begin{cases} 0 \leq x \leq 1 \\ 0\leq y \leq x \end{cases} \\
-I = \int\limits_0 ^1 \int\limits_{0} ^{x} (x+y)\, dy \,dx\\
-\int\limits_{0} ^{x} (x+y)\, dy = xy + \frac{y^2}{2} \Big|_{0} ^{x} = \frac{3x^2}{2} \\
-I = \frac{3}{2}  \int\limits_0 ^1 x^2 \,dx = \frac{x^3}{2}\Big|_0 ^1 = \frac{1}{2} - 0 = \frac{1}{2}
+I = \int\limits_0 ^1 \int\limits_{0} ^{x} (x+y)\, dy \ dx\\
+\int\limits_{0} ^{x} (x+y)\, dy =
+ xy + \frac{y^2}{2} \Big|_{0} ^{x} = \frac{3x^2}{2} \\
+I = \frac{3}{2}  \int\limits_0 ^1 x^2 \,dx = 
+\frac{x^3}{2}\Big|_0 ^1 = \frac{1}{2} - 0 = \frac{1}{2}
 \end{gather*}
 
 \newpage 
@@ -2023,8 +2041,184 @@ I = \frac{3}{2}  \int\limits_0 ^1 x^2 \,dx = \frac{x^3}{2}\Big|_0 ^1 = \frac{1}{
 
 \subsection{Задачи}
 
+\subsection*{Задача 1}
+Да се пресметнат интегралите 
+\begin{itemize}
+\item $I = \iint\limits_D \arctan \frac{y}{x} \, dx \ dy, \qquad 
+D = \begin{cases} 1 \leq x^2 + y^2 \leq 9 \\ y \geq \frac{x}{\sqrt{3}} \qquad y \leq \sqrt{3}x \end{cases} $
+\item $I = \iint\limits_D \, dx \ dy, \qquad
+ D = \{ (x,y) : x^2 +y^2 \leq 25 \}$ 
+\item $I = \iint\limits_D \, dx \ dy, \qquad$ 
+D е оградена от лемниската $(x^2 + y^2)^2 = 2a^2 xy$ 
+\item $I = \iint\limits_D\sqrt{1 + \frac{x^2}{9} + \frac{y^2}{16}} \, dx \ dy , \qquad
+D: \frac{x^2}{9} + \frac{y^2}{16} \leq 1$
+\end{itemize}
+
+\subsection*{Задача 2}
+Да се пресметнат интегралите 
+\begin{itemize}
+\item $I = \iint\limits_D \, dx \ dy, \qquad 
+\partial D: \begin{cases} y^2 = 2x, & xy=1 \\ y^2 = 3x, & xy=2 \end{cases}$
+\item $I = \iint\limits_D (2x - y)\, dx \ dy, \qquad 
+\partial D: \begin{cases} x+y = 1, & x+y=2 \\ 2x-y = 1, & 2x-y = 3 \end{cases}$
+\end{itemize}
+
 \newpage
 \subsection{Решения}
 
+\subsection*{Задача 1}
+\begin{itemize}
+\item $I = \iint\limits_D \arctan \frac{y}{x} \, dx \ dy, \qquad 
+D = \begin{cases} 1 \leq x^2 + y^2 \leq 9 \\ y \geq \frac{x}{\sqrt{3}} \qquad y \leq \sqrt{3}x \end{cases} $
+\begin{gather*}
+\text{Полярна смяна} \\
+x = \rho \cos \varphi \qquad y = \rho \sin \varphi \qquad (\rho > 0, \qquad 0< \varphi < 2\pi ) \\
+\text{За допълнителните условия имаме} \\
+1 \leq x^2 + y^2  = \rho^2 \cos^2 \varphi +\rho^2 \sin^2 \varphi \leq 9 
+\implies  1 \leq \rho^2 \leq 9 \implies
+ 1 \leq \rho \leq 3 \\
+y = \frac{x}{\sqrt{3}} \text{ е права сключваща ъгъл $\frac{\pi}{6}$ с положителната посока на $Ox$, a }\\
+y = \sqrt{3}x - \frac{\pi}{3} \implies \\
+\tan x \geq \frac{1}{\sqrt{3}} \qquad \tan x \leq \sqrt{3} \\
+x \in \left[\frac{\pi}{6} , \frac{\pi}{2}\right) \qquad x \in \left(- \frac{\pi}{2} ,\frac{\pi}{3}\right] \implies
+\varphi \in \left[\frac{\pi}{6}, \frac{\pi}{3} \right] \\
+\arctan \frac{y}{x} =  
+\arctan \frac{\rho \sin \varphi}{\rho \cos \varphi} = 
+\arctan \tan \varphi = \varphi \\
+\Delta = \rho \implies dxdy = \rho d\rho d\varphi\\
+I = \int\limits_{\frac{\pi}{6}} ^{\frac{\pi}{3}} \int\limits_1 ^3 \varphi \cdot \rho \, d\rho \ d\varphi = \int\limits_{\frac{\pi}{6}} ^{\frac{\pi}{3}} \varphi \int\limits_1 ^3 \rho \, d\rho \ d\varphi \\
+\int\limits_1 ^3 \rho \, d\rho = \frac{\rho^2}{2} \Big|_1 ^3 = \frac{1}{2} (9-1) = 4 \\
+I = 4 \int\limits_{\frac{\pi}{6}} ^{\frac{\pi}{3}} \varphi = 
+4\frac{\varphi^2}{2} \Big|_{\frac{\pi}{6}} ^{\frac{\pi}{3}} = 
+2 \left(\frac{\pi^2}{9} - \frac{\pi^2}{36}\right) = 2\frac{3\pi^2}{36} = \frac{\pi^2}{6}
+\end{gather*}
+
+\item $I = \iint\limits_D \, dx \ dy, \qquad
+ D = \{ (x,y) : x^2 +y^2 \leq 25 \}$ 
+\begin{gather*}
+\text{Полярна смяна} \\
+x = \rho \cos \varphi \qquad y = \rho \sin \varphi \qquad (\rho > 0, \qquad 0< \varphi < 2\pi ) \\
+\text{За допълнителните условия имаме} \\
+x^2 + y^2  = \rho^2 \cos^2 \varphi +\rho^2 \sin^2 \varphi \leq 25 \implies 
+0 \leq \rho^2 \leq 25 \implies
+ 0 \leq \rho \leq 5 \\
+\text{За $\varphi$ не се появяват допълнителни ограничения} \\
+\text{Якобианът} = \Delta = \rho \\
+I = \int\limits_0 ^{2\pi} \int\limits_0 ^5 \rho \, d\rho \ d\varphi\\
+\int\limits_0 ^5 \rho \, d \rho = 
+\frac{\rho^2}{2} \Big|_0 ^5 = \frac{25}{2} \\
+I = \frac{25}{2} \int\limits_0 ^{2\pi} \, d\varphi = 
+\frac{25}{2} \cdot 2\pi = 25\pi 
+\end{gather*}
+
+\item $I = \iint\limits_D \, dx \ dy, \qquad$ 
+D е оградена от лемниската $(x^2 + y^2)^2 = 2a^2 xy$ 
+\begin{gather*}
+\text{Полярна смяна} \\
+x = \rho \cos \varphi \qquad y = \rho \sin \varphi \qquad (\rho > 0, \qquad 0< \varphi < 2\pi ) \\
+xy>0 \implies \cos \varphi > 0 \qquad \sin \varphi > 0 \\
+\varphi \in \left(0, \frac{\pi}{2} \right) \qquad  \varphi \in \left(\frac{\pi}{2}, \frac{3\pi}{2} \right)
+\end{gather*}
+
+\item $I = \iint\limits_D\sqrt{1 + \frac{x^2}{9} + \frac{y^2}{16}} \, dx \ dy , \qquad
+D: \frac{x^2}{9} + \frac{y^2}{16} \leq 1$
+\begin{gather*}
+\text{Полярна смяна} \\
+x = 3\rho \cos \varphi \qquad y = 4\rho \sin \varphi \qquad (\rho > 0, \qquad 0< \varphi < 2\pi )\\
+\text{Якобианът на смяната:} \Delta = 12\rho \\
+\sqrt{1 + \frac{x^2}{9} + \frac{y^2}{16}} = 
+\sqrt{1 + \frac{9\rho^2 \cos^2 \varphi}{9} + \frac{16\rho^2 \sin^2 \varphi}{16}} = 
+\sqrt{1 +\rho^2 (\cos^2 \varphi+\sin^2 \varphi)} \implies \\
+\sqrt{1 + \frac{x^2}{9} + \frac{y^2}{16}} = \sqrt{1 +\rho^2} \\
+\frac{9\rho^2 \cos^2 \varphi}{9} + \frac{16\rho^2 \sin^2 \varphi}{16} \leq 1 \implies \rho^2 \leq 1 \implies 0 \leq \rho \leq 1 \\
+I = 12 \int\limits_0 ^{2\pi}  \int\limits_0 ^{1} \sqrt{1 +\rho^2} \, d\rho \ d\varphi\\
+\int\limits_0 ^{1} \sqrt{1 +\rho^2} \, d\rho = 
+\frac{1}{2}\int\limits_0 ^{1} (1 +\rho^2)^{\frac{1}{2}} \, d (\rho^2 + 1) =
+\frac{1}{2} \cdot \frac{(\rho^2+1)^{\frac{3}{2}}}{\frac{3}{2}} \Big|_0 ^{1} =
+\frac{1}{2} \cdot \frac{2^{\frac{3}{2}} - 1 }{\frac{3}{2}} \\
+I = \frac{12}{2} \cdot \frac{2}{3} \int\limits_0 ^{2\pi} 2^{\frac{3}{2}} - 1 \, d\varphi = 
+\frac{12}{3} (2\sqrt{2} - 1) \cdot 2\pi = \frac{8\pi}{3} (2\sqrt{2} - 1)
+\end{gather*}
+\end{itemize}
+
+\subsection*{Задача 2}
+\begin{itemize}
+\item $I = \iint\limits_D \, dx \ dy, \qquad 
+\partial D: \begin{cases} y^2 = 2x, & xy=1 \\ y^2 = 3x, & xy=2 \end{cases}$
+\begin{gather*}
+\text{Нека} \\
+u = \frac{y^2}{x} \qquad v = xy \\
+2 \leq u \leq 3 \qquad 1 \leq v \leq 2 \\
+\text{Якобианът на смяната е}:
+\Delta = \frac{D(x,y)}{D(u,v)} = \frac{1}{\frac{D(u,v)}{D(x,y)}}\\
+\text{Освен това}
+\frac{D(u,v)}{\partial (x,y)} = \begin{vmatrix} u'_x & u'_y \\ v'_x & v'_y \end{vmatrix} =  \begin{vmatrix} - \frac{y^2}{x^2} &\frac{2y}{x}\\ y & x \end{vmatrix} = - \frac{y^2}{x} - \frac{2y^2}{x} =  - \frac{3y^2}{x} = 3u \\
+\Delta = - \frac{1}{3u} \implies |\Delta| = \frac{1}{3u} 
+\end{gather*}
+\begin{gather*}
+I = \int\limits_1 ^2 \int\limits_2 ^3 \frac{1}{3u} \, du \ dv \\
+\int\limits_2 ^3 \frac{1}{3u} \, du  = 
+\frac{1}{3} \int\limits_2 ^3 \frac{1}{u} = 
+\frac{1}{3} \ln u \Big|_2 ^3  = \frac{1}{3} \ln \frac{3}{2} \\
+I = \int\limits_1 ^2 \frac{1}{3} \ln \frac{3}{2} \, dv = 
+\frac{1}{3} \ln \frac{3}{2} \int\limits_1 ^2 \, dv  = 
+\frac{1}{3} \ln \frac{3}{2} v\Big|_1 ^2 = 
+\frac{1}{3} \ln \frac{3}{2}
+\end{gather*}
+\item $I = \iint\limits_D (2x - y)\, dx \ dy, \qquad 
+\partial D: \begin{cases} x+y = 1, & x+y=2 \\ 2x-y = 1, & 2x-y = 3 \end{cases}$
+\begin{gather*}
+\text{Нека} \\
+u = x+y \qquad v = 2x-y \\
+1 \leq u \leq 2 \qquad 1 \leq v \leq 3 \\
+\text{Якобианът на смяната е}:
+\Delta = \frac{D(x,y)}{D(u,v)} = \frac{1}{\frac{D(u,v)}{D(x,y)}}\\
+\text{Освен това}
+\frac{D(u,v)}{\partial (x,y)} = \begin{vmatrix} u'_x & u'_y \\ v'_x & v'_y \end{vmatrix} =  \begin{vmatrix} 1 & 1\\ 2 & -1 \end{vmatrix} =-3 \\
+\Delta = - \frac{1}{3} \implies |\Delta| = \frac{1}{3} 
+\end{gather*}
+\begin{gather*}
+I = \int\limits_1 ^2 \int\limits_1 ^3 \frac{1}{3}v \, dv \ du \\
+\int\limits_1 ^3 \frac{1}{3}v \, dv  =
+\frac{1}{3} \int\limits_1 ^3 v \, dv =
+\frac{1}{3} \frac{v^2}{2} \Big|_1 ^3 = 
+\frac{1}{3} \left( \frac{9}{2} - \frac{1}{2}\right) = \frac{4}{3} \\
+I = \int\limits_1 ^2  \frac{4}{3} \, du = 
+\frac{4}{3} \int\limits_1 ^2  \, du = 
+\frac{4}{3} u\Big|_1 ^2 = \frac{4}{3}
+\end{gather*}
+\end{itemize}
+
+\newpage 
+\section{Упражнение към лекция 12}
+
+\subsection{Задачи}
+
+\newpage
+\subsection{Решения}
+
+\newpage 
+\section{Упражнение към лекция 13}
+
+\subsection{Задачи}
+
+\newpage
+\subsection{Решения}
+
+\newpage 
+\section{Упражнение към лекция 14}
+
+\subsection{Задачи}
+
+\newpage
+\subsection{Решения}
+
+\newpage 
+\section{Упражнение към лекция 15}
+
+\subsection{Задачи}
+
+\newpage
+\subsection{Решения}
 
 \end{document}
