@@ -1283,12 +1283,359 @@ $$ 2 + 3 + 4 + 5 + 8 + 9 + 15 = 46$$
 \end{figure}
 Съответстващата сума от тегловни коефициентина принадлежащите му ребра, е:
 $$ 4 + 8 + 2 + 4 + 2 + 1 + 7 + 9 = 37$$
-\newpage
-\section{Упражнение 9}
 
 \newpage
-\section{ Упражнение 10}
+\section{Упражнение 9: Комбинаторика}
 
+\subsubsection*{Задача 1}
+Колко различникомбинации на 5-разрядни числа могат да се съставят, ако се работи с двоична, десетична бройна система? \\
+Решение:
+\subsubsection*{Възможно е повтаряне}
+Двоична бройна система
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|} 
+\hline
+1ви разряд & 2ри разряд &3ти разряд &4ти разряд &5ти разряд & Комбинации \\
+\hline
+0-1 & 0-1 & 0-1 & 0-1 & 0-1 & \\
+\hline
+2 & 2 & 2 & 2 & 2 & $2^5 = 32$ \\
+\hline
+\end{tabular}
+\end{center}
+Десетична бройна система
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|} 
+\hline
+1ви разряд & 2ри разряд &3ти разряд &4ти разряд &5ти разряд & Комбинации \\
+\hline
+0-9 & 0-9 & 0-9 & 0-9 & 0-9 & \\
+\hline
+10 & 10 & 10 & 10 & 10 & $10^5 = 32$ \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsubsection*{Не е възможно е повтаряне}
+Двоична бройна система - не е възможно защото трябва да се разпределят 2 цифри в 5 позиции.\\
+Десетична бройна система
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|} 
+\hline
+1ви разряд & 2ри разряд &3ти разряд &4ти разряд &5ти разряд & Комбинации \\
+\hline
+10 числа & 9 числа & 8 числа & 7числа & 6 числа & $10 \cdot 9 \cdot 8 \cdot 7 \cdot 6 = 30240$\\
+\hline
+\end{tabular}
+\end{center}
+
+\newpage
+\subsubsection*{Задача 2}
+Компютърна лаборатория разполага с 5 вида маси, 6 вида столове и 3 типа компютърни конфигурации. 
+\begin{enumerate}
+\item Колко възможни начина на съчетаване на маса, стол и компютър могат да се получат?
+\item Ако на всяко възможно работно място съответства по един студент, то колко възможни начина на съчетаване на маса, стол, компютър и студент могат да се получат?
+\end{enumerate}
+Решение: \\
+1.
+\begin{center}
+\begin{tabular}{|c|c|c|c|} 
+\hline
+Маси & Столове & Компютри & Комбинации \\
+\hline
+5 & 6 & 3 & $5 \cdot 6 \cdot 3 = 90$\\
+\hline
+\end{tabular}
+\end{center}
+2.
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|} 
+\hline
+Маси & Столове & Компютри & Комбинации (M-С-К) & Студенти & Комбинации (М-С-К-Ст) \\
+\hline
+5 & 6 & 3 & $5 \cdot 6 \cdot 3 = 90$ & 90 & $5 \cdot 6 \cdot 3 \cdot 90 = 8100$ \\
+\hline 
+\end{tabular}
+\end{center}
+
+\subsubsection*{Задача 3}
+Нека разгледаме краен автомат, чиято входна азбука се състои от 4 букви - $a,b,c,d$. \\
+Колко различни думи може да разпознае автомата, ако във всяка дума буквите $a,b,c,d$ срещат както следва:
+\begin{center}
+\begin{tabular}{|c|c|} 
+\hline
+a & 3 \\
+\hline
+b & 2 \\
+\hline
+c & 1 \\
+\hline
+d & 4\\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{gather*}
+k =4 \quad n_1 = 3 \quad n_2 = 2 \quad n_3 = 1 \quad n_4 = 4 \implies n = n_1 + n_2 + n_3 + n_4 = 10 \\
+P(n_1, n_2,..., n_k) = \frac{n!}{n_1! n_2! ... n_k!}  = \frac{n!}{n_1! n_2! n_3! n_4!} = \frac{10!}{3! 2! 1! 4!} = 12600 
+\end{gather*}
+
+\subsubsection*{Задача 4}
+Необходимо е да се изберат 4 души от студентска група от 10 човека. \\
+Какъв е максималният възможен брой комбинации от 4-ма студента, които да се изберат? \\
+Решение: \\
+$$C_n ^k = \frac{n!}{(n-k)! k!} \qquad n = 10 \quad k = 4 \implies \frac{10!}{(10-4)! 4!} = 210$$
+
+\subsubsection*{Задача 5}
+Нека общият брой на студентите от ФКСУ е 100. Част от тях са взели своите изпити по следния начин:
+\begin{center}
+\begin{tabular}{|c|c|} 
+\hline
+Брой студенти & Дисциплина \\
+\hline
+$N(\alpha_1) = 40 $ & физика \\
+\hline
+$N(\alpha_2) = 50 $ & химия \\
+\hline
+$N(\alpha_3) = 45 $ & ЛААГ \\
+\hline
+$N(\alpha_1, \alpha_2) = 15 $ & физика и химия \\
+\hline
+$N(\alpha_2, \alpha_3) = 20 $ & химия и ЛААГ\\
+\hline
+$N(\alpha_1, \alpha_3) = 10 $ & физика и ЛААГ \\
+\hline
+$N(\overline{\alpha_1}, \overline{\alpha_2}, \overline{\alpha_3}) = 2 $ & нито един \\
+\hline
+\end{tabular}
+\end{center}
+Има ли студенти от ФКСУ, които са взели всеки от горепосочените изпити?
+\begin{figure}[htp!]
+\includegraphics{Pics/Discrete math/ex9/ex9-task5.png}
+\end{figure}
+\begin{gather*}
+100 = (15+x) + (15+x) + (15+x) +  (15-x) +  (10-x) +  (20-x) + x + 2\\
+100 = x +2 + 15 + 15 + 15 + 15 + 10 + 20 \\
+100 = x + 92 \implies x = 8
+\end{gather*}
+\begin{figure}[htp!]
+\includegraphics{Pics/Discrete math/ex9/ex9-task5-2.png}
+\end{figure}
+
+\subsubsection*{Задача 6}
+Имаме 4 еднакви топчета и 2 различни кутии. \\
+Колко са възможните комбинации за поставяне на топчетата в кутиите?
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|} 
+\hline
+I кутия & 4 & 3 & 2 & 1 & 0 \\
+\hline
+II кутия & 0 & 1 & 2 & 3 & 4 \\
+\hline
+\end{tabular}
+\end{center}
+Отговор: 5
+
+\subsubsection*{Задача 7}
+Какъв е броят на делителите на числото 400?
+\begin{gather*}
+N = p_1 ^{n_1} \cdot  p_2 ^{n_2} \cdot ...  p_k ^{n_k}\\
+400 = 4 \cdot 100 = 4 \cdot 4 \cdot 25 = 2^4 \cdot 5^2 = p_1 ^{n_1} \cdot  p_2 ^{n_2}\\
+N = (n_1 + 1) \cdot (n_2 + 1) \cdot ...  (n_k + 1) =  (4 + 1) \cdot (2 + 1) = 5 \cdot 3 = 15 
+\end{gather*}
+
+\newpage
+\section{ Упражнение 10: Вероятности}
+
+\subsubsection*{Задача 1}
+\begin{center}
+\includegraphics{Pics/Discrete math/ex10/ex10-task1.png}
+\end{center}
+Решение: \\
+Светодиодите ще изгаснат (настъпва събитие C), ако настъпи събитие A или едновременно настъпят и трите събития $B_1, B_2, B_3$, т.е
+$$C = A + B_1 \cdot B_2 \cdot B_3$$
+Съответният израз за противоположното събитие се получава като
+$$\overline{C} = \overline{A + B_1 \cdot B_2 \cdot B_3} = \overline{A} \cdot \overline{B_1 \cdot B_2 \cdot B_3} =  \overline{A} \cdot  ( \overline{B_1} +  \overline{B_2} +  \overline{B_3} )$$
+
+\subsubsection*{Задача 2}
+Дадено е устройство, състоящо се от два модула - a и b. Модул а се състои от два блока, а модул b- от три. Дефинирани са следните събития \\
+\begin{itemize}
+\item $A_1$ - блок $a_1$ е в изправност. 
+\item $A_2$ - блок $a_2$ е в изправност. 
+\item $B_1$ - блок $b_1$ е в изправност. 
+\item $B_2$ - блок $b_2$ е в изправност. 
+\item $B_3$ - блок $b_3$ е в изправност. 
+\end{itemize}
+Устройството работи(събитие C), когато е в изправност поне един блок от модул a и не по малко от два блока от модул b. Да се изрази събитието C чрез останалите. \\
+Решение:\\
+$$A = A_1 + A_2 + A_1 \cdot A_2 \qquad 
+B = B_1 \cdot B_2 + B_2 \cdot B_3 + B_3 \cdot B_1 + B_1 \cdot B_2 \cdot B_3$$
+$$C = A \cdot B = (A_1 + A_2 + A_1 \cdot A_2) \cdot 
+(B_1 \cdot B_2 + B_2 \cdot B_3 + B_3 \cdot B_1 + B_1 \cdot B_2 \cdot B_3)$$
+
+\subsubsection*{Задача 3}
+Да се докаже, че събитията $A, \overline{A} \cdot B, \overline{A+B}$ образуват пълна група събития. \\
+Решение: \\
+\begin{gather*}
+A \cdot \overline{A} \cdot B = \varnothing \cdot B = \varnothing \\
+A \cdot \overline{A+B} = A \cdot \overline{A} \cdot \overline{B} = \varnothing \cdot B = \varnothing \\
+\overline{A} \cdot B  \cdot \overline{A} \cdot \overline{B} = \overline{A} \cdot \overline{A} \cdot B \cdot \overline{B} = \overline{A} \cdot \varnothing = \varnothing  \\
+A + \overline{A} \cdot B + \overline{A+B} = 
+A + \overline{A} \cdot B + \overline{A} \cdot \overline{B} = \\
+A + \overline{A} \cdot (B + \overline{B}) = 
+A + \overline{A} \cdot U = 
+A + \overline{A} = U 
+\end{gather*}
+От първите 3 уравнения $\implies$ не са съвместими $\implies$ образуват пълна група събития
+
+\subsubsection*{Задача 4}
+Разполагаме с два различни зара, които се хвърлят едновременно. Нека се дефинират следните събития: 
+\begin{itemize}
+\item A -  Поне единият зар се е паднал 1 точка. 
+\item B -  Сумата от точки върху двата зара е четно число. 
+\end{itemize}
+Да се определят вероятносттите 
+\begin{itemize}
+\item $P(A \cdot B)$
+\item $P(\overline{A} \cdot B)$
+\end{itemize}
+
+\begin{gather*}
+n = 6 \cdot 6 = 36 \\
+A \cdot B = \{E_1 \cdot E_1, E_1 \cdot E_3, E_3 \cdot E_1, E_1 \cdot E_5, E_5 \cdot E_1 \} \implies m = 5 \\
+P(A \cdot B) = \frac{m}{n} = \frac{5}{36} \\
+\overline{A} \cdot B = \{E_2 \cdot E_2, E_2 \cdot E_4, E_2 \cdot E_6
+E_3 \cdot E_3, E_3 \cdot E_5, 
+E_4 \cdot E_4, E_4 \cdot E_2,\\ E_4 \cdot E_6,
+E_5 \cdot E_5, E_5 \cdot E_3,
+E_6 \cdot E_6, E_6 \cdot E_2, E_6 \cdot E_4, 
+\} \implies m = 13 \\
+P(\overline{A} \cdot B) = \frac{m}{n} = \frac{13}{36} 
+\end{gather*}
+
+\subsubsection*{Задача 5}
+Върху картончета е написана всяка от цифрите 0-9 само по веднъж.\\
+Каква е вероятността след поставянето им в кутия и изваждането им оттам със затворени очи цифрите да са подредени по намаляващ ред в зависимост от последователността на изваждането им? \\
+Решение: \\
+Цифри: 0-9 $\implies$ 10 карточета които се подреждат по $10!$ начина $\implies n = 10!$ \\
+Благоприятни изходи: $m = 1$, Да извадим тази подредба $(9,8,7,6,5,4,3,2,1)$ \\
+$$P =  \frac{m}{n} = \frac{1}{10!} $$
+
+\subsubsection*{Задача 6}
+Дадена е мишена. Радиусът на най външния кръг е 10см, а най вътрешния 1см. Движейки се навътре радиусите намаляват с 1см. Да се определи 
+\begin{itemize}
+\item Каква е вероятността при произволно стреляне да се улучи всяка зона?
+\item Каква е вероятността при произволно стреляне да се улучи зона 5,6,7,8?
+\end{itemize}
+\begin{center}
+\includegraphics{Pics/Discrete math/ex10/ex10-task6.png}
+\end{center}
+\begin{gather*}
+\begin{array}{|l@{}}
+S_{10} = \pi r_{10} ^2 = 100\pi \\
+S_9 = \pi r_9 ^2 = 81\pi \\
+S_8 = \pi r_8 ^2 = 8^2\pi = 64\pi\\
+S_7 = \pi r_7 ^2 = 7^2\pi = 49\pi\\
+S_6 = \pi r_6 ^2 = 6^2\pi = 36\pi\\
+S_5 = \pi r_5 ^2 = 5^2\pi = 25\pi \\
+S_4 = \pi r_4 ^2 = 4^2\pi = 16\pi \\
+S_3 = \pi r_3 ^2 = 3^2\pi = 9\pi \\
+S_2 = \pi r_2 ^2 = 2^2\pi = 4\pi \\
+S_1 = \pi r_1 ^2 = 1\pi 
+\end{array} \implies
+\begin{array}{|l@{}}
+m_1 = S_{10} - S_9 = 19\pi \\
+m_2 = S_9 - S_8 = 17\pi \\
+m_3 = S_8 - S_7 = 15\pi \\
+m_4 = S_7 - S_6 = 13\pi \\
+m_5 = S_6 - S_5 = 11\pi \\
+m_6 = S_5 - S_4 = 9\pi \\
+m_7 = S_4 - S_3 = 7\pi \\
+m_8 = S_3 - S_2 = 5\pi \\
+m_9 = S_2 - S_1 = 3\pi \\
+m_{10} = S_1 = \pi
+\end{array} \\
+n = 100\pi \\
+\begin{array}{|l@{}}
+P(A_1) = \frac{m_1}{n} = \frac{19\pi}{100\pi} = 0.19 \\
+P(A_2) = \frac{m_2}{n} = \frac{17\pi}{100\pi} = 0.17 \\
+P(A_3) = \frac{m_3}{n} = \frac{15\pi}{100\pi} = 0.15 \\
+P(A_4) = \frac{m_4}{n} = \frac{13\pi}{100\pi} = 0.13 \\
+P(A_5) = \frac{m_5}{n} = \frac{11\pi}{100\pi} = 0.11 \\
+P(A_6) = \frac{m_6}{n} = \frac{9\pi}{100\pi} = 0.09 \\
+P(A_7) = \frac{m_7}{n} = \frac{7\pi}{100\pi} = 0.07 \\
+P(A_8) = \frac{m_8}{n} = \frac{5\pi}{100\pi} = 0.05 \\
+P(A_9) = \frac{m_9}{n} = \frac{3\pi}{100\pi} = 0.03 \\
+P(A_{10}) = \frac{m_{10}}{n} = \frac{\pi}{100\pi} = 0.01 
+\end{array} \\
+P = P(A_5) + P(A_6) + P(A_7) + P(A_8) = 0.11 + 0.09 + 0.07 + 0.05 = 0.32
+\end{gather*}
+
+\subsubsection*{Задача 7}
+Нека разлгедаме две фирми. На всеки 100 продукта доставени в първата фирма, 75 \% са български, а във втората фирма - 50 \%. Каква е вероятността дадена стока да е от български производител, ако е закупена от първата фирма и от втората. \\
+A - Покупка на стока произведена в България. \\
+B - Закупена от първа/втора фирма.
+$$P(A/B) = \frac{75}{100} = 0.75$$
+$$P(A/B) = \frac{50}{100} = 0.5$$
+
+\subsubsection*{Задача 8}
+Вероятността да се появи ненулев потенциал върху корпуса на уред ориентиран към земята е 0.3. 99\% от дефектно-токовите защити сработват и прекъсват веригата. Каква е вероятността да сработи защитата. \\
+А - поява се ненулев потенциал. \\
+B - сработване на дефектно-токова защита.
+$$P(A \cdot B) = P(A)\cdot P(B/A) = 0.3 \cdot 0.99 = 0.297$$
+
+\subsubsection*{Задача 9}
+Дадени са три несъвместими събития A,B,C. При провеждане на опит всяко от тях може да настъпи с вероятност $P(A) = 0.18,\ P(B) = 0.5,\ P(C) = 0.02$ Каква е вероятността да настъпи поне едно от събитията
+$$P(A+B+C) = P(A) + P(B) + P(C) = 0.18 + 0.5 + 0.02 = 0.7$$
+
+\subsubsection*{Задача 10}
+Дадена е електрическа верига, в която могат да възникнат следните събития
+\begin{itemize}
+\item $A_1$ - изгаряне на светодиод $a_1$ с вероятност $P(A_1) = 0.7$.
+\item $A_2$ - изгаряне на светодиод $a_2$ с вероятност $P(A_2) = 0.5$.
+\item $B_1$ - изгаряне на светодиод $b_1$ с вероятност $P(B_1) = 0.2$.
+\item $B_2$ - изгаряне на светодиод $b_2$ с вероятност $P(B_2) = 0.1$.
+\item $B_3$ - изгаряне на светодиод $b_3$ с вероятност $P(B_3) = 0.3$.
+\end{itemize}
+Каква е вероятността нито един да не свети.
+\begin{gather*}
+P(A+B) = P(A) + P(B) - P(A) \cdot P(B)\\
+P(A) = P(A_1) +P(A_2) - P(A_1)\cdot P(A_2) = 0.7+0.5-0.7 \cdot 0.5 = 0.85 \\
+P(B) = P(B_1) \cdot P(B_2) \cdot P(B_3) = 0.2 \cdot 0.1 \cdot 0.3 = 0.006 \\
+P(A+B) = 0.85 + 0.006 - 0.85 \cdot 0.006 = 0.8509 
+\end{gather*}
+
+\subsubsection*{Задача 11}
+В непрозрачна кутия са поставени три цвята топки - червени, сини, зелени. При боядисването някои са оцветени неравномерно. 
+\begin{center}
+\begin{tabular}{|c|c|c|c|} 
+\hline
+Цвят & Червен & Син & Зелен \\
+\hline
+Общо количество  & 50\% & 10\% & 40 \% \\
+\hline
+Неравномерно оцветени & 2 \% & 5\% & 1\% \\
+\hline
+\end{tabular}
+\end{center}
+Каква е вероятността да се извади неравномерно оцветена. \\
+A - Извадената топка е неравномерно оцветена. \\
+$Н_{r}$ - Извадената топка е червена \\
+$Н_{b}$ - Извадената топка е синя \\
+$Н_{g}$ - Извадената топка е зелена 
+\begin{gather*}
+P(H_{r}) = \frac{50}{100} = 0.5 \implies P \left( \frac{A}{H_{r}} \right) = \frac{2}{100} = 0.02 \\
+P(H_{b}) = \frac{10}{100} = 0.1 \implies P \left( \frac{A}{H_{b}} \right) = \frac{5}{100} = 0.05 \\
+P(H_{g}) = \frac{40}{100} = 0.4 \implies P \left( \frac{A}{H_{b}} \right) = \frac{1}{100} = 0.01 \\
+P(A) = P(H_{r}) \cdot P\left( \frac{A}{H_{r}}\right) +
+P(H_{b})\cdot P\left( \frac{A}{H_{b}} \right)+
+P(H_{g})\cdot P\left( \frac{A}{H_{g}} \right) = \\
+0.5 \cdot 0.02 + 0.1 \cdot 0.05 + 0.4 \cdot 0.01 = 0.019 
+\end{gather*}
+\\
+\begin{center}
+\includegraphics{Pics/Discrete math/ex10/ex10-task12.png}
+\end{center}
 \newpage
 \section{ Упражнение 11}
 
