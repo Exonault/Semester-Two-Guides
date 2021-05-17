@@ -1559,7 +1559,7 @@ $$\xi^{(i)} \in [G_i], i = 1,2,..., i_0$$
 Крайната граница 
 $$\lim\limits_{\delta_\tau \to 0} \sigma_\tau (f)$$
 ако съществува се нарича многократен интеграл от функцията f върху измеримото и отворено множеството G(или [G]) а функцията се нарича интегруема в риманов смисъл върху множеството G(или [G]). Означава се по един от следните начини 
-$$\int f \, dG, \int f(x) \,dG, \int ... \int f(x_1, x_2,..., x_m) \,dx_1 \, dx_2 \, ... \, dx_m$$
+$$\int f \ dG, \int f(x) \ dG, \int ... \int f(x_1, x_2,..., x_m) \ dx_1 \ dx_2 \ ... \ dx_m$$
 Множеството G([G]) се нарича област на интегриране.
 \end{definition}
 
@@ -1584,30 +1584,30 @@ Oсвен това $f,g: [G] \to \mathbb{R}, f,g \in \Re(G)$, a $\lambda, \nu$ -
 \begin{theorem}
 В сила са следните свойства на многократните интеграли
 \begin{enumerate}
-\item $\int \, dG = \int 1 \, dG = \mu(G)$
-\item $\int (\lambda f + \nu g) \, dG = \lambda \int f \, dG + \nu \int g \, dG$ (Линейност на интеграла)\\
+\item $\int \ dG = \int 1 \ dG = \mu(G)$
+\item $\int (\lambda f + \nu g) \ dG = \lambda \int f \ dG + \nu \int g \ dG$ (Линейност на интеграла)\\
 В частност
 \begin{enumerate}
-\item $\lambda = \nu = 1 \implies \int (f+g) \, dG  = \int f \, dG + \int g \, dG$ 
-\item $\lambda = 1,  \nu = -1 \implies \int (f-g) \, dG  = \int f \, dG - \int g \, dG$ 
-\item $\lambda = const,  \nu = 0 \implies \int \lambda f \, dG  = \lambda \int f \, dG$ 
+\item $\lambda = \nu = 1 \implies \int (f+g) ю dG  = \int f \ dG + \int g \ dG$ 
+\item $\lambda = 1,  \nu = -1 \implies \int (f-g) \ dG  = \int f \ dG - \int g \ dG$ 
+\item $\lambda = const,  \nu = 0 \implies \int \lambda f \ dG  = \lambda \int f \ dG$ 
 \end{enumerate}
-\item $f \geq 0$ върху G $\implies \int f \, dG \geq 0$
+\item $f \geq 0$ върху G $\implies \int f \ dG \geq 0$
 \end{enumerate}
 \end{theorem}
 Oт тези три свойства се получва следствието 
-$$f \geq g \implies \int f \, dG \geq \int g \, dG$$
+$$f \geq g \implies \int f \ dG \geq \int g \ dG$$
 
 \begin{theorem}
 Ако $G', G''$ са измеримо множество, $[G] = [G'] \cup [G'']$ и $G' \cap G'' = \varnothing$ то следва
-$$\int f \, dG = \int f \, d(G' \cup G'') =\int f \, dG' + \int f \, dG'' $$
+$$\int f \ dG = \int f \ d(G' \cup G'') =\int f \ dG' + \int f \ dG'' $$
 \end{theorem}
 
 \begin{theorem}[адитивност относно множества]
 Ако $G' \subset G$ е измеримо множество, то $f \in \Re(G')$
 \end{theorem}
 Oт тази теорема следва монотонноста на интеграла: Ако $\Gamma \subset G$ е измеримо множество и $f \geq 0$ върху  G, то 
-$$\int f \, dG \geq \int f \, d\Gamma$$
+$$\int f \ dG \geq \int f \ d\Gamma$$
 
 \begin{theorem}
 Произведението $f \cdot g \in \Re(G)$
@@ -1615,7 +1615,7 @@ $$\int f \, dG \geq \int f \, d\Gamma$$
 
 \begin{theorem}
 Функцията $\vert f \vert \in \Re(G)$ и освен това е изпълнено неравенството 
-$$\left \vert \int f \, dG \right \vert \leq \int \vert f \vert \, dG$$
+$$\left \vert \int f \ dG \right \vert \leq \int \vert f \vert \ dG$$
 \end{theorem}
 
 \newpage
@@ -1634,17 +1634,17 @@ $$\left \vert \int f \, dG \right \vert \leq \int \vert f \vert \, dG$$
 
 \begin{theorem}[Теорема на Фубини]
 Нека G е елементарна фигура отностно $Oy, G \subset \mathbb{R}^2, \partial G$ границата на G, се състои от графиките на непрекъснатите функции $\varphi(x) \psi(x), \varphi(x) \leq \psi(x), x\in [a,b]$ и евентуално от отсечки от правите $x = a, x = b$. Нека $f: [G] \to \mathbb{R}$ и f е непрекъсната върху [G]. Тогава
-$$\iint\limits_{G} f(x,y) \, dx \, dy = \int\limits_a ^b \left( \int\limits_{\varphi(x)} ^{\psi(x)}  f(x,y) \, dy \right) \, dx$$
+$$\iint\limits_{G} f(x,y) \ dx \ dy = \int\limits_a ^b \left( \int\limits_{\varphi(x)} ^{\psi(x)}  f(x,y) \ dy \right) \ dx$$
 \end{theorem}
 
 \begin{definition}
 Интегралът в дясната страна на формулата от Теорема 9.6.1 се нарича повторен и обикновенно се записва във вида
-$$\int\limits_a ^b \int\limits_{\varphi(x)} ^{\psi(x)}  f(x,y) \, dy \, dx $$ 
+$$\int\limits_a ^b \int\limits_{\varphi(x)} ^{\psi(x)}  f(x,y) \ dy \ dx $$ 
 \end{definition}
 
 \begin{lemma}
 При предпложенията от Теорема 9.6.1 функцията 
-$$F(x) = \int\limits_{\varphi(x)} ^{\psi(x)}  f(x,y) \, dy$$
+$$F(x) = \int\limits_{\varphi(x)} ^{\psi(x)}  f(x,y) \ dy$$
 е непрекъсната функция на x в интервала [a,b]. 
 \end{lemma}
 Aко областта G е елементарна отностно $Ox$ и границата ѝ се състои от графиките на непрекъснатите функции $\alpha (y), \beta(y), \alpha (y) \leq \beta(y), c \leq y \leq d$ и евентуално отсечки от правите $y = c, y = d$ и функцията $f(x,y)$ е непрекъсната в компактното множество [G] то е в сила формулата 
@@ -2075,10 +2075,264 @@ $$x^2 + y^2 \leq z \leq 4 \implies \rho^2 \leq z \leq 4 $$
 \end{example}
 
 \newpage
-\section{Лекция 12}
+\section{Лекция 12: Kриви и повърхнини в тримерното пространство}
+
+\subsection{Kриви и повърхнини в тримерното пространство}
+Нека $\Gamma \subset \mathbb{R}^3$ e непрекъсната крива линия, зададена в следния параметричен вид: 
+$$\Gamma: \{r(t); t \in [\alpha, \beta] \} \equiv \{x = \varphi(t), y = \psi(t), z = \chi(t) ; t \in [\alpha, \beta] \}$$
+в интервала $[\alpha, \beta] \subset \mathbb{R}$.
+
+\begin{definition}
+Точката $A = r(\alpha)$ се нарича начало на кривата, а $B = r(\beta)$ - неин край.
+\end{definition}
+
+\begin{definition}
+Точка от кривата $\Gamma$, която е образ на повече от една точка от интервала $[\alpha, \beta]$ (с изключение на началото и края) се нарича точка на самопресичане или кратна точка на тази крива. 
+Крива която няма други точки на самопресичане (освен $r(\alpha) = r(\beta)$) и такива, че $r(t) \neq r(\alpha) = r(\beta); t \in [\alpha, \beta] $ се нарича прост контур. 
+Кривата $\Gamma$ се нарича затворена крива или затворен контур, ако началото ѝ съвпада с нейния край, $r(\alpha) = r(\beta)$.
+\end{definition}
+
+\begin{definition}
+В частност ако кривата $\Gamma$ лежи в някаква равнина, тя се нарича равнинна. 
+Ако посочената равнина е кординатната равнина $xOy$, то представянето на тази крива има вида 
+$$\Gamma: \{r(t); t \in [\alpha, \beta] \} \equiv \{x = \varphi(t), y = \psi(t), z = 0 ; t \in [\alpha, \beta] \}$$
+при което уравнението $z = 0$ обикновенно не се пише.
+\end{definition}
+
+\begin{definition}
+Кривата $\Gamma$ се нарича диференцируема, ако кординатните ѝ функции $ \varphi(t), \psi(t), \chi(t)$ са диференцируеми в $[\alpha, \beta]$, а
+$$r'(t) = ( \varphi'(t), \psi'(t), \chi'(t))$$
+се нарича производна на представянето $r(t)$ на кривата. Ако освен това тези функци са и непрекъснато диференцируеми, то кривата се нарича непрекъснато диференцируема. 
+\end{definition}
+
+\begin{definition}
+Нека кривата $\Gamma$ е диференцируема крива. 
+Точката на кривата $\Gamma$ в която $r' \neq 0$ се нарича неособена, а точката в която $r'=0$ - особена.
+\end{definition}
+От равенството
+$$|r'| = \sqrt{ \varphi'^2 + \psi'^2 + \chi'^2}$$
+следва че точката $( \varphi(t), \psi(t), \chi(t))$ от кривата $\Gamma$ е неособена тогава и само тогава когато $\varphi'^2 (t)+ \psi'^2 (t) + \chi'^2 (t) > 0$ т.е поне една от производните е различна от нула. \\
+Кривата $\Gamma$ има допирателна във всяка неособена точка. 
+
+\begin{definition}
+Кривата $\Gamma$ се нарича гладка, ако е непрекъснато диференцируема крива без особени точки.
+Ако дадената крива не е гладка, но може да се представи като сума от краен брой гладки криви, се казва, че тя по части гладка или частично гладка. 
+\end{definition}
+
+\begin{definition}
+Кривата се нарича ректифицируема, ако има крайна дължина. 
+\end{definition}
+
+\begin{definition}
+Множеството $D \subset \mathbb{R}^2$ се нарича едносвързано, ако за всяка непрекъсната затворена крива линия $\gamma \subset D$ е изпълнено $Int \gamma \subset D$, където $Int \gamma$ е множеството от всички точки, които се намират в ограниченото множество $\widetilde{D}$ с контур $\partial \widetilde{D} = \gamma$
+\end{definition}
+Нека сега $D \subset \mathbb{R}^2$ е едносвързана област и за всички точки от тази област са дефинирани три функции
+$$x = x(u,v) \qquad y = y(u,v) \qquad  z = z(u,v) $$
+или векторна функция 
+$$r = r(u,v)$$
+където $r(u,v)$ е вектор с компоненти $x = x(u,v) \, y = y(u,v) \, z = z(u,v)$.
+
+\begin{definition}
+Казва се че уравненията по горе (x,y,z) или (r) дефинират гладка повърхност, ако функциите (x,y,z) са непрекъснато диференцируеми в областта D и векторното произведение 
+$$N = r'_u (u,v) \times r'_v (u,v) \neq 0 \qquad (u,v) \in D$$
+а векторите 
+$$N = r'_u (u,v) \times r'_v (u,v), \qquad n = \frac{N}{\Vert N \Vert}$$
+се наричат съответно нормален вектор (нормала) и единичен нормален вектор към тази повърхнина.
+Ако повърхнината не е гладка, но може да се раздели на краен брой гладки части, тя се нарича частично гладка или по части гладка повърхнина.
+\end{definition}
+
+\begin{example}[Лист на Мьобиус]
+Ако залепим правоъгълника $ABCD$ така, че А да съвпада с C, а B с D то че получава повърхнина, известна като лист на Мьобиус.
+ Нейната нормала се характеризира с това, че след като направи една обиколка, тя сменя посоката си с противоположната. 
+\end{example}
 
 \newpage
-\section{Лекция 13}
+\section{Лекция 13: Криволинейни интеграли}
+
+\subsection{Дефиниция на криволинейни интеграли от първи и втори род}
+Нека функциите $f(x,y,z), P(x,y,z), Q(x,y,z), R(x,y,z)$ са дефинирани върху непрекъснатата проста ректифируема крива $\Gamma$ с началнa точка A и крайна точка B. 
+\begin{center}
+  \includegraphics{Pics/calc/lec13-1.png}
+\end{center}
+С помощта на точките $A \equiv A_0, A_1, ..., A_n \equiv B$ с кординати съответно $A_i(x_i,y_i,z_i) (i=0,1,...,n)$, кривата $\Gamma$ е разделеня на n дъгички и върху всяка дъгичка произволно е избрана точка $M_i (\xi_i,\eta_i,\zeta_i)$, в която се пресмятат стойностите $f(\xi_i,\eta_i,\zeta_i), P(\xi_i,\eta_i,\zeta_i), Q(\xi_i,\eta_i,\zeta_i), R(\xi_i,\eta_i,\zeta_i)$ на функциите $f, P, Q, R$. 
+Да отбележим, че аналогичен процес на разделяне може да бъде проведен и в случай на затворена крива, ако за точка $A_0 (A_n)$ се вземе коя да е нейна точка, а останалите точки $A_i$ да се разположат последователно по кривата в една от двете възможни посоки. \\
+За дължината на i-тата дъгичка е използвано означението $\Delta l_i$, а за дължината на най-дългата дъгичка от разделянето $\delta_n$
+$$\Delta l_i = \text{дължината на } A_{i-1} A_i \qquad \delta_n = \max\limits_{i = 1\div n} \Delta l_i$$
+Наред с това са въведени и означенията 
+$$\Delta x_i = x_i - x_{i-1} \qquad \Delta y_i = y_i - y_{i-1} \qquad \Delta z_i = z_i - z_{i-1} \qquad i = 1 \div n $$
+По нататък са образувани съответните интегрални суми за всяка една от разглежданите функции както следва
+\begin{gather*}
+\sigma_n (f) = \sum_{i=1} ^n f(\xi_i,\eta_i,\zeta_i) \Delta l_i \\
+\sigma_n (P) = \sum_{i=1} ^n P(\xi_i,\eta_i,\zeta_i) \Delta x_i  \\
+\sigma_n (Q) = \sum_{i=1} ^n Q(\xi_i,\eta_i,\zeta_i) \Delta y_i  \\
+\sigma_n (R) = \sum_{i=1} ^n R(\xi_i,\eta_i,\zeta_i) \Delta z_i  \\
+\end{gather*}
+
+\begin{definition}
+Границата на интегралната сума (първата; ако съществува, не зависейки нито от начина на разделяне, нито от избора на точките $M_i$) при $\delta_n$, клоняща към нула се нарича криволинеен интеграл от първи род на функцията $f(x,y,z)$ върху кривата $\Gamma$ и се записва $\int\limits_{\Gamma} f(x,y,z) \ dl, \text{ или кратко } \int\limits_{\Gamma} f\ dl$, т.е криволинейният интеграл от първи род се дефинира с равенството 
+$$\int\limits_{\Gamma} f(x,y,z) \ dl = \lim\limits_{\delta_n \to 0} \sigma_n (f) = \lim\limits_{\delta_n \to 0} \sum_{i=1} ^n f(\xi_i,\eta_i,\zeta_i) \Delta l_i$$
+ако границата съществува.
+\end{definition}
+
+\begin{definition}
+Границата на интегралната сума (втората; ако съществува, не зависейки нито от начина на разделяне, нито от избора на точките $M_i$) при $\delta_n$, клоняща към нула се нарича криволинеен интеграл от втори род на функцията $P(x,y,z)$ върху кривата $\Gamma$ и се записва $\int\limits_{\Gamma} P(x,y,z) \ dx, \text{ или кратко } \int\limits_{\Gamma} P\ dx$. Аналогично се дефинират и останалите два криволинейни интеграла от втори род. 
+$$
+\int\limits_{\Gamma} P \ dx = \lim\limits_{\delta_n \to 0} \sigma_n (P) \quad 
+\int\limits_{\Gamma} Q \ dy = \lim\limits_{\delta_n \to 0} \sigma_n (Q) \quad 
+\int\limits_{\Gamma} R \ dz = \lim\limits_{\delta_n \to 0} \sigma_n (R) 
+$$
+ако границите съществуват.
+\end{definition}
+
+\begin{definition}
+Сумата от криволинейните интеграли от втори род $\int\limits_{\Gamma} P(x,y,z) \ dx, \int\limits_{\Gamma} Q(x,y,z) \ dy, \int\limits_{\Gamma} R(x,y,z) \ dz$, ако те съществуват също се нарича криволинеен интеграл от втори род върху кривата $\Gamma$ (общ вид) и се означава по следния начин 
+$$\int\limits_{\Gamma} P \ dx + Q \ dy + R \ dz = \int\limits_{\Gamma} P \ dx + \int\limits_{\Gamma} Q \ dy + \int\limits_{\Gamma} R \ dz$$
+Казва се също че интегралът е криволинеен интеграл от втори род от векторната функция 
+$$F(x,y,z) = P(x,y,z) i + Q(x,y,z) j + R(x,y,z) k$$
+върху кривата $\Gamma$ и се записва още във вида $\int\limits_{\Gamma} F \ dr$, т.е
+$$\int\limits_{\Gamma} F \ dr = \int\limits_{\Gamma} P \ dx + Q \ dy + R \ dz $$
+\end{definition}
+Да съпоставим сега дефинираните интеграли от втори род с тези от първи род. 
+Въпреки очевидното сходство на двете дефниции, има съществена разлика между тях. 
+Така например криволинейния интеграл от първи род при съставяне на интегрална сума стойността $f(\xi_i,\eta_i,\zeta_i)$ на функцията е умножена с дължината на дъгата $\Delta l_i$ на частта $A_i A_{i-1}$ oт кривата AB, докато при криволинейния интеграл от втори род стойността на $f(\xi_i,\eta_i,\zeta_i)$ се умножава с величината на проекцията $\Delta x_i(\Delta y_i, \Delta z_i)$ на споменатата дъгичка върху оста $Ox(Oy, Oz)$. \\
+Ясно е че ориентацията (посоката на описване ) на кривата AB, по която се интегрира, не влияе на стойността на интеграла от първи род, защото дължината $\Delta l_i$ не зависи от тази ориентация.
+По друг начин стоят нещата при интегриране от втори род.
+В този случай величината $\Delta x_i(\Delta y_i, \Delta z_i)$ съществено зависи от посоката на описване на дъгата и сменя знака си със смяната на посоката на обход на кривата с обратна. 
+По такъв начин, за интегралите от втори род са изпълнени следните равенства 
+\begin{gather*}
+\int\limits_{BA} P(x,y,z) \ dx = - \int\limits_{AB} P(x,y,z) \ dx\\
+\text{Съответно} \\
+\int\limits_{BA} Q(x,y,z) \ dy = - \int\limits_{AB} Q(x,y,z) \ dy\\
+\int\limits_{BA} R(x,y,z) \ dz = - \int\limits_{AB} R(x,y,z) \ dz\\
+\end{gather*}
+при това, от съществуването на интегралите, които се намират от едната страна на равенствата, следва съществуването и на интегралите от другата страна. 
+Най сетне и за криволинейния интеграл "от общ вид" е изпълнени аналогично равенство, както следва
+$$\int\limits_{BA} P \ dx + Q \ dy + R \ dz = -\int\limits_{AB} P \ dx + Q \ dy + R \ dz$$
+което показва, че и в този случай смяната на посока на интегриране сменя знака на интеграла. \\
+Като частен случай може да се получи криволинеен интеграл от първи род и два криволинейни от втори род за равнинната крива $\Gamma = AB$, a именно 
+$$\int\limits_{\Gamma} f(x,y) \ dl \qquad \int\limits_{\Gamma} P(x,y) \ dx \qquad \int\limits_{\Gamma} Q(x,y) \ dy$$
+Сумата от последните два интеграла в този случай се нарича криволинеен интеграл от втори род върху кривата $\Gamma$ и се означава по следния начин
+$$ \int\limits_{\Gamma} P(x,y) \ dx + Q(x,y) \ dy = \int\limits_{\Gamma} P(x,y) \ dx +\int\limits_{\Gamma} Q(x,y) \ dy$$
+Както е отбелязано по-горе, криволинейният интеграл, от втори род зависи от посоката на описвана на кривата.
+Затова трябва да се направи уточнение, когато $\Gamma$ е затворена крива. \\
+Положителна посока се нарича, тази посока, при движението по която областта, лежаща във вътрешността на контура, остава от лявата страна (т.е движението се извършва обратно на часовниковата стрелка).\\
+\\
+По нататък се счита, че затвореният контур $\Gamma$, по който се извършва интегрирането, винаги е описан в положителна посока. \\
+Когато е необходимо да се подчертае, че контура е затворен, криволинейния интеграл от втори род се означава 
+$$\oint\limits_{\Gamma} P \ dx + Q \ dy + R \ dz  \qquad \oint\limits_{\Gamma} P(x,y) \ dx + Q(x,y) \ dy $$
+Аналогично криволинейните интеграли в $\mathbb{R}^3$ се изгражда и теорията за криволинейните интеграли в $\mathbb{R}^m, m>3$. \\
+Елементарните свойства се пренасят върху криволинейните интеграли.
+
+\subsection{Свойства и пресмятане на криволинейни интеграли}
+Ако $\Gamma$ е гладка (по части гладка) крива линия, зададена с параметричния вид
+$$\Gamma \equiv \{ x= \varphi (t), y = \psi (t) , z = \chi (t), t \in [t_1;t_2] \}$$
+и f е непрекъсната функция върху $\Gamma$, то криволинейният интеграл от първи род съществува и се пресмята чрез следния определен интеграл 
+$$\int\limits_{\Gamma} f(x,y,z) \ dl =
+\int\limits_{t_1} ^{t_2} f(\varphi (t), \psi (t), \chi (t)) \sqrt{\varphi'^2 (t)+ \psi'^2 (t)+ \chi'^2 (t)} \ dt$$
+При дадени допълнителни условия, адитивносттите на криволинейния интеграл от първи род отностно интеграционната крива. \\
+Ако кривата $\Gamma$  е зададена в декартови кординати 
+$$\Gamma \equiv \{ x = x , y = \psi(x), z = \chi (x), z \in [a;b] \}$$
+то формулата се свежда до 
+$$\int\limits_{\Gamma} f(x,y,z) \ dl = 
+\int\limits_a ^b f(x,\psi(x),\chi (x)) \sqrt{1 + \psi'^2 (x),\chi'^2 (x)} \ dx $$
+Ако $\Gamma$ е равнинна крива, зададена в полярни кординати 
+$$\Gamma \equiv \{ \rho = \rho (\vartheta), \vartheta \in [\vartheta_1, \vartheta_2]\}$$
+то формулата се свежда до 
+$$\int\limits_{\Gamma} f(x,y,z) \ dl = 
+\int\limits_{\vartheta_1} ^{\vartheta_2} f(\rho \cos \vartheta, \rho \sin \vartheta) \sqrt{\rho^2 + \rho'^2 } \ d\vartheta$$
+
+\begin{example}
+Да се пресметне $\int\limits_{\Gamma} \sqrt{y} \ dl$, където $\Gamma$ е дъга от циклоидата 
+$$\Gamma \equiv \{x = t-\sin t, y = 1 - \cos t ; t \in [0,\pi] \}$$
+Тъй като кривата $\Gamma$, по която се интегрира е зададена параметрично, за пресмятане на интеграла се получава 
+\begin{gather*}
+I = \int\limits_{\Gamma} \sqrt{y} \ dl = \int\limits_0 ^\pi \sqrt{1 - \cos t } \sqrt{(1 - \cos t )^2 + \sin^2 t} \ dt \\
+\sqrt{(1 - \cos t )^2 + \sin^2 t} = \sqrt{1 - 2\cos t + \cos^2 t + \sin^2 t} = \sqrt{2 - 2\cos t} = \sqrt{2}\sqrt{1 - \cos t} \\
+I =  \int\limits_0 ^\pi \sqrt{1 - \cos t } \sqrt{2}\sqrt{1 - \cos t} \ dt = \sqrt{2} \int\limits_0 ^\pi (1 - \cos t) \ dt \\ 
+\int\limits_0 ^\pi (1 - \cos t) \ dt  = \int\limits_0 ^\pi 1 \ dt - \int\limits_0 ^\pi \cos t \ dt  = t \Big|_0 ^\pi - \sin t \Big|_0 ^\pi = \pi - 0 = \pi \\
+I = \sqrt{2} \pi
+\end{gather*}
+\end{example}
+Нека функциите $P(x,y,z), Q(x,y,z), R(x,y,z)$ са дефинирани върху гладката крива $\Gamma$ с начална точка A и крайна точка B. \\
+Ако кривата е зададена в параметричния и вид, то криволинейния интеграл от втори род се пресмята по следната формула
+$$\int\limits_{\Gamma} P \ dx + Q \ dy + R \ dz = 
+\int\limits_{t_1} ^{t_2} \left\{ \widetilde{P}\varphi' + \widetilde{Q}\psi' + \widetilde{R}\chi' \right\} \ dt$$
+където 
+$$\widetilde{P}(t) = P[\varphi(t), \psi (t), \chi (t)] \quad \widetilde{Q}(t) = Q[\varphi(t), \psi (t), \chi (t)] \quad  \widetilde{R}(t) = R[\varphi(t), \psi (t), \chi (t)] $$
+
+\begin{example}
+Да се пресметне криволинейният интеграл
+$$I = \int\limits_{C} y \ dx - x \ dy + (x+y+z) \ dz$$
+върху винтовата линия
+$$C = \left \{ x = a \cos t , y = a \sin t, z= \frac{h}{2\pi}t, t\in [0;2\pi] \right\}, \quad a>0, h>0$$
+Кривата C е зададена параметрично и прилагането на формулата води до 
+\begin{gather*}
+dx = -a \sin t \qquad dy = a \cos t  \qquad dz = \frac{h}{2\pi} \\
+I = \int\limits_0 ^{2\pi} \left[a\sin t (- a\sin t) - a\cos t (a \cos t) + \left(a \cos t + a\sin t + \frac{h}{2\pi}t \right) \frac{h}{2\pi}\right] \ dt = \\
+I = \int\limits_0 ^{2\pi} \left[-a^2( \sin^2 t  + \cos^2 t)  + \left( \frac{ha}{2\pi}\cos t + \frac{ha}{2\pi}\sin t + \frac{h^2}{4\pi^2}t \right) \right] \ dt = \\
+I = \int\limits_0 ^{2\pi} \left[-a^2 + \frac{ha}{2\pi}\cos t + \frac{ha}{2\pi}\sin t + \frac{h^2}{4\pi^2}t \right] \ dt = \\
+I = \int\limits_0 ^{2\pi} -a^2 \ dt +
+\int\limits_0 ^{2\pi} \frac{ha}{2\pi}\cos t \ dt + 
+\int\limits_0 ^{2\pi} \frac{ha}{2\pi}\sin t \ dt +
+\int\limits_0 ^{2\pi} \frac{h^2}{4\pi^2}t \ dt 
+\end{gather*}
+
+\begin{gather*}
+\int\limits_0 ^{2\pi} -a^2 \ dt = -a^2 \int\limits_0 ^{2\pi} \ dt = -a^2 t \Big|_0 ^{2\pi} = -2a^2\pi \\
+\int\limits_0 ^{2\pi} \frac{ha}{2\pi}\cos t \ dt =
+\frac{ha}{2\pi} \int\limits_0 ^{2\pi} \cos t \ dt  = 
+\frac{ha}{2\pi} \cdot \sin t \Big|_0 ^{2\pi} = \frac{ha}{2\pi} \cdot 0 = 0\\
+\int\limits_0 ^{2\pi} \frac{ha}{2\pi}\sin t \ dt = 
+\frac{ha}{2\pi} \int\limits_0 ^{2\pi}\sin t \ dt = 
+\frac{ha}{2\pi} \cdot ( -\cos t \Big|_0 ^{2\pi} ) = \frac{ha}{2\pi} \cdot 0 = 0\\
+\int\limits_0 ^{2\pi} \frac{h^2}{4\pi^2}t \ dt = 
+\frac{h^2}{4\pi^2} \int\limits_0 ^{2\pi} t \ dt = 
+\frac{h^2}{4\pi^2} \cdot \frac{t^2}{2} \Big|_0 ^{2\pi} = \frac{h^2}{4\pi^2} \cdot \frac{4\pi^2}{2} = \frac{h^2}{2}\\
+I = -2a^2\pi +\frac{h^2}{2} 
+\end{gather*}
+\end{example}
+
+\begin{example}
+Да се пресметне криволинейния интеграл 
+$$I = \int\limits_{\Gamma} xy \ dx + (x-y) \ dy$$
+върху параболата $x = y^2$ oт точка О(0,0) до точка M(4,2). \\
+Равнинната крива е зададена с явна функция и за параметър ще вземем едната променлива. 
+$$\Gamma \equiv \{ x = t^2, y=t; t \in [0,2]\}$$
+След прилагане на формулата се стига до 
+\begin{gather*}
+dx = 2t \quad dy = 1\\
+I = \int\limits_0 ^2 \left(t^2 t 2t + t^2 - t \right) \ dt = I = \int\limits_0 ^2 \left(2t^4 + t^2 - t \right) \ dt = \frac{202}{15}
+\end{gather*}
+\end{example}
+Дотук се занимавахме с директно интегриране. 
+Понякога пресмятането може да се улесни като се използват специфични свойства на криволинейния интеграл и на подинтегралната функция. \\
+Ако подинтегралната функция е пълен диференциал, т.е съществува еднозначна и диференцируема функция U в едносвързано множество D, в която 
+$$\frac{\partial U}{\partial x} = P \qquad \frac{\partial U}{\partial y} = Q \qquad \frac{\partial U}{\partial z} = R $$
+то стойността не зависи от кривата на интегриране, а само от началната и крайната точка и неговата стойност е $U(B) - U(A)$.
+Ако кривата по която се интегрира е затворена, то стойността на криволинейния интеграл при изпълнени условия е нула. \\
+Необходими и достатъчни условия изразът
+$$P dx + Q dy + R dz$$
+да бъде пълен диференциал на два пъти непрекъснато диференцируема функия U са
+$$\frac{\partial P}{\partial y} = \frac{\partial Q}{\partial x} \qquad 
+\frac{\partial Q}{\partial z} = \frac{\partial R}{\partial y} \qquad 
+\frac{\partial R}{\partial x} = \frac{\partial P}{\partial z}$$
+познато като условия за интегруемост. \\
+Нека D е равнинно множество с частично гладка граница, а функциите $P(x,y), Q(x,y), \frac{\partial P}{\partial y}, \frac{\partial Q}{\partial x}$ са непрекъснати в затвореното множество [D]. 
+Тогава е в сила формулата на Грийн-Гаус.
+$$\oint\limits_{\Gamma} P(x,y) \ dx + Q (x,y) \ dy = 
+\iint\limits_{D} \left( \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y}\right) \ dx \ dy$$
+
+\begin{example}
+Да се пресметне криволинейния интеграл
+$$I = \int\limits_{\Gamma} (3x- y) \ dx + (y-x) \ dy$$
+върху затворената начупена линия ABCA с върхове точката $A(0,0), B(1,0), C(0,2)$. 
+Интегралът може да бъде решен с формулата за криволинеен интеграл от втори род, но тъй като преди това начупената линия ABCA се нуждае от параметризиране, е използвана формулата на Грийн-Гаус според която 
+$$I = \iint\limits_{D}  \left( \frac{\partial (y-x)}{\partial x} - \frac{\partial (3x-y)}{\partial y}\right) \ dx \ dy = 0$$
+Същия е и резултата, ако се отчете факта че израза под интеграла е пълен диференциал, тъй като
+$$d \left(\frac{y^2}{2} + \frac{3x^2}{2} - xy\right) = (3x- y) \ dx + (y-x) \ dy$$, 
+а контурът е затворен 
+\end{example}
+
 
 \newpage
 \section{Лекция 14}

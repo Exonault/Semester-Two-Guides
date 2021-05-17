@@ -2195,8 +2195,194 @@ I = \int\limits_1 ^2  \frac{4}{3} \, du =
 
 \subsection{Задачи}
 
+\subsection*{Задача 1}
+Пресметнете интегралите 
+\begin{itemize}
+\item $\iint\limits_{T} (x^2 + y^2 ) \ dx \ dy \ dz, 
+T: \begin{cases} x^2 + y^2 = 2z \\ z = 2 \end{cases}$
+\item $\iint\limits_{T} (x^2 + y^2 ) \ dx \ dy \ dz, 
+T: \begin{cases} z= 6-x^2 - y^2 \\ z^2 = x^2 + y^2 \\ z \geq 0 \end{cases}$
+\end{itemize}
+
+\subsection*{Задача 2}
+Да се пресметне обемът на тялото T
+\begin{itemize}
+\item $T: x^2 + y^2 + z^2 \leq R^2$
+\item $T: \frac{x^2}{a^2} + \frac{y^2}{b^2} +  \frac{z^2}{c^2} \leq 1$
+\end{itemize}
+$$R>0 \qquad a>0 \qquad b>0 \qquad c > 0 \qquad  a,b,c,R = const$$
+
+\subsection*{Задача 3}
+Да се намери лицето на частта от повърхнината 
+$$S: x^2 + y^2 = 2az, \qquad a>0$$
+заключена в цилиндъра 
+$$(x^2 + y^2)^2 = 2a^2xy$$
+
 \newpage
 \subsection{Решения}
+\subsection*{Задача 1}
+\begin{itemize}
+\item $\iint\limits_{T} (x^2 + y^2 ) \ dx \ dy \ dz, 
+T: \begin{cases} x^2 + y^2 = 2z \\ z = 2 \end{cases}$ \\
+\begin{gather*}
+D: \begin{cases} x^2 + y^2 = 2z \\ z = 2 \end{cases} \implies D: x^2 +y^2 \leq 4 \\
+\text{Цилиндрична смяна} \\
+x = \rho \cos \varphi \qquad y = \rho \sin \varphi \qquad z = z  \implies |\Delta| = \rho \\
+\rho^2 \cos^2 \varphi + \rho^2 \sin^2 \varphi \leq 4 \implies \rho^2 \leq 4 \implies 0 \leq \rho \leq 2 \\
+\frac{1}{2} (x^2 + y^2) \leq z \leq 2 \implies \frac{\rho^2}{2} \leq z \leq 2 \\
+I = \int\limits_0 ^{2\pi} \int\limits_0 ^2 \int\limits_{\frac{\rho^2}{2}} ^2 \rho^2 \cdot \rho \ dz \ d \rho \ d \varphi =
+\int\limits_0 ^{2\pi} \int\limits_0 ^2 \int\limits_{\frac{\rho^2}{2}} ^2 \rho^3 \ dz \ d \rho \ d \varphi
+\end{gather*}
+\begin{gather*}
+\int\limits_{\frac{\rho^2}{2}} ^2 \rho^3 \ dz = 
+\rho^3 \int\limits_{\frac{\rho^2}{2}} ^2 \rho^3 \ dz = 
+\rho^3 \cdot z \Big|_{\frac{\rho^2}{2}} ^2 = 
+\rho^3  \cdot \left( 2 - \frac{\rho^2}{2} \right) = 2\rho^3 - \frac{\rho^5}{2} \\
+I = \int\limits_0 ^{2\pi} \int\limits_0 ^2 2\rho^3 - \frac{\rho^5}{2} \ d \rho \ d \varphi 
+\end{gather*}
+\begin{gather*}
+\int\limits_0 ^2 2\rho^3 - \frac{\rho^5}{2} \ d \rho = 
+\int\limits_0 ^2 2\rho^3 \ d \rho - \int\limits_0 ^2 \frac{\rho^5}{2} \ d \rho = \\
+\frac{2\rho^4}{4} \Big|_0 ^2 - \frac{\rho^6}{12} \Big|_0 ^2 = 
+\frac{2 \cdot 16}{4} - \frac{64}{12} =  8 - \frac{16}{3} = \frac{24 - 16}{3} = \frac{8}{3} \\
+I = \int\limits_0 ^{2\pi}  \frac{8}{3} \ d \varphi  =  
+\frac{8}{3} \int\limits_0 ^{2\pi} \ d \varphi = 
+\frac{8}{3} \varphi \Big|_0 ^{2\pi} = \frac{16 \pi}{3}
+\end{gather*}
+
+\item $\iint\limits_{T} (x^2 + y^2 ) \ dx \ dy \ dz, 
+T: \begin{cases} z= 6-x^2 - y^2 \\ z^2 = x^2 + y^2 \\ z \geq 0 \end{cases}$\\
+\begin{gather*}
+\text{Цилиндрична смяна} \\
+x = \rho \cos \varphi \qquad y = \rho \sin \varphi \qquad z = z  \implies |\Delta| = \rho \\
+\begin{array}{|l@{}}
+z = 6-x^2-y^2 \\
+z = \sqrt{x^2+y^2} 
+\end{array} \implies 
+6-x^2-y^2 = \sqrt{x^2+y^2} \\
+\implies 6 - \rho^2 = \rho \implies \rho = -3, \rho > 0 , \rho = 2 \implies \\
+\begin{cases} 0 \leq \rho \leq 2 \\ 0 \leq \varphi \leq 2\pi \end{cases} \\
+I = \int\limits_0 ^{2\pi} \int\limits_0 ^2 \int\limits_{\rho} ^{6 - \rho^2} \rho^3  \ dz \ d\rho \ d\varphi \\
+\int\limits_\rho ^{6 - \rho^2} \rho^3  \ dz = 6\rho^3 - \rho^5 - \rho^4 \\
+I = \int\limits_0 ^{2\pi} \int\limits_0 ^2 6\rho^3 - \rho^5 - \rho^4 \ d\rho \ d\varphi \\
+\int\limits_0 ^2 6\rho^3 - \rho^5 - \rho^4 \ d\rho  = 
+\frac{6\rho^4}{4}\Big|_0 ^2 - \frac{\rho^6}{6}\Big|_0 ^2 - \frac{\rho^5}{5}\Big|_0 ^2 = 
+\frac{104}{15} \\
+I = \int\limits_0 ^{2\pi} \frac{104}{15} \ d\varphi =  \frac{104}{15} \int\limits_0 ^{2\pi} \ d\varphi = \frac{208\pi}{15}
+\end{gather*}
+\end{itemize}
+
+\newpage
+\subsection*{Задача 2}
+$$R>0 \qquad a>0 \qquad b>0 \qquad c > 0 \qquad  a,b,c,R = const$$
+$$V_T = \iiint\limits_{T} \ dx \ dy \ dz $$
+\begin{itemize}
+\item $T: x^2 + y^2 + z^2 \leq R^2$\\
+\begin{gather*}
+\text{Сферична смяна} \\
+x = \rho \cos \varphi \sin \theta \qquad 
+y = \rho \sin \varphi \sin \theta \qquad  
+z = \rho \cos \theta \qquad 
+|\Delta| = \rho^2 \sin \theta \\
+\rho^2 \cos^2 \varphi \sin^2 \theta + \rho^2 \sin^2 \varphi \sin^2 \theta + \rho^2 \cos^2 \theta \leq R^2 \\
+\rho^2 \sin^2 \theta (\cos^2 \varphi + \sin^2 \varphi) + \rho^2 \cos^2 \theta \leq R^2 \\
+\rho^2 \sin^2 \theta + \rho^2 \cos^2 \theta \leq R^2 \implies \rho^2 \leq R^2 \implies 0 \leq \rho \leq R \\
+V_T = \int\limits_0 ^{2\pi} \int\limits_0 ^{R} \int\limits_0 ^{\pi} \rho^2 \sin \theta \ d \theta \ d \rho \ d \varphi \\
+\int\limits_0 ^{\pi} \rho^2 \sin \theta \ d \theta = 
+\rho^2 \int\limits_0 ^{\pi} \sin \theta \ d \theta = 
+\rho^2 (- \cos \theta)\Big|_0 ^{\pi} = 2 \rho^2 \\
+V_T =  \int\limits_0 ^{2\pi} \int\limits_0 ^{R}  2 \rho^2 \ d \rho \ d \varphi =
+2 \int\limits_0 ^{2\pi} \int\limits_0 ^{R} \rho^2 \ d \rho \ d \varphi \\
+\int\limits_0 ^{R} \rho^2 \ d \rho = \frac{\rho^3}{3} \Big|_0 ^{R} = \frac{R^3}{3} \\
+2 \int\limits_0 ^{2\pi}  \frac{R^3}{3} \ d \varphi = 
+\frac{2R^3}{3} \int\limits_0 ^{2\pi} \ d \varphi = \frac{2R^3}{3} \varphi \Big|_0 ^{2\pi} = \frac{4\pi R^3}{3}
+\end{gather*}
+
+\item $T: \frac{x^2}{a^2} + \frac{y^2}{b^2} +  \frac{z^2}{c^2} \leq 1$\\
+\begin{gather*}
+\text{Сферична смяна} \\
+x = a\rho \cos \varphi \sin \theta \qquad
+ y = b\rho \sin \varphi \sin \theta \qquad  
+z = c\rho \cos \theta \qquad 
+|\Delta| = abc\rho^2\sin\theta \\
+\frac{a^2\rho^2 \cos^2 \varphi \sin^2 \theta}{a^2} + \frac{b^2\rho^2 \sin^2 \varphi \sin^2 \theta }{b^2} + \frac{c^2 \rho^2 \cos^2 \theta}{c^2} \leq 1 \\
+\rho^2 \cos^2 \varphi \sin^2 \theta + \rho^2 \sin^2 \varphi \sin^2 \theta + \rho^2 \cos^2 \theta \leq  1 \\
+\rho^2 \sin^2 \theta (\cos^2 \varphi + \sin^2 \varphi) + \rho^2 \cos^2 \theta \leq 1 \\
+\rho^2 \sin^2 \theta + \rho^2 \cos^2 \theta \leq R^2 \implies \rho^2 \leq 1 \implies 0 \leq \rho \leq 1 \\
+V_T = \int\limits_0 ^{2\pi} \int\limits_0 ^{1} \int\limits_0 ^{\pi} abc\rho^2 \sin \theta \ d \theta \ d \rho \ d \varphi = 
+abc \int\limits_0 ^{2\pi} \int\limits_0 ^{1} \int\limits_0 ^{\pi} \rho^2 \sin \theta \ d \theta \ d \rho \ d \varphi \\
+\int\limits_0 ^{\pi} \rho^2 \sin \theta \ d \theta = 
+\rho^2 \int\limits_0 ^{\pi} \sin \theta \ d \theta = 
+\rho^2 (- \cos \theta)\Big|_0 ^{\pi} = 2 \rho^2 \\
+V_T = abc \int\limits_0 ^{2\pi} \int\limits_0 ^{1}  2 \rho^2 \ d \rho \ d \varphi =
+2 abc \int\limits_0 ^{2\pi} \int\limits_0 ^{1} \rho^2 \ d \rho \ d \varphi \\
+\int\limits_0 ^{1} \rho^2 \ d \rho = \frac{\rho^3}{3} \Big|_0 ^{1} = \frac{1}{3} \\
+2 abc \int\limits_0 ^{2\pi}  \frac{1}{3} \ d \varphi = 
+\frac{2abc}{3} \int\limits_0 ^{2\pi} \ d \varphi = \frac{2abc}{3} \varphi \Big|_0 ^{2\pi} = \frac{4}{3} \pi abc 
+\end{gather*}
+\end{itemize}
+
+\subsection*{Задача 3}
+$$S: x^2 + y^2 = 2az, \qquad a>0$$
+$$(x^2 + y^2)^2 = 2a^2xy$$
+\begin{gather*}
+\sigma = \iint\limits_{D} \sqrt{1 + (z'_x)^2 + (z'_y)^2} \ dx \ dy \\
+D: (x^2 + y^2)^2 \leq 2a^2xy \\
+S: z = \frac{1}{2a^2} (x^2 + y^2) \implies z'_x = \frac{x}{a}, z'_y = \frac{y}{a} \\
+1 + (z'_x)^2 + (z'_y)^2 = \frac{a^2 + x^2 + y^2}{a^2} \implies
+\sigma = \frac{4}{a} \iint\limits_{D} \sqrt{a^2 + x^2 + y^2} \ dx \ dy 
+\end{gather*}
+\begin{gather*}
+\text{Полярна смяна} \\
+x = \rho \cos \varphi \qquad y = \rho \sin \varphi \implies \\
+0 \leq \varphi \leq \frac{\pi}{4} \qquad 0 \leq \rho \leq a\sqrt{2\sin\varphi \cos\varphi} = a\sqrt{\sin 2\varphi}\\
+\sigma = \frac{4}{a} \int\limits_0 ^{\frac{\pi}{4}} \int\limits_0 ^{a\sqrt{\sin 2\varphi}} \sqrt{a^2 + \rho^2} \rho \ d\rho \ d \varphi  = \frac{4}{a2} \int\limits_0 ^{\frac{\pi}{4}} \int\limits_0 ^{a\sqrt{\sin 2\varphi}} (a^2 + \rho^2)^\frac{1}{2} \ d\rho^2  \ d \varphi  = \\
+\frac{2}{a} \int\limits_0 ^{\frac{\pi}{4}} \frac{(a^2 + \rho^2 )^\frac{3}{2}}{\frac{3}{2}} \Big|_0 ^{a\sqrt{\sin 2\varphi}}  \ d \varphi =
+\frac{4}{3a} \int\limits_0 ^{\frac{\pi}{4}} (a^2 + a^2 \sin 2\varphi)^\frac{3}{2} - (a^2)^\frac{3}{2}  \ d \varphi = \\
+\frac{4a^3}{3a} \int\limits_0 ^{\frac{\pi}{4}} (1+ \sin 2\varphi)^\frac{3}{2} - 1 \ d \varphi \\
+1+ \sin 2\varphi = \sin^2 \varphi + \cos^2 \varphi + 2\sin\varphi \cos\varphi = (\sin\varphi + \cos\varphi)^2 \\
+\sigma = \frac{4a^2}{3} \int\limits_0 ^{\frac{\pi}{4}} ((\sin\varphi + \cos\varphi)^2)^\frac{3}{2} - 1 \ d \varphi = \frac{4a^2}{3} \int\limits_0 ^{\frac{\pi}{4}} (\sin\varphi + \cos\varphi)^3 - 1 \ d \varphi = \\
+\frac{4a^2}{3} \int\limits_0 ^{\frac{\pi}{4}} \sin^3 \varphi + 3\sin^2\varphi \cos\varphi + 3\sin\varphi \cos^2\varphi + \cos^3 \varphi - 1 \ d \varphi \\
+\sigma = \frac{4a^2}{3} 
+\left[ 
+\int\limits_0 ^{\frac{\pi}{4}} \left( \sin^2\varphi \sin\varphi + 3\sin^2\varphi\cos\varphi\right) \ d \varphi+ 
+\int\limits_0 ^{\frac{\pi}{4}} \left( \cos^2 \varphi \cos \varphi + 3 \cos^2 \varphi \sin\varphi - 1 \right)  \ d \varphi
+\right] \\
+\int\limits_0 ^{\frac{\pi}{4}} \left( \sin^2\varphi \sin\varphi + 3\sin^2\varphi\cos\varphi\right) \ d \varphi = 
+\int\limits_0 ^{\frac{\pi}{4}} \left( (1 - \cos^2 \varphi) \sin\varphi + 3\sin^2\varphi\cos\varphi\right) \ d \varphi = \\
+\int\limits_0 ^{\frac{\pi}{4}} \left( \sin\varphi - \cos^2 \varphi \sin\varphi + 3\sin^2\varphi\cos\varphi\right) \ d \varphi \\
+\int\limits_0 ^{\frac{\pi}{4}} \left( \cos^2 \varphi \cos \varphi + 3 \cos^2 \varphi \sin\varphi - 1 \right)  \ d \varphi = 
+\int\limits_0 ^{\frac{\pi}{4}} \left( (1 - \sin^2 \varphi) \cos \varphi + 3 \cos^2 \varphi \sin\varphi - 1 \right)  \ d \varphi = \\
+\int\limits_0 ^{\frac{\pi}{4}} \left( \cos\varphi - \sin^2\varphi \cos\varphi + 3 \cos^2 \varphi \sin\varphi - 1 \right)  \ d \varphi
+\end{gather*}
+\begin{gather*}
+\sin\varphi - \cos^2 \varphi \sin\varphi + 3\sin^2\varphi\cos\varphi 
++ \cos\varphi - \sin^2\varphi \cos\varphi + 3 \cos^2 \varphi \sin\varphi - 1 = \\
+\sin \varphi + \cos \varphi + 2\sin^2 \varphi \cos \varphi + 2 \sin \varphi \cos^2 \varphi - 1 \\
+\sigma = \frac{4a^2}{3} \left[ \int\limits_0 ^{\frac{\pi}{4}} 
+\sin \varphi + \cos \varphi + 2\sin^2 \varphi \cos \varphi + 2 \sin \varphi \cos^2 \varphi - 1 \ d\varphi \right] = \\
+\frac{4a^2}{3} \left[ 
+\int\limits_0 ^{\frac{\pi}{4}} \sin \varphi \ d\varphi +
+\int\limits_0 ^{\frac{\pi}{4}} \cos \varphi \ d\varphi + 
+2\int\limits_0 ^{\frac{\pi}{4}} \sin^2 \varphi \cos \varphi \ d\varphi +
+2\int\limits_0 ^{\frac{\pi}{4}} \sin \varphi \cos^2 \varphi \ d\varphi  -
+\int\limits_0 ^{\frac{\pi}{4}} 1 \ d\varphi \right] \\
+I_1 = \int\limits_0 ^{\frac{\pi}{4}} \sin \varphi \ d\varphi  = 
+- \cos \varphi \Big|_0 ^{\frac{\pi}{4}} = -\left(\frac{\sqrt{2}}{2} - 1 \right) = 1 - \frac{\sqrt{2}}{2} \\
+I_2 = \int\limits_0 ^{\frac{\pi}{4}} \cos \varphi \ d\varphi = 
+\sin \varphi \Big|_0 ^{\frac{\pi}{4}} = \frac{\sqrt{2}}{2} - 0  = \frac{\sqrt{2}}{2} \\
+I_3 = \int\limits_0 ^{\frac{\pi}{4}} \sin^2 \varphi \cos \varphi \ d\varphi = 
+\frac{\sin^3 \varphi}{3} \Big|_0 ^{\frac{\pi}{4}} = \frac{1}{3} \left[ \left( \frac{\sqrt{2}}{2} \right) ^3 - 0 \right] = 
+\frac{1}{3} \cdot \frac{2\sqrt{2}}{8} = \frac{\sqrt{2}}{12} \\
+I_4 = \int\limits_0 ^{\frac{\pi}{4}} \sin \varphi \cos^2 \varphi \ d\varphi = 
+-\frac{2 \cos^3 \varphi}{3} \Big|_0 ^{\frac{\pi}{4}}  = -\frac{1}{3} \left[ \left( \frac{\sqrt{2}}{2} \right) ^3 - 1 \right] = 
+-\frac{\sqrt{2}}{12} + \frac{1}{3} = \frac{1}{3}-\frac{\sqrt{2}}{12} \\
+I_5 = \int\limits_0 ^{\frac{\pi}{4}} 1 \ d\varphi = \varphi \Big|_0 ^{\frac{\pi}{4}} = \frac{\pi}{4} \\
+\sigma  = \frac{4a^2}{3}  \left[ 1 - \frac{\sqrt{2}}{2}  + \frac{\sqrt{2}}{2} + \frac{2\sqrt{2}}{12} + \frac{2}{3}-\frac{2\sqrt{2}}{12} - \frac{\pi}{4} \right] = 
+\frac{4a^2}{3}  \left[ 1 + \frac{2}{3} - \frac{\pi}{4} \right] \\
+\sigma = \frac{4a^2}{3}  \left[\frac{5}{3} - \frac{\pi}{4} \right] = \frac{a^2}{9} \left[20 - 3\pi \right]
+\end{gather*}
+
 
 \newpage 
 \section{Упражнение към лекция 13}
