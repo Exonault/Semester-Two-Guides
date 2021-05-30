@@ -2335,7 +2335,78 @@ $$d \left(\frac{y^2}{2} + \frac{3x^2}{2} - xy\right) = (3x- y) \ dx + (y-x) \ dy
 
 
 \newpage
-\section{Лекция 14}
+\section{Лекция 14: Приложения на криволинейните интеграли}
+
+\subsection{Приложения на криволинейните интеграли}
+
+\begin{example}
+С помощна на криволинеен интеграл от първи ред да се намери дължината на астроидата
+$$C \equiv \{ x = a\cos^3 t, y = a\sin^3 t, t \in [0.2\pi]\}, a>0$$
+Астроидата е симетрична и е достатъчно да се сметне дължината на частта от кривата в първи квадрант и да се умножи по 4.
+$$I = \int\limits_C \ dl = 4 \int\limits_0 ^{\frac{\pi}{2}} \sqrt{(-3a\cos^2 \sin t)^2+(3a\sin^2 \cos t)} \ dl = 6a$$
+\end{example}
+От формулата на Грийн-Гаус автоматично се получава следната формула
+$$\sigma = \frac{1}{2} \oint\limits_{\Gamma} x \ dy - y \ dx$$
+за пресмятане на лице на равнинно множество D, чиято граница $\Gamma$ е проста затворена крива. \\
+В полярни кординати формулата излглежда
+$$\sigma = \frac{1}{2}\oint\limits_{\Gamma} \rho^2 \ d\varphi$$
+
+\begin{example}
+С помощта на криволинеен интеграл да се пресметне лицето на една навивка от спиралата на Архимед
+$$C \equiv \{ \rho = a\varphi, | \varphi \in [0, 2\pi]\}, a>0$$
+$$\sigma = \frac{1}{2}\oint\limits_{\Gamma} \rho^2 \ d\varphi = \frac{1}{2}\oint\limits_0 ^{2\pi} a^2 \varphi^2 \ d\varphi = \frac{a^2}{2} \cdot \frac{\varphi^3}{3} \Big|_0 ^{2\pi} = \frac{4a^2\pi^3}{3}$$
+\end{example}
+Лицето $\sigma$ на цилиндър с управителна линия
+$$C \equiv \{ x = \varphi(t), y = \psi(t), z = 0, t \in[t_1,t_2]\}$$
+което е ограничено от равнината $xOy$ и от линията
+$$C^* \equiv \{ x = \varphi(t), y = \psi(t), z = \chi(t), t \in[t_1,t_2]\}$$
+се пресмята с криволинеен интеграл от първи род по формулата 
+$$\int\limits_C z \ dl$$
+където $dl$ е линейният елемент на дъгата C.
+
+\begin{example}
+Да се пресметне лицето на цилиндрична повърхнина с управителна крива $x^2+y^2=1$ ограничена надолу от равнината $xOy$ и отгоре от повърхнината $z=xy$.\\
+Параметричните уравнения на окръжността са
+$$C \equiv \{ x = \cos t , y = \sin t, | t \in [0,2\pi]\}$$
+От графиката се вижда наличие на симетрия което се ползва във формулата 
+$$\sigma = \int\limits_C z \ dl = 2 \int\limits_0 ^{\frac{\pi}{2}} \cos t \sin t \sqrt{(-\sin t)^2 + (\cos t)^2} dt = \int\limits_0 ^{\frac{\pi}{2}} \sin 2t \  dt = 1 $$
+\end{example}
+Ако $\rho(x,y,z)$ е плътността на материална крива $\Gamma$, то масата m на тази крива се пресмята чрез криволинеен интеграл от първи род
+$$m = \int\limits_{\Gamma} \rho(x,y,z) \ dl$$
+а центъра на тежеста $G(x_G, y_G, z_G)$ на материална крива има кординати 
+$$ x_G = \frac{\int\limits_{\Gamma} x\rho(x,y,z) \ dl}{\int\limits_{\Gamma} \rho(x,y,z) \ dl} \qquad  
+y_G = \frac{\int\limits_{\Gamma} y\rho(x,y,z) \ dl}{\int\limits_{\Gamma} \rho(x,y,z) \ dl} \qquad  
+z_G = \frac{\int\limits_{\Gamma} z\rho(x,y,z) \ dl}{\int\limits_{\Gamma} \rho(x,y,z) \ dl}$$
+
+\begin{example}
+Дадена е материална отсечка свързваща точка $M(1,0)$ с точка $N(2,3)$. Плътността във всяка точка е равна на $x^2+y^2$. Да се намерят кординатите на центъра на тежестта на отсечката. \\
+Кривата е равнинна и затова се използа формулата за двумерен случай
+$$MN \equiv \{x = 1+t, y=3t, | t \in[0,1] \}$$
+а линейния елемент в този случай е 
+$$dl = \sqrt{(1+t)'^2 + (3t)'^2} dt = \sqrt{10}$$
+Масата е 
+$$m = \int\limits_0 ^1 (1+2t+t^2+9t^2)\sqrt{10} \ dt = \frac{16\sqrt{10}}{3}$$
+Пресмятат се моментите от първи ред
+$$\int\limits_0 ^1 (1+t)(1+2t+t^2+9t^2)\sqrt{10} \ dt  = 9\sqrt{10}$$
+$$\int\limits_0 ^1 3t(1+2t+t^2+9t^2)\sqrt{10} \ dt  = 11\sqrt{10}$$
+След което се получават кординатите на центъра на тежестта
+$$x_G = \frac{27\sqrt{10}}{16\sqrt{10}} = \frac{27}{16} \qquad y_G = \frac{33\sqrt{10}}{16\sqrt{10}} = \frac{33}{16}$$
+\end{example}
+Физическия смисъл на криволинеен интеграл от втори род е работата, която силата 
+$$F(x,y,z) = P(x,y,z)i + Q(x,y,z)j + R(x,y,z) k$$
+извършва за преместване по криволинеен път от началната до крайната му точка.
+
+\begin{center}
+  \includegraphics{Pics/calc/lec14-1.png}
+\end{center}
+
+
+\subsection{Повърхнинни интеграли от първи род}
+\begin{center}
+  \includegraphics{Pics/calc/lec14-2.png}
+\end{center}
+
+
 
 \newpage
 \section{Лекция 15}

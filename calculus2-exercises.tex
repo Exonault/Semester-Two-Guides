@@ -2389,9 +2389,184 @@ I_5 = \int\limits_0 ^{\frac{\pi}{4}} 1 \ d\varphi = \varphi \Big|_0 ^{\frac{\pi}
 
 \subsection{Задачи}
 
+\subsection*{Задача 1}
+Да се пресметне 
+$$I = \oint\limits_{\Gamma} (x+y) \ ds$$
+където $\Gamma$ е затворена начупена линия $OABC, O(0,0), A(1,0), B(0,1)$.
+
+\subsection*{Задача 2}
+Да се пресметне 
+$$I = \oint\limits_{C} \sqrt{x^2 + y^2} \ ds$$
+където 
+$$C \equiv \{x = a(\cos t + t \sin t), y = a(\sin t - t\cos t), 0 \leq t \leq 2\pi \}$$
+ 
+\subsection*{Задача 3}
+Да се пресметне 
+$$I = \int\limits_{C} \frac{1}{x+y} \ ds$$
+ако интегрирането е извършено по отреза на правата, свързваща точките $A(2,4)$ и $B(1,3)$
+ 
+\subsection*{Задача 4}
+Да се пресметне чрез криволинеен интеграл от първи род лицето на цилиндрична повърхнина
+$y^2 = \frac{4}{9}(x-1)^3$ ограничена отдолу от равнината $z=0$, а отгоре от повърхнината $z = 2 - \sqrt{x}$.
+
+\subsection*{Задача 5}
+Да се намери стойността на 
+$$I = \int\limits_{C}(x^2 + y^2 + z^2) \ ds$$
+където C е част от винтовата линия с параметрични уравнения
+$$x = a\cos t \quad y = a\sin t \quad z = bt \qquad 0 \leq t \leq 2\pi \qquad a>0,b>0$$
+
+\subsection*{Задача 6}
+Да се пресметне
+$$\oint\limits_C (x^2-y^2) \ dx + (x^2+y^2) \ dy$$
+в положителна посока на описване на елипсата 
+$$\frac{x^2}{a^2} + \frac{y^2}{b} = 1$$
+започвайки от точката $A(a,0), a>0, b>0$.
+
+\subsection*{Задача 7}
+\begin{enumerate}
+\item Да се покаже, че ако пътят на интегриране не пресича ординатната ос, то интегралът
+$$\int\limits_{(1,2)} ^{(2,1)} \frac{y \ dx - x \ dy}{x^2}$$
+не зависи от пътя на интегриране, и да се пресметне. 
+\item Да се пресметне стойността на интеграла от същата функция по затворен контур, непресичащ ординатната ос.
+\end{enumerate}
+
 \newpage
 \subsection{Решения}
 
+\subsection*{Задача 1}
+\begin{gather*}
+I = \oint\limits_{\Gamma} (x+y) \ ds \qquad \Gamma = AOBO \qquad O(0,0), A(1,0), B(0,1) \\
+\Gamma = OA+AB+BO \implies I = \int\limits_{OA} (x+y) \ ds +  \int\limits_{AB} (x+y) \ ds +  \int\limits_{OB} (x+y) \ ds \\
+I_1 = \int\limits_{OA} (x+y) \ ds  \\
+I_1: \begin{cases} y(t) = 0 \\ x(t) = t \\ 0 \leq t \leq 1 \end{cases} \implies y'(t) = 0 \quad x'(t) = 1 \implies ds = \sqrt{0^2 + 1^2} dt = \sqrt{1} dt \\
+I_1 = \int\limits_0 ^1 (t+0)\sqrt{1} \ dt = \int\limits_0 ^1 t \ dt = \frac{t^2}{2} \Big|_0 ^1 = \frac{1}{2} \\
+I_2 = \int\limits_{AB} (x+y) \ ds  \\
+I_2: AB: x+y=1 \Leftrightarrow AB: y=1-x, 0 \leq x \leq 1 \\
+\implies y'=-1 \implies ds = \sqrt{(-1)^2 + 1^2} dx = \sqrt{2} dx \\
+I_2 = \sqrt{2} \int\limits_0 ^1 \ dx = \sqrt{2} \\
+I_3 = \int\limits_{OB} (x+y) \ ds  \\
+I_3: OB: \begin{cases} x(t) = 0 \\ y(t) = t \end{cases} \implies x'(t) = 0 \quad y'(t) = 1 \implies ds = \sqrt{0^2 + 1^2} dt = \sqrt{1} dt \\
+I_3 = \int\limits_0 ^1 (0+t)\sqrt{1} \ dt = \int\limits_0 ^1 t \ dt = \frac{t^2}{2} \Big|_0 ^1 = \frac{1}{2} \\
+I = \frac{1}{2} + \sqrt{2} + \frac{1}{2} = \sqrt{2} + 1 
+\end{gather*}
+
+\subsection*{Задача 2}
+\begin{gather*}
+I = \oint\limits_{C} \sqrt{x^2 + y^2} \ ds \qquad 
+C \equiv \{x = a(\cos t + t \sin t), y = a(\sin t - t\cos t), 0 \leq t \leq 2\pi \} \\
+x' = a(-\sin t + \sin t + t\cos t) \implies x' = at\cos t \\
+y'= a(- \cos t + \cos t + t\sin t) \implies y' = at\sin t \\
+ds = \sqrt{x'^2 + y'^2} dt = \sqrt{a^2t^2 \cos^2 t + a^2t^2 \sin^2 t}dt = \\
+\sqrt{a^2t^2(\cos^2 t + \sin^2 t)}dt = \sqrt{a^2t^2}dt = atdt \\
+x^2 + y^2 = a^2(\cos t + t \sin t)^2 + a^2(\sin t - t\cos t)^2 = \\
+a^2 \left[\cos^2 t + t^2\sin^2t + 2t\sin t \cos t + \sin^2 t + t^2\cos^2 t - 2t\sin t \cos t \right] = \\
+a^2 \left[ (\cos^2 t + \sin^2 t) + t^2(\cos^2 t + \sin^2 t)\right] = a^2 \left[1+t^2 \right] \implies \\
+\sqrt{x^2+y^2} = a(1+t^2)^{\frac{1}{2}} \\
+I = \int\limits_0 ^{2\pi}  a(1+t^2)^{\frac{1}{2}} at \ dt = 
+a^2 \int\limits_0 ^{2\pi} (1+t^2)^{\frac{1}{2}} t \ dt = 
+a^2 \frac{1}{2} \int\limits_0 ^{2\pi} (1+t^2)^{\frac{1}{2}} d(t^2 + 1) =  \\
+\frac{a^2}{2} \cdot \frac{(1+t^2)^{\frac{3}{2}}}{\frac{3}{2}} \Big|_0 ^{2\pi} = 
+\frac{a^2}{3} \left[(1+4\pi^2)^{\frac{3}{2}} - 1 \right]
+\end{gather*}
+
+\subsection*{Задача 3}
+\begin{gather*}
+I = \int\limits_{C} \frac{1}{x+y} \ ds \qquad C=AB \quad A(2,4), B(1,3)\\
+y-y_1 = k(x-x_1) \implies k = \frac{y_2-y_1}{x_2 - x_1} = \frac{4-3}{2-1} = 1 \implies \\
+AB: y-3 = 1(x-1); \qquad x-1 \implies y = 3 \qquad x=2 \implies y=4 \implies \\
+AB: y=x+2; 1 \leq x \leq 2 \\
+ds = \sqrt{1 + y'^2}dx = \sqrt{1+1}dx = \sqrt{2} dx \\
+x+y = x +x+2 = 2x+2 = 2(x+1) \\
+I = \int\limits_1 ^2 \frac{\sqrt{2}}{2(x+y)} \ dx =
+\frac{\sqrt{2}}{2} \int\limits_1 ^2 \frac{1}{x+1} \ dx =
+\frac{\sqrt{2}}{2} \int\limits_1 ^2 \frac{1}{x+1} \ d(x+1) = 
+\frac{\sqrt{2}}{2} \ln |x+1| \Big|_1 ^2 = \\
+\frac{\sqrt{2}}{2} (\ln 3 - \ln 2) =  
+\frac{\sqrt{2}}{2} \ln \left( \frac{3}{2} \right)
+\end{gather*}
+
+\subsection*{Задача 4}
+\begin{gather*}
+\sigma = \int\limits_C z \ dl \qquad 2-\sqrt{x}, z = 0 \qquad C: y^2 = \frac{4}{9} (x-1)^3, x \geq 1 \\
+y = \pm \frac{2}{3} (x-1)^{\frac{3}{2}} \implies y' = \pm \frac{2}{3} \cdot \frac{3}{2} (x-1)^{\frac{1}{2}} =
+y' = \pm (x-1)^{\frac{1}{2}} \implies y'^2 = x-1 \\
+dl = \sqrt{1+x-1}dx = \sqrt{x} dx \\
+0 \leq z \leq 2-\sqrt{x} \implies 2-\sqrt{x} \geq 0 \implies x \leq 4 \implies 1\leq x \leq 4\\
+\sigma = 2\int\limits_1 ^4 (2-\sqrt{x})\sqrt{x} \ dx = 
+2\int\limits_1 ^4 (2\sqrt{x} - x) \ dx = \\
+2\left[2 \cdot \frac{x^{\frac{3}{2}}}{\frac{3}{2}} - \frac{x^2}{2} \right] \Big|_1 ^4 = 
+2\left[\frac{4}{3} x^{\frac{3}{2}} - \frac{x^2}{2} \right] \Big|_1 ^4 = 
+2\left[\frac{4}{3} \left( \sqrt{4^3} - 1 \right)-  \frac{1}{2} \left(16-1 \right) \right] = \\
+2\left[\frac{4}{3} \left( 7 \right)- \frac{1}{2} \left( 15 \right) \right] = 
+2\left[\frac{28}{3} - \frac{15}{2} \right] = 
+2\left[\frac{56-45}{6} \right] = \frac{11}{3}
+\end{gather*}
+
+\subsection*{Задача 5}
+\begin{gather*}
+I = \int\limits_{C}(x^2 + y^2 + z^2) \ ds \\
+x = a\cos t \quad y = a\sin t \quad z = bt \qquad 0 \leq t \leq 2\pi \qquad a>0,b>0 \\
+x' = -a\sin t \qquad y' = a\cos t \qquad z = b \implies \\
+x'^2 + y'^2 + z'^2 = a^2 \sin^2 t + a^2 \cos^2 t + b^2 = a^2+b^2 \implies dl = \sqrt{a^2+b^2}dt \\
+x^2 + y^2 + z^2 = a^2 \cos^2 t + a^2 \sin^2 t + b^2 t^2 = a^2 + b^2t^2 \\
+I = \int\limits_0 ^{2\pi} (a^2 + b^2t^2)\sqrt{a^2+b^2} \ dt = 
+\sqrt{a^2+b^2} \int\limits_0 ^{2\pi} (a^2 + b^2t^2) \ dt = \\
+\sqrt{a^2+b^2} \left[ a^2t + \frac{b^2t^3}{3}\right] \Big|_0 ^{2\pi} = 
+\sqrt{a^2+b^2} \left[ a^2 2\pi + \frac{b^2(2\pi)^3}{3} \right] = 
+\frac{\sqrt{a^2+b^2}}{3} [a^2 2 \cdot3 \pi + 8\pi^3b^2] = \\
+\frac{\sqrt{a^2+b^2}}{3} [6\pi a^2 + 8\pi^3 b^2] = 
+\frac{2\pi}{3}\sqrt{a^2+b^2} [3a^2 + 4\pi^2 b^2] = 
+\end{gather*}
+
+\subsection*{Задача 6}
+\begin{gather*}
+\oint\limits_C (x^2-y^2) \ dx + (x^2+y^2) \ dy \qquad \frac{x^2}{a^2} + \frac{y^2}{b} = 1\\
+C: x =a\cos t \qquad y = b\sin t \qquad  0\leq t \leq 2\pi \\
+x^2-y^2 = a^2 \cos^2 t - b^2\sin^2 t \qquad dx = -a\sin t dt \\
+(x^2 - y^2) dx = (a^2 \cos^2 t - b^2\sin^2 t)(-a\sin t) dt \\
+x^2+y^2 = a^2 \cos^2 t +  b^2\sin^2 t \qquad dy = b\cos t dt \\
+(x^2 + y^2) dy = (a^2 \cos^2 t + b^2\sin^2 t)(b\cos t) dt \\
+I = \int\limits_0 ^{2\pi} (a^2 \cos^2 t - b^2\sin^2 t)(-a\sin t) \ dt + (a^2 \cos^2 t + b^2\sin^2 t)(b\cos t) \ dt \\
+I = \int\limits_0 ^{2\pi} -a^3 \cos^2 t +ab^2\sin^3 t dt + a^2b \cos^3 t + b^3\sin^2 t \ dt \\
+I = -a^3 \int\limits_0 ^{2\pi} \cos^2 t \sin t \ dt + 
+ab^2 \int\limits_0 ^{2\pi} sin^3 t \ dt + 
+a^2b \int\limits_0 ^{2\pi} \cos^3 t \ dt + 
+b^3 \int\limits_0 ^{2\pi} \sin^2 t \cos t \ dt \\
+I = -a^3 I_1 + ab^2 I_2 +a^2 b I_3 + b^3 I_4 \\
+I_1 = \int\limits_0 ^{2\pi} \cos^2 t \sin t \ dt = 
+- \int\limits_0 ^{2\pi} \cos^2 t \ d(\cos t) = -\frac{\cos^3 t}{3} \Big|_0 ^{2\pi} = 0 \\
+I_2 = \int\limits_0 ^{2\pi} sin^3 t \ dt = \int\limits_0 ^{2\pi} (1-\cos^2 t) \ d(\cos t) = 0 \\
+I_3 = \int\limits_0 ^{2\pi} \cos^3 t \ dt  = - \int\limits_0 ^{2\pi} (1- \sin^2 t) \ d(\sin t) = 0 \\
+I_4 =  \int\limits_0 ^{2\pi} \sin^2 t \cos t \ dt =  \int\limits_0 ^{2\pi} \sin^2 t  \ d(\sin t) = \frac{\sin^3 t}{3} \Big|_0 ^{2\pi} = 0 \\
+I = 0
+\end{gather*}
+
+\subsection*{Задача 7}
+1.\\
+\begin{gather*}
+\int\limits_{(1,2)} ^{(2,1)} \frac{y \ dx - x \ dy}{x^2}\\
+\text{Кривата не пресича $Oy$}\\
+P(x) = \frac{y}{x^2} \qquad Q(x) = - \frac{1}{x} \implies x \neq 0 \\
+\frac{\partial P}{\partial y} = \frac{1}{x^2} \qquad \frac{\partial Q}{\partial x} = \frac{1}{x^2} \implies \frac{\partial P}{\partial y} = \frac{\partial Q}{\partial x} \\
+1) \text{Интегралът I не зависи от пътя на интегриране} \\
+2) \exists u = u(x,y) : u'_x = \frac{y}{x^2} \quad u'_y = - \frac{1}{x}\\
+u'_x = \frac{y}{x^2} \implies u(x,y) = \int \frac{y}{x^2} \ dx \implies \\
+u(x,y) =  y \int \frac{1}{x^2} \ dx  y \int x^{-2} \ dx = y\frac{x^{-1}}{-1} + \varphi(y) = -\frac{y}{x}+ \varphi(y) \\
+u'_y = - \frac{1}{x} \qquad u'_y = - \frac{1}{x} + \varphi'(y) \implies - \frac{1}{x} = - \frac{1}{x} + \varphi'(y) \implies \\
+\varphi'(y) = 0 \implies \varphi(y) = const = c \implies \\
+u(x,y) = - \frac{y}{x} + c 
+I = \int\limits_{(1,2)} ^{(2,1)} \frac{y \ dx - x \ dy}{x^2} = -\frac{y}{x} \Big|_{(1,2)} ^{(2,1)} \implies \\
+I = - \left[\frac{2}{1} - \frac{1}{2}\right] = - \frac{3}{2}
+\end{gather*}
+2. \\
+\begin{gather*}
+\int\limits_{\gamma} P \ dx + Q \ dy = ? \\
+\gamma_1 = ACB \qquad \gamma_2 = ADB \qquad \gamma^- _2 = BDA \\
+\int\limits_{\gamma_1} P \ dx + Q \ dy = \int\limits_{\gamma_2} P \ dx + Q \ dy \implies \\
+\int\limits_{\gamma_1} P \ dx + Q \ dy - \int\limits_{\gamma_2} P \ dx + Q \ dy = 0 \implies \\ 
+\int\limits_{\gamma_1} P \ dx + Q \ dy + \int\limits_{\gamma^- _2} P \ dx + Q \ dy = 0 \implies \\
+\int\limits_{ACBDA} P \ dx + Q \ dy = 0 
+\end{gather*}
 \newpage 
 \section{Упражнение към лекция 14}
 
