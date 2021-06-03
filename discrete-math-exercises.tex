@@ -1652,12 +1652,123 @@ P \left( \frac{E}{A} \right) = \frac{m}{n} = \frac{ P(E) \cdot P \left( \frac{A}
 \end{gather*}
 
 
-
 \newpage
-\section{ Упражнение 11}
+\section{ Упражнение 11: Математическа индукция и рекурсия}
 
+\subsubsection*{Задача 1}
+Използвайки  принципа на  математическата  индукция,  да  се  докажат следните твърдения:
+\begin{itemize}
+\item $1\cdot 1! + 2\cdot 2! + ... + n\cdot n! = (n+1)! - 1 \quad \forall n \in \mathbb{Z}^+$
+\begin{enumerate}
+\item n = 1 
+$$1\cdot 1! = 1 \qquad (1+1)! - 1 = 1 \implies \text{вярно за n=1}$$
+\item n = k > 1 
+$$1\cdot 1! + 2\cdot 2! + ... + k\cdot k! = (k+1)! - 1 \ \text{истина}$$
+\item n = k+1 
+$$1\cdot 1! + 2\cdot 2! + ... +k\cdot k! + (k+1)\cdot (k+1)! = $$
+$$(k+1)! - 1 + (k+1)\cdot (k+1)! = (k+1)!(k+1+1) - 1 = (k+2)! - 1$$
+\end{enumerate}
+\item $3^n < n! \quad \forall n > 6 \land n \in \mathbb{Z}^+$
+\begin{enumerate}
+\item n = 7 
+$$3^7 = 2187 \qquad 7! = 5040 \implies \text{вярно за n=7}$$
+\item n = k > 7
+$$3^k < k! \ \text{истина}$$
+\item n = k+1 
+$$3^{k+1} = 3^k \cdot 3 \qquad (k+1)! = k!(k+1)$$
+$$3^k < k! \qquad 3<k+1 (n>7) \implies 3^{k+1} < (k+1)! \text{истина}$$
+\end{enumerate}
+\end{itemize}
+
+\subsubsection*{Задача 2}
+Нека   функцията $f(n)$ е дефинирана посредством следните рекурентни зависимости:\\
+Да се намерят f(1), f(2), f(3)
+\begin{itemize}
+\item $\begin{array}{|l@{}} f(1) = 1 \\ f(n+1) = -2\cdot f(n) \end{array} \qquad n \in \mathbb{Z}^+$
+$$\begin{array}{|l@{}} 
+f(1) = 1 \\ 
+f(2) = -2f(1) = -2(1) = -2  \\
+ f(3) = -2f(2) = (-2)(-2) = 4
+\end{array}$$
+\item $\begin{array}{|l@{}} f(0) = 1 \\ f(n+1) = f^2(n) -2\cdot f(n) - 2 \end{array} \qquad n \in \mathbb{N}$
+$$\begin{array}{|l@{}} 
+f(0) = 1 \\ 
+f(1) = f(0)^2 - 2f(0) - 2 = 1^2  -2\cdot 1 - 2 = -3 \\
+f(2) = f(1)^2 - 2f(1) - 2 = -3^2 - 2(-3) - 2 = 13 \\
+f(3) = f(2)^2 - 2f(2) - 2 = 13^2 - 2\cdot 13 - 2 = 141 
+\end{array}$$
+\end{itemize}
+
+\subsubsection*{Задача 3}
+Да се дадат рекурсивни дефиниции на следните функции, дефинирани нерекурсивно:
+\begin{itemize}
+\item $f(n) = 4\cdot 7^n \qquad \forall n \in \mathbb{Z}^+$
+$$\begin{array}{|l@{}} 
+f(1) = 4 \cdot 7^1 = 4 \cdot 7 = 28 \\
+f(n+1) = 4 \cdot 7^{n+1} = 7 \cdot 4 \cdot 7^n = 7 \cdot f(n) 
+\end{array}$$
+\item $f(n) = 3n+5 \qquad \forall n \in \mathbb{Z}^+$
+$$\begin{array}{|l@{}} 
+f(1) =3\cdot 1 + 5 = 8\\
+f(n+1) = 3(n+1) + 5 = 3n+3 + 5 = (3n+5) + 3 = f(n) + 3 
+\end{array}$$
+\end{itemize}
+\subsubsection*{Задача 4}
+Да се дадат рекурсивна и нерекурсивна дефиниции намножеството S от:
+\begin{itemize}
+\item всички цели положителни четни числа
+$$S = \{ (2 \in S  \land x \in S) \implies ((x+2) \in S) \} \quad S = \left\{ \begin{array}{|l@{}} x_0 = 2 \\ x_{n+1} = x_n + 2 \end{array} \right\} \qquad S = \{2x | x \in \mathbb{Z}^+ \}$$
+\item всички цели неотрицателни четни числа
+$$S = \{ (0 \in S  \land x \in S) \implies ((x+2) \in S) \} \quad S = \left\{ \begin{array}{|l@{}} x_0 = 0 \\ x_{n+1} = x_n + 2 \end{array} \right\} \qquad S = \{2x | x \in \mathbb{N}\}$$
+\end{itemize}
 \newpage
-\section{ Упражнение 12}
+\section{ Упражнение 12: Крайни автомати}
+
+\subsubsection*{Задача 1}
+Нека $E = \{\alpha, \beta, \gamma \}, \ L_1 = \{ \varepsilon, \alpha, \alpha \beta \beta \}, \ L_2 = \{ \gamma\}$. Да се определят:
+\begin{itemize}
+\item $L_1 L_2 =  \{ \varepsilon, \alpha, \alpha \beta \beta \} \cdot \{ \gamma\} = \{ \varepsilon \gamma, \alpha \gamma, \alpha \beta \beta \gamma \}$
+\item $L^* _1 = \{ \varepsilon, \alpha, \alpha \beta \beta, ( \varepsilon, \alpha, \alpha \beta \beta) ( \varepsilon, \alpha, \alpha \beta \beta), ...\} = 
+\{\varepsilon, \alpha, \alpha \beta \beta, \alpha \alpha, \alpha \alpha \beta \beta, \alpha \beta \beta \alpha, ... \}$
+\item $L_1 \cap L_2 = \varnothing$
+\item $L_1 \cup L_2 = \{ \varepsilon, \alpha, \alpha \beta \beta, \gamma \}$
+\end{itemize}
+
+\subsubsection*{Задача 2}
+Нека: $E = \{\alpha, \beta, \gamma \} $.  Да се определи $L_1 = (\alpha + \beta)\gamma^*$? 
+$$\gamma^* = \{ \varepsilon, \gamma, \gamma \gamma, ... \} \qquad L_1 = (\alpha + \beta)\gamma^* =  \alpha \gamma^* + \beta \gamma^*$$ 
+$$ \implies L_1 
+\{ \varepsilon, \alpha \gamma, \alpha \gamma \gamma, ... \} + 
+\{ \varepsilon, \beta \gamma, \beta \gamma \gamma, ... \} = 
+\{ \alpha, \beta, \alpha \gamma, \beta \gamma, \alpha \gamma \gamma, \beta \gamma \gamma, ... \}$$
+
+\subsubsection*{Задача 3}
+Да се състави краен автомат, генериращ езика $L = (\alpha + \beta)^* \alpha, \ E = \{ \alpha, \beta \}$
+\begin{gather*}
+(\alpha + \beta)^* = \{ \varepsilon, (\alpha + \beta), (\alpha + \beta)(\alpha + \beta), ...\} \\
+L = (\alpha + \beta)^* \alpha = \{ \alpha, \alpha \alpha, \beta \alpha, \alpha \alpha \alpha, \alpha \beta \alpha, \beta \alpha \alpha, \beta \beta \alpha \} \\
+E = \{ \alpha, \beta \} \qquad X = \{0,1\} \\
+f: \begin {cases} f(0, \alpha) = 1 \\ f(1, \alpha) = 1 \\ f(0, \beta) = 0 \\ f(1, \beta) = 0   \end{cases} \\
+x_0 = 0 \\
+F = \{1\}\\
+\end{gather*}
+\subsubsection*{Задача 4}
+Нека е дадена азбуката $Е = \{ \alpha_1, \alpha_2, \beta \}$. Да се синтезира краен автомат, генериращ езика L със стрингове с дължина поне 3 и следните свойства на всеки стринг. \\
+1ва позиция: $\beta$; 2ра позиция: $\alpha_1, \alpha_2$; 3та позиция: $\beta$. \\
+Всяка следваща позиция представлява произволенм елемент от множеството E или произволно тяхно съчетание. 
+$$L = \beta(\alpha_1 + \alpha_2)\beta(\alpha_1 + \alpha_2 + \beta)^*$$
+
+\subsubsection*{Задача 5}
+Да се състави краен автомат с азбука $E = \{1,2,3\}$ който да разпознава стринга 123.\\
+Решение: 
+\begin{gather*}
+E = \{1,2,3\} \qquad x_0 = x_1 \lor x_2 \lor x_3 \qquad F = \{x_{123} \} \qquad X = \{ x_1,x_2, x_3,x_1 x_2, x_1 x_2 x_3 \}\\
+x_1 \implies f(x_1, 1) = x_1 \qquad f(x_1, 2) = x_{12} \qquad f(x_1, 3) = x_3 \\
+x_{12}  \implies f(x_{12}, 1) = x_1 \qquad f(x_{12}, 2) = x_2 \qquad f(x_{12}, 3) = x_{123} \\
+x_3 \implies  f(x_3, 1) = x_1 \qquad f(x_3, 2) = x_2 \qquad f(x_3, 3) = x_3 \\
+x_2 \implies f(x_2, 1) = x_1 \qquad f(x_2, 2) = x_2 \qquad f(x_2, 3) = x_3 
+\end{gather*}
+
 
 \newpage
 \section{ Упражнение 13}
