@@ -172,8 +172,18 @@ $$E_p = mgh$$
 \item Пълна механична енергия на система
 $$E = E_k + E_p$$
 \item Закон за запазване на енергията (ЗЗЕ)
-$$Е_1 = Е_2 \Leftrightarrow E_{k1} + E_{p1} = E_{k2} + E_{p2}$$
-\end{itemize}
+$$E_1 = E_2 \Leftrightarrow E_{k1} + E_{p1} = E_{k2} + E_{p2}$$
+\item Галилееви трансформации \\
+Две системи K(неподвижна) и K'(движи се праволинейно равномерно със скорост $\vec{v_0}$) \\
+Разположение на кординати: K: x,y,z; K': x',y',z' \\
+\includegraphics{Pics/physics/lec2-1.png} \\
+Aко $v << c$
+$$x = x' + V_0t \qquad y = y' \qquad z = z' \qquad t = t'$$
+При $v \to c \implies$ Препобразувания на Лоренц
+Връзка на скоростите в двете системи
+$$V_x = V'_x + V_0 \qquad V_y = V'_y  \qquad  V_z = V'_z \implies \vec{V} = \vec{V'} + \vec{V_0}$$
+$$\vec{a} = \vec{a'} \qquad \vec{F} = \vec{F'}$$
+\end{itemize} 
 \newpage
 \subsection{Константи}
 
@@ -388,7 +398,6 @@ I-ви принцип на ТД  & $\delta Q = dU + \delta A$ & $\delta Q = dU$ 
 \hline
 \end{tabular}
 \end{center}
-\item
 \item Уравнение на Майер
 $$C_p = C_V + R$$
 \item Коефициент полезно действие (КПД)
@@ -427,7 +436,7 @@ $$\overline{E_k} = \frac{m \overline{v_i ^2}}{2}$$
 \item Основно уравнение на молекулно-кинетичната теория(2)
 $$pV = \frac{2}{3} N\overline{E_k}$$
 \item Основно уравнение на молекулно-кинетичната теория при $N = N_A$
-$$pV = \frac{3}{2} k \overline{E_k}$$
+$$pV = \frac{3}{2} k T$$
 \item Вътрешна енергия на идеален газ
 $$U = \sum_{i=1} ^N E_{ki} = N \overline{E_k}$$
 \item Представяне на налягане чрез температура(n - концентрация, N - брой молекули)
@@ -579,7 +588,7 @@ $$I = \frac{dq}{dt} \qquad I = \frac{q}{t} \text{(постоянен ток)}$$
 \item Плътност на тока 
 $$j = \frac{dI}{dS_{\perp}} \qquad j = \frac{I}{S} \text{(постоянен ток)} \qquad I = jS$$
 \item Eлектродвижещо напрежение(ЕДН) 
-$$\varepsilon = \frac{А_{\text{странични}}}{q}$$
+$$\varepsilon = \frac{A_{\text{странични}}}{q}$$
 \item Закон на Ом за част от верига (познато като "URI - URItarted")
 $$R = \frac{U}{I} \implies U=RI \qquad I = \frac{U}{R}$$
 \item Специфично съпротивление (l - дължина на провидника, S - напречно сечение)
@@ -640,6 +649,8 @@ $$\vec{B} = \mu_0 \mu_r \vec{H}$$
 $$d\vec{B} = \frac{\mu_0 \mu_r I(d\vec{L} \times \vec{r})}{4 \pi r^3}$$
 \item Закон на Био-Савар за безкрайно дълъг прав проводник
 $$\vec{B} = \frac{\mu_0 \mu_r I}{2 \pi b}$$
+\item Магнитна инфукция в центъра на кръгов проводник
+$$B = \frac{\mu_0 \mu_r I}{2r}$$
 \item Циркулация на вектора на магнитно поле (dL - участък от крива)
 $$\oint \vec{B} \cdot d\vec{l}$$
 \item Закон на Ампер
@@ -741,7 +752,7 @@ $\mu_0$ & Магнитна константа & $\mu_0 = 4\pi10^{-7} \frac{T\cdo
 \begin{itemize}
 \item Връзка между честота и период
 $$\nu = \frac{1}{T}$$
-\item Хармонично трептение ($\Phi = \omega_0 t + \varphi_0$ - фаза, 
+\item Хармонично трептение и Пружинно махало ($\Phi = \omega_0 t + \varphi_0$ - фаза, 
 $\varphi_0$ -  начална фаза)
 $$x = A\cos (\omega_0 t + \varphi_0) \qquad \omega_0 = \sqrt{\frac{k}{m}} = 2\pi \nu \ \text{кръгова честота}$$
 \item Кинетична енергия на хармоничните трептения ($v = x'$)
@@ -809,8 +820,8 @@ $$ x_{max} = \frac{m\lambda}{d}S \qquad x_{min} = \frac{(2m+1)\lambda}{2d}S  \qq
 $$d\sin\varphi = \frac{(2m+1)\lambda}{2} \implies max \qquad d\sin\varphi = m\lambda \implies min \qquad m = 0, \pm1, \pm 2, ...$$
 \item Условия за интерференчен максимум и минимум при дифракционна решетка
 $$d\sin\varphi =  m\lambda \implies max \qquad d\sin\varphi = \frac{(2m+1)\lambda}{2} \implies min \qquad m = 0, \pm1, \pm 2, ...$$
-\item Закон на Малюс ($I ~ E^2$)
-$$E^2 = E_0 \cos^2 \alpha \Leftrightarrow I = I_0 \cos^2 \alpha$$
+\item Закон на Малюс ($I = E^2$)
+$$E^2 = E^2_0 \cos^2 \alpha \Leftrightarrow I = I_0 \cos^2 \alpha$$
 \item Поляризация чрез ъгъл на падана, отражение
 $$\tan \alpha = n$$
 \end{itemize}

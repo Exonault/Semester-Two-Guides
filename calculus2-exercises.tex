@@ -2567,20 +2567,229 @@ I = - \left[\frac{2}{1} - \frac{1}{2}\right] = - \frac{3}{2}
 \int\limits_{\gamma_1} P \ dx + Q \ dy + \int\limits_{\gamma^- _2} P \ dx + Q \ dy = 0 \implies \\
 \int\limits_{ACBDA} P \ dx + Q \ dy = 0 
 \end{gather*}
-\newpage 
-\section{Упражнение към лекция 14}
+
+\newpage
+\section{Примерен изпит}
 
 \subsection{Задачи}
+
+\subsection*{Задача 1}
+Да се провери изпълнено ли е равенството, за такива стойности на независимите променливи, за които частните производни на функцията $z$ съществува
+$$\frac{1}{x} z'_x + \frac{1}{y} z'_y = \frac{z}{x^2} \qquad \qquad z = 2x\arcsin(y^2- x^2)$$
+
+\subsection*{Задача 2}
+Дадени за функциите и точката
+$$f(x,y) = x^4 + y^4 - 14xy - 7x^2 - 7y^2 + 24x + 24y \qquad F(x,y,z) = f(x,y) + e^{2x^2 + 3y^2 + 4z^2} \qquad A(1,1,1)$$
+Да се намери
+\begin{enumerate}
+\item Локалните екстремуми на f и вида им. 
+\item $g = grad F(A), \Vert g \Vert, \frac{\partial F(A)}{\partial g}$.
+\end{enumerate}
+
+\subsection*{Задача 3}
+Нека y e неявна функция, която се дефинира с уравнението $f(x,y) = 0$, където 
+$$f(x,y) = \sin(x-y) + e^{xy} - 1 \quad y(0) = 0 $$
+Да се намери $y'(0)$.
+
+\subsection*{Задача 4}
+Да се пресметне интеграла
+$$\iint\limits_D (6x^2 + y) \ dx \ dy$$
+където D е оградена от кривите с уравнение $y=2x \text{ и } y = x^2 - x$.
+
+\subsection*{Задача 5}
+Пресметнете криволинейния интеграл от първи род
+$$\int\limits_C (x^2 + y^2 - 2z) \ dl \qquad C: \{x= 4\cos 2t , y = 4\sin 2t, z = 6t, t \in [0,3\pi] \}$$
+
+\subsection*{Задача 6}
+Да се пресметне криволинейния интеграл от втори род
+$$\int\limits_C 2x \ dx + 3yx \ dy \qquad C = \{x= 4\cos 2t , y = 3\sin 2t, t \in [0,2\pi] \}$$
+\begin{enumerate}
+\item непосредствено
+\item с формулата на Грийн.
+\end{enumerate}
+Да се сравнят резултатите. 
+
+\subsection*{Задача 7}
+Да се намери лицето на частта от повърхнината 
+$$S: z = -\sqrt{x^2 + y^2}$$
+заградена от цилиндъра
+$$x^2 + y^2 = 36$$
+
+\subsection*{Задача 8}
+Намерете обема на тялото
+$$T = \{z \leq 2 - x^2 - y^2, z^2 \geq x^2 + y^2 \quad (z \geq 0) \}$$
 
 \newpage
 \subsection{Решения}
 
-\newpage 
-\section{Упражнение към лекция 15}
+\subsection*{Задача 1}
+\begin{gather*}
+\frac{1}{x} z'_x + \frac{1}{y} z'_y = \frac{z}{x^2} \qquad \qquad z = 2x\arcsin(y^2- x^2) \\
+z'_x = 2\arcsin(y^2 - x^2) + \frac{2x}{\sqrt{1 + (y^2 - x^2)^2}} \cdot -2x = 
+2\arcsin(y^2 - x^2) - \frac{4x^2}{\sqrt{1 + (y^2 - x^2)^2}} = \\
+z'_x = \frac{2\sqrt{1 + (y^2 - x^2)^2}\arcsin(y^2 - x^2) - 4x^2}{\sqrt{1 + (y^2 - x^2)^2}} \\
+z'_y = 0\arcsin(y^2 - x^2) + \frac{2x}{\sqrt{1 + (y^2 - x^2)^2}} \cdot 2y =  \frac{4xy}{\sqrt{1 + (y^2 - x^2)^2}}\\
+\frac{1}{x} z'_x= \frac{\frac{2\sqrt{1 + (y^2 - x^2)^2}\arcsin(y^2 - x^2) - 4x^2}{\sqrt{1 + (y^2 - x^2)^2}}}{x} =
+\frac{2\sqrt{1 + (y^2 - x^2)^2}\arcsin(y^2 - x^2) - 4x^2}{\sqrt{1 + (y^2 - x^2)^2}} \cdot \frac{1}{x} = \\
+\frac{2\sqrt{1 + (y^2 - x^2)^2}\arcsin(y^2 - x^2) - 4x^2}{x\sqrt{1 + (y^2 - x^2)^2}} \\
+\frac{1}{y} z'_y = \frac{1}{y} \cdot \frac{4xy}{\sqrt{1 + (y^2 - x^2)^2}} = \frac{4x}{\sqrt{1 + (y^2 - x^2)^2}} \\
+\frac{1}{x} z'_x + \frac{1}{y} z'_y  = \frac{2\sqrt{1 + (y^2 - x^2)^2}\arcsin(y^2 - x^2) - 4x^2}{x\sqrt{1 + (y^2 - x^2)^2}}  + \frac{4x}{\sqrt{1 + (y^2 - x^2)^2}} = \\
+\frac{2\sqrt{1 + (y^2 - x^2)^2}\arcsin(y^2 - x^2) - 4x^2 + 4x^2}{x\sqrt{1 + (y^2 - x^2)^2}} = 
+\frac{2\sqrt{1 + (y^2 - x^2)^2}\arcsin(y^2 - x^2)}{x\sqrt{1 + (y^2 - x^2)^2}} \\
+\frac{1}{x} z'_x + \frac{1}{y} z'_y = \frac{2\arcsin(y^2 - x^2)}{x} \\
+\frac{z}{x^2} = \frac{2x\arcsin(y^2- x^2)}{x^2} =  \frac{2\arcsin(y^2- x^2)}{x} \implies \text{Равенството е изпълнено}
+\end{gather*}
 
-\subsection{Задачи}
+\subsection*{Задача 2}
+$$f(x,y) = x^4 + y^4 - 14xy - 7x^2 - 7y^2 + 24x + 24y \qquad F(x,y,z) = f(x,y) + e^{2x^2 + 3y^2 + 4z^2} \qquad A(1,1,1)$$
+\begin{enumerate}
+\item Локалните екстремуми на f и вида им. 
+\begin{gather*}
+f'_x = 4x^3 - 14x - 14y + 24  \qquad f'_y = 4y^3 - 14x - 14y + 24 \\
+\begin{array}{|l@{}}
+4x^3 - 14x - 14y + 24 = 0 \\
+4y^3 - 14x - 14y + 24 = 0 
+\end{array}\Leftrightarrow
+\begin{array}{|l@{}}
+4x^3 - 4y^3 = 0 \\
+4y^3 - 14x - 14y + 24 = 0 
+\end{array}\\
+4x^3 - 4y^3 = 0 \Leftrightarrow x^3 - y^3 = 0 \Leftrightarrow (x-y)(x^2+xy+y^2) = 0 \\
+f''_{xx} = 12x^2 - 14 \qquad f''_{yy} = 12y^2 - 14 \qquad f''_{xy} = f''_{yx} = -14 \\
+\Delta = f''_{xx}f''_{yy} - f''_{xy}f''_{yx} = (12x^2 - 14)(12y^2 - 14) - 196 \\
+\end{gather*}
+\item $g = grad F(A), \Vert g \Vert, \frac{\partial F(A)}{\partial g}$.
+\end{enumerate}
+\subsection*{Задача 3}
 
-\newpage
-\subsection{Решения}
+\subsection*{Задача 4}
+$$I = \iint\limits_D (6x^2 + y) \ dx \ dy \qquad \qquad D: \begin{cases} y=2x \\ y = x^2 - x \end{cases}$$
+\begin{gather*}
+\begin{array}{|l@{}} y=2x \\ y = x^2 - x \end{array} \Leftrightarrow 2x = x^2 - x \Leftrightarrow x^2 - 3x = 0 \implies 0 \leq x \leq 3 \implies \begin{array}{|l@{}} 0 \leq x \leq 3 \\  x^2 - x \leq y \leq2x \end{array} \\
+I = \int\limits_0 ^3 \int\limits_{x^2 - x} ^{2x} 6x^2 + y \ dy \ dx \\
+\int\limits_{x^2 - x} ^{2x} 6x^2 + y \ dy = 6x^2y + \frac{1}{2} y^2 \Big|_{x^2 - x} ^{2x} = \\
+6x^2\cdot 2x + \frac{4x^2}{2} - 6x^2(x^2-x) - \frac{(x^2-x)^2}{2} = 12x^3 + 2x^2 - 6x^4 + 6x^3 - \frac{x^4 - 2x^3 +x^2}{2} = \\
+\frac{24x^3 + 4x^2 - 12x^4 + 12x^3 - x^4 + 2x^3 - x^2}{2} = \frac{-13 x^4 + 38x^3 + 3x^2}{2} = -\frac{13}{2} x^4 + 19x^3 + \frac{3}{2} x^2 \\
+I = \int\limits_0 ^3 -\frac{13}{2} x^4 + 19x^3 + \frac{3}{2} x^2  \ dx = -\frac{13x^5}{2 \cdot 5} + \frac{19x^4}{4} + \frac{3x^3}{2 \cdot 3} = - \frac{13}{10} x^5 + \frac{19}{4} x^4 + \frac{1}{2} x^3 \Big|_0 ^3 \\
+I = \frac{(-13\cdot 2 \cdot 3^5) + (19 \cdot 5 \cdot 3^4) + (1 \cdot 10 \cdot 3^3)}{20} = \frac{1647}{20}
+\end{gather*}
+
+\subsection*{Задача 5}
+$$I = \int\limits_C (x^2 + y^2 - 2z) \ dl \qquad C: \{x= 4\cos 2t , y = 4\sin 2t, z = 6t, t \in [0,3\pi] \}$$
+\begin{gather*}
+I = \int\limits_C f(x,y,z) \ dl \qquad C: \{x = \varphi(t), y=\psi(t), z=\chi(t), t \in [t_1, t_2] \} \implies \\
+I = \int\limits_{t_1} ^{t_2} f(\varphi(t), \psi(t), \chi(t)) \sqrt{\varphi'^2(t), \psi'^2(t), \chi'^2(t)} \ dt  \\
+\varphi' = -8\sin 2t \qquad \psi' = 8\cos 2t \qquad \chi' = 6 \\
+\varphi'^2 + \psi'^2 + z'^2 = 64\sin^2 2t + 64 \cos^2 2t + 36 = 64 (\sin^2 2t + \cos^2 2t) + 36 = 64 + 36 = 100 \\
+\sqrt{\varphi'^2 + \psi'^2 + \chi'^2} = 10 \\
+dl = \sqrt{\varphi'^2 + \psi'^2 + \chi'^2} dt = 10 dt \\
+x^2 + y^2 - 2z = 16\cos^2 2t + 16 \sin^2 2t - 12t = 16(\cos^2 2t + \sin^2 2t) - 12t = 16 - 12t \\
+I = \int\limits_0 ^{3\pi} (16 - 12t) \cdot 10 \ dt = \int\limits_0 ^{3\pi} 160 - 120t \ dt = 160t - 60t^2 \Big|_0 ^{3\pi} = 160\cdot 3\pi - 60 \cdot 9\pi^2 = \\
+480\pi - 540 \pi^2 
+\end{gather*}
+
+\subsection*{Задача 6}
+$$I= \int\limits_C 2x \ dx + 3yx \ dy \qquad C = \{x= 4\cos 2t , y = 3\sin 2t, t \in [0,2\pi] \}$$
+\begin{enumerate}
+\item непосредствено
+\begin{gather*}
+P(t) = 8\cos 2t \quad Q(t) = 36 \cos 2t \sin 2t  \quad x' = -8\sin 2t \quad y' = 6\cos 2t \implies \\
+I = \int\limits_0 ^{2\pi} Px' + Qy' \ dt = \int\limits_0 ^{2\pi} -64\cos 2t \sin 2t + 216 \cos^2 2t \sin 2t  \ dt  = \\
+\int\limits_0 ^{2\pi} -64\cos 2t \sin 2t \ dt + \int\limits_0 ^{2\pi} 216 \cos^2 2t \sin 2t  \ dt = \\
+- \frac{64}{2} \int\limits_0 ^{2\pi} \cos 2t\ d(\cos 2t) + \frac{216}{2} \int\limits_0 ^{2\pi}  \cos^2 2t \ d(\cos 2t) = \\
+-32 \left(- \frac{\cos^2 2t}{2} \right) + 108 \left(- \frac{\cos^3 2t}{3} \right) \Big|_0 ^{2\pi}= \\
+16\cos^2 4\pi - 36 \cos^3 4\pi - 16\cos^2 0 - 36 \cos^3 0 = 0\\ 
+\end{gather*}
+\item с формулата на Грийн.
+\begin{gather*}
+P = 2x \quad Q = 3yx \\
+\frac{\partial P}{\partial y} = P'_y = 0  \qquad \frac{\partial Q}{\partial x} = Q'_x = 3y \\
+I = \iint\limits_D \left( \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y} \right) \ dx \ dy = \iint\limits_D \left( Q'_x  - P'_y \right) \ dx \ dy = \iint\limits_D 3y \ dx \ dy \\
+\end{gather*}
+\end{enumerate}
+Да се сравнят резултатите. 
+
+\subsection*{Задача 7}
+Да се намери лицето на частта от повърхнината 
+$$S: z = -\sqrt{x^2 + y^2}$$
+заградена от цилиндъра
+$$x^2 + y^2 = 36$$
+\begin{gather*}
+\sigma = \iint\limits_C  \sqrt{1 + z'^2 _x + z'^2 _y} \ dx \ dy \qquad  C: \{ x^2 + y^2 = 36 \} \\
+z'_x = - \frac{x}{\sqrt{x^2 + y^2}} \qquad z'_y = - \frac{y}{\sqrt{x^2 + y^2}} \\
+1 + z'^2 _x + z'^2 _y = 1 + \frac{x^2}{x^2 + y^2} + \frac{y^2}{x^2 + y^2} = 
+\frac{x^2 + y^2 +x^2 + y^2 }{x^2 + y^2} = \frac{2(x^2+y^2)}{x^2 + y^2} = 2 \\
+\sqrt{1 + z'^2 _x + z'^2 _y} = \sqrt{2} \\
+\sigma = \iint\limits_C \sqrt{2} \ dx \ dy \\
+\text{Полярна смяна: }
+x = a\cos(t) \qquad y = a \sin t \qquad |\Delta| = a \qquad  a\geq 0, t \in [0,2\pi] \\
+C = a^2 \cos^2 t + a^2 \sin^2 t = 36 \Leftrightarrow a^2 = 36 \implies a \in [0,6] \\ 
+\sigma = \int\limits_0 ^{2\pi} \int\limits_0 ^6 \sqrt{2} a \ da \ dt \qquad 
+\int\limits_0 ^6 \sqrt{2} a \ da = \sqrt{2}\frac{a^2}{2} \Big|_0 ^6 = \frac{36}{2} \sqrt{2} = 18\sqrt{2} \\
+\sigma = 18\sqrt{2}  \int\limits_0 ^{2\pi} \ dt = 18\sqrt{2} \cdot  2\pi = 36\sqrt{2} \pi 
+\end{gather*} 
+
+\subsection*{Задача 8}
+Намерете обема на тялото
+$$T : z \leq 2 - x^2 - y^2, z^2 \geq x^2 + y^2 \quad (z \geq 0) $$
+\begin{gather*}
+V_T = \iiint\limits_T \ dx \ dy \ dz \\
+\begin{array}{|l@{}}
+z \leq 2 - x^2 - y^2 \\ z^2 \geq x^2 + y^2 \\ z \geq 0 
+\end{array} \\
+\text{Цилиндрична смяна} \\
+x = t \cos a \quad y = t \sin a  \quad  z = z  \quad  (t\geq 0, a \in [0,2\pi]) \\
+\implies |\Delta| = t \\ 
+2 - x^2 - y^2 = \sqrt{x^2 + y^2} \Leftrightarrow 2-t^2 = t \\
+t^2 + t -2 = 0 \Leftrightarrow (t+2)(t-1) = 0 \implies t = 1 \implies t \in [0,1]  \qquad z \in [0,2-t^2]\\ 
+\int\limits_0 ^{2\pi} \int\limits_0 ^1 \int\limits_0 ^{2-t^2} t \ dz \ dt \ da  = \int\limits_0 ^{2\pi} \int\limits_0 ^1  t(2-t^2) \ dt \ da = \int\limits_0 ^{2\pi} \frac{2t^2}{2} - \frac{t^4}{4} \Big|_0 ^1 \ da =  \\
+\int\limits_0 ^{2\pi} \frac{3}{4} \Big|_0 ^1 \ da  = \frac{3\cdot 2\pi}{4} = \frac{3}{2} \pi \\
+\end{gather*} 
+2ра опция
+\begin{gather*}
+z^2 \geq x^2 + y^2 \implies  z \geq \pm \sqrt{x^2 + y^2 }, z \geq 0 \implies z \geq \sqrt{x^2 + y^2} \implies \\
+\sqrt{x^2 + y^2} \leq z \leq 2 - x^2 - y^2 \\
+D: \{ (x,y) , \sqrt{x^2 + y^2} \leq 2-x^2 - y^2 \} \\
+\text{Цилиндрична смяна} \\
+x = t \cos a \quad y = t \sin a  \quad  z = z  \quad  (t\geq 0, a \in [0,2\pi]) \implies |\Delta| = t \\ 
+2 - x^2 - y^2 \leq \sqrt{x^2 + y^2} \Leftrightarrow 2-t^2 = t \\
+t^2 + t -2 = 0 \Leftrightarrow (t+2)(t-1) = 0 \implies t = 1 \implies t \in [0,1]  \qquad z \in [t,2-t^2]\\ 
+\int\limits_0 ^{2\pi} \int\limits_0 ^1 \int\limits_t ^{2-t^2} t \ dz \ dt \ da  = 
+\int\limits_0 ^{2\pi} \int\limits_0 ^1  t(2 - t^2 - t) \ dt \ da = \int\limits_0 ^{2\pi} \frac{2t^2}{2} - \frac{t^4}{4} - \frac{t^3}{3} \Big|_0 ^1 \ da =  \\
+\int\limits_0 ^{2\pi} \frac{5}{12} \Big|_0 ^1 \ da  = \frac{5\cdot 2\pi}{12} = \frac{5}{6} \pi \\
+\end{gather*} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \end{document}
